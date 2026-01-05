@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://huggingface.co/datasets/Gradygu3u/Escher-Data"><img src="https://img.shields.io/badge/🤗%20Dataset-Escher--Data-yellow" alt="Dataset"></a>
-  <a href="#"><img src="https://img.shields.io/badge/📄%20Paper-CVPR%202026-blue" alt="Paper"></a>
+  <a href="#"><img src="https://img.shields.io/badge/📄%20Paper-arxiv-blue" alt="Paper"></a>
   <a href="#license"><img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-green" alt="License"></a>
 </p>
 
