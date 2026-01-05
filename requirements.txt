@@ -1,0 +1,17 @@
+# Core dependencies
+numpy>=1.21.0
+Pillow>=9.0.0
+tqdm>=4.64.0
+openai>=1.0.0
+
+# Video processing (choose one)
+av>=10.0.0  # Recommended
+# opencv-python>=4.5.0  # Alternative
+
+# Local model inference
+torch>=2.0.0
+transformers>=4.40.0
+
+# Optional: for specific models
+# qwen-vl-utils  # For Qwen2.5-VL
+# flash-attn>=2.0.0  # For faster inference
