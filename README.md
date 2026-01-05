@@ -18,7 +18,7 @@
 - **Intent-Driven Reasoning**: Inferring the human goals behind spatial changes
 
 <p align="center">
-  <img src="assets/framework.png" width="85%">
+  <img src="assets/pipeline.png" width="85%">
 </p>
 
 ## 📊 Key Features
@@ -141,6 +141,18 @@ dataset = load_dataset("Gradygu3u/Escher-Data", data_files="Escher-sft.jsonl")
 #   "metadata": {"category": "...", "scene_type": "...", "question_type": "..."}
 # }
 ```
+
+## 🔍 Case Study
+
+<p align="center">
+  <img src="assets/case_study.png" width="90%">
+</p>
+
+## 📊 Data Overview
+
+<p align="center">
+  <img src="assets/data_overview.png" width="85%">
+</p>
 
 ## 📝 Citation
 
