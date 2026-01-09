@@ -157,10 +157,10 @@ dataset = load_dataset("Gradygu3u/Escher-Data", data_files="Escher-sft.jsonl")
 ## 📝 Citation
 
 ```bibtex
-@inproceedings{escherverse2026,
-  title={EscherVerse: An Open World Benchmark and Dataset for Advanced Spatial Intelligence with Physical-Dynamic and Intent-Driven Understanding},
-  author={Anonymous},
-  booktitle={CVPR},
+@article{gu2026escherverse,
+  title={EscherVerse: An Open World Benchmark and Dataset for Teleo-Spatial Intelligence with Physical-Dynamic and Intent-Driven Understanding},
+  author={Gu, Tianjun and Gong, Chenghua and Gong, Jingyu and Zhang, Zhizhong and Xie, Yuan and Ma, Lizhuang and Tan, Xin},
+  journal={arXiv preprint arXiv:2601.01547},
   year={2026}
 }
 ```
@@ -169,6 +169,12 @@ dataset = load_dataset("Gradygu3u/Escher-Data", data_files="Escher-sft.jsonl")
 
 This project is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
 
-## 🙏 Acknowledgments
+## ⬆️ Contact
 
-We thank all contributors and the open-source community for their support.
+For questions or issues, please open an issue in this repository.
+
+If you can't download the meta video, you can contact me: 
+
+Wechat: Grady_gtj_020409
+
+Email: TianjunGu_Grady@outlook.com
