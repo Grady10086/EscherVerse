@@ -5,52 +5,82 @@
 </p>
 
 <p align="center">
-  <a href="https://huggingface.co/datasets/Gradygu3u/Escher-Data"><img src="https://img.shields.io/badge/🤗%20Dataset-Escher--Data-yellow" alt="Dataset"></a>
-  <a href="#"><img src="https://img.shields.io/badge/📄%20Paper-arxiv-blue" alt="Paper"></a>
+  <a href="https://huggingface.co/datasets/Gradygu3u/EscherVerse-Data"><img src="https://img.shields.io/badge/🤗%20Dataset-EscherVerse--Data-yellow" alt="Dataset"></a>
+  <a href="https://arxiv.org/abs/2601.01547"><img src="https://img.shields.io/badge/📄%20Paper-arXiv%202601.01547-blue" alt="Paper"></a>
   <a href="#license"><img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-green" alt="License"></a>
 </p>
 
-## 🌟 Overview
+## Overview
 
-**EscherVerse** is a large-scale, open-world benchmark and dataset for evaluating **Advanced Spatial Intelligence (ASI)** in Vision-Language Models. It introduces a new paradigm that unifies:
+**EscherVerse** is a large-scale open-world benchmark and training resource for **Teleo-Spatial Intelligence (TSI)** in vision-language models. TSI refers to the joint ability to reason about physical dynamics, reference frames, and goal-directed human action in real-world scenes.
 
-- **Physical-Dynamic Reasoning**: Understanding the physical principles of object interactions
-- **Intent-Driven Reasoning**: Inferring the human goals behind spatial changes
+This repository accompanies our paper, [*Vision-language models lag human performance on physical dynamics and intent reasoning*](https://arxiv.org/abs/2601.01547), and provides the released benchmark annotations, instruction-tuning annotations, metadata, and evaluation code.
 
 <p align="center">
   <img src="assets/pipeline.png" width="85%">
 </p>
 
-## 📊 Key Features
+## Highlights
 
-| Feature | Description |
-|---------|-------------|
-| **Open-World** | Real-world videos, not simulated environments |
-| **Dynamic** | Focus on temporal changes, not static scenes |
-| **Human-Centric** | First benchmark for Intent-Driven Reasoning |
-| **Comprehensive** | 8K benchmark + 35K training samples |
+- **11,328 real-world videos** curated from open-world human and object interactions
+- **8,000-example benchmark** for evaluation
+- **35,963-example instruction-tuning set** for model development
+- **27 evaluated models** under a unified zero-shot protocol
+- **Independent first-pass human baseline** from 11 annotators
 
-## 📁 Dataset
+## Main findings
 
-Download from [🤗 Hugging Face](https://huggingface.co/datasets/Gradygu3u/Escher-Data):
+| Setting | System | Overall accuracy |
+|---------|--------|------------------|
+| Best proprietary model | Gemini-2.5-Pro | **57.26%** |
+| Best open-weight baseline | Qwen3-VL-32B-Thinking | **49.58%** |
+| Best Escher model | Escher-8B-Instruct | **49.85%** |
+| First-pass human mean | 11 annotators | **90.62%** |
+| First-pass human range | 11 annotators | **84.81% - 95.14%** |
 
-| File | Description | Size |
-|------|-------------|------|
-| `Escher-Bench.json` | Benchmark evaluation set | 8,000 QA pairs |
-| `Escher-sft.jsonl` | SFT training data | 35,963 QA pairs |
-| `Escher-GRPO-Subset.jsonl` | GRPO training subset | 3,588 samples |
-| `video_list.json` | Video metadata | 11,328 videos |
+These results indicate a large and persistent gap between current vision-language models and human performance on teleo-spatial reasoning in open-world environments.
 
-### Spatial Reasoning Categories
+## Released resources
 
-1. **Object Permanence & Occlusion Tracking** - Understanding object continuity
-2. **Dynamic Spatial Relationships** - Reasoning about changing relations
-3. **Action & Intent-Driven Spatial Reasoning** - Inferring human goals
-4. **Predictive & Counterfactual Reasoning** - Predicting outcomes
-5. **Object Deformation & State Transition** - Physical state changes
-6. **Egocentric vs. Allocentric Reference Frames** - Viewpoint reasoning
+The repository and linked dataset currently provide:
 
-## 🚀 Quick Start
+- **Benchmark annotations** for EscherVerse evaluation
+- **Instruction-tuning annotations** for model development
+- **Metadata** for the released video set
+- **Evaluation code** for running benchmark experiments
+
+The following files are hosted on [Hugging Face](https://huggingface.co/datasets/Gradygu3u/EscherVerse-Data):
+
+| File | Description |
+|------|-------------|
+| `Escher-Bench.json` | Benchmark evaluation set |
+| `Escher-sft.jsonl` | Instruction-tuning data |
+| `Escher-GRPO-Subset.jsonl` | Preference / GRPO subset |
+| `video_list.json` | Video metadata |
+
+## Data access
+
+Download the released files from Hugging Face:
+
+```bash
+huggingface-cli download Gradygu3u/EscherVerse-Data \
+  --repo-type dataset \
+  --local-dir ./data
+```
+
+Or download specific files:
+
+```bash
+huggingface-cli download Gradygu3u/EscherVerse-Data Escher-Bench.json Escher-sft.jsonl video_list.json \
+  --repo-type dataset \
+  --local-dir ./data
+```
+
+Note that the benchmark and training files use different schemas, so direct file download is recommended.
+
+The underlying raw clips are derived from third-party online platforms. For this reason, source video files are **not** redistributed as an unrestricted public download. Access to retained clips is controlled and subject to availability and source-platform terms.
+
+## Quick start
 
 ### Installation
 
@@ -60,121 +90,50 @@ cd EscherVerse
 pip install -r requirements.txt
 ```
 
-### Download Data
+### Run evaluation
 
 ```bash
-# Download benchmark data
-huggingface-cli download Gradygu3u/Escher-Data --local-dir ./data
-
-# Download videos (contact authors for access)
-```
-
-### Run Evaluation
-
-```bash
-# Local model (e.g., Qwen3-VL-8B)
+# Local model
 python eval/evaluate.py \
     --model qwen3-vl-8b \
     --data_path ./data/Escher-Bench.json \
     --video_dir ./data/videos \
     --output_dir ./results
 
-# API model (e.g., GPT-4o)
+# API model
 python eval/evaluate.py \
     --model gpt-4o \
     --api_key YOUR_API_KEY \
     --data_path ./data/Escher-Bench.json \
-    --video_dir ./data/videos
+    --video_dir ./data/videos \
+    --output_dir ./results
 ```
 
-### Supported Models
+Supported model interfaces currently include local transformer-based VLMs and API-based proprietary models such as GPT, Gemini, and Claude-family systems. See [eval/evaluate.py](eval/evaluate.py) for the maintained list.
 
-**Local Models:**
-- `qwen3-vl-8b`, `qwen3-vl-4b`, `qwen3-vl-2b`
-- `qwen2.5-vl-7b`, `qwen2.5-vl-3b`
-- `llava-onevision-7b`
-- `internvl3-8b`
+## Repository structure
 
-**API Models:**
-- `gpt-4o`, `gpt-4o-mini`
-- `gemini-2.5-pro`, `gemini-2.5-flash`
-- `claude-3.5-sonnet`
-
-## 📈 Leaderboard
-
-| Rank | Model | Overall | Human-Centric | Object-Centric |
-|------|-------|---------|---------------|----------------|
-| 1 | Gemini-2.5-Pro | 57.26% | 49.70% | 49.18% |
-| 2 | Escher-8B-SFT | 49.85% | - | - |
-| 3 | Qwen3-VL-32B-Thinking | 49.58% | 49.70% | 49.18% |
-| 4 | Qwen3-VL-8B-Instruct | 45.06% | 45.74% | 42.86% |
-| 5 | GPT-5 | 44.50% | - | - |
-
-<details>
-<summary>Full Results by Category</summary>
-
-| Model | Object Permanence | Dynamic Spatial | Intent-Driven | Predictive | Deformation | Egocentric |
-|-------|-------------------|-----------------|---------------|------------|-------------|------------|
-| Gemini-2.5-Pro | 49.26% | 49.80% | 58.76% | 49.34% | 60.19% | 46.04% |
-| Qwen3-VL-32B-Thinking | 49.26% | 49.80% | 58.76% | 49.34% | 60.19% | 46.04% |
-| Escher-8B-SFT | 46.69% | 43.98% | 63.60% | 43.08% | 58.29% | 42.21% |
-
-</details>
-
-## 🔧 Training
-
-Fine-tune your model on Escher-35k:
-
-```python
-from datasets import load_dataset
-
-# Load training data
-dataset = load_dataset("Gradygu3u/Escher-Data", data_files="Escher-sft.jsonl")
-
-# Training format
-# {
-#   "messages": [
-#     {"role": "user", "content": "<video>\n[Question]..."},
-#     {"role": "assistant", "content": "<think></think>\n<answer>C</answer>"}
-#   ],
-#   "videos": ["video_filename.mp4"],
-#   "metadata": {"category": "...", "scene_type": "...", "question_type": "..."}
-# }
+```text
+assets/           Figures and overview assets
+data/             Dataset access notes
+eval/             Benchmark evaluation code
+requirements.txt  Python dependencies
 ```
 
-## 🔍 Case Study
+## Citation
 
-<p align="center">
-  <img src="assets/case_study.png" width="90%">
-</p>
+If you use EscherVerse, please cite the associated paper:
 
-## 📊 Data Overview
+- [Vision-language models lag human performance on physical dynamics and intent reasoning](https://arxiv.org/abs/2601.01547)
 
-<p align="center">
-  <img src="assets/data_overview.png" width="85%">
-</p>
-
-## 📝 Citation
-
-```bibtex
-@article{gu2026escherverse,
-  title={EscherVerse: An Open World Benchmark and Dataset for Teleo-Spatial Intelligence with Physical-Dynamic and Intent-Driven Understanding},
-  author={Gu, Tianjun and Gong, Chenghua and Gong, Jingyu and Zhang, Zhizhong and Xie, Yuan and Ma, Lizhuang and Tan, Xin},
-  journal={arXiv preprint arXiv:2601.01547},
-  year={2026}
-}
-```
-
-## 📄 License
+## License
 
 This project is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
 
-## ⬆️ Contact
+## Contact
 
-For questions or issues, please open an issue in this repository.
+For questions or issues, please open a GitHub issue.
 
-If you can't download the meta video, you can contact me: 
+For data access questions, contact:
 
-Wechat: Grady_gtj_020409
-
-Email: TianjunGu_Grady@outlook.com
+- Tianjun Gu: TianjunGu_Grady@outlook.com

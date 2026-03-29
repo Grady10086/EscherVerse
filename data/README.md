@@ -1,32 +1,49 @@
-# Data
+# Data access
 
-Download the dataset from Hugging Face:
+The released EscherVerse files are hosted on Hugging Face:
+
+- https://huggingface.co/datasets/Gradygu3u/EscherVerse-Data
+
+Recommended download command:
 
 ```bash
-huggingface-cli download Gradygu3u/Escher-Data --local-dir ./
+huggingface-cli download Gradygu3u/EscherVerse-Data \
+  --repo-type dataset \
+  --local-dir ./
 ```
 
-Or use Python:
+To download only the benchmark and metadata files:
 
-```python
-from huggingface_hub import hf_hub_download
-
-# Download benchmark
-hf_hub_download(
-    repo_id="Gradygu3u/Escher-Data",
-    filename="Escher-Bench.json",
-    repo_type="dataset",
-    local_dir="./"
-)
+```bash
+huggingface-cli download Gradygu3u/EscherVerse-Data Escher-Bench.json video_list.json \
+  --repo-type dataset \
+  --local-dir ./
 ```
 
-## Video Files
+To download the instruction-tuning annotations:
 
-Videos are sourced from YouTube. Contact the authors for access to the processed video clips.
-
-Each video filename follows the format:
+```bash
+huggingface-cli download Gradygu3u/EscherVerse-Data Escher-sft.jsonl Escher-GRPO-Subset.jsonl \
+  --repo-type dataset \
+  --local-dir ./
 ```
+
+## Notes
+
+- The benchmark and training files use different schemas, so direct file download is recommended instead of relying on the dataset viewer.
+- The underlying raw clips are derived from third-party online platforms and are not redistributed as an unrestricted public download.
+- Access to retained source clips is controlled and subject to availability and source-platform terms.
+
+## Video filenames
+
+Each processed clip filename follows the format:
+
+```text
 {youtube_id}_{clip_index}_{start_time}_to_{end_time}.mp4
 ```
 
-Example: `N0b5SvS9k0E_66_0_12_19_238_to_0_12_50_803.mp4`
+Example:
+
+```text
+N0b5SvS9k0E_66_0_12_19_238_to_0_12_50_803.mp4
+```
