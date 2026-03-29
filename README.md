@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+  <img src="assets/human_gap.png" width="85%">
+</p>
+
+<p align="center">
   <a href="https://huggingface.co/datasets/Gradygu3u/EscherVerse-Data"><img src="https://img.shields.io/badge/🤗%20Dataset-EscherVerse--Data-yellow" alt="Dataset"></a>
   <a href="https://arxiv.org/abs/2601.01547"><img src="https://img.shields.io/badge/📄%20Paper-arXiv%202601.01547-blue" alt="Paper"></a>
   <a href="#license"><img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-green" alt="License"></a>
@@ -35,10 +39,6 @@ This repository accompanies our paper, [*Vision-language models lag human perfor
 | First-pass human range | 11 annotators | **84.81% - 95.14%** |
 
 These results indicate a large and persistent gap between current vision-language models and human performance on teleo-spatial reasoning in open-world environments.
-
-<p align="center">
-  <img src="assets/human_gap.png" width="85%">
-</p>
 
 ## Released resources
 
