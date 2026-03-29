@@ -16,10 +16,6 @@
 
 This repository accompanies our paper, [*Vision-language models lag human performance on physical dynamics and intent reasoning*](https://arxiv.org/abs/2601.01547), and provides the released benchmark annotations, instruction-tuning annotations, metadata, and evaluation code.
 
-<p align="center">
-  <img src="assets/pipeline.png" width="85%">
-</p>
-
 ## Highlights
 
 - **11,328 real-world videos** curated from open-world human and object interactions
@@ -39,6 +35,10 @@ This repository accompanies our paper, [*Vision-language models lag human perfor
 | First-pass human range | 11 annotators | **84.81% - 95.14%** |
 
 These results indicate a large and persistent gap between current vision-language models and human performance on teleo-spatial reasoning in open-world environments.
+
+<p align="center">
+  <img src="assets/human_gap.png" width="85%">
+</p>
 
 ## Released resources
 
