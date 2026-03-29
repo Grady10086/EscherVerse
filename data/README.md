@@ -31,6 +31,7 @@ huggingface-cli download Gradygu3u/EscherVerse-Data Escher-sft.jsonl Escher-GRPO
 ## Notes
 
 - The benchmark and training files use different schemas, so direct file download is recommended instead of relying on the dataset viewer.
+- `Escher-Bench.json` uses benchmark-style fields such as `P`, `Q`, `A`, `C`, `scene_type`, and `question_type`, whereas `Escher-sft.jsonl` uses conversational `messages` plus `videos` and `metadata`.
 - The underlying raw clips are derived from third-party online platforms and are not redistributed as an unrestricted public download.
 - Access to retained source clips is controlled and subject to availability and source-platform terms.
 

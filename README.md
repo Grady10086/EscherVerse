@@ -58,6 +58,45 @@ The following files are hosted on [Hugging Face](https://huggingface.co/datasets
 | `Escher-GRPO-Subset.jsonl` | Preference / GRPO subset |
 | `video_list.json` | Video metadata |
 
+## Data formats
+
+The released files use different schemas for evaluation and training.
+
+### Benchmark format
+
+`Escher-Bench.json` stores evaluation examples as JSON objects with fields such as:
+
+```json
+{
+  "index": 1,
+  "P": "video_filename.mp4",
+  "Q": "[Single-Choice] ...",
+  "A": "B",
+  "C": "Category 3: Action & Intent-Driven Spatial Reasoning",
+  "scene_type": "Human-Centric",
+  "question_type": "Single-Choice"
+}
+```
+
+### Instruction-tuning format
+
+`Escher-sft.jsonl` stores training examples in conversational format:
+
+```json
+{
+  "messages": [
+    {"role": "user", "content": "<video>\n[Question] ..."},
+    {"role": "assistant", "content": "<think>...</think>\n<answer>C</answer>"}
+  ],
+  "videos": ["video_filename.mp4"],
+  "metadata": {
+    "category": "Action & Intent-Driven Spatial Reasoning",
+    "scene_type": "Human-Centric",
+    "question_type": "Single-Choice"
+  }
+}
+```
+
 ## Data access
 
 Download the released files from Hugging Face:
@@ -110,6 +149,16 @@ python eval/evaluate.py \
 ```
 
 Supported model interfaces currently include local transformer-based VLMs and API-based proprietary models such as GPT, Gemini, and Claude-family systems. See [eval/evaluate.py](eval/evaluate.py) for the maintained list.
+
+## Evaluation protocol
+
+The released evaluation code follows the protocol used in the paper:
+
+- **Unified zero-shot prompting** across supported models
+- **16 uniformly sampled video frames** per example by default
+- **Deterministic decoding** for comparable runs
+- **`<answer>...</answer>` answer extraction** for automated parsing
+- **Question-type-specific scoring** for single-choice, multiple-select, true/false, and fill-in-the-blank items
 
 ## Repository structure
 
