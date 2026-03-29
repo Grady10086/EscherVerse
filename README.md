@@ -173,7 +173,14 @@ requirements.txt  Python dependencies
 
 If you use EscherVerse, please cite the associated paper:
 
-- [Vision-language models lag human performance on physical dynamics and intent reasoning](https://arxiv.org/abs/2601.01547)
+```bibtex
+@article{gu2026escherverse,
+  title={Vision-language models lag human performance on physical dynamics and intent reasoning},
+  author={Gu, Tianjun and Gong, Jingyu and Zhang, Zhizhong and Xie, Yuan and Ma, Lizhuang and Tan, Xin},
+  journal={arXiv preprint arXiv:2601.01547},
+  year={2026}
+}
+```
 
 ## License
 
