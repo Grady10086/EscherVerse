@@ -1,0 +1,98 @@
+{
+  "schema": "escher-audit-frozen-sample-v1",
+  "seed": 20260813,
+  "source_manifest": "experiments/perception_control/manifests/sample_manifest.csv",
+  "source_manifest_sha256": "2b744d639c234bd480f32471bf19eff9c618530180afc66b8f711850761a972e",
+  "sample_rows": 120,
+  "unique_videos": 120,
+  "per_category": {
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20,
+    "5": 20,
+    "6": 20
+  },
+  "per_scene_type": {
+    "Human-Centric": 86,
+    "Object-Centric": 34
+  },
+  "per_question_type": {
+    "Fill-in-the-Blank": 11,
+    "Multiple-Select": 13,
+    "Single-Choice": 47,
+    "True/False": 49
+  },
+  "stratum_allocations": {
+    "1": {
+      "Human-Centric|Fill-in-the-Blank": 1,
+      "Human-Centric|Multiple-Select": 1,
+      "Human-Centric|Single-Choice": 2,
+      "Human-Centric|True/False": 6,
+      "Object-Centric|Fill-in-the-Blank": 1,
+      "Object-Centric|Multiple-Select": 0,
+      "Object-Centric|Single-Choice": 2,
+      "Object-Centric|True/False": 7
+    },
+    "2": {
+      "Human-Centric|Fill-in-the-Blank": 3,
+      "Human-Centric|Multiple-Select": 1,
+      "Human-Centric|Single-Choice": 4,
+      "Human-Centric|True/False": 6,
+      "Object-Centric|Fill-in-the-Blank": 0,
+      "Object-Centric|Multiple-Select": 1,
+      "Object-Centric|Single-Choice": 4,
+      "Object-Centric|True/False": 1
+    },
+    "3": {
+      "Human-Centric|Fill-in-the-Blank": 1,
+      "Human-Centric|Multiple-Select": 3,
+      "Human-Centric|Single-Choice": 11,
+      "Human-Centric|True/False": 5,
+      "Object-Centric|Multiple-Select": 0
+    },
+    "4": {
+      "Human-Centric|Fill-in-the-Blank": 1,
+      "Human-Centric|Multiple-Select": 0,
+      "Human-Centric|Single-Choice": 8,
+      "Human-Centric|True/False": 3,
+      "Object-Centric|Fill-in-the-Blank": 0,
+      "Object-Centric|Multiple-Select": 0,
+      "Object-Centric|Single-Choice": 6,
+      "Object-Centric|True/False": 2
+    },
+    "5": {
+      "Human-Centric|Fill-in-the-Blank": 1,
+      "Human-Centric|Multiple-Select": 5,
+      "Human-Centric|Single-Choice": 2,
+      "Human-Centric|True/False": 6,
+      "Object-Centric|Fill-in-the-Blank": 1,
+      "Object-Centric|Multiple-Select": 1,
+      "Object-Centric|Single-Choice": 1,
+      "Object-Centric|True/False": 3
+    },
+    "6": {
+      "Human-Centric|Fill-in-the-Blank": 1,
+      "Human-Centric|Multiple-Select": 1,
+      "Human-Centric|Single-Choice": 6,
+      "Human-Centric|True/False": 8,
+      "Object-Centric|Fill-in-the-Blank": 1,
+      "Object-Centric|Multiple-Select": 0,
+      "Object-Centric|Single-Choice": 1,
+      "Object-Centric|True/False": 2
+    }
+  },
+  "selection_fields": [
+    "category_id",
+    "scene_type",
+    "question_type"
+  ],
+  "selection_excluded_fields": [
+    "question",
+    "ground_truth",
+    "model_output",
+    "coverage_annotation"
+  ],
+  "blind_id_order": "fixed-seed random permutation after stratified selection",
+  "output_sha256": "932567fd3f1e20e00d40baf9986f4a8e8b6067e42395605153d4bbbb9378388e"
+}

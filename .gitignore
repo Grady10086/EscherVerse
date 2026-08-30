@@ -15,6 +15,26 @@ results/
 *.jsonl
 !data/*.jsonl
 
+# Curated experiment artifacts. These directories are populated by an explicit
+# allowlist and must retain their frozen JSON/JSONL result artifacts.
+!reproducibility/**/
+!reproducibility/**/*.json
+!experiments/**/
+!experiments/**/*.json
+!experiments/**/*.jsonl
+
+# Internal-only or superseded material.
+experiments/**/*private*
+experiments/**/*_CN.md
+experiments/**/*.sh
+experiments/sft_ablation/manifests/eval_panel_1112.json
+experiments/sft_ablation/manifests/eval_panel_1112.meta.json
+experiments/failure_mode/final_annotations/adjudication_queue.csv
+experiments/perception_control/provisional_pair_analysis_20260813.json
+experiments/perception_control/provisional_pair_analysis_parsed_sensitivity_20260813.json
+experiments/failure_mode/scripts/*.py
+!experiments/failure_mode/scripts/analyze_annotations.py
+
 # Videos (too large for git)
 *.mp4
 *.avi

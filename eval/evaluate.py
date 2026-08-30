@@ -20,6 +20,7 @@ import json
 import os
 import re
 import base64
+import hashlib
 import time
 import argparse
 import difflib
@@ -32,7 +33,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import numpy as np
 from PIL import Image
 import io
-from tqdm import tqdm
+try:
+    from tqdm import tqdm
+except ImportError:  # Keep scoring/parser-only use lightweight.
+    def tqdm(iterable, **_kwargs):
+        return iterable
 
 # Suppress warnings
 import warnings
@@ -45,12 +50,17 @@ warnings.filterwarnings('ignore')
 SUPPORTED_MODELS = {
     # Local models (Transformers-based)
     "qwen3-vl-8b": {"type": "local", "model_path": "Qwen/Qwen3-VL-8B-Instruct", "class": "qwen3"},
+    "qwen3-vl-8b-thinking": {"type": "local", "model_path": "Qwen/Qwen3-VL-8B-Thinking", "class": "qwen3"},
+    "qwen3-vl-4b-thinking": {"type": "local", "model_path": "Qwen/Qwen3-VL-4B-Thinking", "class": "qwen3"},
+    "qwen3-vl-2b-instruct": {"type": "local", "model_path": "Qwen/Qwen3-VL-2B-Instruct", "class": "qwen3"},
     "qwen3-vl-4b": {"type": "local", "model_path": "Qwen/Qwen3-VL-4B-Instruct", "class": "qwen3"},
     "qwen3-vl-2b": {"type": "local", "model_path": "Qwen/Qwen3-VL-2B-Instruct", "class": "qwen3"},
     "qwen2.5-vl-7b": {"type": "local", "model_path": "Qwen/Qwen2.5-VL-7B-Instruct", "class": "qwen2.5"},
+    "qwen2.5-vl-32b-awq": {"type": "local", "model_path": "Qwen/Qwen2.5-VL-32B-Instruct-AWQ", "class": "qwen2.5"},
     "qwen2.5-vl-3b": {"type": "local", "model_path": "Qwen/Qwen2.5-VL-3B-Instruct", "class": "qwen2.5"},
     "llava-onevision-7b": {"type": "local", "model_path": "lmms-lab/llava-onevision-qwen2-7b-ov", "class": "llava"},
     "internvl3-8b": {"type": "local", "model_path": "OpenGVLab/InternVL3-8B", "class": "internvl"},
+    "internvl3-2b": {"type": "local", "model_path": "OpenGVLab/InternVL3-2B", "class": "internvl"},
     
     # API models
     "gpt-4o": {"type": "api", "model_name": "gpt-4o"},
@@ -152,21 +162,33 @@ def extract_answer_from_tags(text: str) -> str:
     """Extract content between <answer> tags."""
     if not text:
         return ""
-    match = re.search(r'<answer>(.*?)</answer>', text, re.DOTALL | re.IGNORECASE)
-    return match.group(1).strip() if match else text.strip()
+    matches = re.findall(r'<answer>(.*?)</answer>', text, re.DOTALL | re.IGNORECASE)
+    nonempty = [match.strip() for match in matches if match.strip()]
+    return "\n".join(nonempty) if nonempty else text.strip()
 
 
 def extract_option_letters(text: str, question_type: str) -> str:
     """Extract option letters from answer text."""
     text = text.strip()
-    
+
+    # Accept explicit option labels while avoiding ordinary words such as
+    # "answer", "between", "correct", and the article "a".
+    label_matches = re.findall(
+        r"(?<![A-Za-z0-9])([A-D])"
+        r"(?=(?:[ \t]*(?:[).,:;/]|$|\band\b|&)|[ \t]*\r?\n))",
+        text,
+    )
+    answer_phrase_matches = re.findall(
+        r"\b(?:answer|option|choice)s?\s*(?:is|are|:)?\s*([A-D])\b",
+        text,
+        re.IGNORECASE,
+    )
+    letters = sorted(
+        set(label_matches + [letter.upper() for letter in answer_phrase_matches])
+    )
     if question_type == "Multiple-Select":
-        matches = re.findall(r'\b([A-D])\)?', text, re.IGNORECASE)
-        letters = sorted(set(m.upper() for m in matches))
-        return ','.join(letters) if letters else text
-    else:
-        match = re.search(r'\b([A-D])\)?', text, re.IGNORECASE)
-        return match.group(1).upper() if match else text
+        return ",".join(letters) if letters else text
+    return letters[0] if len(letters) == 1 else (",".join(letters) or text)
 
 
 def normalize_text(text: str) -> str:
@@ -257,7 +279,16 @@ def evaluate_answer(prediction: str, ground_truth: str, question_type: str) -> D
 class ModelInference:
     """Unified model inference interface."""
     
-    def __init__(self, model_key: str, api_key: str = None, api_base: str = None):
+    def __init__(
+        self,
+        model_key: str,
+        api_key: str = None,
+        api_base: str = None,
+        model_path: str = None,
+        adapter_path: str = None,
+        max_tokens: int = DEFAULT_MAX_TOKENS,
+        awq_preserve_lm_head: bool = False,
+    ):
         self.model_key = model_key
         self.config = SUPPORTED_MODELS.get(model_key)
         if not self.config:
@@ -267,6 +298,11 @@ class ModelInference:
         self.model = None
         self.processor = None
         self.client = None
+        self.model_path_override = model_path
+        self.adapter_path = adapter_path
+        self.max_tokens = max_tokens
+        self.awq_preserve_lm_head = awq_preserve_lm_head
+        self.last_generation_metadata = {}
         
         if self.model_type == "api":
             self._init_api_client(api_key, api_base)
@@ -285,18 +321,58 @@ class ModelInference:
     def _init_local_model(self):
         """Initialize local transformers model."""
         import torch
-        from transformers import AutoProcessor, AutoModelForCausalLM
+        from transformers import AutoProcessor
         
-        model_path = self.config["model_path"]
+        model_path = self.model_path_override or self.config["model_path"]
         model_class = self.config["class"]
         
         print(f"Loading model: {model_path}")
         
-        if model_class in ["qwen3", "qwen2.5"]:
-            self.model = AutoModelForCausalLM.from_pretrained(
+        if model_class == "qwen3":
+            from transformers import Qwen3VLForConditionalGeneration
+
+            self.model = Qwen3VLForConditionalGeneration.from_pretrained(
                 model_path, torch_dtype=torch.bfloat16, device_map="auto", trust_remote_code=True
             )
-            self.processor = AutoProcessor.from_pretrained(model_path, trust_remote_code=True)
+            if self.adapter_path:
+                from peft import PeftModel
+
+                self.model = PeftModel.from_pretrained(self.model, self.adapter_path)
+            self.processor = AutoProcessor.from_pretrained(
+                model_path, trust_remote_code=True, use_fast=False
+            )
+        elif model_class == "qwen2.5":
+            from transformers import AutoConfig, Qwen2_5_VLForConditionalGeneration
+
+            model_kwargs = {}
+            model_dtype = (
+                torch.float16
+                if self.model_key.endswith("-awq")
+                else torch.bfloat16
+            )
+            if self.awq_preserve_lm_head:
+                model_config = AutoConfig.from_pretrained(
+                    model_path, trust_remote_code=True
+                )
+                quantization_config = dict(model_config.quantization_config)
+                preserved = list(
+                    quantization_config.get("modules_to_not_convert", [])
+                )
+                if "lm_head" not in preserved:
+                    preserved.append("lm_head")
+                quantization_config["modules_to_not_convert"] = preserved
+                model_config.quantization_config = quantization_config
+                model_kwargs["config"] = model_config
+            self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+                model_path,
+                torch_dtype=model_dtype,
+                device_map="auto",
+                trust_remote_code=True,
+                **model_kwargs,
+            )
+            self.processor = AutoProcessor.from_pretrained(
+                model_path, trust_remote_code=True, use_fast=False
+            )
         elif model_class == "llava":
             from transformers import LlavaOnevisionForConditionalGeneration
             self.model = LlavaOnevisionForConditionalGeneration.from_pretrained(
@@ -309,12 +385,15 @@ class ModelInference:
                 model_path, torch_dtype=torch.bfloat16, device_map="auto",
                 trust_remote_code=True, low_cpu_mem_usage=True
             ).eval()
-            self.processor = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+            self.processor = AutoTokenizer.from_pretrained(
+                model_path, trust_remote_code=True, use_fast=False
+            )
         
         print(f"Model loaded successfully")
     
     def generate(self, prompt: str, images: List[Image.Image]) -> Optional[str]:
         """Generate response from model."""
+        self.last_generation_metadata = {}
         if self.model_type == "api":
             return self._generate_api(prompt, images)
         else:
@@ -334,10 +413,16 @@ class ModelInference:
                 response = self.client.chat.completions.create(
                     model=self.model_name,
                     messages=[{"role": "user", "content": content}],
-                    max_tokens=DEFAULT_MAX_TOKENS,
+                    max_tokens=self.max_tokens,
                     temperature=0.0,
                     timeout=120
                 )
+                usage = getattr(response, "usage", None)
+                self.last_generation_metadata = {
+                    "finish_reason": response.choices[0].finish_reason,
+                    "generated_token_count": getattr(usage, "completion_tokens", None),
+                    "hit_max_tokens": response.choices[0].finish_reason == "length",
+                }
                 return response.choices[0].message.content
             except Exception as e:
                 print(f"  [API Error] Attempt {attempt + 1}/{max_retries}: {e}")
@@ -370,8 +455,25 @@ class ModelInference:
         text = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         inputs = self.processor(text=text, images=images, return_tensors="pt").to(self.model.device)
         
-        generated_ids = self.model.generate(**inputs, max_new_tokens=DEFAULT_MAX_TOKENS, do_sample=False)
+        generated_ids = self.model.generate(
+            **inputs, max_new_tokens=self.max_tokens, do_sample=False
+        )
         generated_ids = generated_ids[:, inputs['input_ids'].shape[1]:]
+        token_ids = generated_ids[0].tolist()
+        eos_token_ids = self.model.generation_config.eos_token_id
+        if isinstance(eos_token_ids, int):
+            eos_token_ids = [eos_token_ids]
+        eos_token_ids = set(eos_token_ids or [])
+        eos_observed = any(token_id in eos_token_ids for token_id in token_ids)
+        hit_max_tokens = len(token_ids) >= self.max_tokens and not eos_observed
+        self.last_generation_metadata = {
+            "generated_token_count": len(token_ids),
+            "eos_observed": eos_observed,
+            "hit_max_tokens": hit_max_tokens,
+            "finish_reason": (
+                "max_tokens" if hit_max_tokens else "eos" if eos_observed else "unknown"
+            ),
+        }
         return self.processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
     
     def _generate_llava(self, prompt: str, images: List[Image.Image]) -> str:
@@ -382,7 +484,9 @@ class ModelInference:
         inputs = self.processor(images=images, text=prompt_text, return_tensors="pt").to(self.model.device)
         
         with torch.inference_mode():
-            generated_ids = self.model.generate(**inputs, max_new_tokens=DEFAULT_MAX_TOKENS, do_sample=False)
+            generated_ids = self.model.generate(
+                **inputs, max_new_tokens=self.max_tokens, do_sample=False
+            )
         
         generated_ids = [out[len(inp):] for inp, out in zip(inputs.input_ids, generated_ids)]
         return self.processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
@@ -390,21 +494,57 @@ class ModelInference:
     def _generate_internvl(self, prompt: str, images: List[Image.Image]) -> str:
         """Generate using InternVL model."""
         import torch
-        pixel_values_list = []
-        num_patches_list = []
-        
-        for img in images:
-            pixel_values = self.model.load_image(img, max_num=12).to(self.model.device, dtype=self.model.dtype)
-            pixel_values_list.append(pixel_values)
-            num_patches_list.append(pixel_values.size(0))
-        
-        pixel_values = torch.cat(pixel_values_list, dim=0)
-        image_tokens = ''.join([f'<image-{i+1}>: <image>\n' for i in range(len(images))])
-        question = f'{image_tokens}{prompt}'
-        
-        response = self.model.chat(self.processor, pixel_values, question, 
-                                   dict(max_new_tokens=DEFAULT_MAX_TOKENS, do_sample=False),
-                                   num_patches_list=num_patches_list)
+        import torchvision.transforms as transforms
+        from torchvision.transforms.functional import InterpolationMode
+
+        transform = transforms.Compose(
+            [
+                transforms.Lambda(
+                    lambda image: image.convert("RGB")
+                    if image.mode != "RGB"
+                    else image
+                ),
+                transforms.Resize(
+                    (448, 448), interpolation=InterpolationMode.BICUBIC
+                ),
+                transforms.ToTensor(),
+                transforms.Normalize(
+                    mean=(0.485, 0.456, 0.406),
+                    std=(0.229, 0.224, 0.225),
+                ),
+            ]
+        )
+        pixel_values = torch.stack([transform(image) for image in images]).to(
+            self.model.device, dtype=self.model.dtype
+        )
+        num_patches_list = [1] * len(images)
+        video_prefix = "".join(
+            f"Frame{index + 1}: <image>\n" for index in range(len(images))
+        )
+        question = f"{video_prefix}{prompt}"
+
+        response = self.model.chat(
+            self.processor,
+            pixel_values,
+            question,
+            dict(max_new_tokens=self.max_tokens, do_sample=False),
+            num_patches_list=num_patches_list,
+            history=None,
+            return_history=False,
+        )
+        response_token_count = len(
+            self.processor.encode(response, add_special_tokens=False)
+        )
+        self.last_generation_metadata = {
+            "generated_token_count": response_token_count,
+            "hit_max_tokens": response_token_count >= self.max_tokens,
+            "finish_reason": (
+                "max_tokens_estimate"
+                if response_token_count >= self.max_tokens
+                else "length_below_limit"
+            ),
+            "finish_reason_auditable": False,
+        }
         return response
 
 
@@ -460,7 +600,16 @@ def calculate_statistics(results: List[Dict]) -> Dict:
     return stats
 
 
-def save_results(results: List[Dict], stats: Dict, output_path: Path, model_name: str):
+def save_results(
+    results: List[Dict],
+    stats: Dict,
+    output_path: Path,
+    model_name: str,
+    model_path: str = None,
+    max_tokens: int = DEFAULT_MAX_TOKENS,
+    num_frames: int = DEFAULT_NUM_FRAMES,
+    run_metadata: Dict = None,
+):
     """Save evaluation results."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
@@ -469,7 +618,10 @@ def save_results(results: List[Dict], stats: Dict, output_path: Path, model_name
             "model": model_name,
             "timestamp": datetime.now().isoformat(),
             "total_items": len(results),
-            "num_frames": DEFAULT_NUM_FRAMES
+            "num_frames": num_frames,
+            "model_path": model_path,
+            "max_tokens": max_tokens,
+            **(run_metadata or {}),
         },
         "statistics": stats,
         "results": results
@@ -507,7 +659,15 @@ def run_evaluation(args):
     
     # Initialize model
     print(f"\nInitializing model: {args.model}")
-    model = ModelInference(args.model, api_key=args.api_key, api_base=args.api_base)
+    model = ModelInference(
+        args.model,
+        api_key=args.api_key,
+        api_base=args.api_base,
+        model_path=args.model_path,
+        adapter_path=args.adapter_path,
+        max_tokens=args.max_tokens,
+        awq_preserve_lm_head=args.awq_preserve_lm_head,
+    )
     
     # Run evaluation
     results = []
@@ -515,19 +675,57 @@ def run_evaluation(args):
     
     for i, item in enumerate(tqdm(benchmark_data, desc="Evaluating")):
         video_filename = item.get("P")
-        if not video_filename:
-            continue
-        
-        video_path = video_dir / video_filename
-        images = extract_video_frames(video_path, args.num_frames)
-        if not images:
-            continue
-        
         question = item.get('Q', '')
         question_type = item.get('question_type', 'Unknown')
         ground_truth = item.get('A', '')
         category = item.get('C', 'Unknown')
         scene_type = item.get('scene_type', 'Unknown')
+
+        base_result = {
+            "index": item.get('index', i),
+            "video": video_filename,
+            "question": question,
+            "question_type": question_type,
+            "category": category,
+            "scene_type": scene_type,
+            "target_capability": item.get("target_capability"),
+            "ground_truth": ground_truth,
+        }
+        if not video_filename:
+            results.append({
+                **base_result,
+                "raw_response": "",
+                "raw_response_sha256": hashlib.sha256(b"").hexdigest(),
+                "answer_tag_count": 0,
+                "generation_metadata": {},
+                "model_prediction": "[ERROR]",
+                "is_correct": None,
+                "score": 0.0,
+                "prediction_clean": "[ERROR]",
+                "ground_truth_clean": ground_truth,
+                "eval_method": "error",
+                "error_type": "missing_video_filename",
+            })
+            continue
+
+        video_path = video_dir / video_filename
+        images = extract_video_frames(video_path, args.num_frames)
+        if not images:
+            results.append({
+                **base_result,
+                "raw_response": "",
+                "raw_response_sha256": hashlib.sha256(b"").hexdigest(),
+                "answer_tag_count": 0,
+                "generation_metadata": {},
+                "model_prediction": "[ERROR]",
+                "is_correct": None,
+                "score": 0.0,
+                "prediction_clean": "[ERROR]",
+                "ground_truth_clean": ground_truth,
+                "eval_method": "error",
+                "error_type": "video_frame_extraction_failed",
+            })
+            continue
         
         prompt = create_prompt(question)
         response = model.generate(prompt, images)
@@ -540,14 +738,17 @@ def run_evaluation(args):
             eval_result = {"is_correct": None, "score": 0.0, "prediction_clean": "[ERROR]",
                           "ground_truth_clean": ground_truth, "eval_method": "error"}
         
+        raw_response = response or ""
         result_item = {
-            "index": item.get('index', i),
-            "video": video_filename,
-            "question": question,
-            "question_type": question_type,
-            "category": category,
-            "scene_type": scene_type,
-            "ground_truth": ground_truth,
+            **base_result,
+            "raw_response": raw_response,
+            "raw_response_sha256": hashlib.sha256(
+                raw_response.encode("utf-8")
+            ).hexdigest(),
+            "answer_tag_count": len(
+                re.findall(r"<answer>.*?</answer>", raw_response, re.DOTALL | re.IGNORECASE)
+            ),
+            "generation_metadata": dict(model.last_generation_metadata),
             "model_prediction": prediction,
             "is_correct": eval_result["is_correct"],
             "score": eval_result["score"],
@@ -562,9 +763,43 @@ def run_evaluation(args):
     
     # Final statistics and save
     final_stats = calculate_statistics(results)
+    result_indices = [item["index"] for item in results]
+    run_integrity = {
+        "input_items": len(benchmark_data),
+        "output_items": len(results),
+        "unique_output_indices": len(set(result_indices)),
+        "inference_errors": final_stats["error"],
+        "complete": (
+            len(results) == len(benchmark_data)
+            and len(set(result_indices)) == len(benchmark_data)
+            and final_stats["error"] == 0
+        ),
+    }
+    evaluator_path = Path(__file__).resolve()
+    data_path = Path(args.data_path).resolve()
+    run_metadata = {
+        "evaluator_sha256": hashlib.sha256(evaluator_path.read_bytes()).hexdigest(),
+        "data_path": str(data_path),
+        "data_sha256": hashlib.sha256(data_path.read_bytes()).hexdigest(),
+        "video_dir": str(video_dir.resolve()),
+        "run_integrity": run_integrity,
+        "awq_preserve_lm_head": args.awq_preserve_lm_head,
+        "adapter_path": args.adapter_path,
+    }
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_path = Path(args.output_dir) / f"results_{args.model}_{timestamp}.json"
-    save_results(results, final_stats, output_path, args.model)
+    save_results(
+        results,
+        final_stats,
+        output_path,
+        args.model,
+        args.model_path,
+        args.max_tokens,
+        args.num_frames,
+        run_metadata,
+    )
+    if not run_integrity["complete"]:
+        raise RuntimeError(f"Evaluation integrity check failed: {run_integrity}")
 
 
 def main():
@@ -584,6 +819,20 @@ def main():
                         help="API key for API models")
     parser.add_argument("--api_base", type=str, default=None,
                         help="API base URL for API models")
+    parser.add_argument("--model_path", type=str, default=None,
+                        help="Override the configured local checkpoint path")
+    parser.add_argument("--adapter_path", type=str, default=None,
+                        help="Optional PEFT adapter to load on the local base model")
+    parser.add_argument("--max_tokens", type=int, default=DEFAULT_MAX_TOKENS,
+                        help="Maximum generated tokens per response")
+    parser.add_argument(
+        "--awq_preserve_lm_head",
+        action="store_true",
+        help=(
+            "Treat lm_head as unquantized when an AWQ checkpoint stores "
+            "lm_head.weight but omits it from modules_to_not_convert"
+        ),
+    )
     
     args = parser.parse_args()
     run_evaluation(args)

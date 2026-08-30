@@ -1,0 +1,44 @@
+{
+  "judge_identity": "reviewer-assisted judge (reviewer-assisted pass), independent blinded semantic coverage judgment from packet text only",
+  "created_date": "2026-08-13",
+  "inputs_read": [
+    "experiments/coverage_audit/COVERAGE_JUDGING_GUIDE_CN.md",
+    "experiments/coverage_audit/manifests/coverage_judgment_packet_666.csv"
+  ],
+  "outputs_written": [
+    "experiments/coverage_audit/judgments/judge_2.csv",
+    "experiments/coverage_audit/judgments/judge_2.csv.meta.json"
+  ],
+  "counts": {
+    "absent": 400,
+    "partial": 203,
+    "direct": 63,
+    "uncertain": 0
+  },
+  "packet_sha256": "22b1952399037bddfc1e22cc28da2cc26e45bc19a47f4a672fd553deda91789f",
+  "guide_sha256": "8aa9bb8a56dce03c2e1b68011cfe0940b4d8d81cb3fbdaef37df16cc19910727",
+  "output_sha256": "75c5282001dc7a4a536950cc893455c67836a3b454471c3f8e1bbf7e3d0d8ed5",
+  "validation": {
+    "row_count": 666,
+    "unique_blind_proposal_ids": 666,
+    "expected_row_count": 666,
+    "exact_key_equality": true,
+    "valid_statuses": true,
+    "valid_closest_generated_ids": true,
+    "required_columns": [
+      "blind_proposal_id",
+      "coverage_status",
+      "closest_generated_id",
+      "confidence",
+      "reason_cn"
+    ],
+    "no_uncertain_in_main_counts": true
+  },
+  "judging_policy": {
+    "direct": "same core visible fact and substantially same reasoning operation",
+    "partial": "clear semantic overlap in the core visual fact, with only part of entity/time/condition/reasoning overlapping",
+    "absent": "different core fact; same video, actor, object, or nearby event alone is not coverage",
+    "uncertain": "reserved for text-insufficient cases requiring review"
+  },
+  "notes": "Generated ids were constrained to the ids listed in each packet row; no existing judge outputs, mappings, labels, metadata, answers, or model results were read."
+}

@@ -1,0 +1,14 @@
+{
+  "train_runtime": 11641.7585,
+  "train_samples_per_second": 0.121,
+  "train_steps_per_second": 0.015,
+  "total_flos": 1.2430889483481293e+17,
+  "train_loss": 0.2368142587148537,
+  "epoch": 1.0,
+  "seed": 20260815,
+  "data": "experiments/sft_ablation/subsets_strict/intent_matched1409.jsonl",
+  "available_rows": 1409,
+  "num_frames": 8,
+  "gradient_checkpointing": false,
+  "trainable_scope": "language attention q/k/v/o LoRA; visual encoder frozen"
+}

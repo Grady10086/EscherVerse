@@ -1,0 +1,18 @@
+{
+  "artifact": "scope_dual_consensus_all666.csv",
+  "rows": 666,
+  "consensus_counts": {
+    "binary_coverage_contested": 95,
+    "both_covered_with_support": 174,
+    "both_direct": 342,
+    "both_outside_scope": 55
+  },
+  "primary_dimension_exact_agreement_count": 444,
+  "definition": {
+    "both_direct": "both raters directly_in_scope",
+    "both_covered_with_support": "both raters covered but at least one used supporting_operation",
+    "both_outside_scope": "both raters outside_scope",
+    "binary_coverage_contested": "one rater covered and the other did not"
+  },
+  "csv_sha256": "a611756cb79d6bd0963c7e8883276eee6623cda9ff115fdc0bf6cabacf6e32c6"
+}

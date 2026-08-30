@@ -1,0 +1,28 @@
+display_name,group,overall_accuracy_percent,reproduction_route,public_identifier,note
+Qwen3-VL-2B-Instruct,open-weight,38.90,fresh inference,Qwen/Qwen3-VL-2B-Instruct,supported by eval/evaluate.py
+Qwen2.5-VL-3B-Instruct,open-weight,40.61,fresh inference,Qwen/Qwen2.5-VL-3B-Instruct,supported by eval/evaluate.py
+Qwen2.5-VL-7B-Instruct,open-weight,38.66,fresh inference,Qwen/Qwen2.5-VL-7B-Instruct,supported by eval/evaluate.py
+Qwen3-VL-4B-Instruct,open-weight,45.60,fresh inference,Qwen/Qwen3-VL-4B-Instruct,supported by eval/evaluate.py
+Qwen3-VL-4B-Thinking,open-weight,46.58,fresh inference,Qwen/Qwen3-VL-4B-Thinking,supported by eval/evaluate.py
+Qwen3-VL-8B-Instruct,open-weight,46.34,fresh inference,Qwen/Qwen3-VL-8B-Instruct,supported by eval/evaluate.py
+Qwen3-VL-8B-Thinking,open-weight,46.45,fresh inference,Qwen/Qwen3-VL-8B-Thinking,supported by eval/evaluate.py
+Qwen3-VL-30B-A3B-Instruct,open-weight,47.06,configuration reference,Qwen/Qwen3-VL-30B-A3B-Instruct,not wired into the maintained evaluator
+Qwen3-VL-32B-Thinking,open-weight,49.58,configuration reference,Qwen/Qwen3-VL-32B-Thinking,not wired into the maintained evaluator
+LLaVA-OneVision-1.5-4B-Instruct,open-weight,43.75,aggregate score only,,exact checkpoint integration not included
+LLaVA-OneVision-1.5-8B-Instruct,open-weight,44.30,aggregate score only,,exact checkpoint integration not included
+MiniCPM-V-4,open-weight,40.99,aggregate score only,,exact checkpoint integration not included
+InternVL3-8B,open-weight,43.56,fresh inference,OpenGVLab/InternVL3-8B,supported by eval/evaluate.py
+ERNIE-4.5-VL-28B-A3B-Thinking,open-weight,42.58,aggregate score only,,exact checkpoint integration not included
+LLaVA-NeXT-Video-7B,open-weight,11.30,aggregate score only,,exact checkpoint integration not included
+Spatial-MLLM,open-weight,15.81,aggregate score only,,exact checkpoint integration not included
+ViCA2-7B,open-weight,16.45,aggregate score only,,exact checkpoint integration not included
+ISI-8B-Instruct,SFT,45.06,aggregate score only,,original training configuration not included in this release
+Escher-7B-Instruct,SFT,48.89,aggregate score only,,original adapter and exact training configuration not included in this release
+Escher-4B-Instruct,SFT,49.49,aggregate score only,,original adapter and exact training configuration not included in this release
+Escher-4B-Thinking,SFT,48.54,aggregate score only,,original adapter and exact training configuration not included in this release
+Escher-8B-Instruct,SFT,49.85,aggregate score only,,original adapter and exact training configuration not included in this release
+Escher-8B-Thinking,SFT,48.79,aggregate score only,,original adapter and exact training configuration not included in this release
+qwen3-vl-plus,closed API,44.75,aggregate score only,qwen3-vl-plus,API output archive not public
+GPT5,closed API,53.36,aggregate score only,,dated API snapshot not public
+Gemini-2.5-flash,closed API,52.19,fresh inference,gemini-2.5-flash,provider behavior may change
+Gemini-2.5-pro,closed API,57.26,fresh inference,gemini-2.5-pro,provider behavior may change

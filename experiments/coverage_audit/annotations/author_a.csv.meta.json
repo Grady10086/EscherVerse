@@ -1,0 +1,33 @@
+{
+  "artifact": "author_a.csv",
+  "role": "independent_blinded_question_author_a",
+  "row_count": 360,
+  "unique_audit_item_ids": 120,
+  "proposals_per_audit_item_id": 3,
+  "needs_full_video_count": 148,
+  "human_involved_count": 246,
+  "capability_counts": {
+    "action_event": 29,
+    "action_goal": 5,
+    "deformation_state": 28,
+    "dynamic_relation": 67,
+    "entity_attribute": 6,
+    "occlusion_permanence": 10,
+    "orientation_facing": 37,
+    "reference_frame": 27,
+    "static_relation": 49,
+    "temporal_order": 102
+  },
+  "sha256": "3797f91d8741dc5d1741bed53b98cf3c42048bb0aed424ab33a1851241d918a8",
+  "validation": {
+    "exactly_360_rows": true,
+    "exactly_120_ids": true,
+    "exactly_3_proposals_each": true,
+    "no_blank_question_or_capability": true,
+    "codebook_labels_only": true,
+    "boolean_fields_are_0_or_1": true
+  },
+  "blindness_note_cn": "本作者仅阅读 CODEBOOK_CN.md、盲化出题包及其中列出的 120 份 20 帧全时段 contact sheet；未查看冻结清单、基准原题或答案、类别与场景元数据、其他作者输出或模型结果。",
+  "author_identity_note_cn": "Author A 是 AI/模型辅助的独立盲化出题者，逐张查看 20 帧全时段 contact sheet，并非观看完整视频的人类作者。needs_full_video=1 的题意明确保留给完整视频复核，不应表述为已由人类全视频作者确认。",
+  "created_date": "2026-08-13"
+}

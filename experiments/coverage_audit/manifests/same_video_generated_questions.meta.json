@@ -1,0 +1,24 @@
+{
+  "sample_videos": 120,
+  "generated_final_questions": 287,
+  "questions_per_video": {
+    "1": 34,
+    "2": 39,
+    "3": 29,
+    "4": 10,
+    "5": 3,
+    "6": 3,
+    "7": 1,
+    "8": 1
+  },
+  "videos_with_multiple_questions": 86,
+  "capability_distribution": {
+    "action_goal": 37,
+    "deformation_state": 36,
+    "dynamic_relation": 59,
+    "occlusion_permanence": 53,
+    "physical_prediction": 49,
+    "reference_frame": 53
+  },
+  "annotation_note": "Primary capability and cross-cut flags are deterministic category-aligned mappings, not fresh semantic judgments."
+}

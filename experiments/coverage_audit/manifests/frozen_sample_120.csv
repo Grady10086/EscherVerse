@@ -1,0 +1,121 @@
+audit_item_id,source_sample_id,benchmark_index,video,category_id,category,scene_type,question_type
+audit-0001,pc-0559,4677,V1vPefRqyY8_6_0_02_02_735_to_0_02_14_014.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,True/False
+audit-0002,pc-0501,23,OVgPWMhb1kA_48_0_08_44_690_to_0_09_03_668.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,True/False
+audit-0003,pc-0361,4592,U4dJVRiEsxw_60_0_08_48_861_to_0_09_02_675.mp4,4,Predictive and Counterfactual Spatial Reasoning,Object-Centric,Single-Choice
+audit-0004,pc-0178,6527,pzYg5DfbxLs_53_0_07_55_678_to_0_08_10_765.mp4,2,Dynamic Spatial Relationships,Human-Centric,Fill-in-the-Blank
+audit-0005,pc-0092,9235,f1YWduf7KqQ_26_0_05_12_445_to_0_05_25_224.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,True/False
+audit-0006,pc-0571,5983,_qLAtYDDIsw_47_0_04_50_519_to_0_05_01_120.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,Multiple-Select
+audit-0007,pc-0141,3717,WO5pDwf515g_15_0_04_19_399_to_0_04_36_566.mp4,2,Dynamic Spatial Relationships,Object-Centric,Single-Choice
+audit-0008,pc-0497,9737,lJ98a0Owtuo_34_0_06_48_174_to_0_06_59_652.mp4,5,Object Deformation and State Transition,Object-Centric,True/False
+audit-0009,pc-0341,3563,UEvDE_9rlSY_18_0_03_30_233_to_0_03_42_533.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,Single-Choice
+audit-0010,pc-0305,644,_FuEMlST0s8_90_0_14_57_997_to_0_15_09_376.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,Single-Choice
+audit-0011,pc-0028,2444,I1zDGqSd1qY_38_0_09_02_275_to_0_09_16_155.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,True/False
+audit-0012,pc-0287,8057,gabX04pMBQY_129_0_16_10_666_to_0_16_25_233.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0013,pc-0014,1156,NkFI7LBA8N4_22_0_03_36_382_to_0_03_48_127.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,True/False
+audit-0014,pc-0327,2446,I2GVSghytCI_5_0_01_15_542_to_0_01_30_557.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,Single-Choice
+audit-0015,pc-0173,5963,rbDgTJYSAXc_5_0_00_18_418_to_0_00_38_138.mp4,2,Dynamic Spatial Relationships,Human-Centric,Multiple-Select
+audit-0016,pc-0443,5815,i_XP2x9DJ_Q_50_0_06_39_132_to_0_06_50_510.mp4,5,Object Deformation and State Transition,Human-Centric,Multiple-Select
+audit-0017,pc-0405,472,QmHwLF0_P3g_13_0_03_21_117_to_0_04_06_454.mp4,5,Object Deformation and State Transition,Object-Centric,True/False
+audit-0018,pc-0427,3650,VEv8V1CuIcE_30_0_05_50_550_to_0_06_16_042.mp4,5,Object Deformation and State Transition,Human-Centric,True/False
+audit-0019,pc-0280,7378,j8SWLmK4lk8_60_0_12_05_633_to_0_12_19_266.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0020,pc-0415,1222,OjdG3oWYOKk_16_0_02_46_065_to_0_02_58_678.mp4,5,Object Deformation and State Transition,Object-Centric,True/False
+audit-0021,pc-0579,6918,lMWYDpSZES4_16_0_02_33_553_to_0_02_43_663.mp4,6,Egocentric vs. Allocentric Reference Frames,Object-Centric,Fill-in-the-Blank
+audit-0022,pc-0429,3898,ZOYahjTf2M4_5_0_00_47_799_to_0_01_03_640.mp4,5,Object Deformation and State Transition,Human-Centric,True/False
+audit-0023,pc-0082,6897,lYicz5ag9kY_52_0_08_36_549_to_0_09_11_851.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,Fill-in-the-Blank
+audit-0024,pc-0546,3591,UZkkRMISavc_16_0_02_07_961_to_0_02_18_638.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,True/False
+audit-0025,pc-0053,4293,JH6vsa0twcA_41_0_08_54_133_to_0_09_04_533.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,Single-Choice
+audit-0026,pc-0589,7658,i0F4379JRnw_95_0_17_13_933_to_0_17_24_310.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,Single-Choice
+audit-0027,pc-0076,5932,ukNdVhFkoAU_9_0_01_05_665_to_0_01_39_065.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,Multiple-Select
+audit-0028,pc-0236,2656,Fcg0bhOyQUI_48_0_06_21_339_to_0_06_43_444.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0029,pc-0191,8757,jrrAZ0wM0bM_1_0_00_05_438_to_0_00_45_211.mp4,2,Dynamic Spatial Relationships,Human-Centric,True/False
+audit-0030,pc-0535,3083,Td-DsroeCWY_34_0_07_31_117_to_0_07_58_644.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,Single-Choice
+audit-0031,pc-0318,1940,FDMxA941dVE_64_0_08_46_292_to_0_08_56_869.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,Single-Choice
+audit-0032,pc-0393,7913,h8gr-CQ6oMI_1_0_00_05_599_to_0_00_17_199.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,Single-Choice
+audit-0033,pc-0167,5796,kH3yGROIOio_8_0_01_30_457_to_0_01_44_004.mp4,2,Dynamic Spatial Relationships,Object-Centric,Multiple-Select
+audit-0034,pc-0597,9375,olfO0rPYVX0_27_0_05_19_886_to_0_05_43_976.mp4,6,Egocentric vs. Allocentric Reference Frames,Object-Centric,True/False
+audit-0035,pc-0125,2005,SyuM7XAzEEM_1_0_00_28_833_to_0_00_43_625.mp4,2,Dynamic Spatial Relationships,Human-Centric,True/False
+audit-0036,pc-0454,5976,qRtxlEZpev0_31_0_07_11_699_to_0_07_26_366.mp4,5,Object Deformation and State Transition,Human-Centric,Multiple-Select
+audit-0037,pc-0129,2660,FeXKZzWrS34_8_0_01_12_038_to_0_01_25_185.mp4,2,Dynamic Spatial Relationships,Human-Centric,True/False
+audit-0038,pc-0282,7450,iszhz9KmI64_74_0_11_06_166_to_0_11_18_791.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0039,pc-0112,686,sPcffDKFKWc_52_0_14_02_107_to_0_14_15_688.mp4,2,Dynamic Spatial Relationships,Human-Centric,Single-Choice
+audit-0040,pc-0007,523,TanhzwLYs6E_2_0_01_59_452_to_0_02_13_033.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,True/False
+audit-0041,pc-0304,405,DDlrlxASBOI_30_0_06_03_963_to_0_06_15_475.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,True/False
+audit-0042,pc-0326,2387,EOswWepObDw_28_0_03_27_975_to_0_03_54_329.mp4,4,Predictive and Counterfactual Spatial Reasoning,Object-Centric,Single-Choice
+audit-0043,pc-0183,7109,k-IbB7jAw9g_114_0_32_35_720_to_0_33_11_089.mp4,2,Dynamic Spatial Relationships,Human-Centric,Single-Choice
+audit-0044,pc-0097,9582,me0ENrUEpE4_40_0_07_11_120_to_0_07_29_319.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,True/False
+audit-0045,pc-0520,1588,eVTd0Q43YQY_60_0_06_07_408_to_0_06_19_170.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,True/False
+audit-0046,pc-0422,2400,ERekgrM-aaA_46_0_11_59_996_to_0_12_34_577.mp4,5,Object Deformation and State Transition,Object-Centric,Single-Choice
+audit-0047,pc-0179,6604,p1tQXuvT0Fg_12_0_05_15_399_to_0_05_27_600.mp4,2,Dynamic Spatial Relationships,Human-Centric,Fill-in-the-Blank
+audit-0048,pc-0102,202,lxl0FAwu6Rw_4_0_00_22_633_to_0_00_56_566.mp4,2,Dynamic Spatial Relationships,Object-Centric,Single-Choice
+audit-0049,pc-0474,6901,lVoflPzlZRU_27_0_09_08_514_to_0_09_35_675.mp4,5,Object Deformation and State Transition,Human-Centric,Fill-in-the-Blank
+audit-0050,pc-0292,8376,fWEYTSaHq4U_10_0_01_52_879_to_0_02_05_625.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0051,pc-0288,8190,g9jDgXHane4_52_0_12_07_527_to_0_12_18_004.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0052,pc-0231,2243,_yrxbcB4CwA_104_0_16_52_779_to_0_17_05_759.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Fill-in-the-Blank
+audit-0053,pc-0569,5755,nIzM3o__gsw_11_0_02_42_833_to_0_02_55_733.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,Single-Choice
+audit-0054,pc-0033,2848,RhqY2FLyVPE_4_0_00_16_116_to_0_00_28_795.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,True/False
+audit-0055,pc-0048,3837,Yd8OlFUVe5I_39_0_06_58_240_to_0_07_08_240.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,Fill-in-the-Blank
+audit-0056,pc-0400,9372,oozvOIje5Rg_138_0_14_51_279_to_0_15_04_159.mp4,4,Predictive and Counterfactual Spatial Reasoning,Object-Centric,True/False
+audit-0057,pc-0212,530,TzXbHitrUBM_16_0_03_14_699_to_0_03_39_033.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0058,pc-0502,53,aTOCXYLj5HQ_17_0_03_01_806_to_0_03_16_654.mp4,6,Egocentric vs. Allocentric Reference Frames,Object-Centric,Single-Choice
+audit-0059,pc-0289,8268,ftZEfZ7hbJc_3_0_01_19_446_to_0_01_46_306.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0060,pc-0242,3686,Vhq-OykV6nQ_16_0_02_19_535_to_0_02_30_647.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0061,pc-0362,4768,W2pq8aabi2U_31_0_09_55_000_to_0_11_04_166.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,Single-Choice
+audit-0062,pc-0025,1999,SmE_DqZ64n8_99_0_13_05_993_to_0_13_19_882.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,True/False
+audit-0063,pc-0131,2752,G3EJRaUHlbk_26_0_02_43_955_to_0_02_54_674.mp4,2,Dynamic Spatial Relationships,Object-Centric,Single-Choice
+audit-0064,pc-0404,311,6MyqiFNiS-g_27_0_04_26_367_to_0_04_39_246.mp4,5,Object Deformation and State Transition,Human-Centric,True/False
+audit-0065,pc-0223,1060,MaKSkIbHIxM_64_0_12_04_457_to_0_12_22_141.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Multiple-Select
+audit-0066,pc-0227,1840,LSlhkLImq8U_2_0_01_22_449_to_0_02_30_283.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,True/False
+audit-0067,pc-0323,2075,VGN1mWGDO7w_19_0_03_08_621_to_0_03_18_731.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,True/False
+audit-0068,pc-0293,8482,fEkgDypfXFI_15_0_02_35_054_to_0_02_58_845.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0069,pc-0069,5315,srbQrg_NF5E_56_0_09_33_703_to_0_09_45_432.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,Single-Choice
+audit-0070,pc-0090,9104,g6wB7Cuwux8_56_0_08_04_417_to_0_08_16_696.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,True/False
+audit-0071,pc-0190,8729,k3vZmC6hy3c_21_0_04_03_866_to_0_04_19_366.mp4,2,Dynamic Spatial Relationships,Human-Centric,True/False
+audit-0072,pc-0539,3353,Qj8BZ8T8Oac_205_0_32_12_599_to_0_32_26_880.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,Single-Choice
+audit-0073,pc-0591,8958,hekzmOGY4jo_14_0_01_46_940_to_0_01_59_385.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,True/False
+audit-0074,pc-0195,8874,icloqbwjRbY_53_0_06_24_120_to_0_06_36_120.mp4,2,Dynamic Spatial Relationships,Object-Centric,True/False
+audit-0075,pc-0086,8893,iVBkmPk7Sxk_0_0_00_01_199_to_0_00_12_933.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,True/False
+audit-0076,pc-0262,5926,v9lTwOyEhd8_31_0_09_28_559_to_0_09_41_480.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Multiple-Select
+audit-0077,pc-0423,2720,FvjQ4vFdAlA_3_0_02_00_453_to_0_02_17_837.mp4,5,Object Deformation and State Transition,Human-Centric,True/False
+audit-0078,pc-0368,5116,_vTG5LNQqT4_2_0_00_51_451_to_0_01_23_616.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,Fill-in-the-Blank
+audit-0079,pc-0419,2118,G-xOwvyrK8o_23_0_11_46_172_to_0_12_30_082.mp4,5,Object Deformation and State Transition,Human-Centric,True/False
+audit-0080,pc-0481,8301,fkb6l0L3Kn4_13_0_03_50_199_to_0_04_02_900.mp4,5,Object Deformation and State Transition,Human-Centric,Single-Choice
+audit-0081,pc-0420,2285,GvaFtmAzxNk_11_0_01_15_909_to_0_01_34_360.mp4,5,Object Deformation and State Transition,Human-Centric,True/False
+audit-0082,pc-0224,1071,Me-ow0kXHfI_11_0_01_58_718_to_0_02_36_456.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,True/False
+audit-0083,pc-0215,693,sbxC6BKxZRg_9_0_01_29_799_to_0_01_40_760.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,True/False
+audit-0084,pc-0358,4419,RO5Mr1bGRpI_12_0_03_28_900_to_0_03_39_666.mp4,4,Predictive and Counterfactual Spatial Reasoning,Object-Centric,True/False
+audit-0085,pc-0177,6493,f3WZgMnSxeM_21_0_03_30_944_to_0_03_41_421.mp4,2,Dynamic Spatial Relationships,Human-Centric,Fill-in-the-Blank
+audit-0086,pc-0111,654,_vyGEgNbx7c_37_0_05_37_003_to_0_06_13_873.mp4,2,Dynamic Spatial Relationships,Human-Centric,Single-Choice
+audit-0087,pc-0347,3905,Z_F-KfgKv3U_167_0_34_57_864_to_0_35_19_119.mp4,4,Predictive and Counterfactual Spatial Reasoning,Object-Centric,Single-Choice
+audit-0088,pc-0049,3856,Yp_RIDCAdlo_30_0_06_01_761_to_0_06_12_372.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,True/False
+audit-0089,pc-0445,5904,lXGGkDcGB7o_1_0_00_05_205_to_0_00_15_849.mp4,5,Object Deformation and State Transition,Human-Centric,Multiple-Select
+audit-0090,pc-0390,7508,icw8ffApXOs_24_0_05_07_373_to_0_05_26_659.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,Single-Choice
+audit-0091,pc-0246,4396,R5lA1ZQzauM_12_0_07_29_399_to_0_08_49_533.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Multiple-Select
+audit-0092,pc-0355,4319,QD-b4M7nnYo_102_0_15_34_652_to_0_15_47_334.mp4,4,Predictive and Counterfactual Spatial Reasoning,Object-Centric,Single-Choice
+audit-0093,pc-0145,3942,_2IhrVCmNp0_42_0_04_28_559_to_0_04_51_207.mp4,2,Dynamic Spatial Relationships,Object-Centric,Single-Choice
+audit-0094,pc-0561,4856,XNES0L6wkzw_28_0_04_31_337_to_0_04_42_348.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,True/False
+audit-0095,pc-0130,2679,Q_KgiEB6bYc_113_0_28_51_564_to_0_29_12_919.mp4,2,Dynamic Spatial Relationships,Human-Centric,True/False
+audit-0096,pc-0232,2281,GvWldUGLkVM_53_0_07_40_793_to_0_08_00_279.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,True/False
+audit-0097,pc-0562,4940,YZSZwejs058_1_0_00_05_271_to_0_00_21_688.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,Single-Choice
+audit-0098,pc-0113,968,Lk3X_EMY9fw_15_0_04_40_113_to_0_05_16_482.mp4,2,Dynamic Spatial Relationships,Human-Centric,Single-Choice
+audit-0099,pc-0085,8149,gImhyG8Ri7w_10_0_01_18_978_to_0_01_32_759.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,Single-Choice
+audit-0100,pc-0046,3734,X-lAaQRZCMM_6_0_01_09_791_to_0_01_20_004.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,True/False
+audit-0101,pc-0109,403,D39Xmg7PEew_28_0_05_27_360_to_0_05_43_443.mp4,2,Dynamic Spatial Relationships,Human-Centric,True/False
+audit-0102,pc-0350,4042,GIZXp3foP9g_22_0_04_56_896_to_0_05_11_477.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,True/False
+audit-0103,pc-0590,8905,iNkzts_Mclw_8_0_01_01_784_to_0_01_24_716.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,True/False
+audit-0104,pc-0431,4008,G4LR05OjQKc_32_0_06_51_100_to_0_07_23_833.mp4,5,Object Deformation and State Transition,Human-Centric,Multiple-Select
+audit-0105,pc-0253,5312,spFoINSFQOs_70_0_08_18_414_to_0_08_43_397.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,Single-Choice
+audit-0106,pc-0592,9115,g4LGbQmbEvs_58_0_08_41_520_to_0_08_53_933.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,True/False
+audit-0107,pc-0469,6454,fRmaPWqByGw_25_0_05_06_560_to_0_05_41_199.mp4,5,Object Deformation and State Transition,Object-Centric,Fill-in-the-Blank
+audit-0108,pc-0057,4585,TyUnJy4z5Mw_305_0_45_56_440_to_0_46_07_519.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,Single-Choice
+audit-0109,pc-0203,69,cTkVOgySCi0_61_0_13_15_427_to_0_13_28_841.mp4,3,Action and Intent-Driven Spatial Reasoning,Human-Centric,True/False
+audit-0110,pc-0476,7402,j4jcztT_3O0_30_0_06_10_966_to_0_06_24_133.mp4,5,Object Deformation and State Transition,Human-Centric,Single-Choice
+audit-0111,pc-0343,3681,VcazxZahLN0_5_0_01_18_840_to_0_01_50_040.mp4,4,Predictive and Counterfactual Spatial Reasoning,Object-Centric,Single-Choice
+audit-0112,pc-0426,3460,SCub0dBSVPo_14_0_04_28_201_to_0_04_40_580.mp4,5,Object Deformation and State Transition,Object-Centric,Multiple-Select
+audit-0113,pc-0094,9339,pFawXXbi7oY_4_0_00_36_302_to_0_00_47_747.mp4,1,Object Permanence and Occlusion Tracking,Object-Centric,True/False
+audit-0114,pc-0043,3639,V8W4h8DBuWQ_29_0_04_59_766_to_0_05_12_145.mp4,1,Object Permanence and Occlusion Tracking,Human-Centric,True/False
+audit-0115,pc-0458,6024,WzdoAuzWa4E_21_0_03_58_071_to_0_04_12_852.mp4,5,Object Deformation and State Transition,Human-Centric,Multiple-Select
+audit-0116,pc-0325,2284,cvHz5JgkzlM_41_0_06_01_094_to_0_06_15_742.mp4,4,Predictive and Counterfactual Spatial Reasoning,Human-Centric,Single-Choice
+audit-0117,pc-0378,5457,ui-qeIZyyRQ_18_0_05_34_233_to_0_06_39_399.mp4,4,Predictive and Counterfactual Spatial Reasoning,Object-Centric,Single-Choice
+audit-0118,pc-0525,2125,WNQBYA5gC5c_1_0_00_05_171_to_0_00_16_383.mp4,6,Egocentric vs. Allocentric Reference Frames,Object-Centric,True/False
+audit-0119,pc-0511,588,WrTTfmkKQsM_46_0_08_03_524_to_0_08_15_119.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,Single-Choice
+audit-0120,pc-0577,6632,odcmK3Int58_6_0_01_22_282_to_0_01_50_877.mp4,6,Egocentric vs. Allocentric Reference Frames,Human-Centric,Fill-in-the-Blank

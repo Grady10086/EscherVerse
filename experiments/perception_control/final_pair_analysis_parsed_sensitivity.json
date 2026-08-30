@@ -1,0 +1,1742 @@
+{
+  "status": "provisional_unreviewed_control_ground_truth",
+  "scoring_mode": "parsed_answer_including_max_token_rows",
+  "models": [
+    {
+      "model": "InternVL3-2B",
+      "n": 200,
+      "conservative_max_tokens_as_incorrect": false,
+      "max_token_rows": {
+        "control": 0,
+        "original": 1
+      },
+      "control_accuracy": {
+        "successes": 151,
+        "total": 200,
+        "accuracy": 0.755,
+        "wilson_95_ci": [
+          0.6909575644379659,
+          0.8094313191096282
+        ]
+      },
+      "original_tsi_accuracy": {
+        "successes": 78,
+        "total": 200,
+        "accuracy": 0.39,
+        "wilson_95_ci": [
+          0.32508343137469625,
+          0.45906254042830247
+        ]
+      },
+      "accuracy_gap_control_minus_original": 0.365,
+      "conditional_original_accuracy_given_control_pass": {
+        "successes": 59,
+        "total": 151,
+        "accuracy": 0.39072847682119205,
+        "wilson_95_ci": [
+          0.3165409622035034,
+          0.4703378217388909
+        ]
+      },
+      "paired_2x2": {
+        "control_correct_original_correct": 59,
+        "control_correct_original_wrong": 92,
+        "control_wrong_original_correct": 19,
+        "control_wrong_original_wrong": 30
+      },
+      "exact_mcnemar_p": 1.1236121882237838e-12,
+      "control_by_type": {
+        "action_event": {
+          "successes": 53,
+          "total": 67,
+          "accuracy": 0.7910447761194029,
+          "wilson_95_ci": [
+            0.6792819349311753,
+            0.8712431481097088
+          ]
+        },
+        "entity": {
+          "successes": 62,
+          "total": 67,
+          "accuracy": 0.9253731343283582,
+          "wilson_95_ci": [
+            0.8369096320722301,
+            0.9677039508336774
+          ]
+        },
+        "simple_relation": {
+          "successes": 36,
+          "total": 66,
+          "accuracy": 0.5454545454545454,
+          "wilson_95_ci": [
+            0.42615011343389175,
+            0.6597587450194226
+          ]
+        }
+      },
+      "control_by_subtype": {
+        "action_recognition": {
+          "successes": 32,
+          "total": 34,
+          "accuracy": 0.9411764705882353,
+          "wilson_95_ci": [
+            0.8090639309571901,
+            0.9837173447898773
+          ]
+        },
+        "object_actor_presence": {
+          "successes": 62,
+          "total": 67,
+          "accuracy": 0.9253731343283582,
+          "wilson_95_ci": [
+            0.8369096320722301,
+            0.9677039508336774
+          ]
+        },
+        "orientation": {
+          "successes": 15,
+          "total": 33,
+          "accuracy": 0.45454545454545453,
+          "wilson_95_ci": [
+            0.2984293851387611,
+            0.6201406146378252
+          ]
+        },
+        "simple_spatial_relation": {
+          "successes": 21,
+          "total": 33,
+          "accuracy": 0.6363636363636364,
+          "wilson_95_ci": [
+            0.466161783022664,
+            0.7781282176475764
+          ]
+        },
+        "temporal_order": {
+          "successes": 21,
+          "total": 33,
+          "accuracy": 0.6363636363636364,
+          "wilson_95_ci": [
+            0.466161783022664,
+            0.7781282176475764
+          ]
+        }
+      },
+      "by_original_category": {
+        "1": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 21,
+            "total": 34,
+            "accuracy": 0.6176470588235294,
+            "wilson_95_ci": [
+              0.450410173444307,
+              0.7609981667549109
+            ]
+          },
+          "original_accuracy": {
+            "successes": 12,
+            "total": 34,
+            "accuracy": 0.35294117647058826,
+            "wilson_95_ci": [
+              0.21487920594879506,
+              0.5208603688021827
+            ]
+          }
+        },
+        "2": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 30,
+            "total": 34,
+            "accuracy": 0.8823529411764706,
+            "wilson_95_ci": [
+              0.7337915722962817,
+              0.9532855333511766
+            ]
+          },
+          "original_accuracy": {
+            "successes": 9,
+            "total": 34,
+            "accuracy": 0.2647058823529412,
+            "wilson_95_ci": [
+              0.14601190677211753,
+              0.4311714128294467
+            ]
+          }
+        },
+        "3": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 27,
+            "total": 33,
+            "accuracy": 0.8181818181818182,
+            "wilson_95_ci": [
+              0.6561176836533009,
+              0.9138923179105933
+            ]
+          },
+          "original_accuracy": {
+            "successes": 18,
+            "total": 33,
+            "accuracy": 0.5454545454545454,
+            "wilson_95_ci": [
+              0.3798593853621746,
+              0.7015706148612388
+            ]
+          }
+        },
+        "4": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 26,
+            "total": 33,
+            "accuracy": 0.7878787878787878,
+            "wilson_95_ci": [
+              0.6224835500784931,
+              0.8932397846697919
+            ]
+          },
+          "original_accuracy": {
+            "successes": 10,
+            "total": 33,
+            "accuracy": 0.30303030303030304,
+            "wilson_95_ci": [
+              0.17375531424053603,
+              0.47338135145800564
+            ]
+          }
+        },
+        "5": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 23,
+            "total": 33,
+            "accuracy": 0.696969696969697,
+            "wilson_95_ci": [
+              0.5266186485419944,
+              0.8262446857594641
+            ]
+          },
+          "original_accuracy": {
+            "successes": 14,
+            "total": 33,
+            "accuracy": 0.42424242424242425,
+            "wilson_95_ci": [
+              0.27235596633410203,
+              0.5919273666268754
+            ]
+          }
+        },
+        "6": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 24,
+            "total": 33,
+            "accuracy": 0.7272727272727273,
+            "wilson_95_ci": [
+              0.5578244099712737,
+              0.8493255911457935
+            ]
+          },
+          "original_accuracy": {
+            "successes": 15,
+            "total": 33,
+            "accuracy": 0.45454545454545453,
+            "wilson_95_ci": [
+              0.2984293851387611,
+              0.6201406146378252
+            ]
+          }
+        }
+      }
+    },
+    {
+      "model": "Qwen3-VL-2B-Instruct",
+      "n": 200,
+      "conservative_max_tokens_as_incorrect": false,
+      "max_token_rows": {
+        "control": 4,
+        "original": 2
+      },
+      "control_accuracy": {
+        "successes": 81,
+        "total": 200,
+        "accuracy": 0.405,
+        "wilson_95_ci": [
+          0.3393777128250677,
+          0.47420289918661307
+        ]
+      },
+      "original_tsi_accuracy": {
+        "successes": 76,
+        "total": 200,
+        "accuracy": 0.38,
+        "wilson_95_ci": [
+          0.31559005848673627,
+          0.44893281984380773
+        ]
+      },
+      "accuracy_gap_control_minus_original": 0.025,
+      "conditional_original_accuracy_given_control_pass": {
+        "successes": 31,
+        "total": 81,
+        "accuracy": 0.38271604938271603,
+        "wilson_95_ci": [
+          0.28446535970964626,
+          0.491587524527587
+        ]
+      },
+      "paired_2x2": {
+        "control_correct_original_correct": 31,
+        "control_correct_original_wrong": 50,
+        "control_wrong_original_correct": 45,
+        "control_wrong_original_wrong": 74
+      },
+      "exact_mcnemar_p": 0.6817425059181855,
+      "control_by_type": {
+        "action_event": {
+          "successes": 29,
+          "total": 67,
+          "accuracy": 0.43283582089552236,
+          "wilson_95_ci": [
+            0.3210431149754175,
+            0.5519126350920709
+          ]
+        },
+        "entity": {
+          "successes": 25,
+          "total": 67,
+          "accuracy": 0.373134328358209,
+          "wilson_95_ci": [
+            0.2671815998117199,
+            0.49284592809353595
+          ]
+        },
+        "simple_relation": {
+          "successes": 27,
+          "total": 66,
+          "accuracy": 0.4090909090909091,
+          "wilson_95_ci": [
+            0.2986741800934038,
+            0.5295081029999674
+          ]
+        }
+      },
+      "control_by_subtype": {
+        "action_recognition": {
+          "successes": 17,
+          "total": 34,
+          "accuracy": 0.5,
+          "wilson_95_ci": [
+            0.340693256456825,
+            0.659306743543175
+          ]
+        },
+        "object_actor_presence": {
+          "successes": 25,
+          "total": 67,
+          "accuracy": 0.373134328358209,
+          "wilson_95_ci": [
+            0.2671815998117199,
+            0.49284592809353595
+          ]
+        },
+        "orientation": {
+          "successes": 15,
+          "total": 33,
+          "accuracy": 0.45454545454545453,
+          "wilson_95_ci": [
+            0.2984293851387611,
+            0.6201406146378252
+          ]
+        },
+        "simple_spatial_relation": {
+          "successes": 12,
+          "total": 33,
+          "accuracy": 0.36363636363636365,
+          "wilson_95_ci": [
+            0.22187178235242364,
+            0.533838216977336
+          ]
+        },
+        "temporal_order": {
+          "successes": 12,
+          "total": 33,
+          "accuracy": 0.36363636363636365,
+          "wilson_95_ci": [
+            0.22187178235242364,
+            0.533838216977336
+          ]
+        }
+      },
+      "by_original_category": {
+        "1": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 10,
+            "total": 34,
+            "accuracy": 0.29411764705882354,
+            "wilson_95_ci": [
+              0.1683463067042243,
+              0.46168909794714436
+            ]
+          },
+          "original_accuracy": {
+            "successes": 13,
+            "total": 34,
+            "accuracy": 0.38235294117647056,
+            "wilson_95_ci": [
+              0.239001833245089,
+              0.5495898265556929
+            ]
+          }
+        },
+        "2": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 12,
+            "total": 34,
+            "accuracy": 0.35294117647058826,
+            "wilson_95_ci": [
+              0.21487920594879506,
+              0.5208603688021827
+            ]
+          },
+          "original_accuracy": {
+            "successes": 11,
+            "total": 34,
+            "accuracy": 0.3235294117647059,
+            "wilson_95_ci": [
+              0.1913164356402552,
+              0.491571054060918
+            ]
+          }
+        },
+        "3": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 17,
+            "total": 33,
+            "accuracy": 0.5151515151515151,
+            "wilson_95_ci": [
+              0.3521837544891414,
+              0.674959578918663
+            ]
+          },
+          "original_accuracy": {
+            "successes": 11,
+            "total": 33,
+            "accuracy": 0.3333333333333333,
+            "wilson_95_ci": [
+              0.19750227679220683,
+              0.5039210557219438
+            ]
+          }
+        },
+        "4": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 16,
+            "total": 33,
+            "accuracy": 0.48484848484848486,
+            "wilson_95_ci": [
+              0.325040421081337,
+              0.6478162455108585
+            ]
+          },
+          "original_accuracy": {
+            "successes": 14,
+            "total": 33,
+            "accuracy": 0.42424242424242425,
+            "wilson_95_ci": [
+              0.27235596633410203,
+              0.5919273666268754
+            ]
+          }
+        },
+        "5": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 11,
+            "total": 33,
+            "accuracy": 0.3333333333333333,
+            "wilson_95_ci": [
+              0.19750227679220683,
+              0.5039210557219438
+            ]
+          },
+          "original_accuracy": {
+            "successes": 12,
+            "total": 33,
+            "accuracy": 0.36363636363636365,
+            "wilson_95_ci": [
+              0.22187178235242364,
+              0.533838216977336
+            ]
+          }
+        },
+        "6": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 15,
+            "total": 33,
+            "accuracy": 0.45454545454545453,
+            "wilson_95_ci": [
+              0.2984293851387611,
+              0.6201406146378252
+            ]
+          },
+          "original_accuracy": {
+            "successes": 15,
+            "total": 33,
+            "accuracy": 0.45454545454545453,
+            "wilson_95_ci": [
+              0.2984293851387611,
+              0.6201406146378252
+            ]
+          }
+        }
+      }
+    },
+    {
+      "model": "Qwen3-VL-8B-Instruct",
+      "n": 200,
+      "conservative_max_tokens_as_incorrect": false,
+      "max_token_rows": {
+        "control": 0,
+        "original": 0
+      },
+      "control_accuracy": {
+        "successes": 162,
+        "total": 200,
+        "accuracy": 0.81,
+        "wilson_95_ci": [
+          0.7499876129240015,
+          0.8583282847220932
+        ]
+      },
+      "original_tsi_accuracy": {
+        "successes": 88,
+        "total": 200,
+        "accuracy": 0.44,
+        "wilson_95_ci": [
+          0.37297819251185865,
+          0.5092832466534133
+        ]
+      },
+      "accuracy_gap_control_minus_original": 0.37,
+      "conditional_original_accuracy_given_control_pass": {
+        "successes": 69,
+        "total": 162,
+        "accuracy": 0.42592592592592593,
+        "wilson_95_ci": [
+          0.3523642022129436,
+          0.5029192705045236
+        ]
+      },
+      "paired_2x2": {
+        "control_correct_original_correct": 69,
+        "control_correct_original_wrong": 93,
+        "control_wrong_original_correct": 19,
+        "control_wrong_original_wrong": 19
+      },
+      "exact_mcnemar_p": 6.74813608304086e-13,
+      "control_by_type": {
+        "action_event": {
+          "successes": 51,
+          "total": 67,
+          "accuracy": 0.7611940298507462,
+          "wilson_95_ci": [
+            0.6467423624446971,
+            0.8473186095150707
+          ]
+        },
+        "entity": {
+          "successes": 64,
+          "total": 67,
+          "accuracy": 0.9552238805970149,
+          "wilson_95_ci": [
+            0.8764216691090624,
+            0.9846560248779613
+          ]
+        },
+        "simple_relation": {
+          "successes": 47,
+          "total": 66,
+          "accuracy": 0.7121212121212122,
+          "wilson_95_ci": [
+            0.5936275059135346,
+            0.8072805002019329
+          ]
+        }
+      },
+      "control_by_subtype": {
+        "action_recognition": {
+          "successes": 30,
+          "total": 34,
+          "accuracy": 0.8823529411764706,
+          "wilson_95_ci": [
+            0.7337915722962817,
+            0.9532855333511766
+          ]
+        },
+        "object_actor_presence": {
+          "successes": 64,
+          "total": 67,
+          "accuracy": 0.9552238805970149,
+          "wilson_95_ci": [
+            0.8764216691090624,
+            0.9846560248779613
+          ]
+        },
+        "orientation": {
+          "successes": 22,
+          "total": 33,
+          "accuracy": 0.6666666666666666,
+          "wilson_95_ci": [
+            0.49607894427805616,
+            0.802497723207793
+          ]
+        },
+        "simple_spatial_relation": {
+          "successes": 25,
+          "total": 33,
+          "accuracy": 0.7575757575757576,
+          "wilson_95_ci": [
+            0.5897538017044264,
+            0.8716828662282499
+          ]
+        },
+        "temporal_order": {
+          "successes": 21,
+          "total": 33,
+          "accuracy": 0.6363636363636364,
+          "wilson_95_ci": [
+            0.466161783022664,
+            0.7781282176475764
+          ]
+        }
+      },
+      "by_original_category": {
+        "1": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 26,
+            "total": 34,
+            "accuracy": 0.7647058823529411,
+            "wilson_95_ci": [
+              0.6000386207746362,
+              0.8756301446736041
+            ]
+          },
+          "original_accuracy": {
+            "successes": 17,
+            "total": 34,
+            "accuracy": 0.5,
+            "wilson_95_ci": [
+              0.340693256456825,
+              0.659306743543175
+            ]
+          }
+        },
+        "2": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 29,
+            "total": 34,
+            "accuracy": 0.8529411764705882,
+            "wilson_95_ci": [
+              0.6987194350454784,
+              0.9355055855521754
+            ]
+          },
+          "original_accuracy": {
+            "successes": 13,
+            "total": 34,
+            "accuracy": 0.38235294117647056,
+            "wilson_95_ci": [
+              0.239001833245089,
+              0.5495898265556929
+            ]
+          }
+        },
+        "3": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 28,
+            "total": 33,
+            "accuracy": 0.8484848484848485,
+            "wilson_95_ci": [
+              0.6908012411955788,
+              0.9334954271839244
+            ]
+          },
+          "original_accuracy": {
+            "successes": 17,
+            "total": 33,
+            "accuracy": 0.5151515151515151,
+            "wilson_95_ci": [
+              0.3521837544891414,
+              0.674959578918663
+            ]
+          }
+        },
+        "4": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 30,
+            "total": 33,
+            "accuracy": 0.9090909090909091,
+            "wilson_95_ci": [
+              0.7642739435353028,
+              0.9685960584754183
+            ]
+          },
+          "original_accuracy": {
+            "successes": 12,
+            "total": 33,
+            "accuracy": 0.36363636363636365,
+            "wilson_95_ci": [
+              0.22187178235242364,
+              0.533838216977336
+            ]
+          }
+        },
+        "5": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 23,
+            "total": 33,
+            "accuracy": 0.696969696969697,
+            "wilson_95_ci": [
+              0.5266186485419944,
+              0.8262446857594641
+            ]
+          },
+          "original_accuracy": {
+            "successes": 19,
+            "total": 33,
+            "accuracy": 0.5757575757575758,
+            "wilson_95_ci": [
+              0.4080726333731245,
+              0.7276440336658979
+            ]
+          }
+        },
+        "6": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 26,
+            "total": 33,
+            "accuracy": 0.7878787878787878,
+            "wilson_95_ci": [
+              0.6224835500784931,
+              0.8932397846697919
+            ]
+          },
+          "original_accuracy": {
+            "successes": 10,
+            "total": 33,
+            "accuracy": 0.30303030303030304,
+            "wilson_95_ci": [
+              0.17375531424053603,
+              0.47338135145800564
+            ]
+          }
+        }
+      }
+    },
+    {
+      "model": "Qwen2.5-VL-7B-Instruct",
+      "n": 200,
+      "conservative_max_tokens_as_incorrect": false,
+      "max_token_rows": {
+        "control": 0,
+        "original": 0
+      },
+      "control_accuracy": {
+        "successes": 141,
+        "total": 200,
+        "accuracy": 0.705,
+        "wilson_95_ci": [
+          0.6384128547538122,
+          0.7638605614315084
+        ]
+      },
+      "original_tsi_accuracy": {
+        "successes": 76,
+        "total": 200,
+        "accuracy": 0.38,
+        "wilson_95_ci": [
+          0.31559005848673627,
+          0.44893281984380773
+        ]
+      },
+      "accuracy_gap_control_minus_original": 0.325,
+      "conditional_original_accuracy_given_control_pass": {
+        "successes": 58,
+        "total": 141,
+        "accuracy": 0.41134751773049644,
+        "wilson_95_ci": [
+          0.33352679724010953,
+          0.4938706882343454
+        ]
+      },
+      "paired_2x2": {
+        "control_correct_original_correct": 58,
+        "control_correct_original_wrong": 83,
+        "control_wrong_original_correct": 18,
+        "control_wrong_original_wrong": 41
+      },
+      "exact_mcnemar_p": 3.7288032400274995e-11,
+      "control_by_type": {
+        "action_event": {
+          "successes": 50,
+          "total": 67,
+          "accuracy": 0.746268656716418,
+          "wilson_95_ci": [
+            0.6307080546049992,
+            0.8351208618142105
+          ]
+        },
+        "entity": {
+          "successes": 58,
+          "total": 67,
+          "accuracy": 0.8656716417910447,
+          "wilson_95_ci": [
+            0.7639962773866297,
+            0.9276890833570451
+          ]
+        },
+        "simple_relation": {
+          "successes": 33,
+          "total": 66,
+          "accuracy": 0.5,
+          "wilson_95_ci": [
+            0.3827368802505011,
+            0.6172631197494989
+          ]
+        }
+      },
+      "control_by_subtype": {
+        "action_recognition": {
+          "successes": 29,
+          "total": 34,
+          "accuracy": 0.8529411764705882,
+          "wilson_95_ci": [
+            0.6987194350454784,
+            0.9355055855521754
+          ]
+        },
+        "object_actor_presence": {
+          "successes": 58,
+          "total": 67,
+          "accuracy": 0.8656716417910447,
+          "wilson_95_ci": [
+            0.7639962773866297,
+            0.9276890833570451
+          ]
+        },
+        "orientation": {
+          "successes": 16,
+          "total": 33,
+          "accuracy": 0.48484848484848486,
+          "wilson_95_ci": [
+            0.325040421081337,
+            0.6478162455108585
+          ]
+        },
+        "simple_spatial_relation": {
+          "successes": 17,
+          "total": 33,
+          "accuracy": 0.5151515151515151,
+          "wilson_95_ci": [
+            0.3521837544891414,
+            0.674959578918663
+          ]
+        },
+        "temporal_order": {
+          "successes": 21,
+          "total": 33,
+          "accuracy": 0.6363636363636364,
+          "wilson_95_ci": [
+            0.466161783022664,
+            0.7781282176475764
+          ]
+        }
+      },
+      "by_original_category": {
+        "1": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 25,
+            "total": 34,
+            "accuracy": 0.7352941176470589,
+            "wilson_95_ci": [
+              0.5688285871705535,
+              0.8539880932278826
+            ]
+          },
+          "original_accuracy": {
+            "successes": 15,
+            "total": 34,
+            "accuracy": 0.4411764705882353,
+            "wilson_95_ci": [
+              0.2888348224624217,
+              0.6054610074379694
+            ]
+          }
+        },
+        "2": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 24,
+            "total": 34,
+            "accuracy": 0.7058823529411765,
+            "wilson_95_ci": [
+              0.5383109020528557,
+              0.8316536932957758
+            ]
+          },
+          "original_accuracy": {
+            "successes": 12,
+            "total": 34,
+            "accuracy": 0.35294117647058826,
+            "wilson_95_ci": [
+              0.21487920594879506,
+              0.5208603688021827
+            ]
+          }
+        },
+        "3": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 22,
+            "total": 33,
+            "accuracy": 0.6666666666666666,
+            "wilson_95_ci": [
+              0.49607894427805616,
+              0.802497723207793
+            ]
+          },
+          "original_accuracy": {
+            "successes": 11,
+            "total": 33,
+            "accuracy": 0.3333333333333333,
+            "wilson_95_ci": [
+              0.19750227679220683,
+              0.5039210557219438
+            ]
+          }
+        },
+        "4": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 23,
+            "total": 33,
+            "accuracy": 0.696969696969697,
+            "wilson_95_ci": [
+              0.5266186485419944,
+              0.8262446857594641
+            ]
+          },
+          "original_accuracy": {
+            "successes": 12,
+            "total": 33,
+            "accuracy": 0.36363636363636365,
+            "wilson_95_ci": [
+              0.22187178235242364,
+              0.533838216977336
+            ]
+          }
+        },
+        "5": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 23,
+            "total": 33,
+            "accuracy": 0.696969696969697,
+            "wilson_95_ci": [
+              0.5266186485419944,
+              0.8262446857594641
+            ]
+          },
+          "original_accuracy": {
+            "successes": 13,
+            "total": 33,
+            "accuracy": 0.3939393939393939,
+            "wilson_95_ci": [
+              0.24683107434477095,
+              0.5631655918005977
+            ]
+          }
+        },
+        "6": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 24,
+            "total": 33,
+            "accuracy": 0.7272727272727273,
+            "wilson_95_ci": [
+              0.5578244099712737,
+              0.8493255911457935
+            ]
+          },
+          "original_accuracy": {
+            "successes": 13,
+            "total": 33,
+            "accuracy": 0.3939393939393939,
+            "wilson_95_ci": [
+              0.24683107434477095,
+              0.5631655918005977
+            ]
+          }
+        }
+      }
+    },
+    {
+      "model": "Qwen3-VL-8B-Thinking",
+      "n": 200,
+      "conservative_max_tokens_as_incorrect": false,
+      "max_token_rows": {
+        "control": 14,
+        "original": 84
+      },
+      "control_accuracy": {
+        "successes": 170,
+        "total": 200,
+        "accuracy": 0.85,
+        "wilson_95_ci": [
+          0.7939442071583334,
+          0.89286406437758
+        ]
+      },
+      "original_tsi_accuracy": {
+        "successes": 82,
+        "total": 200,
+        "accuracy": 0.41,
+        "wilson_95_ci": [
+          0.34415674908482885,
+          0.4792354096630791
+        ]
+      },
+      "accuracy_gap_control_minus_original": 0.44,
+      "conditional_original_accuracy_given_control_pass": {
+        "successes": 70,
+        "total": 170,
+        "accuracy": 0.4117647058823529,
+        "wilson_95_ci": [
+          0.34052887495637685,
+          0.48690009277368007
+        ]
+      },
+      "paired_2x2": {
+        "control_correct_original_correct": 70,
+        "control_correct_original_wrong": 100,
+        "control_wrong_original_correct": 12,
+        "control_wrong_original_wrong": 18
+      },
+      "exact_mcnemar_p": 1.9275817215653924e-18,
+      "control_by_type": {
+        "action_event": {
+          "successes": 53,
+          "total": 67,
+          "accuracy": 0.7910447761194029,
+          "wilson_95_ci": [
+            0.6792819349311753,
+            0.8712431481097088
+          ]
+        },
+        "entity": {
+          "successes": 63,
+          "total": 67,
+          "accuracy": 0.9402985074626866,
+          "wilson_95_ci": [
+            0.8563049895862848,
+            0.976540648860181
+          ]
+        },
+        "simple_relation": {
+          "successes": 54,
+          "total": 66,
+          "accuracy": 0.8181818181818182,
+          "wilson_95_ci": [
+            0.7085480732292817,
+            0.8928139359439196
+          ]
+        }
+      },
+      "control_by_subtype": {
+        "action_recognition": {
+          "successes": 32,
+          "total": 34,
+          "accuracy": 0.9411764705882353,
+          "wilson_95_ci": [
+            0.8090639309571901,
+            0.9837173447898773
+          ]
+        },
+        "object_actor_presence": {
+          "successes": 63,
+          "total": 67,
+          "accuracy": 0.9402985074626866,
+          "wilson_95_ci": [
+            0.8563049895862848,
+            0.976540648860181
+          ]
+        },
+        "orientation": {
+          "successes": 25,
+          "total": 33,
+          "accuracy": 0.7575757575757576,
+          "wilson_95_ci": [
+            0.5897538017044264,
+            0.8716828662282499
+          ]
+        },
+        "simple_spatial_relation": {
+          "successes": 29,
+          "total": 33,
+          "accuracy": 0.8787878787878788,
+          "wilson_95_ci": [
+            0.7267449482892476,
+            0.9518383869058644
+          ]
+        },
+        "temporal_order": {
+          "successes": 21,
+          "total": 33,
+          "accuracy": 0.6363636363636364,
+          "wilson_95_ci": [
+            0.466161783022664,
+            0.7781282176475764
+          ]
+        }
+      },
+      "by_original_category": {
+        "1": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 30,
+            "total": 34,
+            "accuracy": 0.8823529411764706,
+            "wilson_95_ci": [
+              0.7337915722962817,
+              0.9532855333511766
+            ]
+          },
+          "original_accuracy": {
+            "successes": 11,
+            "total": 34,
+            "accuracy": 0.3235294117647059,
+            "wilson_95_ci": [
+              0.1913164356402552,
+              0.491571054060918
+            ]
+          }
+        },
+        "2": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 30,
+            "total": 34,
+            "accuracy": 0.8823529411764706,
+            "wilson_95_ci": [
+              0.7337915722962817,
+              0.9532855333511766
+            ]
+          },
+          "original_accuracy": {
+            "successes": 7,
+            "total": 34,
+            "accuracy": 0.20588235294117646,
+            "wilson_95_ci": [
+              0.10349526899031919,
+              0.367983880511636
+            ]
+          }
+        },
+        "3": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 29,
+            "total": 33,
+            "accuracy": 0.8787878787878788,
+            "wilson_95_ci": [
+              0.7267449482892476,
+              0.9518383869058644
+            ]
+          },
+          "original_accuracy": {
+            "successes": 18,
+            "total": 33,
+            "accuracy": 0.5454545454545454,
+            "wilson_95_ci": [
+              0.3798593853621746,
+              0.7015706148612388
+            ]
+          }
+        },
+        "4": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 28,
+            "total": 33,
+            "accuracy": 0.8484848484848485,
+            "wilson_95_ci": [
+              0.6908012411955788,
+              0.9334954271839244
+            ]
+          },
+          "original_accuracy": {
+            "successes": 10,
+            "total": 33,
+            "accuracy": 0.30303030303030304,
+            "wilson_95_ci": [
+              0.17375531424053603,
+              0.47338135145800564
+            ]
+          }
+        },
+        "5": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 26,
+            "total": 33,
+            "accuracy": 0.7878787878787878,
+            "wilson_95_ci": [
+              0.6224835500784931,
+              0.8932397846697919
+            ]
+          },
+          "original_accuracy": {
+            "successes": 21,
+            "total": 33,
+            "accuracy": 0.6363636363636364,
+            "wilson_95_ci": [
+              0.466161783022664,
+              0.7781282176475764
+            ]
+          }
+        },
+        "6": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 27,
+            "total": 33,
+            "accuracy": 0.8181818181818182,
+            "wilson_95_ci": [
+              0.6561176836533009,
+              0.9138923179105933
+            ]
+          },
+          "original_accuracy": {
+            "successes": 15,
+            "total": 33,
+            "accuracy": 0.45454545454545453,
+            "wilson_95_ci": [
+              0.2984293851387611,
+              0.6201406146378252
+            ]
+          }
+        }
+      }
+    },
+    {
+      "model": "Qwen3-VL-4B-Thinking",
+      "n": 200,
+      "conservative_max_tokens_as_incorrect": false,
+      "max_token_rows": {
+        "control": 9,
+        "original": 52
+      },
+      "control_accuracy": {
+        "successes": 173,
+        "total": 200,
+        "accuracy": 0.865,
+        "wilson_95_ci": [
+          0.8107086162924745,
+          0.9055342954521209
+        ]
+      },
+      "original_tsi_accuracy": {
+        "successes": 92,
+        "total": 200,
+        "accuracy": 0.46,
+        "wilson_95_ci": [
+          0.3923305179997147,
+          0.5291771081104666
+        ]
+      },
+      "accuracy_gap_control_minus_original": 0.405,
+      "conditional_original_accuracy_given_control_pass": {
+        "successes": 77,
+        "total": 173,
+        "accuracy": 0.44508670520231214,
+        "wilson_95_ci": [
+          0.37302267079723245,
+          0.5195364602645353
+        ]
+      },
+      "paired_2x2": {
+        "control_correct_original_correct": 77,
+        "control_correct_original_wrong": 96,
+        "control_wrong_original_correct": 15,
+        "control_wrong_original_wrong": 12
+      },
+      "exact_mcnemar_p": 1.235835714472334e-15,
+      "control_by_type": {
+        "action_event": {
+          "successes": 54,
+          "total": 67,
+          "accuracy": 0.8059701492537313,
+          "wilson_95_ci": [
+            0.6958088777455582,
+            0.8829482608358841
+          ]
+        },
+        "entity": {
+          "successes": 63,
+          "total": 67,
+          "accuracy": 0.9402985074626866,
+          "wilson_95_ci": [
+            0.8563049895862848,
+            0.976540648860181
+          ]
+        },
+        "simple_relation": {
+          "successes": 56,
+          "total": 66,
+          "accuracy": 0.8484848484848485,
+          "wilson_95_ci": [
+            0.7430709513021234,
+            0.9155636301732872
+          ]
+        }
+      },
+      "control_by_subtype": {
+        "action_recognition": {
+          "successes": 31,
+          "total": 34,
+          "accuracy": 0.9117647058823529,
+          "wilson_95_ci": [
+            0.7703951343719114,
+            0.9695340563253515
+          ]
+        },
+        "object_actor_presence": {
+          "successes": 63,
+          "total": 67,
+          "accuracy": 0.9402985074626866,
+          "wilson_95_ci": [
+            0.8563049895862848,
+            0.976540648860181
+          ]
+        },
+        "orientation": {
+          "successes": 25,
+          "total": 33,
+          "accuracy": 0.7575757575757576,
+          "wilson_95_ci": [
+            0.5897538017044264,
+            0.8716828662282499
+          ]
+        },
+        "simple_spatial_relation": {
+          "successes": 31,
+          "total": 33,
+          "accuracy": 0.9393939393939394,
+          "wilson_95_ci": [
+            0.803937551913522,
+            0.983219116912808
+          ]
+        },
+        "temporal_order": {
+          "successes": 23,
+          "total": 33,
+          "accuracy": 0.696969696969697,
+          "wilson_95_ci": [
+            0.5266186485419944,
+            0.8262446857594641
+          ]
+        }
+      },
+      "by_original_category": {
+        "1": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 30,
+            "total": 34,
+            "accuracy": 0.8823529411764706,
+            "wilson_95_ci": [
+              0.7337915722962817,
+              0.9532855333511766
+            ]
+          },
+          "original_accuracy": {
+            "successes": 13,
+            "total": 34,
+            "accuracy": 0.38235294117647056,
+            "wilson_95_ci": [
+              0.239001833245089,
+              0.5495898265556929
+            ]
+          }
+        },
+        "2": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 30,
+            "total": 34,
+            "accuracy": 0.8823529411764706,
+            "wilson_95_ci": [
+              0.7337915722962817,
+              0.9532855333511766
+            ]
+          },
+          "original_accuracy": {
+            "successes": 11,
+            "total": 34,
+            "accuracy": 0.3235294117647059,
+            "wilson_95_ci": [
+              0.1913164356402552,
+              0.491571054060918
+            ]
+          }
+        },
+        "3": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 30,
+            "total": 33,
+            "accuracy": 0.9090909090909091,
+            "wilson_95_ci": [
+              0.7642739435353028,
+              0.9685960584754183
+            ]
+          },
+          "original_accuracy": {
+            "successes": 14,
+            "total": 33,
+            "accuracy": 0.42424242424242425,
+            "wilson_95_ci": [
+              0.27235596633410203,
+              0.5919273666268754
+            ]
+          }
+        },
+        "4": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 30,
+            "total": 33,
+            "accuracy": 0.9090909090909091,
+            "wilson_95_ci": [
+              0.7642739435353028,
+              0.9685960584754183
+            ]
+          },
+          "original_accuracy": {
+            "successes": 12,
+            "total": 33,
+            "accuracy": 0.36363636363636365,
+            "wilson_95_ci": [
+              0.22187178235242364,
+              0.533838216977336
+            ]
+          }
+        },
+        "5": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 26,
+            "total": 33,
+            "accuracy": 0.7878787878787878,
+            "wilson_95_ci": [
+              0.6224835500784931,
+              0.8932397846697919
+            ]
+          },
+          "original_accuracy": {
+            "successes": 23,
+            "total": 33,
+            "accuracy": 0.696969696969697,
+            "wilson_95_ci": [
+              0.5266186485419944,
+              0.8262446857594641
+            ]
+          }
+        },
+        "6": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 27,
+            "total": 33,
+            "accuracy": 0.8181818181818182,
+            "wilson_95_ci": [
+              0.6561176836533009,
+              0.9138923179105933
+            ]
+          },
+          "original_accuracy": {
+            "successes": 19,
+            "total": 33,
+            "accuracy": 0.5757575757575758,
+            "wilson_95_ci": [
+              0.4080726333731245,
+              0.7276440336658979
+            ]
+          }
+        }
+      }
+    },
+    {
+      "model": "Qwen2.5-VL-32B-Instruct-AWQ",
+      "n": 200,
+      "conservative_max_tokens_as_incorrect": false,
+      "max_token_rows": {
+        "control": 0,
+        "original": 0
+      },
+      "control_accuracy": {
+        "successes": 167,
+        "total": 200,
+        "accuracy": 0.835,
+        "wilson_95_ci": [
+          0.7773421846094045,
+          0.8800314467178268
+        ]
+      },
+      "original_tsi_accuracy": {
+        "successes": 97,
+        "total": 200,
+        "accuracy": 0.485,
+        "wilson_95_ci": [
+          0.4166738517187752,
+          0.5538915080725428
+        ]
+      },
+      "accuracy_gap_control_minus_original": 0.35,
+      "conditional_original_accuracy_given_control_pass": {
+        "successes": 82,
+        "total": 167,
+        "accuracy": 0.49101796407185627,
+        "wilson_95_ci": [
+          0.4162558957192636,
+          0.566183963898485
+        ]
+      },
+      "paired_2x2": {
+        "control_correct_original_correct": 82,
+        "control_correct_original_wrong": 85,
+        "control_wrong_original_correct": 15,
+        "control_wrong_original_wrong": 18
+      },
+      "exact_mcnemar_p": 4.825421503937196e-13,
+      "control_by_type": {
+        "action_event": {
+          "successes": 56,
+          "total": 67,
+          "accuracy": 0.835820895522388,
+          "wilson_95_ci": [
+            0.7294473706077897,
+            0.9057738790547687
+          ]
+        },
+        "entity": {
+          "successes": 65,
+          "total": 67,
+          "accuracy": 0.9701492537313433,
+          "wilson_95_ci": [
+            0.89753444436648,
+            0.9917753051611021
+          ]
+        },
+        "simple_relation": {
+          "successes": 46,
+          "total": 66,
+          "accuracy": 0.696969696969697,
+          "wilson_95_ci": [
+            0.5778119305445574,
+            0.7944597894198052
+          ]
+        }
+      },
+      "control_by_subtype": {
+        "action_recognition": {
+          "successes": 31,
+          "total": 34,
+          "accuracy": 0.9117647058823529,
+          "wilson_95_ci": [
+            0.7703951343719114,
+            0.9695340563253515
+          ]
+        },
+        "object_actor_presence": {
+          "successes": 65,
+          "total": 67,
+          "accuracy": 0.9701492537313433,
+          "wilson_95_ci": [
+            0.89753444436648,
+            0.9917753051611021
+          ]
+        },
+        "orientation": {
+          "successes": 22,
+          "total": 33,
+          "accuracy": 0.6666666666666666,
+          "wilson_95_ci": [
+            0.49607894427805616,
+            0.802497723207793
+          ]
+        },
+        "simple_spatial_relation": {
+          "successes": 24,
+          "total": 33,
+          "accuracy": 0.7272727272727273,
+          "wilson_95_ci": [
+            0.5578244099712737,
+            0.8493255911457935
+          ]
+        },
+        "temporal_order": {
+          "successes": 25,
+          "total": 33,
+          "accuracy": 0.7575757575757576,
+          "wilson_95_ci": [
+            0.5897538017044264,
+            0.8716828662282499
+          ]
+        }
+      },
+      "by_original_category": {
+        "1": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 31,
+            "total": 34,
+            "accuracy": 0.9117647058823529,
+            "wilson_95_ci": [
+              0.7703951343719114,
+              0.9695340563253515
+            ]
+          },
+          "original_accuracy": {
+            "successes": 16,
+            "total": 34,
+            "accuracy": 0.47058823529411764,
+            "wilson_95_ci": [
+              0.31451504475088476,
+              0.6326328701993107
+            ]
+          }
+        },
+        "2": {
+          "n": 34,
+          "control_accuracy": {
+            "successes": 28,
+            "total": 34,
+            "accuracy": 0.8235294117647058,
+            "wilson_95_ci": [
+              0.6648626260015726,
+              0.9165103095462768
+            ]
+          },
+          "original_accuracy": {
+            "successes": 18,
+            "total": 34,
+            "accuracy": 0.5294117647058824,
+            "wilson_95_ci": [
+              0.3673671298006892,
+              0.6854849552491152
+            ]
+          }
+        },
+        "3": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 27,
+            "total": 33,
+            "accuracy": 0.8181818181818182,
+            "wilson_95_ci": [
+              0.6561176836533009,
+              0.9138923179105933
+            ]
+          },
+          "original_accuracy": {
+            "successes": 12,
+            "total": 33,
+            "accuracy": 0.36363636363636365,
+            "wilson_95_ci": [
+              0.22187178235242364,
+              0.533838216977336
+            ]
+          }
+        },
+        "4": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 26,
+            "total": 33,
+            "accuracy": 0.7878787878787878,
+            "wilson_95_ci": [
+              0.6224835500784931,
+              0.8932397846697919
+            ]
+          },
+          "original_accuracy": {
+            "successes": 10,
+            "total": 33,
+            "accuracy": 0.30303030303030304,
+            "wilson_95_ci": [
+              0.17375531424053603,
+              0.47338135145800564
+            ]
+          }
+        },
+        "5": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 28,
+            "total": 33,
+            "accuracy": 0.8484848484848485,
+            "wilson_95_ci": [
+              0.6908012411955788,
+              0.9334954271839244
+            ]
+          },
+          "original_accuracy": {
+            "successes": 25,
+            "total": 33,
+            "accuracy": 0.7575757575757576,
+            "wilson_95_ci": [
+              0.5897538017044264,
+              0.8716828662282499
+            ]
+          }
+        },
+        "6": {
+          "n": 33,
+          "control_accuracy": {
+            "successes": 27,
+            "total": 33,
+            "accuracy": 0.8181818181818182,
+            "wilson_95_ci": [
+              0.6561176836533009,
+              0.9138923179105933
+            ]
+          },
+          "original_accuracy": {
+            "successes": 16,
+            "total": 33,
+            "accuracy": 0.48484848484848486,
+            "wilson_95_ci": [
+              0.325040421081337,
+              0.6478162455108585
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

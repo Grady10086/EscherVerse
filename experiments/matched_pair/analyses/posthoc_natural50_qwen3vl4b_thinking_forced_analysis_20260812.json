@@ -1,0 +1,435 @@
+{
+  "analysis_scope": "posthoc_natural50_held_out_model_evaluation",
+  "benchmark_sha256": "a4cbe71c14bbb73cf4829b8c6a59c39cb9f4e6de46bbe32d426fe17f265b111b",
+  "bootstrap_iterations": 100000,
+  "candidate_pair_count": 50,
+  "candidate_pairs_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+  "interpretation": "the model was evaluated after the post-hoc 50-pair candidate set was frozen and did not participate in selection.",
+  "model": "Qwen3-VL-4B-Thinking-forced",
+  "nonstandard_gold_indices": [
+    5196,
+    5606
+  ],
+  "prediction_item_coverage": {
+    "covered": 100,
+    "missing_indices": [],
+    "required": 100
+  },
+  "prediction_provenance": {
+    "consistent_overlap_rows": 0,
+    "sources": [
+      {
+        "metadata": {
+          "changed_row_count": 1,
+          "data_path": "historical_internal/items_shard_0.json",
+          "data_sha256": "8c45e32295224722762bd176bab9b0d396fc490ab8b83d1901e533c0655f8a4a",
+          "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+          "force_hit_max_incorrect": true,
+          "max_tokens": 4096,
+          "model": "qwen3-vl-4b-thinking",
+          "model_path": "historical_internal/Qwen3-VL-4B-Thinking",
+          "num_frames": 16,
+          "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+          "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+          "rescore_protocol": "anchored-option-label-v2",
+          "rescored_at": "2026-08-12T10:38:31.600954+00:00",
+          "run_integrity": {
+            "complete": true,
+            "inference_errors": 0,
+            "input_items": 15,
+            "output_items": 15,
+            "unique_output_indices": 15
+          },
+          "source_result_path": "archived_workspace/experiments/matched_pair/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl4b_thinking_20260812/shard_0/results_qwen3-vl-4b-thinking_20260812_183213.json",
+          "source_result_sha256": "7d5a0bb239e066526cc001055fa857ca0907adf3b93806a57b6ec92161fa6902",
+          "timestamp": "2026-08-12T18:32:13.908289",
+          "total_items": 15,
+          "video_dir": "data/videos"
+        },
+        "path": "historical_internal/results/posthoc_natural50_qwen3vl4b_thinking_force_max_wrong_20260812/shard_0_results_qwen3-vl-4b-thinking_20260812_183213_rescored.json",
+        "rows": 15,
+        "sha256": "3b39142f85c17c3157c42f057228594cf33a543678bc2e000cb31d4b9b37afc4"
+      },
+      {
+        "metadata": {
+          "changed_row_count": 1,
+          "data_path": "historical_internal/items_shard_1.json",
+          "data_sha256": "063ea5da02b4e201beb22cfaf9e31e8c727b28304a3476d3478bdc1cf4bf97a6",
+          "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+          "force_hit_max_incorrect": true,
+          "max_tokens": 4096,
+          "model": "qwen3-vl-4b-thinking",
+          "model_path": "historical_internal/Qwen3-VL-4B-Thinking",
+          "num_frames": 16,
+          "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+          "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+          "rescore_protocol": "anchored-option-label-v2",
+          "rescored_at": "2026-08-12T10:38:31.604005+00:00",
+          "run_integrity": {
+            "complete": true,
+            "inference_errors": 0,
+            "input_items": 15,
+            "output_items": 15,
+            "unique_output_indices": 15
+          },
+          "source_result_path": "archived_workspace/experiments/matched_pair/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl4b_thinking_20260812/shard_1/results_qwen3-vl-4b-thinking_20260812_183042.json",
+          "source_result_sha256": "4ee311e8d58e78047559e691ceb6c3f3e4e0f6e433143b79914d30153739399a",
+          "timestamp": "2026-08-12T18:30:42.944890",
+          "total_items": 15,
+          "video_dir": "data/videos"
+        },
+        "path": "historical_internal/results/posthoc_natural50_qwen3vl4b_thinking_force_max_wrong_20260812/shard_1_results_qwen3-vl-4b-thinking_20260812_183042_rescored.json",
+        "rows": 15,
+        "sha256": "5ba5c47b9b45976569189476fe9449c512cd893b41bad61ebd6a0316e04fafe6"
+      },
+      {
+        "metadata": {
+          "changed_row_count": 2,
+          "data_path": "historical_internal/items_shard_2.json",
+          "data_sha256": "4b8d89ce85b516b667ddd362b163df3a322cc0b7faadf2f79376b89fc6f6357f",
+          "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+          "force_hit_max_incorrect": true,
+          "max_tokens": 4096,
+          "model": "qwen3-vl-4b-thinking",
+          "model_path": "historical_internal/Qwen3-VL-4B-Thinking",
+          "num_frames": 16,
+          "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+          "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+          "rescore_protocol": "anchored-option-label-v2",
+          "rescored_at": "2026-08-12T10:38:31.607149+00:00",
+          "run_integrity": {
+            "complete": true,
+            "inference_errors": 0,
+            "input_items": 14,
+            "output_items": 14,
+            "unique_output_indices": 14
+          },
+          "source_result_path": "archived_workspace/experiments/matched_pair/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl4b_thinking_20260812/shard_2/results_qwen3-vl-4b-thinking_20260812_183130.json",
+          "source_result_sha256": "1d52116be3c6d0b4f1f45c6314f23f46e5d17dd1d443232880c58aac05fa53c3",
+          "timestamp": "2026-08-12T18:31:30.001061",
+          "total_items": 14,
+          "video_dir": "data/videos"
+        },
+        "path": "historical_internal/results/posthoc_natural50_qwen3vl4b_thinking_force_max_wrong_20260812/shard_2_results_qwen3-vl-4b-thinking_20260812_183130_rescored.json",
+        "rows": 14,
+        "sha256": "7c320cd45ecc06d03d6eec7477cf4633ee251eb7b6c1ce52a3e5b2802e0ad84b"
+      },
+      {
+        "metadata": {
+          "changed_row_count": 2,
+          "data_path": "historical_internal/items_shard_3.json",
+          "data_sha256": "51ef004dfb66fa356a4ea501f59dba3fddb12b60f29f3da220e487e62c404a57",
+          "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+          "force_hit_max_incorrect": true,
+          "max_tokens": 4096,
+          "model": "qwen3-vl-4b-thinking",
+          "model_path": "historical_internal/Qwen3-VL-4B-Thinking",
+          "num_frames": 16,
+          "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+          "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+          "rescore_protocol": "anchored-option-label-v2",
+          "rescored_at": "2026-08-12T10:38:31.610846+00:00",
+          "run_integrity": {
+            "complete": true,
+            "inference_errors": 0,
+            "input_items": 14,
+            "output_items": 14,
+            "unique_output_indices": 14
+          },
+          "source_result_path": "archived_workspace/experiments/matched_pair/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl4b_thinking_20260812/shard_3/results_qwen3-vl-4b-thinking_20260812_183237.json",
+          "source_result_sha256": "b6616914d4109298a2b2471c2e2952529a9a874ef9b72b4ff4deb7aa6de02f69",
+          "timestamp": "2026-08-12T18:32:37.170147",
+          "total_items": 14,
+          "video_dir": "data/videos"
+        },
+        "path": "historical_internal/results/posthoc_natural50_qwen3vl4b_thinking_force_max_wrong_20260812/shard_3_results_qwen3-vl-4b-thinking_20260812_183237_rescored.json",
+        "rows": 14,
+        "sha256": "f1c10d57fd4de8b97e9bf08889d72633b4fc7d0a7926c81a162bd929370519e6"
+      },
+      {
+        "metadata": {
+          "changed_row_count": 3,
+          "data_path": "historical_internal/items_shard_4.json",
+          "data_sha256": "4741f8246e7d0bf82672156ed9a740201fbc5b031d375a1ac05f51bbe3636869",
+          "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+          "force_hit_max_incorrect": true,
+          "max_tokens": 4096,
+          "model": "qwen3-vl-4b-thinking",
+          "model_path": "historical_internal/Qwen3-VL-4B-Thinking",
+          "num_frames": 16,
+          "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+          "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+          "rescore_protocol": "anchored-option-label-v2",
+          "rescored_at": "2026-08-12T10:38:31.614221+00:00",
+          "run_integrity": {
+            "complete": true,
+            "inference_errors": 0,
+            "input_items": 14,
+            "output_items": 14,
+            "unique_output_indices": 14
+          },
+          "source_result_path": "archived_workspace/experiments/matched_pair/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl4b_thinking_20260812/shard_4/results_qwen3-vl-4b-thinking_20260812_183537.json",
+          "source_result_sha256": "14c00d60a394cc6d049ff8155ff724cde493c9cf5b86c01ca9660932e3fbd5ce",
+          "timestamp": "2026-08-12T18:35:37.675161",
+          "total_items": 14,
+          "video_dir": "data/videos"
+        },
+        "path": "historical_internal/results/posthoc_natural50_qwen3vl4b_thinking_force_max_wrong_20260812/shard_4_results_qwen3-vl-4b-thinking_20260812_183537_rescored.json",
+        "rows": 14,
+        "sha256": "6fea8ebd56fc024dd01bcd5402d9f48a2f4df86d3d09d365d6e9dc3b8b446ce4"
+      },
+      {
+        "metadata": {
+          "changed_row_count": 3,
+          "data_path": "historical_internal/items_shard_5.json",
+          "data_sha256": "5029a21c040eb0cc47e8ec03e407a4637e1eb20f16ba72fd510a80eaf9ad7641",
+          "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+          "force_hit_max_incorrect": true,
+          "max_tokens": 4096,
+          "model": "qwen3-vl-4b-thinking",
+          "model_path": "historical_internal/Qwen3-VL-4B-Thinking",
+          "num_frames": 16,
+          "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+          "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+          "rescore_protocol": "anchored-option-label-v2",
+          "rescored_at": "2026-08-12T10:38:31.619666+00:00",
+          "run_integrity": {
+            "complete": true,
+            "inference_errors": 0,
+            "input_items": 14,
+            "output_items": 14,
+            "unique_output_indices": 14
+          },
+          "source_result_path": "archived_workspace/experiments/matched_pair/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl4b_thinking_20260812/shard_5/results_qwen3-vl-4b-thinking_20260812_183331.json",
+          "source_result_sha256": "9ebfee416a71820920fc794b790765853cc9b9c0e9dfad8e344d2b039a9c3f22",
+          "timestamp": "2026-08-12T18:33:31.222020",
+          "total_items": 14,
+          "video_dir": "data/videos"
+        },
+        "path": "historical_internal/results/posthoc_natural50_qwen3vl4b_thinking_force_max_wrong_20260812/shard_5_results_qwen3-vl-4b-thinking_20260812_183331_rescored.json",
+        "rows": 14,
+        "sha256": "09108c51648427e4cd12a9fd13cc10459c635faccfabc0f957338d6ddd5e53d0"
+      },
+      {
+        "metadata": {
+          "changed_row_count": 3,
+          "data_path": "historical_internal/items_shard_6.json",
+          "data_sha256": "b9ac3aa12ef83eed86786b41ec1ea900a62f43eea55eafd893329478c80b5985",
+          "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+          "force_hit_max_incorrect": true,
+          "max_tokens": 4096,
+          "model": "qwen3-vl-4b-thinking",
+          "model_path": "historical_internal/Qwen3-VL-4B-Thinking",
+          "num_frames": 16,
+          "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+          "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+          "rescore_protocol": "anchored-option-label-v2",
+          "rescored_at": "2026-08-12T10:38:31.624299+00:00",
+          "run_integrity": {
+            "complete": true,
+            "inference_errors": 0,
+            "input_items": 14,
+            "output_items": 14,
+            "unique_output_indices": 14
+          },
+          "source_result_path": "archived_workspace/experiments/matched_pair/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl4b_thinking_20260812/shard_6/results_qwen3-vl-4b-thinking_20260812_183311.json",
+          "source_result_sha256": "cc104b4a44d17f0e6cfd5b848c2a762bdc3e7b8b9d0f85a4221c64180477ed44",
+          "timestamp": "2026-08-12T18:33:11.646778",
+          "total_items": 14,
+          "video_dir": "data/videos"
+        },
+        "path": "historical_internal/results/posthoc_natural50_qwen3vl4b_thinking_force_max_wrong_20260812/shard_6_results_qwen3-vl-4b-thinking_20260812_183311_rescored.json",
+        "rows": 14,
+        "sha256": "1d30d0496c8a70c8a91164687ad5fb8b11f3eceab9be21506f52ff6da7a40670"
+      }
+    ],
+    "unique_prediction_rows": 100
+  },
+  "reporting_guardrail": "This held-out model did not participate in candidate selection. Do not alter the frozen candidate set after viewing this result; retain the complete 100- and 254-pair analyses as the overall evidence.",
+  "schema_version": "same-video-additional-analysis-v1",
+  "seed": 20260812,
+  "subsets": {
+    "all_candidates": {
+      "a_correct_b_wrong": 12,
+      "a_correct_b_wrong_rate": 0.24,
+      "a_correct_count": 21,
+      "a_wrong_b_correct": 16,
+      "a_wrong_b_correct_rate": 0.32,
+      "arm_a_accuracy": 0.42,
+      "arm_b_accuracy": 0.5,
+      "b_wrong_given_a_correct_rate": 0.5714285714285714,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.5715881884098053,
+      "n_pairs": 50,
+      "paired_difference_b_minus_a": 0.08000000000000002,
+      "requested_pairs": 50,
+      "video_cluster_bootstrap_interval": [
+        -0.12,
+        0.28
+      ],
+      "video_cluster_sign_flip_p": 0.5709442905570944
+    },
+    "camera_vs_actor_goal": {
+      "a_correct_b_wrong": 4,
+      "a_correct_b_wrong_rate": 0.23529411764705882,
+      "a_correct_count": 8,
+      "a_wrong_b_correct": 6,
+      "a_wrong_b_correct_rate": 0.35294117647058826,
+      "arm_a_accuracy": 0.47058823529411764,
+      "arm_b_accuracy": 0.5882352941176471,
+      "b_wrong_given_a_correct_rate": 0.5,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.75390625,
+      "n_pairs": 17,
+      "paired_difference_b_minus_a": 0.11764705882352944,
+      "requested_pairs": 17,
+      "video_cluster_bootstrap_interval": [
+        -0.23529411764705882,
+        0.47058823529411764
+      ],
+      "video_cluster_sign_flip_p": 0.7538324616753832
+    },
+    "camera_vs_actor_goal_same_question_type": {
+      "a_correct_b_wrong": 1,
+      "a_correct_b_wrong_rate": 0.2,
+      "a_correct_count": 2,
+      "a_wrong_b_correct": 2,
+      "a_wrong_b_correct_rate": 0.4,
+      "arm_a_accuracy": 0.4,
+      "arm_b_accuracy": 0.6,
+      "b_wrong_given_a_correct_rate": 0.5,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 1.0,
+      "n_pairs": 5,
+      "paired_difference_b_minus_a": 0.19999999999999996,
+      "requested_pairs": 5,
+      "video_cluster_bootstrap_interval": [
+        -0.4,
+        0.8
+      ],
+      "video_cluster_sign_flip_p": 1.0
+    },
+    "dynamic_vs_intent": {
+      "a_correct_b_wrong": 3,
+      "a_correct_b_wrong_rate": 0.17647058823529413,
+      "a_correct_count": 5,
+      "a_wrong_b_correct": 7,
+      "a_wrong_b_correct_rate": 0.4117647058823529,
+      "arm_a_accuracy": 0.29411764705882354,
+      "arm_b_accuracy": 0.5294117647058824,
+      "b_wrong_given_a_correct_rate": 0.6,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.34375,
+      "n_pairs": 17,
+      "paired_difference_b_minus_a": 0.23529411764705882,
+      "requested_pairs": 17,
+      "video_cluster_bootstrap_interval": [
+        -0.11764705882352941,
+        0.5882352941176471
+      ],
+      "video_cluster_sign_flip_p": 0.33987660123398766
+    },
+    "dynamic_vs_intent_same_question_type": {
+      "a_correct_b_wrong": 0,
+      "a_correct_b_wrong_rate": 0.0,
+      "a_correct_count": 0,
+      "a_wrong_b_correct": 3,
+      "a_wrong_b_correct_rate": 0.6,
+      "arm_a_accuracy": 0.0,
+      "arm_b_accuracy": 0.6,
+      "b_wrong_given_a_correct_rate": null,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.25,
+      "n_pairs": 5,
+      "paired_difference_b_minus_a": 0.6,
+      "requested_pairs": 5,
+      "video_cluster_bootstrap_interval": [
+        0.2,
+        1.0
+      ],
+      "video_cluster_sign_flip_p": 0.24715752842471575
+    },
+    "same_question_type": {
+      "a_correct_b_wrong": 2,
+      "a_correct_b_wrong_rate": 0.14285714285714285,
+      "a_correct_count": 3,
+      "a_wrong_b_correct": 6,
+      "a_wrong_b_correct_rate": 0.42857142857142855,
+      "arm_a_accuracy": 0.21428571428571427,
+      "arm_b_accuracy": 0.5,
+      "b_wrong_given_a_correct_rate": 0.6666666666666666,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.2890625,
+      "n_pairs": 14,
+      "paired_difference_b_minus_a": 0.2857142857142857,
+      "requested_pairs": 14,
+      "video_cluster_bootstrap_interval": [
+        -0.07142857142857142,
+        0.6428571428571429
+      ],
+      "video_cluster_sign_flip_p": 0.28684713152868474
+    },
+    "standard_gold_format": {
+      "a_correct_b_wrong": 12,
+      "a_correct_b_wrong_rate": 0.25,
+      "a_correct_count": 21,
+      "a_wrong_b_correct": 15,
+      "a_wrong_b_correct_rate": 0.3125,
+      "arm_a_accuracy": 0.4375,
+      "arm_b_accuracy": 0.5,
+      "b_wrong_given_a_correct_rate": 0.5714285714285714,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.7011080384254456,
+      "n_pairs": 48,
+      "paired_difference_b_minus_a": 0.0625,
+      "requested_pairs": 48,
+      "video_cluster_bootstrap_interval": [
+        -0.14583333333333334,
+        0.2708333333333333
+      ],
+      "video_cluster_sign_flip_p": 0.7000429995700043
+    },
+    "tracking_vs_prediction": {
+      "a_correct_b_wrong": 5,
+      "a_correct_b_wrong_rate": 0.3125,
+      "a_correct_count": 8,
+      "a_wrong_b_correct": 3,
+      "a_wrong_b_correct_rate": 0.1875,
+      "arm_a_accuracy": 0.5,
+      "arm_b_accuracy": 0.375,
+      "b_wrong_given_a_correct_rate": 0.625,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.7265625,
+      "n_pairs": 16,
+      "paired_difference_b_minus_a": -0.125,
+      "requested_pairs": 16,
+      "video_cluster_bootstrap_interval": [
+        -0.4375,
+        0.1875
+      ],
+      "video_cluster_sign_flip_p": 0.7247727522724773
+    },
+    "tracking_vs_prediction_same_question_type": {
+      "a_correct_b_wrong": 1,
+      "a_correct_b_wrong_rate": 0.25,
+      "a_correct_count": 1,
+      "a_wrong_b_correct": 1,
+      "a_wrong_b_correct_rate": 0.25,
+      "arm_a_accuracy": 0.25,
+      "arm_b_accuracy": 0.25,
+      "b_wrong_given_a_correct_rate": 1.0,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 1.0,
+      "n_pairs": 4,
+      "paired_difference_b_minus_a": 0.0,
+      "requested_pairs": 4,
+      "video_cluster_bootstrap_interval": [
+        -0.75,
+        0.75
+      ],
+      "video_cluster_sign_flip_p": 1.0
+    }
+  },
+  "title": "Natural Near-Average 50-Pair Held-Out Model Analysis",
+  "unique_item_count": 100
+}

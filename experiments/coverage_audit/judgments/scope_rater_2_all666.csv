@@ -1,0 +1,667 @@
+scope_item_id,scope_status,primary_dimension,secondary_dimensions,confidence,reason_cn
+scope-0001,supporting_operation,C2_dynamic_spatial,,medium,对“第二个人的抄网最终位于鱼的下方吗？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0002,outside_scope,NONE,,high,对“驳船位于河岸建筑的前方还是后方？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0003,supporting_operation,C3_action_intent,,medium,对“女子先握住小鱼还是先让另一只手接近鱼钩？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0004,outside_scope,NONE,,high,对“输电线位于城市建筑上方吗？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0005,outside_scope,NONE,,high,对“三脚架位于沙发坐垫上还是地面上？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0006,directly_in_scope,C5_deformation_state,,high,对“按下启动键后仪表盘发生什么状态变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0007,supporting_operation,C2_dynamic_spatial,C6_reference_frame,medium,对“鱼最终位于船的哪一侧？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。；同时还需处理相机、行动者或对象参照。
+scope-0008,supporting_operation,C3_action_intent,C2_dynamic_spatial,medium,对“鱼进入抄网发生在收线之前还是之后？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0009,supporting_operation,C2_dynamic_spatial,,medium,对“他先经过照片墙还是先到达洗手间门口？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0010,directly_in_scope,C2_dynamic_spatial,,high,对“水翼板手在水面上是否保持离水滑行？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0011,supporting_operation,C2_dynamic_spatial,,medium,对“无人机降低高度后落在什么表面？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0012,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“黑马从侧向行进转为朝相机靠近了吗？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0013,supporting_operation,C2_dynamic_spatial,,medium,对“车辆先驶入主路还是先遇到红灯？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0014,supporting_operation,C6_reference_frame,,medium,对“摩托车驶过路口时向哪一侧转弯？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0015,supporting_operation,C2_dynamic_spatial,,medium,对“鱼从水下出现到被举起经历了什么顺序？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0016,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“白色汽车绕场地行驶时方向如何持续变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0017,directly_in_scope,C5_deformation_state,,high,对“发动机盖在整个片段中保持打开吗？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0018,directly_in_scope,C2_dynamic_spatial,,high,对“浪线相对沙滩边缘如何推进？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0019,directly_in_scope,C5_deformation_state,C2_dynamic_spatial,high,对“鱼竿弯曲方向相对海面如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0020,outside_scope,NONE,,high,对“烟雾出现发生在正式加速之前还是之后？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0021,directly_in_scope,C5_deformation_state,C3_action_intent,high,对“男子按压后车门区域后车门是否打开？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需绑定动作与空间目标或结果。
+scope-0022,directly_in_scope,C5_deformation_state,,high,对“蓝色橡皮筋的编织结构如何随操作变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0023,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“机翼相对跑道始终位于画面下方吗？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0024,directly_in_scope,C2_dynamic_spatial,,high,对“冲浪者在片段中是否完成了不止一次方向相反的明显转向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0025,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“水面反光区域随镜头移动发生了什么变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0026,directly_in_scope,C2_dynamic_spatial,,high,对“红色汽车绕场时是否与另一辆红车交会？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0027,directly_in_scope,C2_dynamic_spatial,,high,对“两辆车之间的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0028,outside_scope,NONE,,high,对“男子先展示绳端还是先演示船上固定点？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0029,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“鱼被举起后其身体朝向如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0030,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“着陆时机身朝向是否保持稳定？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0031,directly_in_scope,C3_action_intent,,high,对“男子的手主要指向发动机舱的哪个区域？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0032,directly_in_scope,C5_deformation_state,,high,对“男子操作后折叠自行车的轮部状态是否改变？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0033,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“栏杆是否始终位于画面下方？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0034,supporting_operation,C6_reference_frame,,medium,对“火箭尖端相对发射架位于什么方向？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0035,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“汽车绕行时车头朝向如何改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0036,outside_scope,NONE,,high,对“镜头先展示座椅材质还是先展示驾驶控制区？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0037,outside_scope,NONE,,high,对“橙衣男子是否反复低头操作物体？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0038,directly_in_scope,C6_reference_frame,,high,对“方向盘相对中控屏位于驾驶者哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0039,supporting_operation,C6_reference_frame,,medium,对“人物经过镜头后田间箱子位于画面哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0040,directly_in_scope,C2_dynamic_spatial,,high,对“冲浪者在浪壁上的高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0041,directly_in_scope,C5_deformation_state,,high,对“车床加工前后木杆表面如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0042,supporting_operation,C6_reference_frame,,medium,对“白色围墙在转弯前位于车辆哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0043,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“汽车经过镜头时朝向如何改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0044,directly_in_scope,C3_action_intent,,high,对“使用工具的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0045,directly_in_scope,C5_deformation_state,,high,对“绳索在手中形成了什么结构？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0046,supporting_operation,C6_reference_frame,,medium,对“车辆经过时透明大帐篷位于画面哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0047,outside_scope,NONE,,high,对“彩色物体主要位于树线的上方还是下方？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0048,outside_scope,NONE,,high,对“纪念碑相对水池位于什么方向？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0049,outside_scope,NONE,,high,对“石门上突出的石块分布在门洞两侧吗？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0050,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“镜头移动时村庄从哪侧进入画面？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0051,outside_scope,NONE,,high,对“游泳者到达近处前采用了什么泳姿？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0052,directly_in_scope,C4_predictive_counterfactual,C2_dynamic_spatial,high,对“若维持当前轨迹车辆会接近弯道内侧吗？”，题面显式要求依据当前轨迹或假设条件预测未观察空间状态，直接考查 C4 预测与反事实。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0053,supporting_operation,C2_dynamic_spatial,,medium,对“人群是否朝同一方向移动？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0054,outside_scope,NONE,,high,对“镜头先展示发动机舱还是先展示驾驶舱？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0055,directly_in_scope,C2_dynamic_spatial,,high,对“车辆经过出口标志后驶入哪条道路分支？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0056,directly_in_scope,C2_dynamic_spatial,,high,对“两辆摩托车的前后关系在比赛中是否改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0057,outside_scope,NONE,,high,对“镜头先展示镜子还是先展示发光装饰灯？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0058,directly_in_scope,C2_dynamic_spatial,,high,对“两辆车在弯道上的前后关系是否改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0059,supporting_operation,C6_reference_frame,,medium,对“骑象者沿道路行进时主要面向哪个方向？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0060,outside_scope,NONE,,high,对“孤立树位于果岭哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0061,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“航站楼先位于机翼前方还是随后移到后方？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0062,outside_scope,NONE,,high,对“男子抱起设备发生在蹲下之后吗？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0063,directly_in_scope,C3_action_intent,C2_dynamic_spatial,high,对“车辆从支路汇入主路前是否等待横向车流？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0064,outside_scope,NONE,,high,对“云层与输电线是否发生遮挡重叠？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0065,outside_scope,NONE,,high,对“镜头先展示道路还是先转向驾驶员面部？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0066,directly_in_scope,C3_action_intent,,high,对“制作绳结的直接目标是固定上方绳环吗？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0067,outside_scope,NONE,,high,对“镜头中人物出现前主要展示了什么景物？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0068,outside_scope,NONE,,high,对“橙色饰条位于座椅的哪个边缘？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0069,outside_scope,NONE,,high,对“滑雪者在片段中完成了几次跳跃？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0070,directly_in_scope,C2_dynamic_spatial,,high,对“蓝白小船相对驳船向哪侧移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0071,directly_in_scope,C1_occlusion_permanence,,high,对“镜头从球员转向球洞后球员是否仍在画面中？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0072,supporting_operation,C2_dynamic_spatial,,medium,对“直升机最终是否平稳落到草地？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0073,supporting_operation,C2_dynamic_spatial,,medium,对“单板滑雪者在下坡中进行了几次明显换刃转向？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0074,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“滑雪板相对栏杆的高度和方向如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0075,supporting_operation,C2_dynamic_spatial,,medium,对“射门后球进入球门的哪一侧？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0076,supporting_operation,C2_dynamic_spatial,,medium,对“鱼从水中到岸边的出现顺序是什么？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0077,outside_scope,NONE,,high,对“深色云层位于房屋上方吗？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0078,directly_in_scope,C1_occlusion_permanence,C2_dynamic_spatial,high,对“白车与路边树木的遮挡关系如何变化？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0079,directly_in_scope,C2_dynamic_spatial,,high,对“水翼板相对水面的高度是否稳定？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0080,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“骑手经过路口时前车向哪侧移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0081,directly_in_scope,C1_occlusion_permanence,C2_dynamic_spatial,high,对“船尾出现在画面前还是后完全离开桥下？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0082,directly_in_scope,C5_deformation_state,,high,对“女子收线时鱼竿弯曲程度如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0083,outside_scope,NONE,,high,对“背包男子先指向山体还是先转身？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0084,supporting_operation,C2_dynamic_spatial,,medium,对“车辆最终停在人群的哪一侧？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0085,outside_scope,NONE,,high,对“鳐鱼主要位于人群的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0086,directly_in_scope,C3_action_intent,,high,对“讲解者的手主要指向备胎还是车身？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0087,directly_in_scope,C2_dynamic_spatial,,high,对“人靠近鳐鱼时鳐鱼是否改变了移动方向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0088,outside_scope,NONE,,high,对“房车侧面的入口门位于车身哪一端？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0089,directly_in_scope,C3_action_intent,,high,对“讲解者手势主要指向备胎还是车顶？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0090,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“敞篷车驶入弯道后朝向如何改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0091,directly_in_scope,C2_dynamic_spatial,,high,对“狗群是否在奔跑中改变整体方向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0092,directly_in_scope,C2_dynamic_spatial,,high,对“无人机先远离还是先接近相机？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0093,directly_in_scope,C6_reference_frame,,high,对“从驾驶者视角看出口位于哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0094,outside_scope,NONE,,high,对“黄色立柱位于通道哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0095,directly_in_scope,C1_occlusion_permanence,,high,对“迎面行人经过后是否离开视野？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0096,directly_in_scope,C3_action_intent,,high,对“悬挂物被取下后是否交给室外的人？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0097,outside_scope,NONE,,high,对“蓝帽男子出现前镜头先经过谁？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0098,directly_in_scope,C2_dynamic_spatial,,high,对“金属件相对墙洞的位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0099,directly_in_scope,C6_reference_frame,,high,对“场景切换后起重桥位于相机上方还是前方？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0100,directly_in_scope,C4_predictive_counterfactual,C2_dynamic_spatial,high,对“若保持当前转向车辆下一刻会靠近轮胎障碍吗？”，题面显式要求依据当前轨迹或假设条件预测未观察空间状态，直接考查 C4 预测与反事实。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0101,directly_in_scope,C2_dynamic_spatial,,high,对“飞行器靠近相机后是否再次远离？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0102,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“滑雪者在转弯时朝向如何改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0103,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“移动镜头中车辆与马匹区域的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0104,directly_in_scope,C2_dynamic_spatial,,high,对“飞机起飞时机场地面与机翼的相对距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0105,outside_scope,NONE,,high,对“居民区位于草地的哪个方向？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0106,supporting_operation,C6_reference_frame,,medium,对“摩托车从路边起步后驶向哪侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0107,supporting_operation,C6_reference_frame,,medium,对“步行镜头中行人流主要朝向相机还是远离相机？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0108,supporting_operation,C2_dynamic_spatial,,medium,对“横向车辆通过与本车起步的先后顺序是什么？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0109,directly_in_scope,C3_action_intent,,high,对“相机转向驾驶舱的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0110,directly_in_scope,C2_dynamic_spatial,,high,对“镜头从房车前门移动到后门吗？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0111,outside_scope,NONE,,high,对“镜头中最显眼的房屋位于山体前方还是后方？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0112,directly_in_scope,C3_action_intent,C6_reference_frame,high,对“操作者最后把工具移向织机哪一侧？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需处理相机、行动者或对象参照。
+scope-0113,supporting_operation,C6_reference_frame,,medium,对“抄网从钓鱼者的哪一侧伸向鱼？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0114,outside_scope,NONE,,high,对“记者展示天花板破损是在采访住户之前还是之后？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0115,supporting_operation,C6_reference_frame,,medium,对“游泳者主要面向相机还是背向相机？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0116,outside_scope,NONE,,high,对“后车门相对尾灯位于哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0117,directly_in_scope,C2_dynamic_spatial,,high,对“球从边路到门前的轨迹如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0118,directly_in_scope,C2_dynamic_spatial,,high,对“汽车与溪流之间的距离如何随弯道变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0119,supporting_operation,C1_occlusion_permanence,,medium,对“黑色汽车是否先于白色卡车离开画面？”，表层只判断进入/离开视野、遮挡时点或持续可见性；在该具体语境中它是 C1 的明确追踪操作，但未直接询问隐藏后的持续存在。
+scope-0120,supporting_operation,C2_dynamic_spatial,,medium,对“冲浪板竖起发生在冲浪者落水之前还是之后？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0121,directly_in_scope,C2_dynamic_spatial,,high,对“鱼从女子手中到另一人手中的位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0122,directly_in_scope,C2_dynamic_spatial,,high,对“汽车与拍摄车辆的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0123,outside_scope,NONE,,high,对“相邻住宅的橙色墙面位于灰色墙面哪侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0124,outside_scope,NONE,,high,对“男子打开说明书的直接目标是什么？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0125,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“车辆在弯路上是否改变朝向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0126,outside_scope,NONE,,high,对“视频前半段主要出现鱼还是红色虾？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0127,directly_in_scope,C5_deformation_state,,high,对“钳子夹持的金属件最终是否被取下？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0128,outside_scope,NONE,,high,对“餐盘中的食物在画面末尾是否减少？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0129,outside_scope,NONE,,high,对“男子在船内先指向座椅还是先指向地板？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0130,supporting_operation,C2_dynamic_spatial,,medium,对“飞行器最终相对树线位于上方吗？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0131,directly_in_scope,C2_dynamic_spatial,,high,对“红车在片段中是否完成了不止一次明显转向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0132,supporting_operation,C2_dynamic_spatial,,medium,对“飞行器最终相对地平线处于什么高度？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0133,outside_scope,NONE,,high,对“摄影者出现是在镜头扫过薰衣草田之前还是之后？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0134,directly_in_scope,C2_dynamic_spatial,,high,对“飞行器在烟雾出现后向上还是向下移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0135,directly_in_scope,C5_deformation_state,,high,对“房车侧面的伸出结构是否处于展开状态？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0136,supporting_operation,C2_dynamic_spatial,,medium,对“他开始滑落发生在下蹲之前还是之后？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0137,supporting_operation,C2_dynamic_spatial,,medium,对“大象先经过住宅还是先到达停放车辆附近？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0138,outside_scope,NONE,,high,对“女子入口食物后面部表情如何变化？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0139,directly_in_scope,C2_dynamic_spatial,,high,对“无人机最终是否回到近地面位置？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0140,directly_in_scope,C2_dynamic_spatial,,high,对“太阳反光与浪峰的相对位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0141,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“板头朝向在转弯过程中如何改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0142,directly_in_scope,C3_action_intent,C2_dynamic_spatial,high,对“人群是否在车辆靠近时让出行驶空间？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0143,directly_in_scope,C1_occlusion_permanence,,high,对“镜头转向湖面后，水鸟是否始终留在水面上？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0144,supporting_operation,C6_reference_frame,,medium,对“观察者沿商场通道主要向前还是向后移动？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0145,supporting_operation,C2_dynamic_spatial,,medium,对“鱼竿弯曲后鱼何时出现在岸边？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0146,supporting_operation,C6_reference_frame,,medium,对“摩托车在路口选择了哪个行进方向？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0147,directly_in_scope,C2_dynamic_spatial,,high,对“浮标相对皮划艇的位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0148,outside_scope,NONE,,high,对“镜头依次聚焦了几位坐着的人？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0149,directly_in_scope,C3_action_intent,C2_dynamic_spatial,high,对“店员把蛋糕移向展示柜前方了吗？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0150,directly_in_scope,C2_dynamic_spatial,,high,对“车辆与大型透明帐篷的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0151,directly_in_scope,C2_dynamic_spatial,,high,对“前方红车与骑手的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0152,directly_in_scope,C3_action_intent,C2_dynamic_spatial,high,对“人群在车辆靠近前是否向两侧让开？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0153,directly_in_scope,C2_dynamic_spatial,,high,对“游泳者与相机之间的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0154,outside_scope,NONE,,high,对“最近的海鸟相对船体位于哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0155,directly_in_scope,C2_dynamic_spatial,,high,对“蓝车先远离还是先再次靠近拍摄车辆？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0156,supporting_operation,C2_dynamic_spatial,,medium,对“黄衣男子坐下滑行后是否翻滚？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0157,supporting_operation,C2_dynamic_spatial,,medium,对“他在翻滚结束后是否恢复站立？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0158,directly_in_scope,C2_dynamic_spatial,,high,对“三只狗在沙地上的前后位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0159,directly_in_scope,C2_dynamic_spatial,,high,对“马群相对内侧栏杆如何移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0160,outside_scope,NONE,,high,对“红色越野车的备胎安装在哪里？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0161,directly_in_scope,C1_occlusion_permanence,,high,对“冲浪者是否进入浪管后再出来？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0162,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“以画面为参照，球向球门右侧飞行时守门员是否也向画面右侧扑出？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0163,supporting_operation,C1_occlusion_permanence,,medium,对“副驾驶是否在驾驶员转向后才进入画面？”，表层只判断进入/离开视野、遮挡时点或持续可见性；在该具体语境中它是 C1 的明确追踪操作，但未直接询问隐藏后的持续存在。
+scope-0164,directly_in_scope,C2_dynamic_spatial,,high,对“无人机相对地面的高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0165,supporting_operation,C2_dynamic_spatial,,medium,对“经过斑马线发生在明显转向之前还是之后？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0166,directly_in_scope,C2_dynamic_spatial,,high,对“摩托车起步后是否沿道路直行？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0167,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“相机绕车尾移动时蓝车从哪侧出现？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0168,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“镜头平移是否改变了山峰与花田的上下关系？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0169,directly_in_scope,C5_deformation_state,C2_dynamic_spatial,high,对“打结后两根绳端的相对位置如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0170,supporting_operation,C3_action_intent,,medium,对“操作者先插入金属条还是先拉动手柄？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0171,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“镜头移动时输电塔在画面中向哪侧移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0172,outside_scope,NONE,,high,对“车身尾部缺失了哪些部件？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0173,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“飞机起飞后地面停机坪在画面中如何移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0174,directly_in_scope,C5_deformation_state,,high,对“鱼挣扎时钓竿弯曲程度如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0175,directly_in_scope,C3_action_intent,,high,对“防守球员回撤的直接目标是封堵哪一区域？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0176,supporting_operation,C6_reference_frame,,medium,对“冲浪者从浪管出来后向哪个方向滑行？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0177,directly_in_scope,C1_occlusion_permanence,,high,对“冲浪者进入浪管后是否一度被浪花遮住？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0178,supporting_operation,C3_action_intent,,medium,对“手拿起小零件发生在松开钳子之前还是之后？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0179,directly_in_scope,C5_deformation_state,,high,对“鸟从悬挂状态变为桌面状态的顺序是什么？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0180,directly_in_scope,C5_deformation_state,,high,对“鱼竿先保持平直还是先出现弯曲？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0181,directly_in_scope,C3_action_intent,,high,对“两人靠近汽车的直接目标是查看外观还是内饰？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0182,supporting_operation,C3_action_intent,,medium,对“球员走近洞杯发生在击球之后吗？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0183,directly_in_scope,C2_dynamic_spatial,,high,对“白色汽车绕停车场时与相机距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0184,supporting_operation,C2_dynamic_spatial,,medium,对“车辆最接近相机发生在完成转弯之前还是之后？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0185,outside_scope,NONE,,high,对“镜头依次展示了几名坐着的老人？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0186,outside_scope,NONE,,high,对“橙色自行车是否装有后货架？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0187,directly_in_scope,C5_deformation_state,,high,对“冲浪者在整段中是否保持站立？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0188,directly_in_scope,C3_action_intent,C6_reference_frame,high,对“操作的直接目标位于栏杆上方还是下方？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需处理相机、行动者或对象参照。
+scope-0189,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“红色轿车靠近相机后从哪一侧经过？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0190,directly_in_scope,C3_action_intent,,high,对“骑手通过调整身体姿势达到什么即时目标？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0191,directly_in_scope,C5_deformation_state,,high,对“遮阳篷在片段中保持展开吗？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0192,directly_in_scope,C6_reference_frame,,high,对“从骑手视角看路缘最初位于哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0193,directly_in_scope,C2_dynamic_spatial,,high,对“球从边路向球门区的轨迹如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0194,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“黑车接近人群时是否改变朝向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0195,outside_scope,NONE,,high,对“男子停下后主要做了什么动作？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0196,directly_in_scope,C5_deformation_state,,high,对“绳索结构在拉紧后如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0197,directly_in_scope,C2_dynamic_spatial,,high,对“冲浪者沿浪壁的运动方向如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0198,directly_in_scope,C6_reference_frame,,high,对“俯视视角下汽车沿弯道朝哪个方向行驶？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0199,outside_scope,NONE,,high,对“球洞位于沙坑的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0200,directly_in_scope,C3_action_intent,,high,对“操作者拉动钳子的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0201,supporting_operation,C3_action_intent,,medium,对“骑手在起步前是否先转动车把？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0202,outside_scope,NONE,,high,对“石像分布在步道哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0203,directly_in_scope,C2_dynamic_spatial,,high,对“飞行物相对树梢高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0204,supporting_operation,C2_dynamic_spatial,,medium,对“火箭主体抬起发生在支撑结构可见之前还是之后？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0205,directly_in_scope,C5_deformation_state,C3_action_intent,high,对“男子踩踏后车尾踏板是否展开？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需绑定动作与空间目标或结果。
+scope-0206,directly_in_scope,C5_deformation_state,,high,对“滑雪者越过杆后是否保持站立？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0207,supporting_operation,C2_dynamic_spatial,,medium,对“片段结束前鱼是否被拉出水面？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0208,outside_scope,NONE,,high,对“镜头先展示车辆左后侧还是正后方？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0209,directly_in_scope,C2_dynamic_spatial,,high,对“儿童群与成年男子之间的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0210,supporting_operation,C6_reference_frame,,medium,对“孩子们主要面向相机还是远离相机？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0211,outside_scope,NONE,,high,对“输电塔相对城市建筑位于前景还是远景？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0212,supporting_operation,C6_reference_frame,,medium,对“男子出现时海面位于其哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0213,directly_in_scope,C2_dynamic_spatial,,high,对“大象与随行人员的前后关系如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0214,supporting_operation,C6_reference_frame,,medium,对“男子收线时鱼线指向船的哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0215,supporting_operation,C5_deformation_state,,medium,对“绳索在操作后形成了几个环？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。
+scope-0216,supporting_operation,C2_dynamic_spatial,,medium,对“黑狗与白狗是否朝同一方向奔跑？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0217,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“主要红车先从侧面经过还是先正面靠近相机？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0218,supporting_operation,C6_reference_frame,,medium,对“男子手指主要指向画面的哪个方向？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0219,supporting_operation,C6_reference_frame,,medium,对“飞机最终朝画面的哪一侧飞离？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0220,supporting_operation,C2_dynamic_spatial,,medium,对“镜头沿商店街移动时先经过果蔬店还是服装店？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0221,outside_scope,NONE,,high,对“湖面上有几只水鸟同时可见？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0222,outside_scope,NONE,,high,对“镜头从农田转向道路发生在看到马之前还是之后？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0223,supporting_operation,C6_reference_frame,,medium,对“末段地面人物面向飞行物吗？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0224,directly_in_scope,C2_dynamic_spatial,,high,对“无人机相对湖面高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0225,directly_in_scope,C2_dynamic_spatial,,high,对“她进入门洞前后与相机的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0226,directly_in_scope,C3_action_intent,,high,对“男子取下悬挂物后将其带向室内还是室外？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0227,supporting_operation,C3_action_intent,,medium,对“人先展示鱼还是先处理鱼钩？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0228,supporting_operation,C2_dynamic_spatial,,medium,对“道路标志先出现还是车道开始分离先出现？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0229,directly_in_scope,C3_action_intent,,high,对“男子用工具处理肉块的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0230,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“镜头平移时海岸线相对画面如何移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0231,directly_in_scope,C5_deformation_state,C2_dynamic_spatial,high,对“广场人群是否逐渐聚集成一支队伍？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0232,directly_in_scope,C6_reference_frame,,high,对“从骑手视角看转弯目标道路位于哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0233,outside_scope,NONE,,high,对“飞行器升空前地面车辆是否移动？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0234,supporting_operation,C6_reference_frame,,medium,对“男子的手势是面向相机还是面向海面？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0235,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“相机绕车移动时前轮相对画面如何变化？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0236,supporting_operation,C3_action_intent,,medium,对“白队射门前是否先突破了多名蓝队防守者？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0237,directly_in_scope,C2_dynamic_spatial,,high,对“黑色汽车朝人群靠近时距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0238,directly_in_scope,C6_reference_frame,,high,对“从骑手视角看中央隔离带位于哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0239,outside_scope,NONE,,high,对“深色吸音板分布在浅色板的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0240,supporting_operation,C6_reference_frame,,medium,对“守门员向哪一侧扑救？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0241,outside_scope,NONE,,high,对“两尊石像沿小路如何排列？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0242,directly_in_scope,C6_reference_frame,,high,对“对向白车位于骑手哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0243,directly_in_scope,C2_dynamic_spatial,,high,对“较大的鱼群在水草前方如何移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0244,supporting_operation,C6_reference_frame,,medium,对“驾驶员在弯道前面向道路前方吗？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0245,directly_in_scope,C6_reference_frame,,high,对“白色车辆最初位于骑手哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0246,outside_scope,NONE,,high,对“车辆后部是否装有外置备胎？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0247,directly_in_scope,C5_deformation_state,C2_dynamic_spatial,high,对“冲浪者靠近岩石后是否与冲浪板分离？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0248,supporting_operation,C6_reference_frame,,medium,对“拍摄车辆经过帐篷区时白色皮卡位于镜头哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0249,directly_in_scope,C5_deformation_state,,high,对“女子收线时鱼竿弯曲程度如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0250,outside_scope,NONE,,high,对“镜头先展示红色灯塔还是升降桥？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0251,directly_in_scope,C2_dynamic_spatial,,high,对“冲浪者从浪壁高处向下转向的轨迹如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0252,outside_scope,NONE,,high,对“记者展示天花板破损发生在采访住户之前吗？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0253,supporting_operation,C3_action_intent,,medium,对“他先展示绳端还是先把绳索抛向地面？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0254,supporting_operation,C6_reference_frame,,medium,对“住户用手指向了房间的哪个方向？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0255,outside_scope,NONE,,high,对“绿色蛋糕上主要装饰着什么形状？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0256,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“镜头转动时远山在画面中的相对位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0257,outside_scope,NONE,,high,对“开孔位于车身部件的哪个区域？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0258,directly_in_scope,C5_deformation_state,,high,对“冲浪者在浪峰塌下前是否保持站立？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0259,supporting_operation,C5_deformation_state,,medium,对“捆扎点位于两根木杆交叉处还是末端？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。
+scope-0260,directly_in_scope,C2_dynamic_spatial,,high,对“飞行器相对树线的高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0261,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“大象最终朝建筑还是远离建筑移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0262,directly_in_scope,C5_deformation_state,,high,对“处理后鱼钩是否与鱼分离？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0263,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“大象沿道路行走时骑手始终面向前方吗？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0264,supporting_operation,C6_reference_frame,,medium,对“固定点相对男子位于哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0265,directly_in_scope,C2_dynamic_spatial,,high,对“遥控飞行器相对地面的高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0266,supporting_operation,C6_reference_frame,,medium,对“观察者的影子在道路上朝哪个方向延伸？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0267,supporting_operation,C2_dynamic_spatial,,medium,对“鱼最终位于浪线的陆侧还是海侧？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0268,directly_in_scope,C3_action_intent,C2_dynamic_spatial,high,对“驾驶者在红灯前是否停在其他车辆后方？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0269,directly_in_scope,C6_reference_frame,,high,对“从驾驶者视角看汇入方向位于哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0270,outside_scope,NONE,,high,对“戴蓝帽的人在戴宽檐帽的人之前还是之后出现？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0271,outside_scope,NONE,,high,对“镜头先展示海岸还是最后出现人物？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0272,directly_in_scope,C2_dynamic_spatial,,high,对“白车相对仓库的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0273,supporting_operation,C3_action_intent,,medium,对“他先触碰车架还是先转动后轮部件？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0274,directly_in_scope,C5_deformation_state,,high,对“后轮组件在操作中发生了什么状态变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0275,supporting_operation,C2_dynamic_spatial,,medium,对“镜头先经过小帐篷还是大型透明帐篷？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0276,directly_in_scope,C3_action_intent,,high,对“展示者主要指向包装盒的哪个区域？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0277,directly_in_scope,C3_action_intent,,high,对“男子从室内取下鸟后将其带到哪里？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0278,supporting_operation,C6_reference_frame,C2_dynamic_spatial,medium,对“女子进入石门时是否侧身通过？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0279,supporting_operation,C3_action_intent,C2_dynamic_spatial,medium,对“蓝队传中后球先到绿队球员还是守门员附近？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0280,supporting_operation,C6_reference_frame,,medium,对“飞行器最终朝场地哪一侧飞离？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0281,supporting_operation,C6_reference_frame,,medium,对“绳索末端最初位于男子哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0282,supporting_operation,C6_reference_frame,,medium,对“通过路口时红车选择了哪个行进方向？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0283,outside_scope,NONE,,high,对“镜头先展示座椅还是驾驶位控制键？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0284,outside_scope,NONE,,high,对“草地位于村庄前方吗？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0285,outside_scope,NONE,,high,对“道路两侧主要分布着什么？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0286,supporting_operation,C2_dynamic_spatial,,medium,对“镜头沿车身移动时不同窗户的出现顺序是什么？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0287,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“镜头环绕后摩托车的左右朝向如何变化？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0288,directly_in_scope,C3_action_intent,,high,对“女子反复转动渔轮的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0289,directly_in_scope,C1_occlusion_permanence,,high,对“冲浪者在浪管内是否短暂被浪壁遮住？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0290,outside_scope,NONE,,high,对“钓鱼者先拿着浮漂还是先展示鱼？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0291,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“以画面为参照，浪管闭合前冲浪者最后一次明显转向是朝左还是朝右？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0292,outside_scope,NONE,,high,对“镜头先扫过海边果岭还是先出现自拍者？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0293,outside_scope,NONE,,high,对“镜头先呈现山体还是近处房屋？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0294,outside_scope,NONE,,high,对“牛群主要位于道路的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0295,directly_in_scope,C5_deformation_state,,high,对“中控屏与仪表盘哪一个先亮起？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0296,directly_in_scope,C1_occlusion_permanence,C2_dynamic_spatial,high,对“浪花完全遮住冲浪者发生在其转向之前还是之后？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0297,supporting_operation,C2_dynamic_spatial,,medium,对“小船先进入桥下还是先经过桥墩？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0298,directly_in_scope,C3_action_intent,,high,对“两人操作鱼钩的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0299,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“小船通过桥下时桥面从相机上方如何移动？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0300,supporting_operation,C2_dynamic_spatial,,medium,对“狗先沿栈道远离相机还是先转向栏杆？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0301,supporting_operation,C3_action_intent,C2_dynamic_spatial,medium,对“车辆沿弯路行驶时驾驶员何时明显转动方向盘？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0302,directly_in_scope,C5_deformation_state,C3_action_intent,high,对“手指接触灯顶后灯光状态是否改变？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需绑定动作与空间目标或结果。
+scope-0303,outside_scope,NONE,,high,对“男子先演示绳结还是先在船上讲解？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0304,directly_in_scope,C2_dynamic_spatial,,high,对“鞋子在其双臂中的相对位置是否保持稳定？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0305,directly_in_scope,C2_dynamic_spatial,,high,对“海鸟靠近船时与相机的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0306,directly_in_scope,C3_action_intent,,high,对“男子操作轮毂的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0307,directly_in_scope,C1_occlusion_permanence,,high,对“镜头是否始终保持包装盒完整可见？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0308,outside_scope,NONE,,high,对“镜头先展示空海滩还是先展示男子面部？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0309,directly_in_scope,C5_deformation_state,,high,对“浪破碎后冲浪者是否继续保持站立？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0310,supporting_operation,C6_reference_frame,,medium,对“海鸟掠过船侧时朝哪个方向飞行？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0311,directly_in_scope,C2_dynamic_spatial,,high,对“车辆下坡进入停车区后是否改变行驶方向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0312,directly_in_scope,C5_deformation_state,,high,对“绳索穿过固定装置后形状如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0313,directly_in_scope,C5_deformation_state,,high,对“绳索在操作后是否形成明显线圈？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0314,supporting_operation,C6_reference_frame,,medium,对“波浪朝画面的哪个方向推进？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0315,supporting_operation,C2_dynamic_spatial,,medium,对“黄衣人在雪坡上先蹲下还是先翻滚？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0316,directly_in_scope,C5_deformation_state,,high,对“车床加工后木杆表面形状如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0317,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“白车经过住宅时从车内视角向哪侧移动？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0318,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“男子转头时由面向相机变为面向哪里？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0319,supporting_operation,C3_action_intent,,medium,对“滑雪者接近金属杆后做了什么？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0320,directly_in_scope,C1_occlusion_permanence,,high,对“冲浪者进入浪管后是否再次清晰出现？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0321,outside_scope,NONE,,high,对“白色吸音板与黑色音箱如何交替分布？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0322,directly_in_scope,C2_dynamic_spatial,,high,对“鱼相对码头边缘的位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0323,outside_scope,NONE,,high,对“女子吃下食物后的面部反应如何变化？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0324,outside_scope,NONE,,high,对“前景灌木是否遮挡部分房屋？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0325,directly_in_scope,C2_dynamic_spatial,,high,对“飞行器从地面起飞后高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0326,supporting_operation,C3_action_intent,C5_deformation_state,medium,对“踏板展开发生在他触碰后门之前还是之后？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。；同时还需识别形变、开合或组装状态。
+scope-0327,directly_in_scope,C6_reference_frame,,high,对“从俯视图看道路绕溪流哪一侧弯曲？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0328,directly_in_scope,C2_dynamic_spatial,,high,对“前进过程中迎面行人与相机距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0329,outside_scope,NONE,,high,对“男子移动时始终手持什么？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0330,supporting_operation,C5_deformation_state,,medium,对“男子先拆开包装还是先取出电池？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。
+scope-0331,directly_in_scope,C5_deformation_state,,high,对“车门由关闭到打开属于什么状态变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0332,directly_in_scope,C3_action_intent,,high,对“男子拉动绳索的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0333,outside_scope,NONE,,high,对“红色越野车相对两侧车辆处于什么位置？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0334,supporting_operation,C2_dynamic_spatial,,medium,对“道路标线先出现斑马线还是转向箭头？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0335,outside_scope,NONE,,high,对“男子在走向镜头前手里拿着什么？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0336,supporting_operation,C6_reference_frame,,medium,对“白车最终朝哪个方向驶离？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0337,supporting_operation,C2_dynamic_spatial,,medium,对“男子在走廊中先经过照片墙还是无障碍标志？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0338,directly_in_scope,C5_deformation_state,,high,对“加工后的木杆与旁边未加工木杆形状相同吗？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0339,directly_in_scope,C2_dynamic_spatial,,high,对“雨中吊饰摆动方向是否改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0340,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“相机转向自拍时果岭在画面中如何移出？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0341,directly_in_scope,C2_dynamic_spatial,,high,对“车辆相对帐篷如何移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0342,directly_in_scope,C1_occlusion_permanence,,high,对“前景树木是否短暂遮挡住宅？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0343,supporting_operation,C5_deformation_state,,medium,对“金属条先插入机器还是先被弯曲？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。
+scope-0344,supporting_operation,C6_reference_frame,,medium,对“受访者抬手指向什么方向？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0345,outside_scope,NONE,,high,对“驳船位于河对岸建筑前方吗？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0346,supporting_operation,C6_reference_frame,,medium,对“男子最终朝哪个出口方向转身？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0347,directly_in_scope,C3_action_intent,,high,对“男子的手主要指向方向盘左侧的哪些控制区域？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0348,supporting_operation,C1_occlusion_permanence,,medium,对“雨势是否使远岸逐渐更难看清？”，表层只判断进入/离开视野、遮挡时点或持续可见性；在该具体语境中它是 C1 的明确追踪操作，但未直接询问隐藏后的持续存在。
+scope-0349,outside_scope,NONE,,high,对“男子打开旧车车门是在走近车辆之前还是之后？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0350,directly_in_scope,C3_action_intent,,high,对“男子反复转动渔轮的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0351,supporting_operation,C2_dynamic_spatial,,medium,对“镜头先经过水果店还是服装店？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0352,directly_in_scope,C2_dynamic_spatial,,high,对“直升机相对地面的高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0353,outside_scope,NONE,,high,对“灰色越野车的备胎位于车身什么位置？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0354,supporting_operation,C3_action_intent,,medium,对“球员先击球还是另一人走近洞口？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0355,directly_in_scope,C2_dynamic_spatial,,high,对“游泳者朝相机靠近时距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0356,directly_in_scope,C2_dynamic_spatial,,high,对“道路相对两侧牧场的位置是否保持居中？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0357,directly_in_scope,C5_deformation_state,,high,对“敞篷车顶在行驶过程中如何改变状态？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0358,supporting_operation,C2_dynamic_spatial,,medium,对“骑手靠近镜头时马位于围栏哪一侧？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0359,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“火箭在发射架上是否逐渐抬升到倾斜位置？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0360,supporting_operation,C6_reference_frame,,medium,对“车列与马匹围场分别位于画面的哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0361,directly_in_scope,C3_action_intent,C2_dynamic_spatial,high,对“皮划艇上的人最终把鱼移到艇内还是水外？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0362,outside_scope,NONE,,high,对“餐盘中洋葱位于薯条的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0363,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“男子沿走廊行进时是否改变朝向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0364,directly_in_scope,C3_action_intent,,high,对“操作者按键的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0365,directly_in_scope,C6_reference_frame,,high,对“道路从驾驶者视角向哪侧弯曲？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0366,outside_scope,NONE,,high,对“出口匝道位于主车道的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0367,directly_in_scope,C2_dynamic_spatial,,high,对“汽车先接近装卸区还是先从远处横向驶过？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0368,directly_in_scope,C2_dynamic_spatial,,high,对“火箭尖端相对地面的高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0369,supporting_operation,C6_reference_frame,,medium,对“吊饰位于远处岛屿的哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0370,supporting_operation,C6_reference_frame,,medium,对“车辆驶出坡道后向哪一侧转向？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0371,directly_in_scope,C2_dynamic_spatial,,high,对“小船相对防波堤如何移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0372,outside_scope,NONE,,high,对“他先停止行走还是先举起双手？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0373,directly_in_scope,C3_action_intent,C6_reference_frame,high,对“守门员扑救的直接空间目标是哪一侧来球？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需处理相机、行动者或对象参照。
+scope-0374,directly_in_scope,C5_deformation_state,,high,对“启动动画先出现在左侧仪表还是中控屏？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0375,directly_in_scope,C5_deformation_state,,high,对“鱼竿弯曲程度在片段中如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0376,supporting_operation,C2_dynamic_spatial,,medium,对“鱼是否曾在水面附近出现？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0377,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“从画面参照系看，岸线相对相机向哪一侧移动？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0378,directly_in_scope,C5_deformation_state,,high,对“按下启动按钮后仪表盘显示如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0379,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“窗外白车相对观察者向哪侧移动？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0380,outside_scope,NONE,,high,对“男子先指向门把手还是车牌上方？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0381,directly_in_scope,C2_dynamic_spatial,,high,对“蓝车相对车道边线如何移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0382,outside_scope,NONE,,high,对“华盛顿纪念碑相对人群位于哪个方向？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0383,directly_in_scope,C5_deformation_state,C2_dynamic_spatial|C6_reference_frame,high,对“冲浪板与人分离后朝向如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需跟踪相关空间关系或轨迹的时间变化；同时还需处理相机、行动者或对象参照。
+scope-0384,outside_scope,NONE,,high,对“薰衣草行列相对远山朝哪个方向延伸？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0385,directly_in_scope,C2_dynamic_spatial,,high,对“水鸟群相对岸边如何移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0386,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“镜头平移时输电塔何时进入画面中央？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0387,directly_in_scope,C1_occlusion_permanence,,high,对“迎面行人是否在经过相机后离开视野？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0388,outside_scope,NONE,,high,对“最亮的阳光反射位于浪峰前方还是后方？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0389,directly_in_scope,C1_occlusion_permanence,C2_dynamic_spatial,high,对“冲浪者消失在浪后发生在最后一次转向之前还是之后？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0390,directly_in_scope,C2_dynamic_spatial,,high,对“赛马群中领先位置是否发生变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0391,supporting_operation,C2_dynamic_spatial,,medium,对“单板滑雪者的腾空动作发生在最后一次大幅转向之前还是之后？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0392,outside_scope,NONE,,high,对“盒面圆形图案相对产品名称位于哪里？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0393,supporting_operation,C5_deformation_state,C2_dynamic_spatial,medium,对“最终结位于原有大环的上方还是下方？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0394,outside_scope,NONE,,high,对“画面右上方持续可见的物体是什么？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0395,directly_in_scope,C2_dynamic_spatial,,high,对“摩托车经过斑马线后是否改变车道？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0396,directly_in_scope,C3_action_intent,,high,对“讲解手势的直接目标是展示哪个车尾部件？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0397,outside_scope,NONE,,high,对“镜头扫过房间时三脚架位于沙发前还是后？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0398,supporting_operation,C3_action_intent,,medium,对“伸手动作发生在游到近处之前还是之后？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0399,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“车辆到达人群前是否改变车头朝向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0400,supporting_operation,C2_dynamic_spatial,,medium,对“转弯发生在经过红色房屋之前还是之后？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0401,supporting_operation,C6_reference_frame,,medium,对“骑手们沿赛道朝哪个方向驶离？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0402,directly_in_scope,C6_reference_frame,,high,对“出口匝道相对主路位于驾驶者哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0403,directly_in_scope,C2_dynamic_spatial,,high,对“冲浪者与岩石之间的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0404,supporting_operation,C1_occlusion_permanence,C2_dynamic_spatial,medium,对“遥控直升机是先升空还是先从灌木后出现？”，表层只判断进入/离开视野、遮挡时点或持续可见性；在该具体语境中它是 C1 的明确追踪操作，但未直接询问隐藏后的持续存在。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0405,supporting_operation,C2_dynamic_spatial,,medium,对“冲浪者在小浪上是否完成多次转向？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0406,supporting_operation,C5_deformation_state,,medium,对“开箱后鼠标配件按什么顺序被取出？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。
+scope-0407,outside_scope,NONE,,high,对“红色招牌商店位于通道哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0408,directly_in_scope,C5_deformation_state,,high,对“车身部件是否呈现未完成或拆卸状态？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0409,supporting_operation,C2_dynamic_spatial,,medium,对“鱼从水中到手中的顺序是什么？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0410,directly_in_scope,C2_dynamic_spatial,,high,对“冲浪者与岩石的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0411,directly_in_scope,C5_deformation_state,,high,对“男子捆扎后木杆之间的相对状态如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0412,directly_in_scope,C3_action_intent,C2_dynamic_spatial,high,对“驾驶员转动方向盘时车辆行进方向如何变化？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0413,directly_in_scope,C5_deformation_state,C3_action_intent,high,对“男子移动盖板后船内空间状态是否改变？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需绑定动作与空间目标或结果。
+scope-0414,supporting_operation,C6_reference_frame,,medium,对“冲浪板在摔倒后呈什么朝向？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0415,supporting_operation,C3_action_intent,,medium,对“小鱼先被女子握住还是先交给另一双手？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0416,supporting_operation,C2_dynamic_spatial,,medium,对“高尔夫球最终停在洞口的哪一侧？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0417,supporting_operation,C6_reference_frame,,medium,对“绿色上衣男子主要朝向同伴还是汽车？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0418,directly_in_scope,C2_dynamic_spatial,,high,对“鱼进入抄网后是否再次离开？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0419,outside_scope,NONE,,high,对“他先抬头还是先戴上蓝色手套？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0420,directly_in_scope,C5_deformation_state,C3_action_intent,high,对“钳子夹住墙内零件后零件是否被取出？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需绑定动作与空间目标或结果。
+scope-0421,supporting_operation,C2_dynamic_spatial,,medium,对“车辆先接近低墙还是先转向返回坡道？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0422,directly_in_scope,C1_occlusion_permanence,,high,对“狗跑远时是否短暂离开清晰可见范围？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0423,supporting_operation,C2_dynamic_spatial,,medium,对“滑雪者是否完整滑过栏杆后落回雪面？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0424,directly_in_scope,C5_deformation_state,,high,对“男子手中的橙色绳索是否逐渐展开？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0425,supporting_operation,C3_action_intent,,medium,对“男子先调整车架还是先转动后轮？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0426,outside_scope,NONE,,high,对“镜头校色切换发生在无人机出现之前还是之后？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0427,supporting_operation,C3_action_intent,,medium,对“男子先用剪刀接触肉块还是先放下肉块？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0428,supporting_operation,C2_dynamic_spatial,,medium,对“摔倒发生在越过栏杆之前还是之后？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0429,outside_scope,NONE,,high,对“镜头先展示设备控制盒还是汽车发动机舱？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0430,directly_in_scope,C1_occlusion_permanence,C5_deformation_state,high,对“车顶收起后驾驶者是否持续可见？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。；同时还需识别形变、开合或组装状态。
+scope-0431,directly_in_scope,C2_dynamic_spatial,,high,对“第一视角所在载具在水面上是否持续前进？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0432,directly_in_scope,C5_deformation_state,,high,对“天花板上哪一部分已经缺失？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0433,directly_in_scope,C3_action_intent,,high,对“讲解者移动手势的直接目标是展示哪个船内区域？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0434,directly_in_scope,C3_action_intent,,high,对“男子抱着多双鞋从地面起身后走向哪里？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0435,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“飞行器是否完成了明显的滚转？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0436,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“她是否始终面向水面操作？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0437,directly_in_scope,C2_dynamic_spatial,,high,对“海鸟是否从海面上方飞到船旁？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0438,directly_in_scope,C5_deformation_state,,high,对“钩针操作后蓝色橡皮筋结构如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0439,outside_scope,NONE,,high,对“领先车辆位于赛道哪一侧？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0440,directly_in_scope,C6_reference_frame,,high,对“从后座看驾驶员位于观察者哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0441,outside_scope,NONE,,high,对“鱼相对皮划艇船头位于哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0442,directly_in_scope,C5_deformation_state,,high,对“手指接近灯口时灯的状态是否改变？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0443,supporting_operation,C6_reference_frame,,medium,对“车辆最终是否朝向相机？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0444,supporting_operation,C2_dynamic_spatial,,medium,对“无人机飞过时位于高楼上方吗？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0445,outside_scope,NONE,,high,对“男子先展示车身外壳还是先展示开孔细节？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0446,supporting_operation,C5_deformation_state,,medium,对“车顶开始移动发生在车辆进入弯道之前还是之后？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。
+scope-0447,outside_scope,NONE,,high,对“天花板缺口相对吊灯位于哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0448,outside_scope,NONE,,high,对“戴帽男子坐在最初出现的老人哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0449,supporting_operation,C6_reference_frame,,medium,对“摩托车在片段末尾向道路哪一侧偏转？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0450,outside_scope,NONE,,high,对“包装盒位于黑色桌子的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0451,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“镜头前进时两侧店铺的相对位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0452,outside_scope,NONE,,high,对“服装店陈列架相对通道位于哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0453,directly_in_scope,C3_action_intent,,high,对“镜头移动的直接目标是跟随球还是展示球洞？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0454,outside_scope,NONE,,high,对“镜头先展示车身外壳还是先展示尾部孔洞？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0455,directly_in_scope,C2_dynamic_spatial,,high,对“他与墙上历史照片的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0456,outside_scope,NONE,,high,对“橙色饰边分布在座椅什么位置？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0457,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“镜头从箭体下方向尖端移动吗？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0458,outside_scope,NONE,,high,对“镜头先展示纪念碑还是先转向台阶旁队伍？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0459,directly_in_scope,C3_action_intent,,high,对“操作者把工具接触旋转木杆的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0460,directly_in_scope,C2_dynamic_spatial,,high,对“水翼板在运动中是否始终高于水面？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0461,directly_in_scope,C5_deformation_state,,high,对“汽车引擎盖在整个片段中保持打开吗？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0462,outside_scope,NONE,,high,对“烟柱出现发生在飞机掠过之前还是之后？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0463,outside_scope,NONE,,high,对“孤立树木相对海岸位于哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0464,outside_scope,NONE,,high,对“马匹位于停放车辆的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0465,directly_in_scope,C5_deformation_state,,high,对“浪峰在移动过程中是否逐渐破碎？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0466,directly_in_scope,C2_dynamic_spatial,,high,对“黑衣男子出现后走向镜头吗？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0467,supporting_operation,C2_dynamic_spatial,,medium,对“汽车最接近相机发生在转弯之前还是之后？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0468,directly_in_scope,C1_occlusion_permanence,,high,对“狗是否短暂进入灌木遮挡区？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0469,supporting_operation,C2_dynamic_spatial,,medium,对“镜头先经过车辆还是先看到远处马匹？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0470,outside_scope,NONE,,high,对“小船相对红色灯塔的位置如何分布？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0471,directly_in_scope,C3_action_intent,C2_dynamic_spatial,high,对“店员从柜台后取出的绿色甜点最终放在哪里？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0472,directly_in_scope,C2_dynamic_spatial,,high,对“两辆摩托车起步后哪一辆先明显领先？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0473,outside_scope,NONE,,high,对“风铃与远岸岛屿的前后关系是什么？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0474,directly_in_scope,C2_dynamic_spatial,,high,对“两只狗的前后关系如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0475,supporting_operation,C6_reference_frame,,medium,对“滑雪者最后朝雪坡的哪个方向滑走？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0476,directly_in_scope,C2_dynamic_spatial,,high,对“红车驶远后是否再次靠近相机？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0477,outside_scope,NONE,,high,对“镜头先展示窗边吸音板还是中央三脚架？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0478,directly_in_scope,C2_dynamic_spatial,,high,对“飞行器是否始终高于草地？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0479,directly_in_scope,C2_dynamic_spatial,,high,对“推婴儿车的人是否从画面一侧走到另一侧？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0480,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“蓝车在弯道中是否始终朝向相机？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0481,directly_in_scope,C3_action_intent,,high,对“讲解者转向尾部的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0482,supporting_operation,C2_dynamic_spatial,,medium,对“遥控直升机先升空还是先降落？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0483,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“山谷在道路弯曲过程中位于车辆哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0484,supporting_operation,C2_dynamic_spatial,,medium,对“鱼在水面附近出现后是否被举到船边？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0485,directly_in_scope,C2_dynamic_spatial,,high,对“船与桥墩之间的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0486,outside_scope,NONE,,high,对“方向盘相对蓝白座椅位于什么位置？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0487,directly_in_scope,C6_reference_frame,,high,对“前方道路弯向驾驶者哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0488,supporting_operation,C2_dynamic_spatial,,medium,对“鱼先在水下绕圈还是先进入抄网？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0489,supporting_operation,C3_action_intent,,medium,对“传中球到达门前后哪队球员先触球？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0490,outside_scope,NONE,,high,对“后门相对侧窗位于哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0491,outside_scope,NONE,,high,对“圆柱灯相对花瓶和相框位于哪里？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0492,outside_scope,NONE,,high,对“男子在船内先展示座椅还是先展示中央台面？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0493,directly_in_scope,C2_dynamic_spatial,,high,对“人与岸线之间的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0494,directly_in_scope,C2_dynamic_spatial,,high,对“摩托车与前方红车的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0495,supporting_operation,C6_reference_frame,,medium,对“方向盘位于驾驶室画面的哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0496,supporting_operation,C6_reference_frame,,medium,对“男子的枪口主要朝向水面还是天空？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0497,directly_in_scope,C3_action_intent,,high,对“操作者转身的直接目标是持续跟踪飞行器吗？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0498,supporting_operation,C3_action_intent,,medium,对“他转身指示发生在穿过人群之前还是之后？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0499,directly_in_scope,C1_occlusion_permanence,,high,对“树木经过前景时是否短暂遮挡山谷？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0500,directly_in_scope,C2_dynamic_spatial,,high,对“他与相机之间的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0501,supporting_operation,C2_dynamic_spatial,,medium,对“白狗与黑狗哪一只先接近相机？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0502,directly_in_scope,C2_dynamic_spatial,,high,对“狗与右侧栏杆的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0503,directly_in_scope,C6_reference_frame,,high,对“从骑手视角看转向车道位于哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0504,supporting_operation,C6_reference_frame,,medium,对“指示时岩石相对男子位于哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0505,directly_in_scope,C1_occlusion_permanence,,high,对“前景立柱何时遮住远处山景？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0506,directly_in_scope,C3_action_intent,,high,对“手指反复指向包装盒的哪个区域？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0507,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“镜头绕车移动时车身朝向如何变化？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0508,supporting_operation,C2_dynamic_spatial,,medium,对“相机从车尾移到车头发生在讲解手势之前吗？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0509,outside_scope,NONE,,high,对“住宅位于水面的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0510,directly_in_scope,C1_occlusion_permanence,,high,对“白车是否被前景仪表台遮挡过？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0511,directly_in_scope,C2_dynamic_spatial,,high,对“赛马群的领先位置是否发生变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0512,directly_in_scope,C2_dynamic_spatial,,high,对“盒子在讲解过程中是否改变位置？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0513,directly_in_scope,C1_occlusion_permanence,C5_deformation_state,high,对“车门打开后车内空间是否变得可见？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。；同时还需识别形变、开合或组装状态。
+scope-0514,outside_scope,NONE,,high,对“镜头先展示港口小船还是大型起重桥？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0515,directly_in_scope,C5_deformation_state,C3_action_intent,high,对“男子对肉块使用工具后肉块是否被分离？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需绑定动作与空间目标或结果。
+scope-0516,outside_scope,NONE,,high,对“摩托车经过观众席前是否先产生烟雾？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0517,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“单板相对坡面的朝向如何交替变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0518,outside_scope,NONE,,high,对“果岭旗杆位于沙坑的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0519,outside_scope,NONE,,high,对“成年男子出现是在孩子们散开之前还是之后？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0520,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“镜头平移时山谷先出现在画面哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0521,directly_in_scope,C3_action_intent,C6_reference_frame,high,对“男子指向的目标位于人群哪一侧？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需处理相机、行动者或对象参照。
+scope-0522,supporting_operation,C2_dynamic_spatial,,medium,对“孩子们在空地上是否朝远处共同跑动？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0523,supporting_operation,C2_dynamic_spatial,,medium,对“球最终停在洞杯的近处还是远处？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0524,supporting_operation,C6_reference_frame,,medium,对“进入弯道后蓝车车头朝向哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0525,directly_in_scope,C5_deformation_state,C2_dynamic_spatial,high,对“孩子们先聚集还是先散开？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0526,directly_in_scope,C1_occlusion_permanence,C6_reference_frame,high,对“无人机从湖面哪一侧进入清晰画面？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。；同时还需处理相机、行动者或对象参照。
+scope-0527,supporting_operation,C2_dynamic_spatial,,medium,对“鱼被举起时相对船边位于哪一侧？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0528,directly_in_scope,C2_dynamic_spatial,,high,对“冲线前马群是否逐渐拉开距离？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0529,directly_in_scope,C5_deformation_state,,high,对“鱼竿的弯曲程度如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0530,outside_scope,NONE,,high,对“绿色甜点相对玻璃柜台位于哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0531,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“镜头沿山路移动时近处护栏如何掠过画面？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0532,directly_in_scope,C2_dynamic_spatial,,high,对“骑手相对岸边向哪个方向移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0533,outside_scope,NONE,,high,对“镜头先展示石像还是先展示戴口罩男子？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0534,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“虾在水草上的朝向是否发生改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0535,directly_in_scope,C3_action_intent,,high,对“冲浪者抬起前脚的直接目标是保持平衡吗？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0536,outside_scope,NONE,,high,对“车门数量在侧面镜头中可见为多少？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0537,directly_in_scope,C2_dynamic_spatial,,high,对“冲浪板相对浪峰的位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0538,directly_in_scope,C6_reference_frame,,high,对“从后座视角看驾驶员位于车辆哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0539,directly_in_scope,C5_deformation_state,,high,对“鱼竿弯曲程度随时间如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0540,outside_scope,NONE,,high,对“红色虾停在水草的什么位置？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0541,directly_in_scope,C1_occlusion_permanence,,high,对“前景车顶是否遮挡过马匹？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0542,directly_in_scope,C5_deformation_state,C2_dynamic_spatial,high,对“浪峰朝岸边推进时形状如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0543,directly_in_scope,C3_action_intent,,high,对“男子用绳索固定了什么物体？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0544,supporting_operation,C2_dynamic_spatial,,medium,对“车辆先通过急弯还是先进入较直路段？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0545,directly_in_scope,C1_occlusion_permanence,,high,对“女子通过门洞前后是否短暂被石墙遮挡？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0546,supporting_operation,C2_dynamic_spatial,,medium,对“鱼竿明显弯曲后鱼是否出现在岸边？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0547,directly_in_scope,C2_dynamic_spatial,,high,对“狗先远离相机还是先返回相机附近？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0548,directly_in_scope,C5_deformation_state,,high,对“金属条经过工具后是否弯曲？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0549,supporting_operation,C6_reference_frame,,medium,对“两名男子交谈时主要面向彼此还是面向车辆？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0550,directly_in_scope,C2_dynamic_spatial,,high,对“冲浪者相对浪峰的位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0551,outside_scope,NONE,,high,对“长形座垫位于中央台面的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0552,directly_in_scope,C2_dynamic_spatial,,high,对“飞机相对地面的高度先升高还是降低？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0553,outside_scope,NONE,,high,对“他先整理鞋带还是先站起来？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0554,directly_in_scope,C2_dynamic_spatial,,high,对“蓝色汽车相对拍摄车辆的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0555,outside_scope,NONE,,high,对“女子第一次进食发生在展示餐盘之前吗？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0556,directly_in_scope,C5_deformation_state,,high,对“设备上橙色束带是否保持固定？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0557,supporting_operation,C6_reference_frame,,medium,对“男子指向石像时面向哪里？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0558,outside_scope,NONE,,high,对“橙衣男子是否在持续处理手中物品？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0559,directly_in_scope,C6_reference_frame,,high,对“她穿门时身体朝向与门洞方向是否一致？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0560,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“车辆转弯时车头朝向如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0561,directly_in_scope,C6_reference_frame,,high,对“路边邮箱从骑手视角位于哪一侧？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。
+scope-0562,outside_scope,NONE,,high,对“室外有几人共同处理鸟？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0563,supporting_operation,C5_deformation_state,,medium,对“成品木杆与对照木杆长度是否相近？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。
+scope-0564,directly_in_scope,C2_dynamic_spatial,,high,对“遥控飞行器相对操作者如何移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0565,outside_scope,NONE,,high,对“电动自行车的电池位于车架什么位置？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0566,directly_in_scope,C1_occlusion_permanence,,high,对“冲浪者何时被浪花完全遮挡？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0567,outside_scope,NONE,,high,对“他低头操作与抬头观察的顺序如何交替？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0568,outside_scope,NONE,,high,对“后货架与后轮在垂直方向上是什么关系？”，核心是一般动作、表情、属性或可见事实识别，未要求六维定义中的高层时空能力。
+scope-0569,directly_in_scope,C2_dynamic_spatial,,high,对“海鸟接近船时与相机距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0570,supporting_operation,C3_action_intent,,medium,对“工具接触肉块发生在男子展示肉块之前还是之后？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0571,directly_in_scope,C1_occlusion_permanence,,high,对“驶出桥下后桥体是否离开视野？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0572,directly_in_scope,C2_dynamic_spatial,,high,对“球在门前混战中是否改变方向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0573,directly_in_scope,C5_deformation_state,,high,对“机器操作后金属条从直线变成什么形状？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0574,directly_in_scope,C3_action_intent,,high,对“男子系绳的直接目标是什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0575,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“深红汽车先正对镜头还是先侧向经过？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0576,directly_in_scope,C5_deformation_state,,high,对“滑雪者落地后是否继续保持平衡？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0577,outside_scope,NONE,,high,对“她先再次取食还是先表现出明显反应？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0578,supporting_operation,C2_dynamic_spatial,,medium,对“镜头先经过拖车还是先展示远处马匹？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0579,directly_in_scope,C5_deformation_state,,high,对“弯曲后的金属条是否仍完整连续？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0580,directly_in_scope,C2_dynamic_spatial,,high,对“马在视频中是否改变了行进方向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0581,directly_in_scope,C1_occlusion_permanence,,high,对“水面先被树木部分遮挡还是后被完整展示？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0582,directly_in_scope,C3_action_intent,C6_reference_frame,high,对“男子抱着设备走向厨房哪个方向？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需处理相机、行动者或对象参照。
+scope-0583,supporting_operation,C2_dynamic_spatial,,medium,对“镜头是在经过牛群之前还是之后进入较直的路段？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0584,outside_scope,NONE,,high,对“海边住宅相对水面位于高处还是低处？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0585,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“人群在广场中的密度随镜头移动如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0586,outside_scope,NONE,,high,对“绿色招牌先出现还是大型红色招牌先出现？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0587,outside_scope,NONE,,high,对“男子打开了旧车的哪扇门？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0588,directly_in_scope,C5_deformation_state,,high,对“肉块在处理过程中是否被分成更小部分？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0589,supporting_operation,C1_occlusion_permanence,C6_reference_frame,medium,对“无人机短暂变小时是否仍保持在画面中央附近？”，表层只判断进入/离开视野、遮挡时点或持续可见性；在该具体语境中它是 C1 的明确追踪操作，但未直接询问隐藏后的持续存在。；同时还需处理相机、行动者或对象参照。
+scope-0590,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“镜头移动时住宅群在画面中向哪侧移动？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0591,directly_in_scope,C3_action_intent,,high,对“黑衣男子手指向岩石的哪个部位？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0592,outside_scope,NONE,,high,对“镜头从高尔夫球员转向果岭旗杆的顺序是什么？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0593,outside_scope,NONE,,high,对“说明书相对鼠标和电池放在桌面的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0594,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“镜头移动时三脚架相对沙发的位置如何变化？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0595,outside_scope,NONE,,high,对“路牌先出现还是大片针叶树先出现？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0596,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“汽车经过近处后车头朝向如何改变？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0597,directly_in_scope,C3_action_intent,,high,对“白队球员突破后射门是否得分？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0598,directly_in_scope,C2_dynamic_spatial,,high,对“工具始终位于瓷砖孔洞的右侧吗？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0599,supporting_operation,C3_action_intent,,medium,对“右手先穿绳还是先拉紧绳端？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0600,directly_in_scope,C5_deformation_state,C2_dynamic_spatial,high,对“冲浪者接近岩石后是否离开冲浪板？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0601,supporting_operation,C3_action_intent,,medium,对“男子先取下悬挂物还是先走向室外？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0602,directly_in_scope,C2_dynamic_spatial,C5_deformation_state,high,对“桌面物品在拆包过程中如何重新排列？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需识别形变、开合或组装状态。
+scope-0603,directly_in_scope,C2_dynamic_spatial,,high,对“无人机是先远离相机还是先靠近相机？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0604,outside_scope,NONE,,high,对“两名男子先讨论发动机舱还是先展示驾驶室？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0605,outside_scope,NONE,,high,对“镜头先展示墙上镜子还是桌面灯具？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0606,directly_in_scope,C2_dynamic_spatial,,high,对“狗与右侧栏杆的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0607,outside_scope,NONE,,high,对“镜头先展示花园石像还是先展示戴口罩男子？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0608,directly_in_scope,C2_dynamic_spatial,,high,对“白车绕障碍物时行驶轨迹呈什么形状？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0609,supporting_operation,C2_dynamic_spatial,,medium,对“车辆最终停在道路上吗？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0610,directly_in_scope,C3_action_intent,C6_reference_frame,high,对“男子从远处走近后主要朝哪个方向手势示意？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需处理相机、行动者或对象参照。
+scope-0611,outside_scope,NONE,,high,对“大型银色鱼与红色虾哪一个先出现？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0612,directly_in_scope,C1_occlusion_permanence,,high,对“冲浪者跌入浪花后是否再次露出水面？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0613,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“镜头移动后哪栋房屋进入画面中央？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0614,directly_in_scope,C2_dynamic_spatial,,high,对“航拍镜头从空地向居民区靠近时距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0615,directly_in_scope,C5_deformation_state,,high,对“包装从封闭到展开经历了什么状态变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0616,supporting_operation,C2_dynamic_spatial,,medium,对“飞机经过航站楼上空时是否已经离地？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0617,directly_in_scope,C1_occlusion_permanence,,high,对“狗在远处变小后是否仍可被持续追踪？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0618,directly_in_scope,C2_dynamic_spatial,,high,对“水面相对远岸树木的位置是否保持稳定？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0619,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“球员与球洞之间的距离随镜头推进如何变化？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0620,directly_in_scope,C2_dynamic_spatial,,high,对“白车在空地中是否完成转弯？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0621,supporting_operation,C2_dynamic_spatial,,medium,对“女子是否完整穿过狭窄石门？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0622,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“镜头移动时海滨住宅何时进入中央？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0623,directly_in_scope,C3_action_intent,,high,对“两人主要查看车辆的侧面还是尾部？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0624,outside_scope,NONE,,high,对“折叠机构位于后轮的哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0625,directly_in_scope,C2_dynamic_spatial,,high,对“鳐鱼相对岸边的位置如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0626,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“男子是否一直保持面向水面？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0627,supporting_operation,C2_dynamic_spatial,,medium,对“黄色车道结束标志出现于匝道分离之前吗？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0628,outside_scope,NONE,,high,对“黄色工具相对编织板位于哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0629,directly_in_scope,C3_action_intent,,high,对“冲浪者下板的直接目标是避免什么？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0630,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“马接近镜头后从哪一侧经过？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0631,outside_scope,NONE,,high,对“点亮的圆柱灯位于白色花瓶哪一侧？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0632,directly_in_scope,C2_dynamic_spatial,,high,对“桥墩相对小船从哪侧经过？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0633,supporting_operation,C2_dynamic_spatial,,medium,对“冲浪者失去平衡前是否完成转向？”，表层只问运动终点、局部动态关系或空间事件顺序；在该具体运动过程中它是 C2 的必要基础操作，但未直接要求建模完整关系变化。
+scope-0634,supporting_operation,C6_reference_frame,,medium,对“手中物品相对栏杆位于哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0635,supporting_operation,C3_action_intent,,medium,对“海浪涌来时人群先后退还是先伸手？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。
+scope-0636,directly_in_scope,C2_dynamic_spatial,,high,对“火箭在片段中是否发生真实位移？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0637,directly_in_scope,C3_action_intent,,high,对“行驶车辆在出口分岔处选择了哪条车道？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0638,directly_in_scope,C2_dynamic_spatial,,high,对“直升机相对树篱高度如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0639,supporting_operation,C6_reference_frame,,medium,对“翻滚后他相对相机向哪个方向移动？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0640,directly_in_scope,C5_deformation_state,,high,对“鱼钩从鱼口取出后鱼的状态如何变化？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0641,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“游泳者从远处接近相机时是否一直面向相机？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0642,outside_scope,NONE,,high,对“镜头先展示海岸还是先展示男子面部？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0643,directly_in_scope,C2_dynamic_spatial,,high,对“马群通过终点区域前是否逐渐拉开距离？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0644,outside_scope,NONE,,high,对“镜头先展示圣诞树还是蛋糕柜台？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0645,outside_scope,NONE,,high,对“甜点出现发生在顾客到达柜台之前还是之后？”，核心只是一般事件或镜头展示顺序；题面未表明该顺序是六维高层推理的必要组成，因此判为范围外。
+scope-0646,supporting_operation,C5_deformation_state,,medium,对“他先绕绳还是先拉紧绳结？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。
+scope-0647,outside_scope,NONE,,high,对“前半段可见的大型银色鱼有几条？”，核心只是数量、身份、外观属性或普通实体识别；不要求六维中的持续追踪、动态关系、空间目标、预测、状态转变或参照转换。
+scope-0648,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“相机转向自拍时地平线在画面中如何移动？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0649,supporting_operation,C5_deformation_state,C2_dynamic_spatial,medium,对“展开后的踏板位于保险杠上方还是下方？”，表层只问加工/组装步骤、成品位置或局部状态，是 C5 的明确基础操作，但未直接要求解释完整状态转变。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0650,supporting_operation,C6_reference_frame,,medium,对“男子操作时肉块相对其身体位于哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0651,supporting_operation,C6_reference_frame,,medium,对“白车先出现在画面右侧还是左侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0652,directly_in_scope,C2_dynamic_spatial,,high,对“大象与随行步行者的前后关系如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0653,supporting_operation,C1_occlusion_permanence,C5_deformation_state,medium,对“板与人分离发生在浪花遮挡之前还是之后？”，表层只判断进入/离开视野、遮挡时点或持续可见性；在该具体语境中它是 C1 的明确追踪操作，但未直接询问隐藏后的持续存在。；同时还需识别形变、开合或组装状态。
+scope-0654,supporting_operation,C3_action_intent,C5_deformation_state,medium,对“男子先启动车床还是先用工具接触木杆？”，表层只问动作识别或操作先后；该具体操作围绕空间目标、受体或结果展开，是 C3 的必要基础操作，但未直接询问意图本身。；同时还需识别形变、开合或组装状态。
+scope-0655,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“冲浪者在浪上是否多次改变朝向？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0656,directly_in_scope,C5_deformation_state,,high,对“升降桥的桥面处于抬起状态吗？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0657,supporting_operation,C6_reference_frame,,medium,对“车辆最终朝向画面哪一侧？”，表层只读取固定时刻的方向、朝向或哪一侧，是 C6 的参照表达基础操作，但未要求显式视角转换。
+scope-0658,directly_in_scope,C3_action_intent,C6_reference_frame,high,对“男子抛动橙色绳索后绳圈落在身体哪一侧？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。；同时还需处理相机、行动者或对象参照。
+scope-0659,directly_in_scope,C1_occlusion_permanence,,high,对“无人机何时从湖对岸进入画面？”，核心要求跨遮挡、离开视野或可见性变化持续追踪对象及其再现，直接考查 C1 遮挡与客体持续性。
+scope-0660,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“驶向红灯停车队列时，本车是从黑色汽车左侧还是右侧接近？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。
+scope-0661,outside_scope,NONE,,high,对“道路位于陡坡上方还是下方？”，只需读取单点静态位置或方位，且没有明确动态过程或视角转换；不能仅因含空间词就归入六维。
+scope-0662,directly_in_scope,C3_action_intent,,high,对“讲解者反复指向车辆的哪个区域？”，核心要求把可见空间行动与其目标、去向或即时结果绑定，直接考查 C3 行动与意图。
+scope-0663,directly_in_scope,C2_dynamic_spatial,,high,对“骑手与相机之间的距离如何变化？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。
+scope-0664,directly_in_scope,C2_dynamic_spatial,C6_reference_frame,high,对“镜头是否从悍马车头移动到车尾？”，核心要求跟踪对象间位置、方向、距离或轨迹随时间的变化，直接考查 C2 动态空间关系。；同时还需处理相机、行动者或对象参照。
+scope-0665,directly_in_scope,C5_deformation_state,,high,对“鱼竿在末段是否明显弯曲？”，核心要求识别开合、弯曲、组装、分离、破坏或状态转变，直接考查 C5 形变与状态变化。
+scope-0666,directly_in_scope,C6_reference_frame,C2_dynamic_spatial,high,对“远处树木相对观察者向哪个方向移动？”，核心要求在明确的相机、行动者或对象视角下表示或转换空间方向，直接考查 C6 参照系。；同时还需跟踪相关空间关系或轨迹的时间变化。

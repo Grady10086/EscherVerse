@@ -1,0 +1,94 @@
+{
+  "schema": "escher-audit-historical-review-audit-v1",
+  "sources": {
+    "benchmark": {
+      "path": "data/Escher-Bench.json",
+      "sha256": "a4cbe71c14bbb73cf4829b8c6a59c39cb9f4e6de46bbe32d426fe17f265b111b"
+    },
+    "workbook": {
+      "path": "private_human_record.xlsx",
+      "sha256": "1dc73d4329c6fede139f7590398645c7dd63427f47b3bb3a20344b7d660e80bb"
+    },
+    "archive": {
+      "path": "archived_inputs/manual_review_organized_1020.zip",
+      "sha256": "bbcbeafb8973c023308a34c04fcaaca47b9f88838db86cbd006237301311bce2"
+    }
+  },
+  "final_benchmark": {
+    "rows": 8000,
+    "unique_video_question_keys": 6283,
+    "unique_videos": 4572
+  },
+  "manuscript_reported_video_attrition_not_log_verified": {
+    "initial_online_videos": 3766053,
+    "after_rule_filter": ">105000",
+    "final_selected_videos": 11328,
+    "stage_1_retention_lower_bound": 0.02788064851981637,
+    "stage_1_removal_upper_bound": 0.9721193514801836,
+    "stage_2_retention_upper_bound": 0.10788571428571428,
+    "stage_2_removal_lower_bound": 0.8921142857142857,
+    "reported_reason_taxonomy": {
+      "rule_filter": [
+        "static or monotonous video captions",
+        "keyword/content-score mismatch"
+      ],
+      "llm_filter": [
+        "static or ambiguous content",
+        "low object/agent interaction",
+        "low action or movement value"
+      ]
+    },
+    "source": "sn-article.tex lines 341-347",
+    "verification_status": "manuscript claims found; underlying stage logs not recovered"
+  },
+  "human_delivery_workbook": {
+    "data_rows": 3569,
+    "status_counts": {
+      "blank": 31,
+      "正确，不需要修改": 1518,
+      "错误，需要修改": 2020
+    },
+    "parse_and_usability_counts": {
+      "modification_required_but_unusable": 248,
+      "original_json_error": 1,
+      "revised_json_error": 9,
+      "untrusted_status": 31
+    },
+    "original_json_unique_keys": 3302,
+    "effective_decision_rows": 3290,
+    "effective_original_rows": 1518,
+    "effective_revised_rows": 1772,
+    "effective_unique_keys": 3123,
+    "effective_unique_videos": 2577,
+    "repeated_effective_keys": 152,
+    "rows_in_repeated_effective_keys": 319,
+    "conflicting_effective_answer_keys": 49,
+    "unique_keys_strictly_mapped_to_final": 1967,
+    "unique_keys_with_one_human_answer_equal_to_final": 1461
+  },
+  "manual_review_archive_771": {
+    "rows": 771,
+    "unique_keys": 771,
+    "unique_videos": 742,
+    "strictly_mapped_to_final": 770,
+    "same_answer_as_final": 310,
+    "different_answer_from_final": 460,
+    "same_category_as_final": 770,
+    "same_scene_type_as_final": 770,
+    "interpretation": "A human-review handoff subset, not a candidate-generation or discard log."
+  },
+  "recoverability": {
+    "directly_observed": [
+      "final benchmark size",
+      "workbook review-row statuses and usable effective decisions",
+      "archive-to-final answer/category/scene changes"
+    ],
+    "not_recoverable_from_these_artifacts": [
+      "number of QA candidates initially generated",
+      "number rejected before human handoff",
+      "stage-specific discard reasons for the full pipeline",
+      "generator-omitted question types"
+    ],
+    "prohibited_inference": "Do not subtract these non-nested artifacts to estimate attrition."
+  }
+}

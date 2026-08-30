@@ -1,0 +1,91 @@
+{
+  "schema_version": "error-error-pool-v1",
+  "created_at": "2026-08-13T06:11:50.654590+00:00",
+  "status": "frozen_unlabeled",
+  "sampling_frame": "paired 200-item perception-control panel",
+  "sampling_unit": "model-item error",
+  "sample_per_model": 100,
+  "total_sample": 300,
+  "seed": 20260813,
+  "models": {
+    "InternVL3-2B": {
+      "error_population": 122,
+      "sample_size": 100,
+      "error_population_by_category": {
+        "1": 22,
+        "2": 25,
+        "3": 15,
+        "4": 23,
+        "5": 19,
+        "6": 18
+      },
+      "sample_by_category": {
+        "1": 18,
+        "2": 20,
+        "3": 12,
+        "4": 19,
+        "5": 16,
+        "6": 15
+      },
+      "control_pass_in_sample": 75
+    },
+    "Qwen3-VL-8B-Instruct": {
+      "error_population": 112,
+      "sample_size": 100,
+      "error_population_by_category": {
+        "1": 17,
+        "2": 21,
+        "3": 16,
+        "4": 21,
+        "5": 14,
+        "6": 23
+      },
+      "sample_by_category": {
+        "1": 15,
+        "2": 19,
+        "3": 14,
+        "4": 19,
+        "5": 12,
+        "6": 21
+      },
+      "control_pass_in_sample": 84
+    },
+    "Qwen2.5-VL-7B-Instruct": {
+      "error_population": 124,
+      "sample_size": 100,
+      "error_population_by_category": {
+        "1": 19,
+        "2": 22,
+        "3": 22,
+        "4": 21,
+        "5": 20,
+        "6": 20
+      },
+      "sample_by_category": {
+        "1": 15,
+        "2": 18,
+        "3": 18,
+        "4": 17,
+        "5": 16,
+        "6": 16
+      },
+      "control_pass_in_sample": 68
+    }
+  },
+  "unique_benchmark_items": 169,
+  "control_pass_total": 227,
+  "source_sha256": {
+    "archived_workspace/experiments/perception_control/manifests/provisional_eval_200_20260813/originals/items.json": "1f22f277d65d5615ead88e1e56f2a807da86a888bc3ca91ee63ac204bf4315ad",
+    "archived_workspace/experiments/perception_control/manifests/provisional_eval_200_20260813/controls/items.json": "95bcdd175f5f4300d3492e28d70f4ab6313c2d2c5e0882aa235a28bdfdac36fa",
+    "archived_workspace/experiments/perception_control/results/provisional_original_200_20260813/internvl3_2b/results_internvl3-2b_20260813_005643.json": "c158debcb1607958af5b607880bcc6fda4c0494a71b8815ca0c8499041a9e07b",
+    "archived_workspace/experiments/perception_control/results/provisional_eval_200_20260813/internvl3_2b/results_internvl3-2b_20260813_004116.json": "132a9c63f275fbd0966f6e40fcc06438a22f9e8ba53a2fb105ca97b232b7c5a5",
+    "archived_workspace/experiments/perception_control/results/provisional_original_200_20260813/qwen3vl8b/results_qwen3-vl-8b_20260813_011246.json": "5f451c06338e5caaa23f7b9ed65f53341b2b08ec0c9d6767b7a107dc6a6b9c4f",
+    "archived_workspace/experiments/perception_control/results/provisional_eval_200_20260813/qwen3vl8b/results_qwen3-vl-8b_20260813_004934.json": "4ded02e28a1dba644a4ed07319acd4c5a5f1a9a76e733919d0211a66c6bb9475",
+    "archived_workspace/experiments/perception_control/results/provisional_original_200_20260813/qwen25vl7b/results_qwen2.5-vl-7b_20260813_012745.json": "1cf59fb9991de923f8cb1d709e5db5468938f058c72498f34b9c7f0005a34a14",
+    "archived_workspace/experiments/perception_control/results/provisional_eval_200_20260813/qwen25vl7b/results_qwen2.5-vl-7b_20260813_005620.json": "09fc525208171cb6a4945f1ee4dacab7b497830fb41d94163c541cfdcbfddb05"
+  },
+  "audit_manifest_sha256": "59b5c638600b7c856f8f6ef735200bd5615f4342253dd9ed1572a7b572f9b5ed",
+  "label_state": {
+    "unlabeled": 300
+  }
+}

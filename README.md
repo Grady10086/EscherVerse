@@ -47,7 +47,11 @@ The repository and linked dataset currently provide:
 - **Benchmark annotations** for EscherVerse evaluation
 - **Instruction-tuning annotations** for model development
 - **Metadata** for the released video set
-- **Evaluation code** for running benchmark experiments
+- **Evaluation and common-scoring code** for supported models
+- **Video reconstruction tooling** for sources that remain publicly available
+- **A Qwen3-VL SFT/LoRA entry point** and frozen content-specific ablation artifacts
+- **Scripts and frozen outputs** for the analyses added during revision
+- **An explicit reproducibility registry** for all 27 reported model rows
 
 The following files are hosted on [Hugging Face](https://huggingface.co/datasets/Gradygu3u/EscherVerse-Data):
 
@@ -150,6 +154,12 @@ python eval/evaluate.py \
 
 Supported model interfaces currently include local transformer-based VLMs and API-based proprietary models such as GPT, Gemini, and Claude-family systems. See [eval/evaluate.py](eval/evaluate.py) for the maintained list.
 
+This maintained interface does not cover every row in the 27-model manuscript
+table. [The model registry](reproducibility/models/model_registry.csv) states,
+row by row, whether the public release supports fresh inference, provides only a
+configuration reference, or provides only the reported aggregate score. We do
+not describe aggregate-only rows as reproducible inference runs.
+
 ## Evaluation protocol
 
 The released evaluation code follows the protocol used in the paper:
@@ -160,12 +170,81 @@ The released evaluation code follows the protocol used in the paper:
 - **`<answer>...</answer>` answer extraction** for automated parsing
 - **Question-type-specific scoring** for single-choice, multiple-select, true/false, and fill-in-the-blank items
 
+## Reproducibility paths
+
+The release separates rerunning an experiment from recomputing a statistic.
+External media, model licenses, mutable APIs, and human-record privacy prevent
+one command from reproducing every number in the paper.
+
+| Path | Public reproduction level | Entry point |
+|------|---------------------------|-------------|
+| Supported open-weight/API inference | Fresh inference when videos and model access are available | `eval/evaluate.py` |
+| Common answer scoring | Deterministic recomputation from compatible outputs | `eval/evaluate.py` |
+| Video inputs | Reconstruction from retained sources or currently available public sources | `reproducibility/video/reconstruct_clips.py` |
+| Additional analyses | Recompute statistics from frozen public artifacts; fresh perception-control inference also requires video access | `experiments/` |
+| Content-specific SFT/LoRA ablation | Rebuild subsets, train adapters, evaluate, and recompute statistics | `experiments/sft_ablation/` |
+| Original Escher model rows | Aggregate scores only in this release | `reproducibility/models/model_registry.csv` |
+| Human first-pass baseline | Public aggregate verification; item-level aggregation code is provided | `reproducibility/human_baseline/` |
+
+### Reconstruct available clips
+
+Use retained full-length source files when available:
+
+```bash
+python reproducibility/video/reconstruct_clips.py \
+  --metadata data/video_list.json \
+  --source-dir /path/to/source_videos \
+  --output-dir data/videos \
+  --report video_availability.csv
+```
+
+Public retrieval is opt-in and requires `yt-dlp`, `ffmpeg`, and `ffprobe`:
+
+```bash
+python reproducibility/video/reconstruct_clips.py --download
+```
+
+The report distinguishes valid existing clips, reconstructed clips, unavailable
+sources, and clipping failures. The script does not bypass authentication,
+regional controls, removal decisions, or platform terms.
+
+### Run the content-specific LoRA ablation
+
+The exact ablation hyperparameters are recorded in
+`reproducibility/training/sft_lora_config.json`. Frozen subsets, the evaluation
+panel, per-seed training metrics, item-level outputs, and the final bootstrap
+analysis are under `experiments/sft_ablation/`.
+
+```bash
+python reproducibility/training/train_qwen3vl_lora.py \
+  --data experiments/sft_ablation/subsets_strict/intent_matched1409.jsonl \
+  --video-dir /path/to/clips \
+  --model Qwen/Qwen3-VL-4B-Instruct \
+  --output-dir runs/intent_seed20260814 \
+  --seed 20260814
+```
+
+This entry point and configuration reproduce the content-specific SFT ablation. The
+original six Escher model rows predate this release and are listed as
+aggregate-only unless their exact adapter and training configuration are
+subsequently deposited.
+
+### Human baseline
+
+`reproducibility/human_baseline/aggregate.py` recomputes per-annotator and
+summary accuracy from an anonymized CSV with `annotator_id` and `is_correct`
+columns. The public repository includes the manuscript-level aggregate record,
+not the item-level first-pass judgments. Deidentified item-level records are
+available to editors and referees subject to the study's privacy constraints.
+
 ## Repository structure
 
 ```text
 assets/           Figures and overview assets
 data/             Dataset access notes
 eval/             Benchmark evaluation code
+reproducibility/  Video, model-registry, training, and human-baseline paths
+experiments/      Frozen inputs, scripts, and outputs for additional analyses
 requirements.txt  Python dependencies
 ```
 

@@ -1,0 +1,304 @@
+{
+  "analysis_scope": "posthoc_natural50_held_out_model_evaluation",
+  "benchmark_sha256": "a4cbe71c14bbb73cf4829b8c6a59c39cb9f4e6de46bbe32d426fe17f265b111b",
+  "bootstrap_iterations": 100000,
+  "candidate_pair_count": 50,
+  "candidate_pairs_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+  "interpretation": "the model was evaluated after the post-hoc 50-pair candidate set was frozen and did not participate in selection.",
+  "model": "Qwen3-VL-8B-Thinking-raw",
+  "nonstandard_gold_indices": [
+    5196,
+    5606
+  ],
+  "prediction_item_coverage": {
+    "covered": 100,
+    "missing_indices": [],
+    "required": 100
+  },
+  "prediction_provenance": {
+    "consistent_overlap_rows": 0,
+    "sources": [
+      {
+        "metadata": {
+          "base_max_tokens": 4096,
+          "base_rows": 100,
+          "base_sources": [
+            {
+              "path": "historical_internal/results/posthoc_natural50_qwen3vl8b_thinking_merged4096_20260812/results.json",
+              "rows": 100,
+              "sha256": "dd3d4fb427d523ff17221f1d77d0c2f9dc57f14b09e3dce2183eb8362ba8def5"
+            }
+          ],
+          "changed_row_count": 0,
+          "created_at": "2026-08-12T10:24:29.700531+00:00",
+          "force_hit_max_incorrect": false,
+          "merge_rule": "Replace exactly the base rows whose generation metadata recorded hit_max_tokens=true; preserve all other rows unchanged.",
+          "merged_rows": 100,
+          "model": "qwen3-vl-8b-thinking",
+          "remaining_hit_max_tokens": 17,
+          "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+          "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+          "rescore_protocol": "anchored-option-label-v2",
+          "rescored_at": "2026-08-12T10:25:10.675280+00:00",
+          "retry_indices": [
+            588,
+            1529,
+            1828,
+            2036,
+            2154,
+            3710,
+            4775,
+            5197,
+            5424,
+            5606,
+            5715,
+            6090,
+            6350,
+            7198,
+            7405,
+            8070,
+            8289,
+            8746,
+            8969,
+            9275,
+            9557,
+            9906
+          ],
+          "retry_max_tokens": 8192,
+          "retry_rows": 22,
+          "retry_sources": [
+            {
+              "path": "historical_internal/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl8b_thinking_maxhit8192_20260812/shard_0/results_qwen3-vl-8b-thinking_20260812_181803.json",
+              "rows": 4,
+              "sha256": "176fe2c96dcc5f5b98abb32a965543b2e5fe810df176f095b4340d670778e4ea"
+            },
+            {
+              "path": "historical_internal/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl8b_thinking_maxhit8192_20260812/shard_1/results_qwen3-vl-8b-thinking_20260812_181522.json",
+              "rows": 3,
+              "sha256": "9d04f23dcbf2d0e1cd3a97a159150de29e8bee9ec11b96034456e8047fe83a6e"
+            },
+            {
+              "path": "historical_internal/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl8b_thinking_maxhit8192_20260812/shard_2/results_qwen3-vl-8b-thinking_20260812_181217.json",
+              "rows": 3,
+              "sha256": "d1c32af6d0c871f84646b315048cfedff03b5ac85a375ec581da908af9517d89"
+            },
+            {
+              "path": "historical_internal/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl8b_thinking_maxhit8192_20260812/shard_3/results_qwen3-vl-8b-thinking_20260812_181524.json",
+              "rows": 3,
+              "sha256": "ab7eaa106ae65557cd7cfe59aaa8eedcb43cbcbe9f51a36099cd9f5d76838d77"
+            },
+            {
+              "path": "historical_internal/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl8b_thinking_maxhit8192_20260812/shard_4/results_qwen3-vl-8b-thinking_20260812_181320.json",
+              "rows": 3,
+              "sha256": "4908b8bf9ce732e35e44789039466d8d8eb639b7a762ce8c6927d011358227ee"
+            },
+            {
+              "path": "historical_internal/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl8b_thinking_maxhit8192_20260812/shard_5/results_qwen3-vl-8b-thinking_20260812_181320.json",
+              "rows": 3,
+              "sha256": "cffba7ab99491f48a39137da00b5a1b03eb3b3615dbb2d3cede8cf0e70e27301"
+            },
+            {
+              "path": "historical_internal/results/heldout_natural50_remote_20260812/posthoc_natural50_qwen3vl8b_thinking_maxhit8192_20260812/shard_6/results_qwen3-vl-8b-thinking_20260812_181525.json",
+              "rows": 3,
+              "sha256": "5c79317435cf99b84ab7edb897a6b61fc51b2944a26b9e5383a7af4079d2ba09"
+            }
+          ],
+          "schema_version": "max-token-retry-merge-v1",
+          "source_result_path": "archived_workspace/experiments/matched_pair/results/posthoc_natural50_qwen3vl8b_thinking_merged8192_20260812/results.json",
+          "source_result_sha256": "2a7441512ca0d26b81ace7c8336ed4cf25b0e858d8bfd6c3af676f6a507fc56f"
+        },
+        "path": "historical_internal/results/posthoc_natural50_qwen3vl8b_thinking_rescored_20260812/posthoc_natural50_qwen3vl8b_thinking_merged8192_20260812_results_rescored.json",
+        "rows": 100,
+        "sha256": "acfd82a3a60c32c516576f4d992ccd33773b63b1275c5890d0f6ecf732775d3a"
+      }
+    ],
+    "unique_prediction_rows": 100
+  },
+  "reporting_guardrail": "This held-out model did not participate in candidate selection. Do not alter the frozen candidate set after viewing this result; retain the complete 100- and 254-pair analyses as the overall evidence.",
+  "schema_version": "same-video-additional-analysis-v1",
+  "seed": 20260812,
+  "subsets": {
+    "all_candidates": {
+      "a_correct_b_wrong": 11,
+      "a_correct_b_wrong_rate": 0.22,
+      "a_correct_count": 24,
+      "a_wrong_b_correct": 16,
+      "a_wrong_b_correct_rate": 0.32,
+      "arm_a_accuracy": 0.48,
+      "arm_b_accuracy": 0.58,
+      "b_wrong_given_a_correct_rate": 0.4583333333333333,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.44206833839416504,
+      "n_pairs": 50,
+      "paired_difference_b_minus_a": 0.09999999999999998,
+      "requested_pairs": 50,
+      "video_cluster_bootstrap_interval": [
+        -0.1,
+        0.3
+      ],
+      "video_cluster_sign_flip_p": 0.44318556814431853
+    },
+    "camera_vs_actor_goal": {
+      "a_correct_b_wrong": 3,
+      "a_correct_b_wrong_rate": 0.17647058823529413,
+      "a_correct_count": 7,
+      "a_wrong_b_correct": 7,
+      "a_wrong_b_correct_rate": 0.4117647058823529,
+      "arm_a_accuracy": 0.4117647058823529,
+      "arm_b_accuracy": 0.6470588235294118,
+      "b_wrong_given_a_correct_rate": 0.42857142857142855,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.34375,
+      "n_pairs": 17,
+      "paired_difference_b_minus_a": 0.23529411764705888,
+      "requested_pairs": 17,
+      "video_cluster_bootstrap_interval": [
+        -0.11764705882352941,
+        0.5882352941176471
+      ],
+      "video_cluster_sign_flip_p": 0.3435965640343597
+    },
+    "camera_vs_actor_goal_same_question_type": {
+      "a_correct_b_wrong": 0,
+      "a_correct_b_wrong_rate": 0.0,
+      "a_correct_count": 1,
+      "a_wrong_b_correct": 2,
+      "a_wrong_b_correct_rate": 0.4,
+      "arm_a_accuracy": 0.2,
+      "arm_b_accuracy": 0.6,
+      "b_wrong_given_a_correct_rate": 0.0,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.5,
+      "n_pairs": 5,
+      "paired_difference_b_minus_a": 0.39999999999999997,
+      "requested_pairs": 5,
+      "video_cluster_bootstrap_interval": [
+        0.0,
+        0.8
+      ],
+      "video_cluster_sign_flip_p": 0.5004249957500425
+    },
+    "dynamic_vs_intent": {
+      "a_correct_b_wrong": 2,
+      "a_correct_b_wrong_rate": 0.11764705882352941,
+      "a_correct_count": 8,
+      "a_wrong_b_correct": 6,
+      "a_wrong_b_correct_rate": 0.35294117647058826,
+      "arm_a_accuracy": 0.47058823529411764,
+      "arm_b_accuracy": 0.7058823529411765,
+      "b_wrong_given_a_correct_rate": 0.25,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.2890625,
+      "n_pairs": 17,
+      "paired_difference_b_minus_a": 0.23529411764705888,
+      "requested_pairs": 17,
+      "video_cluster_bootstrap_interval": [
+        -0.058823529411764705,
+        0.5294117647058824
+      ],
+      "video_cluster_sign_flip_p": 0.2883371166288337
+    },
+    "dynamic_vs_intent_same_question_type": {
+      "a_correct_b_wrong": 0,
+      "a_correct_b_wrong_rate": 0.0,
+      "a_correct_count": 3,
+      "a_wrong_b_correct": 1,
+      "a_wrong_b_correct_rate": 0.2,
+      "arm_a_accuracy": 0.6,
+      "arm_b_accuracy": 0.8,
+      "b_wrong_given_a_correct_rate": 0.0,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 1.0,
+      "n_pairs": 5,
+      "paired_difference_b_minus_a": 0.20000000000000007,
+      "requested_pairs": 5,
+      "video_cluster_bootstrap_interval": [
+        0.0,
+        0.6
+      ],
+      "video_cluster_sign_flip_p": 1.0
+    },
+    "same_question_type": {
+      "a_correct_b_wrong": 1,
+      "a_correct_b_wrong_rate": 0.07142857142857142,
+      "a_correct_count": 5,
+      "a_wrong_b_correct": 4,
+      "a_wrong_b_correct_rate": 0.2857142857142857,
+      "arm_a_accuracy": 0.35714285714285715,
+      "arm_b_accuracy": 0.5714285714285714,
+      "b_wrong_given_a_correct_rate": 0.2,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.375,
+      "n_pairs": 14,
+      "paired_difference_b_minus_a": 0.21428571428571425,
+      "requested_pairs": 14,
+      "video_cluster_bootstrap_interval": [
+        -0.07142857142857142,
+        0.5
+      ],
+      "video_cluster_sign_flip_p": 0.37489625103748964
+    },
+    "standard_gold_format": {
+      "a_correct_b_wrong": 11,
+      "a_correct_b_wrong_rate": 0.22916666666666666,
+      "a_correct_count": 24,
+      "a_wrong_b_correct": 15,
+      "a_wrong_b_correct_rate": 0.3125,
+      "arm_a_accuracy": 0.5,
+      "arm_b_accuracy": 0.5833333333333334,
+      "b_wrong_given_a_correct_rate": 0.4583333333333333,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.557197093963623,
+      "n_pairs": 48,
+      "paired_difference_b_minus_a": 0.08333333333333337,
+      "requested_pairs": 48,
+      "video_cluster_bootstrap_interval": [
+        -0.125,
+        0.2916666666666667
+      ],
+      "video_cluster_sign_flip_p": 0.5585444145558545
+    },
+    "tracking_vs_prediction": {
+      "a_correct_b_wrong": 6,
+      "a_correct_b_wrong_rate": 0.375,
+      "a_correct_count": 9,
+      "a_wrong_b_correct": 3,
+      "a_wrong_b_correct_rate": 0.1875,
+      "arm_a_accuracy": 0.5625,
+      "arm_b_accuracy": 0.375,
+      "b_wrong_given_a_correct_rate": 0.6666666666666666,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 0.5078125,
+      "n_pairs": 16,
+      "paired_difference_b_minus_a": -0.1875,
+      "requested_pairs": 16,
+      "video_cluster_bootstrap_interval": [
+        -0.5625,
+        0.1875
+      ],
+      "video_cluster_sign_flip_p": 0.5076249237507625
+    },
+    "tracking_vs_prediction_same_question_type": {
+      "a_correct_b_wrong": 1,
+      "a_correct_b_wrong_rate": 0.25,
+      "a_correct_count": 1,
+      "a_wrong_b_correct": 1,
+      "a_wrong_b_correct_rate": 0.25,
+      "arm_a_accuracy": 0.25,
+      "arm_b_accuracy": 0.25,
+      "b_wrong_given_a_correct_rate": 1.0,
+      "coverage_rate": 1.0,
+      "exact_mcnemar_p": 1.0,
+      "n_pairs": 4,
+      "paired_difference_b_minus_a": 0.0,
+      "requested_pairs": 4,
+      "video_cluster_bootstrap_interval": [
+        -0.75,
+        0.75
+      ],
+      "video_cluster_sign_flip_p": 1.0
+    }
+  },
+  "title": "Natural Near-Average 50-Pair Held-Out Model Analysis",
+  "unique_item_count": 100
+}

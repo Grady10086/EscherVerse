@@ -1,0 +1,116 @@
+{
+  "schema": "escher-sft-ablation-analysis-v1",
+  "conditions": {
+    "base": 1,
+    "intent": 2,
+    "dynamic": 2,
+    "random": 2
+  },
+  "items": 972,
+  "per_run_accuracy": {
+    "base": [
+      {
+        "intent": 0.5020576131687243,
+        "dynamic_non_intent": 0.3765432098765432
+      }
+    ],
+    "intent": [
+      {
+        "intent": 0.551440329218107,
+        "dynamic_non_intent": 0.39094650205761317
+      },
+      {
+        "intent": 0.5987654320987654,
+        "dynamic_non_intent": 0.39094650205761317
+      }
+    ],
+    "dynamic": [
+      {
+        "intent": 0.5370370370370371,
+        "dynamic_non_intent": 0.4279835390946502
+      },
+      {
+        "intent": 0.5534979423868313,
+        "dynamic_non_intent": 0.4444444444444444
+      }
+    ],
+    "random": [
+      {
+        "intent": 0.5288065843621399,
+        "dynamic_non_intent": 0.4279835390946502
+      },
+      {
+        "intent": 0.51440329218107,
+        "dynamic_non_intent": 0.4074074074074074
+      }
+    ]
+  },
+  "aggregate": {
+    "base": {
+      "intent": {
+        "mean_accuracy": 0.5020576131687243,
+        "seed_sd": null,
+        "gain_over_base": 0.0
+      },
+      "dynamic_non_intent": {
+        "mean_accuracy": 0.3765432098765432,
+        "seed_sd": null,
+        "gain_over_base": 0.0
+      },
+      "intent_minus_dynamic": 0.1255144032921811
+    },
+    "intent": {
+      "intent": {
+        "mean_accuracy": 0.5751028806584362,
+        "seed_sd": 0.03346390116726456,
+        "gain_over_base": 0.07304526748971185
+      },
+      "dynamic_non_intent": {
+        "mean_accuracy": 0.39094650205761317,
+        "seed_sd": 0.0,
+        "gain_over_base": 0.014403292181069949
+      },
+      "intent_minus_dynamic": 0.18415637860082307
+    },
+    "dynamic": {
+      "intent": {
+        "mean_accuracy": 0.5452674897119342,
+        "seed_sd": 0.011639617797309371,
+        "gain_over_base": 0.043209876543209846
+      },
+      "dynamic_non_intent": {
+        "mean_accuracy": 0.43621399176954734,
+        "seed_sd": 0.01163961779730941,
+        "gain_over_base": 0.05967078189300412
+      },
+      "intent_minus_dynamic": 0.10905349794238686
+    },
+    "random": {
+      "intent": {
+        "mean_accuracy": 0.5216049382716049,
+        "seed_sd": 0.010184665572645739,
+        "gain_over_base": 0.019547325102880597
+      },
+      "dynamic_non_intent": {
+        "mean_accuracy": 0.4176954732510288,
+        "seed_sd": 0.014549522246636793,
+        "gain_over_base": 0.041152263374485576
+      },
+      "intent_minus_dynamic": 0.10390946502057613
+    }
+  },
+  "difference_in_differences": {
+    "definition": "(IntentSFT_intent - DynamicSFT_intent) - (IntentSFT_dynamic - DynamicSFT_dynamic)",
+    "point_estimate": 0.07510288065843618,
+    "bootstrap": {
+      "iterations": 10000,
+      "cluster": "video within capability",
+      "estimate": 0.07593232627083557,
+      "ci95": [
+        0.03098778050657647,
+        0.12172385600375964
+      ],
+      "p_two_sided_bootstrap": 0.0018
+    }
+  }
+}

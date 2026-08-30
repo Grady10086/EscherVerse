@@ -1,0 +1,38 @@
+{
+  "author_id": "author_b",
+  "role": "independent_blinded_question_author",
+  "source_packet": "experiments/coverage_audit/manifests/blind_authoring_packet.csv",
+  "codebook": "experiments/coverage_audit/CODEBOOK_CN.md",
+  "rows": 360,
+  "unique_audit_item_ids": 120,
+  "proposals_per_audit_item_id": 3,
+  "needs_full_video": 74,
+  "confidence_counts": {
+    "high": 192,
+    "medium": 152,
+    "low": 16
+  },
+  "primary_capability_counts": {
+    "action_event": 18,
+    "temporal_order": 70,
+    "orientation_facing": 30,
+    "entity_attribute": 8,
+    "dynamic_relation": 71,
+    "occlusion_permanence": 24,
+    "static_relation": 45,
+    "reference_frame": 31,
+    "deformation_state": 27,
+    "action_goal": 32,
+    "physical_prediction": 4,
+    "other_askable": 0
+  },
+  "validation": {
+    "expected_rows": 360,
+    "expected_unique_audit_item_ids": 120,
+    "exactly_three_proposals_per_id": true,
+    "blank_question_or_capability_count": 0,
+    "invalid_enum_or_boolean_count": 0
+  },
+  "csv_sha256": "0d361a8cd3584c9a17efb4f448b259b4dba8ccc1e6a91edf6353f5d7e1313541",
+  "authorship_note": "This file was produced by an reviewer-assisted independent blinded author who visually inspected the supplied 20-frame full-duration contact sheets. The author was not a human full-video author and did not inspect the benchmark questions, answers, category or scene metadata, other-author output, or model results. Items marked needs_full_video=1 require full-video review because the contact sheet alone was insufficient for a stable judgment."
+}

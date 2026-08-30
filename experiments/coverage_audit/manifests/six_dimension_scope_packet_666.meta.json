@@ -1,0 +1,18 @@
+{
+  "schema": "escher-audit-six-dimension-scope-packet-v1",
+  "seed": 20260814,
+  "included": 666,
+  "excluded": {
+    "rejected": 7,
+    "still_uncertain": 47
+  },
+  "blind_packet_excludes": [
+    "author identity",
+    "video identity",
+    "original capability label",
+    "benchmark questions and labels",
+    "coverage-overlap judgments"
+  ],
+  "packet_sha256": "52a4a1fe10de82befe956e8693cf2b2f1862004d26dc1adbff328bbdf1d16eb9",
+  "mapping_sha256": "4c9c75c021a5718192c6ed247ce1013e9b7680e8db433390949ffb73d98cc9dd"
+}

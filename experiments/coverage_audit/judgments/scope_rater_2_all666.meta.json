@@ -1,0 +1,82 @@
+{
+  "artifact": "scope_rater_2_all666.csv",
+  "confidence_counts": {
+    "high": 502,
+    "medium": 164
+  },
+  "created_at": "2026-08-14T15:27:07+08:00",
+  "csv_sha256": "0b41db90f18a8d150d92f87ccfa814d76eee5a5bc7d244e155467af0c3b09c5a",
+  "dimension_incidence_counts": {
+    "C1_occlusion_permanence": 36,
+    "C2_dynamic_spatial": 280,
+    "C3_action_intent": 86,
+    "C4_predictive_counterfactual": 2,
+    "C5_deformation_state": 81,
+    "C6_reference_frame": 156
+  },
+  "human_rater": false,
+  "independence_statement": "Judgments were made from the frozen scope codebook and blinded 666-item packet only, without targeting a desired coverage rate.",
+  "input_restrictions": {
+    "files_read": [
+      "experiments/coverage_audit/SIX_DIMENSION_SCOPE_CODEBOOK_CN.md",
+      "experiments/coverage_audit/manifests/six_dimension_scope_packet_666.csv"
+    ],
+    "not_read": [
+      "scope_rater_1_first100.csv",
+      "any mapping",
+      "author original labels",
+      "benchmark categories",
+      "existing coverage judgments",
+      "result reports"
+    ],
+    "other_files_read": false
+  },
+  "judgment_policy": {
+    "desired_coverage_rate_used": false,
+    "item_by_item_semantic_judgment": true,
+    "static_relation_action_recognition_or_temporal_order_promoted_to_direct": false,
+    "supporting_operation_requires_concrete_six_dimension_role": true
+  },
+  "model_assistance": "OpenAI Codex AI assistant performed item-by-item semantic judgments; no human labeling is claimed.",
+  "primary_dimension_counts": {
+    "C1_occlusion_permanence": 36,
+    "C2_dynamic_spatial": 229,
+    "C3_action_intent": 80,
+    "C4_predictive_counterfactual": 2,
+    "C5_deformation_state": 75,
+    "C6_reference_frame": 96,
+    "NONE": 148
+  },
+  "rater_role": "six-dimension scope audit independent second rater",
+  "rater_type": "reviewer-assisted independent rater",
+  "row_count": 666,
+  "secondary_dimension_counts": {
+    "C1_occlusion_permanence": 0,
+    "C2_dynamic_spatial": 51,
+    "C3_action_intent": 6,
+    "C4_predictive_counterfactual": 0,
+    "C5_deformation_state": 6,
+    "C6_reference_frame": 60
+  },
+  "status_counts": {
+    "directly_in_scope": 354,
+    "outside_scope": 148,
+    "supporting_operation": 164
+  },
+  "unique_scope_item_id_count": 666,
+  "validation": {
+    "legal_dimension_enums": true,
+    "legal_status_enums": true,
+    "no_duplicate_ids": true,
+    "outside_ambiguous_primary_is_NONE": true,
+    "packet_id_sequence_exact_match": true,
+    "required_csv_fields_exact": [
+      "scope_item_id",
+      "scope_status",
+      "primary_dimension",
+      "secondary_dimensions",
+      "confidence",
+      "reason_cn"
+    ]
+  }
+}

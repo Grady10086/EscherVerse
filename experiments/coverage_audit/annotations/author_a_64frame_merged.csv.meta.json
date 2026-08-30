@@ -1,0 +1,32 @@
+{
+  "artifact": "author_a_64frame_merged.csv",
+  "source_artifact": "author_a.csv",
+  "source_sha256": "3797f91d8741dc5d1741bed53b98cf3c42048bb0aed424ab33a1851241d918a8",
+  "row_count": 360,
+  "unique_audit_item_ids": 120,
+  "unique_keys": 360,
+  "review_status_counts": {
+    "confirmed": 103,
+    "not_reviewed_64frame": 212,
+    "rejected": 3,
+    "revised": 7,
+    "still_uncertain": 35
+  },
+  "excluded_from_coverage_counts": {
+    "0": 357,
+    "1": 3
+  },
+  "needs_full_video_counts": {
+    "0": 325,
+    "1": 35
+  },
+  "sha256": "216e5794ef3e948200c7ee733bdf184f2da66dd47584a41569bfef7f584d8b69",
+  "validation": {
+    "all_360_original_proposals_present": true,
+    "unflagged_source_fields_unchanged": true,
+    "reviewed_rows_applied_by_exact_key": true,
+    "rejected_rows_excluded_from_coverage": true,
+    "still_uncertain_rows_keep_needs_full_video_1": true
+  },
+  "method_note": "Independent reviewer-assisted review based on the blinded 8x8 64-frame full-duration contact sheets. This is not continuous-video review and not human-only review; no benchmark, original questions/answers/categories, generated-question reference, other-author output, or model results were consulted."
+}

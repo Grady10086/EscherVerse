@@ -1,0 +1,224 @@
+{
+  "candidate_pairs": {
+    "path": "experiments/matched_pair/frozen_panel/candidate_pairs.csv",
+    "sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f"
+  },
+  "candidate_pairs_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+  "heldout_models": [
+    {
+      "candidate_pairs_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+      "coverage": {
+        "covered": 100,
+        "missing_indices": [],
+        "required": 100
+      },
+      "label": "Qwen3-VL-8B-Thinking",
+      "path": "experiments/matched_pair/analyses/posthoc_natural50_qwen3vl8b_thinking_forced_analysis_20260812.json",
+      "reporting_guardrail": "This held-out model did not participate in candidate selection. Do not alter the frozen candidate set after viewing this result; retain the complete 100- and 254-pair analyses as the overall evidence.",
+      "result": {
+        "a_correct_b_wrong": 11,
+        "a_correct_b_wrong_rate": 0.22,
+        "a_correct_count": 23,
+        "a_wrong_b_correct": 14,
+        "a_wrong_b_correct_rate": 0.28,
+        "arm_a_accuracy": 0.46,
+        "arm_b_accuracy": 0.52,
+        "b_wrong_given_a_correct_rate": 0.4782608695652174,
+        "coverage_rate": 1.0,
+        "exact_mcnemar_p": 0.6900379657745361,
+        "n_pairs": 50,
+        "paired_difference_b_minus_a": 0.06,
+        "requested_pairs": 50,
+        "video_cluster_bootstrap_interval": [
+          -0.14,
+          0.26
+        ],
+        "video_cluster_sign_flip_p": 0.6904630953690463
+      },
+      "sha256": "977e739644ee4e2dd71c396a05465e27016db3eef16df724afee55a3141b9f78"
+    },
+    {
+      "candidate_pairs_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+      "coverage": {
+        "covered": 100,
+        "missing_indices": [],
+        "required": 100
+      },
+      "label": "Qwen3-VL-4B-Thinking",
+      "path": "experiments/matched_pair/analyses/posthoc_natural50_qwen3vl4b_thinking_forced_analysis_20260812.json",
+      "reporting_guardrail": "This held-out model did not participate in candidate selection. Do not alter the frozen candidate set after viewing this result; retain the complete 100- and 254-pair analyses as the overall evidence.",
+      "result": {
+        "a_correct_b_wrong": 12,
+        "a_correct_b_wrong_rate": 0.24,
+        "a_correct_count": 21,
+        "a_wrong_b_correct": 16,
+        "a_wrong_b_correct_rate": 0.32,
+        "arm_a_accuracy": 0.42,
+        "arm_b_accuracy": 0.5,
+        "b_wrong_given_a_correct_rate": 0.5714285714285714,
+        "coverage_rate": 1.0,
+        "exact_mcnemar_p": 0.5715881884098053,
+        "n_pairs": 50,
+        "paired_difference_b_minus_a": 0.08000000000000002,
+        "requested_pairs": 50,
+        "video_cluster_bootstrap_interval": [
+          -0.12,
+          0.28
+        ],
+        "video_cluster_sign_flip_p": 0.5709442905570944
+      },
+      "sha256": "4621ee6fb88e93e0333d4b29be8b9f776cf143f72ddc901b61061e1a8ff7d340"
+    },
+    {
+      "candidate_pairs_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+      "coverage": {
+        "covered": 100,
+        "missing_indices": [],
+        "required": 100
+      },
+      "label": "Qwen2.5-VL-32B-Instruct-AWQ",
+      "path": "experiments/matched_pair/analyses/posthoc_natural50_qwen25vl32b_awq_analysis_20260812.json",
+      "reporting_guardrail": "This held-out model did not participate in candidate selection. Do not alter the frozen candidate set after viewing this result; retain the complete 100- and 254-pair analyses as the overall evidence.",
+      "result": {
+        "a_correct_b_wrong": 11,
+        "a_correct_b_wrong_rate": 0.22,
+        "a_correct_count": 26,
+        "a_wrong_b_correct": 13,
+        "a_wrong_b_correct_rate": 0.26,
+        "arm_a_accuracy": 0.52,
+        "arm_b_accuracy": 0.56,
+        "b_wrong_given_a_correct_rate": 0.4230769230769231,
+        "coverage_rate": 1.0,
+        "exact_mcnemar_p": 0.8388197422027588,
+        "n_pairs": 50,
+        "paired_difference_b_minus_a": 0.040000000000000036,
+        "requested_pairs": 50,
+        "video_cluster_bootstrap_interval": [
+          -0.16,
+          0.24
+        ],
+        "video_cluster_sign_flip_p": 0.8383816161838381
+      },
+      "sha256": "cffa3b5eec28952c5f07e3bad2c733ded4a717cd7c8e83f71230a39ffbf99f4e"
+    }
+  ],
+  "historical_partial_coverage": [],
+  "interpretation": {
+    "heldout_models": "Evaluated only after the 50-pair set was frozen; no reselection.",
+    "scope": "The panel validates behavior on a post-hoc same-video category-proxy set and applies only to these frozen 50 pairs.",
+    "selection_models": "Descriptive only: these outcomes were used in post-hoc selection."
+  },
+  "schema_version": "posthoc-natural50-model-panel-v1",
+  "selection_models": [
+    {
+      "arm_a_accuracy": 0.5,
+      "arm_a_correct": 25,
+      "arm_b_accuracy": 0.62,
+      "arm_b_correct": 31,
+      "b_minus_a": 0.12,
+      "key": "qwen3vl8b",
+      "label": "Qwen3-VL-8B-Instruct",
+      "pairs": 50
+    },
+    {
+      "arm_a_accuracy": 0.34,
+      "arm_a_correct": 17,
+      "arm_b_accuracy": 0.48,
+      "arm_b_correct": 24,
+      "b_minus_a": 0.14,
+      "key": "qwen25vl7b",
+      "label": "Qwen2.5-VL-7B-Instruct",
+      "pairs": 50
+    },
+    {
+      "arm_a_accuracy": 0.4,
+      "arm_a_correct": 20,
+      "arm_b_accuracy": 0.5,
+      "arm_b_correct": 25,
+      "b_minus_a": 0.1,
+      "key": "qwen3vl2b",
+      "label": "Qwen3-VL-2B-Instruct",
+      "pairs": 50
+    },
+    {
+      "arm_a_accuracy": 0.42,
+      "arm_a_correct": 21,
+      "arm_b_accuracy": 0.5,
+      "arm_b_correct": 25,
+      "b_minus_a": 0.08,
+      "key": "internvl3_2b",
+      "label": "InternVL3-2B",
+      "pairs": 50
+    }
+  ],
+  "selection_summary": {
+    "path": "experiments/matched_pair/frozen_panel/candidate_summary.json",
+    "sha256": "b0fa893cebd3a46285ed302a8e131fdd827f66989aaf4036d0d18235ff895914"
+  },
+  "sensitivity_analyses": {
+    "Qwen3-VL-4B-Thinking": {
+      "candidate_pairs_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+      "coverage": {
+        "covered": 100,
+        "missing_indices": [],
+        "required": 100
+      },
+      "label": "Qwen3-VL-4B-Thinking",
+      "path": "experiments/matched_pair/analyses/posthoc_natural50_qwen3vl4b_thinking_raw_analysis_20260812.json",
+      "reporting_guardrail": "This held-out model did not participate in candidate selection. Do not alter the frozen candidate set after viewing this result; retain the complete 100- and 254-pair analyses as the overall evidence.",
+      "result": {
+        "a_correct_b_wrong": 12,
+        "a_correct_b_wrong_rate": 0.24,
+        "a_correct_count": 23,
+        "a_wrong_b_correct": 15,
+        "a_wrong_b_correct_rate": 0.3,
+        "arm_a_accuracy": 0.46,
+        "arm_b_accuracy": 0.52,
+        "b_wrong_given_a_correct_rate": 0.5217391304347826,
+        "coverage_rate": 1.0,
+        "exact_mcnemar_p": 0.7011080384254456,
+        "n_pairs": 50,
+        "paired_difference_b_minus_a": 0.06,
+        "requested_pairs": 50,
+        "video_cluster_bootstrap_interval": [
+          -0.14,
+          0.26
+        ],
+        "video_cluster_sign_flip_p": 0.6997430025699743
+      },
+      "sha256": "6f8a87edbc1bbe1b62e099631674b88917b73265f07d9a3656a8cf17de43f66e"
+    },
+    "Qwen3-VL-8B-Thinking": {
+      "candidate_pairs_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+      "coverage": {
+        "covered": 100,
+        "missing_indices": [],
+        "required": 100
+      },
+      "label": "Qwen3-VL-8B-Thinking",
+      "path": "experiments/matched_pair/analyses/posthoc_natural50_qwen3vl8b_thinking_raw_analysis_20260812.json",
+      "reporting_guardrail": "This held-out model did not participate in candidate selection. Do not alter the frozen candidate set after viewing this result; retain the complete 100- and 254-pair analyses as the overall evidence.",
+      "result": {
+        "a_correct_b_wrong": 11,
+        "a_correct_b_wrong_rate": 0.22,
+        "a_correct_count": 24,
+        "a_wrong_b_correct": 16,
+        "a_wrong_b_correct_rate": 0.32,
+        "arm_a_accuracy": 0.48,
+        "arm_b_accuracy": 0.58,
+        "b_wrong_given_a_correct_rate": 0.4583333333333333,
+        "coverage_rate": 1.0,
+        "exact_mcnemar_p": 0.44206833839416504,
+        "n_pairs": 50,
+        "paired_difference_b_minus_a": 0.09999999999999998,
+        "requested_pairs": 50,
+        "video_cluster_bootstrap_interval": [
+          -0.1,
+          0.3
+        ],
+        "video_cluster_sign_flip_p": 0.44318556814431853
+      },
+      "sha256": "ed20804afdbbc627ead6f651827f4f78324454923f1ce4b36205f41958a5fb68"
+    }
+  }
+}

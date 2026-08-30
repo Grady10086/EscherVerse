@@ -1,0 +1,1875 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-12",
+  "purpose": "Post-hoc near-average A-hard/B-easy 50-pair candidate set",
+  "valid_for_inference": false,
+  "selection": {
+    "post_hoc_outcome_selected": true,
+    "optimizer": "scipy.optimize.milp (HiGHS)",
+    "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "target_profile": "natural",
+    "seed_for_deterministic_objective": "20260812-stratified-natural-near-average-50",
+    "rule": "Choose one pair per video under fixed pair-type, source-set, question-type-match, and stratum-by-model-by-arm correctness targets nearest to the complete 254-pair rates. Resolve feasible solutions using a fixed SHA-256-derived linear objective.",
+    "quotas": {
+      "dynamic_vs_intent": 17,
+      "camera_vs_actor_goal": 17,
+      "tracking_vs_prediction": 16
+    },
+    "source_targets": {
+      "old154": 30,
+      "new100": 20
+    },
+    "question_type_match_target": 14,
+    "stratified_correctness_targets": {
+      "dynamic_vs_intent": {
+        "qwen3vl8b": [
+          8,
+          11
+        ],
+        "qwen25vl7b": [
+          5,
+          11
+        ],
+        "qwen3vl2b": [
+          7,
+          9
+        ],
+        "internvl3_2b": [
+          8,
+          9
+        ]
+      },
+      "camera_vs_actor_goal": {
+        "qwen3vl8b": [
+          9,
+          12
+        ],
+        "qwen25vl7b": [
+          6,
+          8
+        ],
+        "qwen3vl2b": [
+          7,
+          10
+        ],
+        "internvl3_2b": [
+          7,
+          10
+        ]
+      },
+      "tracking_vs_prediction": {
+        "qwen3vl8b": [
+          8,
+          8
+        ],
+        "qwen25vl7b": [
+          6,
+          5
+        ],
+        "qwen3vl2b": [
+          6,
+          6
+        ],
+        "internvl3_2b": [
+          6,
+          6
+        ]
+      }
+    },
+    "model_outcomes_used": true
+  },
+  "cardinalities": {
+    "candidate_pairs": 50,
+    "packets": 50,
+    "unique_items": 100,
+    "videos": 50
+  },
+  "pair_type_counts": {
+    "camera_vs_actor_goal": 17,
+    "dynamic_vs_intent": 17,
+    "tracking_vs_prediction": 16
+  },
+  "source_group_counts": {
+    "new100": 20,
+    "old154": 30
+  },
+  "question_type_match_counts": {
+    "no": 36,
+    "yes": 14
+  },
+  "descriptive_selected_set_results": {
+    "qwen3vl8b": {
+      "pairs": 50,
+      "arm_a_correct": 25,
+      "arm_b_correct": 31,
+      "arm_a_accuracy": 0.5,
+      "arm_b_accuracy": 0.62,
+      "b_minus_a": 0.12
+    },
+    "qwen25vl7b": {
+      "pairs": 50,
+      "arm_a_correct": 17,
+      "arm_b_correct": 24,
+      "arm_a_accuracy": 0.34,
+      "arm_b_accuracy": 0.48,
+      "b_minus_a": 0.14
+    },
+    "qwen3vl2b": {
+      "pairs": 50,
+      "arm_a_correct": 20,
+      "arm_b_correct": 25,
+      "arm_a_accuracy": 0.4,
+      "arm_b_accuracy": 0.5,
+      "b_minus_a": 0.1
+    },
+    "internvl3_2b": {
+      "pairs": 50,
+      "arm_a_correct": 21,
+      "arm_b_correct": 25,
+      "arm_a_accuracy": 0.42,
+      "arm_b_accuracy": 0.5,
+      "b_minus_a": 0.08
+    }
+  },
+  "complete_pool_results": {
+    "qwen3vl8b": {
+      "pairs": 254,
+      "arm_a_correct": 127,
+      "arm_b_correct": 159,
+      "arm_a_accuracy": 0.5,
+      "arm_b_accuracy": 0.6259842519685039,
+      "b_minus_a": 0.12598425196850394
+    },
+    "qwen25vl7b": {
+      "pairs": 254,
+      "arm_a_correct": 83,
+      "arm_b_correct": 120,
+      "arm_a_accuracy": 0.32677165354330706,
+      "arm_b_accuracy": 0.47244094488188976,
+      "b_minus_a": 0.14566929133858267
+    },
+    "qwen3vl2b": {
+      "pairs": 254,
+      "arm_a_correct": 100,
+      "arm_b_correct": 130,
+      "arm_a_accuracy": 0.3937007874015748,
+      "arm_b_accuracy": 0.5118110236220472,
+      "b_minus_a": 0.11811023622047244
+    },
+    "internvl3_2b": {
+      "pairs": 254,
+      "arm_a_correct": 104,
+      "arm_b_correct": 130,
+      "arm_a_accuracy": 0.4094488188976378,
+      "arm_b_accuracy": 0.5118110236220472,
+      "b_minus_a": 0.10236220472440945
+    }
+  },
+  "selected_minus_pool": {
+    "qwen3vl8b": {
+      "arm_a_percentage_points": 0.0,
+      "arm_b_percentage_points": -0.598425196850394,
+      "b_minus_a_percentage_points": -0.598425196850394
+    },
+    "qwen25vl7b": {
+      "arm_a_percentage_points": 1.3228346456692963,
+      "arm_b_percentage_points": 0.7559055118110225,
+      "b_minus_a_percentage_points": -0.5669291338582655
+    },
+    "qwen3vl2b": {
+      "arm_a_percentage_points": 0.6299212598425197,
+      "arm_b_percentage_points": -1.1811023622047223,
+      "b_minus_a_percentage_points": -1.8110236220472433
+    },
+    "internvl3_2b": {
+      "arm_a_percentage_points": 1.0551181102362195,
+      "arm_b_percentage_points": -1.1811023622047223,
+      "b_minus_a_percentage_points": -2.2362204724409445
+    }
+  },
+  "source_files": {
+    "candidate_pairs": {
+      "path": "historical_internal/manifests/combined_same_video_254_20260812/candidate_pairs.csv",
+      "sha256": "df22ea802e094883b58d7fb524c25a8178b5c96bd14109351107881873d03305"
+    },
+    "candidate_summary": {
+      "path": "historical_internal/manifests/combined_same_video_254_20260812/candidate_summary.json",
+      "sha256": "5ce3a0ae890b841642e83d9a3669e01cb2b3e03f18ef4354b5832f1edd1aefbf"
+    },
+    "benchmark": {
+      "path": "data/Escher-Bench.json",
+      "sha256": "a4cbe71c14bbb73cf4829b8c6a59c39cb9f4e6de46bbe32d426fe17f265b111b"
+    },
+    "evaluation_provenance_summary": {
+      "path": "historical_internal/manifests/posthoc_a_hard_b_easy_50_20260812/candidate_summary.json",
+      "sha256": "0e6ec55efedabfd523de23f3fd2f63514bc3e9c35284b2787be8c7b66f25c5a9"
+    },
+    "source_sets": [
+      {
+        "label": "old154",
+        "path": "historical_internal/manifests/double500_pair_stage_packet_closed_20260812/candidate_pairs.csv",
+        "sha256": "1500917ea2cd00bb6191e54f8338c70ce3d03500c1a0c162c925ef98c32202fa",
+        "selected_target": 30
+      },
+      {
+        "label": "new100",
+        "path": "historical_internal/manifests/additional_same_video_100_20260812/candidate_pairs.csv",
+        "sha256": "2e85a1fa67581e2e4751979a231243b4b74624ee0ceaeb44737aca83055d0c3f",
+        "selected_target": 20
+      }
+    ],
+    "models": [
+      {
+        "label": "qwen3vl8b",
+        "provenance": {
+          "sources": [
+            {
+              "path": "historical_internal/results/broad154_qwen3vl8b_rescored_v2_20260812/shard_0_results_qwen3-vl-8b_20260812_030536_rescored.json",
+              "sha256": "2bbdc893f6cd36cfbf8d65e22921127b17b2c245a1222bee0820ee6990c3667d",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T03:05:36.972534",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.268215+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl8b_full_20260812/shard_0/results_qwen3-vl-8b_20260812_030536.json",
+                "source_result_sha256": "83521c0a1ef25051f69a28aa027089067ee3552e232069e22e9bed57a707025a",
+                "changed_row_count": 1
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl8b_rescored_v2_20260812/shard_1_results_qwen3-vl-8b_20260812_030532_rescored.json",
+              "sha256": "f6f937bf5a4c4db24b253b892019a2331bbbacb5f05dd35860e5f11a2d04aef8",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T03:05:32.010889",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.271373+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl8b_full_20260812/shard_1/results_qwen3-vl-8b_20260812_030532.json",
+                "source_result_sha256": "1dbb5d459d2a2ce5836acce090c197ec23345b62b846dacbdf8e24c59f1dec64",
+                "changed_row_count": 1
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl8b_rescored_v2_20260812/shard_2_results_qwen3-vl-8b_20260812_030537_rescored.json",
+              "sha256": "5d1f2f54468f258549761e51148ae65d8eda83970ccf36972809f25b11bc37b9",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T03:05:37.776028",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.273440+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl8b_full_20260812/shard_2/results_qwen3-vl-8b_20260812_030537.json",
+                "source_result_sha256": "caf1e3356ed32e0c9a75e529477321e8db93c4e0ed7627f8d3defad9766d23a6",
+                "changed_row_count": 0
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl8b_rescored_v2_20260812/shard_3_results_qwen3-vl-8b_20260812_030521_rescored.json",
+              "sha256": "44fec36bbd28b559e0719265dddec3cd3cf68941cebd2bd5f51ae03d84bedace",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T03:05:21.648270",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.274834+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl8b_full_20260812/shard_3/results_qwen3-vl-8b_20260812_030521.json",
+                "source_result_sha256": "d64a92d21c8cad9c638e8b2b04360918c0fbd775f8d033392c0844b8738f799e",
+                "changed_row_count": 0
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl8b_rescored_v2_20260812/shard_4_results_qwen3-vl-8b_20260812_030526_rescored.json",
+              "sha256": "72703fa790f93b338dc6252f695dc588119074c64c8a8a45140edf1d11c132ab",
+              "rows": 42,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T03:05:26.771633",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.276372+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl8b_full_20260812/shard_4/results_qwen3-vl-8b_20260812_030526.json",
+                "source_result_sha256": "6346a9970bbeafc819ee9c201de66c541b4b0bacbd5e718851d5297bfcdcb3e8",
+                "changed_row_count": 0
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl8b_rescored_v2_20260812/shard_5_results_qwen3-vl-8b_20260812_030523_rescored.json",
+              "sha256": "4aaf38f48cac7500a90c325167e614aa3582cbbd9134b141d2ce31ad0d469349",
+              "rows": 42,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T03:05:23.206926",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.277865+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl8b_full_20260812/shard_5/results_qwen3-vl-8b_20260812_030523.json",
+                "source_result_sha256": "38a49c19ee44c93c306f606c96b83b76458ea269a1ca34016770b9be38c003f5",
+                "changed_row_count": 0
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl8b_rescored_v2_20260812/shard_6_results_qwen3-vl-8b_20260812_030506_rescored.json",
+              "sha256": "430fc33dcb3d1ae51508de5b970b7aa812f713eee00350e3d2309d3c163a478d",
+              "rows": 42,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T03:05:06.904406",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.279224+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl8b_full_20260812/shard_6/results_qwen3-vl-8b_20260812_030506.json",
+                "source_result_sha256": "19cde217632e4a9117cabc6e75a50636b7853d310e3cbe18b1b6b31cd8f27235",
+                "changed_row_count": 1
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl8b/shard_0_results_qwen3-vl-8b_20260812_164257_rescored.json",
+              "sha256": "600a1063b4bf07d52cb0e8d4d7b8d0a20bc685a2b2ec93dc6c53242885c7fa98",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T16:42:57.492964",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_0.json",
+                "data_sha256": "3ed2394111b2531590d1b918ed182b24427cc446b09e973f790c80e53f7d9f40",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.368385+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl8b_full_20260812/shard_0/results_qwen3-vl-8b_20260812_164257.json",
+                "source_result_sha256": "686b2a64a93ec870bfe1d25202bd729252e64a10b208e12b1ab901b27541fa97",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl8b/shard_1_results_qwen3-vl-8b_20260812_164243_rescored.json",
+              "sha256": "dba193198986426fc2beed338bdd3830ab9cf83f61fe0cbe110e7a1ee228a501",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T16:42:43.302408",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_1.json",
+                "data_sha256": "a6a07b9c2ccdf6008f5d99874e54e2ca339ec5cd9ae16f6133abe3f7a3fc8936",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.371579+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl8b_full_20260812/shard_1/results_qwen3-vl-8b_20260812_164243.json",
+                "source_result_sha256": "596e79fa4ed8c79f27c02c2c0ee738a45e796b1f9a5ff4325f9255adf944e4e8",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl8b/shard_2_results_qwen3-vl-8b_20260812_164228_rescored.json",
+              "sha256": "48bdd7857ce7f824a5d29bceb0cc44f574b670acc821351e26418c879da00d6e",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T16:42:28.987743",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_2.json",
+                "data_sha256": "25ebdf1abb631b1f0b878c03422d39873048dc7c48b3c3fa042afbe451632755",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.373123+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl8b_full_20260812/shard_2/results_qwen3-vl-8b_20260812_164228.json",
+                "source_result_sha256": "0c4ffaaf9ea90c5cb6705d199992565d296260a4c0dc5c6378b390ca39689134",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl8b/shard_3_results_qwen3-vl-8b_20260812_164233_rescored.json",
+              "sha256": "8e3158fe39c4b22aca34abfc736eff0b51a2f19375919f501f5933d053bbf750",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T16:42:33.478084",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_3.json",
+                "data_sha256": "4e07fe47a73f4061c9a4ec40f73269df6e1193d7d5b741d70f55915d4f6d7d74",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.375127+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl8b_full_20260812/shard_3/results_qwen3-vl-8b_20260812_164233.json",
+                "source_result_sha256": "5da2a7afe76280807f3f81139d52dc69991cf4e260c5640e63dd4b249e958533",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl8b/shard_4_results_qwen3-vl-8b_20260812_164235_rescored.json",
+              "sha256": "f523c132ab453e2a8db4dcdd140195bec8fc215da698908fd3648d749e0ce3e3",
+              "rows": 28,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T16:42:35.046174",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_4.json",
+                "data_sha256": "34c2e5fb1d1dc34c5d1cd92818bb1d4ab8c99b4081c9a72ad4186bf88159543d",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.376462+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl8b_full_20260812/shard_4/results_qwen3-vl-8b_20260812_164235.json",
+                "source_result_sha256": "f782de8818927bc5231b7b410ce8177a343da3605d630effccb275c022a854df",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl8b/shard_5_results_qwen3-vl-8b_20260812_164229_rescored.json",
+              "sha256": "b2f2522cd038d35339323d39749b11a3608c88ab80a565341fb9510aa8ad6ad6",
+              "rows": 28,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T16:42:29.496248",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_5.json",
+                "data_sha256": "46f11ada9159e594cc10334be93adb3e8599a1b609ce175d0a67221bb4d18640",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.377716+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl8b_full_20260812/shard_5/results_qwen3-vl-8b_20260812_164229.json",
+                "source_result_sha256": "d8208d08524149a06c7bd315ad9f62c2cf9e0ee9c87b9ccf6aae5d3569e0932e",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl8b/shard_6_results_qwen3-vl-8b_20260812_164230_rescored.json",
+              "sha256": "a4fd937d3c886985e7a7076c487388be4e0659a8c1902f37d1ec6239ce9a95b8",
+              "rows": 28,
+              "metadata": {
+                "model": "qwen3-vl-8b",
+                "timestamp": "2026-08-12T16:42:30.670116",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-8B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_6.json",
+                "data_sha256": "f85f8a9a90bf74051bcec1105fb5dbb09bad758cb2ec464ead8e39245a020402",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.379054+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl8b_full_20260812/shard_6/results_qwen3-vl-8b_20260812_164230.json",
+                "source_result_sha256": "4c5bfef7a692e7a23616addbf7c4f27c827b79e74d5c8df9291aefc2b88bffaa",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            }
+          ],
+          "unique_prediction_rows": 498,
+          "consistent_overlap_rows": 0
+        }
+      },
+      {
+        "label": "qwen25vl7b",
+        "provenance": {
+          "sources": [
+            {
+              "path": "historical_internal/results/broad154_qwen25vl7b_rescored_v2_20260812/shard_0_results_qwen2.5-vl-7b_20260812_031528_rescored.json",
+              "sha256": "83d2cf2fcb6bb3df18a0224a41975fdfbfe81d80af21446692b09ef32684490b",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T03:15:28.809103",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.397588+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen25vl7b_full_20260812/shard_0/results_qwen2.5-vl-7b_20260812_031528.json",
+                "source_result_sha256": "c1f9f87a6d705b2367dc675508445192a343a0e85ef6522ea0142e9b208ab3cd",
+                "changed_row_count": 3
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen25vl7b_rescored_v2_20260812/shard_1_results_qwen2.5-vl-7b_20260812_031527_rescored.json",
+              "sha256": "8fb4e6dc2e5714a474c8486429c9de8fcb0c75a1bcf307026cb2ca4f06001894",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T03:15:27.921746",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.399514+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen25vl7b_full_20260812/shard_1/results_qwen2.5-vl-7b_20260812_031527.json",
+                "source_result_sha256": "a60206098962e30d73ca0fe97ba0e9eca309d66c3474d3a8d2dfef30e1ed73d4",
+                "changed_row_count": 2
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen25vl7b_rescored_v2_20260812/shard_2_results_qwen2.5-vl-7b_20260812_031540_rescored.json",
+              "sha256": "04b8282f1e8ca2553d08907412f0159d449ad6786784c9f3f13f8d18923a550f",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T03:15:40.393681",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.400927+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen25vl7b_full_20260812/shard_2/results_qwen2.5-vl-7b_20260812_031540.json",
+                "source_result_sha256": "1f5b846bf6c0461e76d71c81114ff402e4b70d8df0e3ca88f226c5f9a6fccb24",
+                "changed_row_count": 2
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen25vl7b_rescored_v2_20260812/shard_3_results_qwen2.5-vl-7b_20260812_031518_rescored.json",
+              "sha256": "f79db5fbcf28e0217b64419c95cc9586079ffc26de984293d6d1ef61b4568e94",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T03:15:18.292910",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.402839+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen25vl7b_full_20260812/shard_3/results_qwen2.5-vl-7b_20260812_031518.json",
+                "source_result_sha256": "b99c3ecfbfe65828d3f5651a628d3dc9aae6b68ee73463fe5700b75124c7ce3c",
+                "changed_row_count": 1
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen25vl7b_rescored_v2_20260812/shard_4_results_qwen2.5-vl-7b_20260812_031521_rescored.json",
+              "sha256": "6a2f41adb96d0eebf5252bbf608fb8dc18075000282e0cdaacafb2aae78bd55f",
+              "rows": 42,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T03:15:21.278143",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.404342+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen25vl7b_full_20260812/shard_4/results_qwen2.5-vl-7b_20260812_031521.json",
+                "source_result_sha256": "b55852f72d5a8d353e5a1fc65f773596564e4b2f6d30c925e07ad06032c47e8d",
+                "changed_row_count": 1
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen25vl7b_rescored_v2_20260812/shard_5_results_qwen2.5-vl-7b_20260812_031517_rescored.json",
+              "sha256": "fa303ba7031a3eaada795af94d793080162a143c76acb4e94bce4420b522cebe",
+              "rows": 42,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T03:15:17.199667",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.405863+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen25vl7b_full_20260812/shard_5/results_qwen2.5-vl-7b_20260812_031517.json",
+                "source_result_sha256": "c063279a95c9ed3c8d1885b580d122b05b124ac3c9b495c1b574e5cdfd802bef",
+                "changed_row_count": 0
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen25vl7b_rescored_v2_20260812/shard_6_results_qwen2.5-vl-7b_20260812_031455_rescored.json",
+              "sha256": "05c7f6fdd3c4415060bc821875db30be95f88a676f8f7ed7c9a54e1b158fe1c6",
+              "rows": 42,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T03:14:55.044461",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "rescored_at": "2026-08-11T20:11:00.407552+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen25vl7b_full_20260812/shard_6/results_qwen2.5-vl-7b_20260812_031455.json",
+                "source_result_sha256": "387d9682dcef8cfdff799c27e6483adfc0eb933f9bdbb7cd4f98daad10e60be8",
+                "changed_row_count": 1
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen25vl7b/shard_0_results_qwen2.5-vl-7b_20260812_164350_rescored.json",
+              "sha256": "4244afb106464dcc0008423f98cb79515e5584e248795028720cb97a8e221fca",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T16:43:50.672651",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_0.json",
+                "data_sha256": "3ed2394111b2531590d1b918ed182b24427cc446b09e973f790c80e53f7d9f40",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.465817+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen25vl7b_full_20260812/shard_0/results_qwen2.5-vl-7b_20260812_164350.json",
+                "source_result_sha256": "6405db648e0c9bbfa7a14f49ab0cc98c6cbda2463bc36026fdfd493bb56aeaf4",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen25vl7b/shard_1_results_qwen2.5-vl-7b_20260812_164343_rescored.json",
+              "sha256": "a996c77e4f059e9cc29a0e9324aab7bd3890aed2f9b29e26a5c563431e49e3aa",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T16:43:43.655317",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_1.json",
+                "data_sha256": "a6a07b9c2ccdf6008f5d99874e54e2ca339ec5cd9ae16f6133abe3f7a3fc8936",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.467707+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen25vl7b_full_20260812/shard_1/results_qwen2.5-vl-7b_20260812_164343.json",
+                "source_result_sha256": "6132779260983f47696d023f75dc1fc148b96cdd4746db7c45eb34214f8f4ddc",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen25vl7b/shard_2_results_qwen2.5-vl-7b_20260812_164320_rescored.json",
+              "sha256": "7e93ee345d96b186f89d72adb5d5ee14091d44556d49e90b6d2c6fd096400a6d",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T16:43:20.780698",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_2.json",
+                "data_sha256": "25ebdf1abb631b1f0b878c03422d39873048dc7c48b3c3fa042afbe451632755",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.469083+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen25vl7b_full_20260812/shard_2/results_qwen2.5-vl-7b_20260812_164320.json",
+                "source_result_sha256": "998e7d139e5f6cb006e88a9fdafdf69dedda3939b9d0e01498184070600921aa",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen25vl7b/shard_3_results_qwen2.5-vl-7b_20260812_164324_rescored.json",
+              "sha256": "2587232a30cfa69861621409165c38d8f50b0ed6ff1b41db633fbed502cca2ed",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T16:43:24.522284",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_3.json",
+                "data_sha256": "4e07fe47a73f4061c9a4ec40f73269df6e1193d7d5b741d70f55915d4f6d7d74",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.470895+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen25vl7b_full_20260812/shard_3/results_qwen2.5-vl-7b_20260812_164324.json",
+                "source_result_sha256": "b9ff7a5283813115f03faf1479ed70445106d9036cf850cdf3148213f724bea0",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen25vl7b/shard_4_results_qwen2.5-vl-7b_20260812_164333_rescored.json",
+              "sha256": "3d31acfd79b2ee33ccaacac37eb23e5535ce89a0e4fe7414f408cd105abd3cfd",
+              "rows": 28,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T16:43:33.256905",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_4.json",
+                "data_sha256": "34c2e5fb1d1dc34c5d1cd92818bb1d4ab8c99b4081c9a72ad4186bf88159543d",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.472441+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen25vl7b_full_20260812/shard_4/results_qwen2.5-vl-7b_20260812_164333.json",
+                "source_result_sha256": "d04fbe4a56ede8d0e271256945c238a00a68326b8f9b5da729683bfbd348ab74",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen25vl7b/shard_5_results_qwen2.5-vl-7b_20260812_164323_rescored.json",
+              "sha256": "0ef7a7aa52001c742463644e3558e4584e623bd9674fb9c166f62c47e248d398",
+              "rows": 28,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T16:43:23.311500",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_5.json",
+                "data_sha256": "46f11ada9159e594cc10334be93adb3e8599a1b609ce175d0a67221bb4d18640",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.473887+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen25vl7b_full_20260812/shard_5/results_qwen2.5-vl-7b_20260812_164323.json",
+                "source_result_sha256": "78c4fcfd6b62a93365277397ab87aee9c752e5b407ca5a18d6e2a4f1e3d23e4b",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen25vl7b/shard_6_results_qwen2.5-vl-7b_20260812_164332_rescored.json",
+              "sha256": "4b051ca3a6768b9682b5d1bfdf6a2ec29fc7ae3ba1b98b705a94b0790e38fe5b",
+              "rows": 28,
+              "metadata": {
+                "model": "qwen2.5-vl-7b",
+                "timestamp": "2026-08-12T16:43:32.084522",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen2.5-VL-7B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_6.json",
+                "data_sha256": "f85f8a9a90bf74051bcec1105fb5dbb09bad758cb2ec464ead8e39245a020402",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.475368+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen25vl7b_full_20260812/shard_6/results_qwen2.5-vl-7b_20260812_164332.json",
+                "source_result_sha256": "0aa629a1ff9aa9cbb960c02579e33c5c605eef34730f0f5e9c3f5fd6a77b8b28",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            }
+          ],
+          "unique_prediction_rows": 498,
+          "consistent_overlap_rows": 0
+        }
+      },
+      {
+        "label": "qwen3vl2b",
+        "provenance": {
+          "sources": [
+            {
+              "path": "historical_internal/results/broad154_qwen3vl2b_instruct_audited_rescored_v3_20260812/shard_0_results_qwen3-vl-2b-instruct_20260812_044830_rescored.json",
+              "sha256": "4df3b41f78c548aae6d17fd6cfb7388b0f907d9f03275314ede76ff5baf8306f",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T04:48:30.123120",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_0.json",
+                "data_sha256": "9be57f68b6b664c5fba310c05f50e62ece927c66c77b32f0a649fa36677cd469",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 43,
+                  "output_items": 43,
+                  "unique_output_indices": 43,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:22.917457+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl2b_instruct_audited_full_20260812/shard_0/results_qwen3-vl-2b-instruct_20260812_044830.json",
+                "source_result_sha256": "65bef9ed3a096e16f2ecde4c630328f5f6e89fff0a05f63b2b96677884aa1f03",
+                "changed_row_count": 1,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl2b_instruct_audited_rescored_v3_20260812/shard_1_results_qwen3-vl-2b-instruct_20260812_044523_rescored.json",
+              "sha256": "0c5baec79c61c825f791ec7961ec81873e89bb627c1785e08cd65373d2510ff0",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T04:45:23.225291",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_1.json",
+                "data_sha256": "586069040f612e11b138aab41416d027a73b3c6546b52c7015d2f9168485fd98",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 43,
+                  "output_items": 43,
+                  "unique_output_indices": 43,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:22.921132+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl2b_instruct_audited_full_20260812/shard_1/results_qwen3-vl-2b-instruct_20260812_044523.json",
+                "source_result_sha256": "7a47a7eb3d818dd466925e2d22e777781f085124708b43297f38ec5c18f5a846",
+                "changed_row_count": 1,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl2b_instruct_audited_rescored_v3_20260812/shard_2_results_qwen3-vl-2b-instruct_20260812_044652_rescored.json",
+              "sha256": "6b9ea5d16bd995c31be75800cb1bb28947aa90512353a04af51e9ae4296dcb5b",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T04:46:52.107641",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_2.json",
+                "data_sha256": "79b3ad6b84bb77491d6a037be98d3a573eda9fbb154be5e414db22fd3162cdd7",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 43,
+                  "output_items": 43,
+                  "unique_output_indices": 43,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:22.923225+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl2b_instruct_audited_full_20260812/shard_2/results_qwen3-vl-2b-instruct_20260812_044652.json",
+                "source_result_sha256": "728066c6dd47a841f8a095cb41ea913b53d0ad199eac8780d6681609714322ca",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl2b_instruct_audited_rescored_v3_20260812/shard_3_results_qwen3-vl-2b-instruct_20260812_044250_rescored.json",
+              "sha256": "351a2bbf999cbe335403154ae659d60fcdb90f019a86f06eba05397cbabb1974",
+              "rows": 43,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T04:42:50.212918",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_3.json",
+                "data_sha256": "4fa5f60ab1294c3468ddef9f96f5331156f8028e1ebb523cca22548a24650f5e",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 43,
+                  "output_items": 43,
+                  "unique_output_indices": 43,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:22.926353+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl2b_instruct_audited_full_20260812/shard_3/results_qwen3-vl-2b-instruct_20260812_044250.json",
+                "source_result_sha256": "241b979c351b5733b3e5c6929e43c5698ebdef6b95529b3c140a8640337bc916",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl2b_instruct_audited_rescored_v3_20260812/shard_4_results_qwen3-vl-2b-instruct_20260812_044749_rescored.json",
+              "sha256": "076849a21781c70be656dd4cf2e3c47bce3d781b6a08356cdb4b95c3c875b64f",
+              "rows": 42,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T04:47:49.541695",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_4.json",
+                "data_sha256": "ac97ab27aaac7f8920718f7d302ecaec627f2a540448ce8bda8588399259cdb4",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 42,
+                  "output_items": 42,
+                  "unique_output_indices": 42,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:22.928159+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl2b_instruct_audited_full_20260812/shard_4/results_qwen3-vl-2b-instruct_20260812_044749.json",
+                "source_result_sha256": "da886c54990e80aa2c3082b0a79bb13b6054ae3da00d9e6550ea2fc142f29817",
+                "changed_row_count": 1,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl2b_instruct_audited_rescored_v3_20260812/shard_5_results_qwen3-vl-2b-instruct_20260812_044304_rescored.json",
+              "sha256": "536c47eb264c9e4d2dc656f4b48176c0c440c5f8f66aaef940a1985092bbe011",
+              "rows": 42,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T04:43:04.709979",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_5.json",
+                "data_sha256": "cdf867a9ca6726a438b5ad19613d665738b7d929f00c50ae3d4d5b54bd3127ca",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 42,
+                  "output_items": 42,
+                  "unique_output_indices": 42,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:22.931048+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl2b_instruct_audited_full_20260812/shard_5/results_qwen3-vl-2b-instruct_20260812_044304.json",
+                "source_result_sha256": "40f0d73d1ff509a53000f7425341539a04f4de4770044aa7d4618bbb8d6a09ec",
+                "changed_row_count": 1,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_qwen3vl2b_instruct_audited_rescored_v3_20260812/shard_6_results_qwen3-vl-2b-instruct_20260812_044201_rescored.json",
+              "sha256": "551cfc0174c12bff3148f1b99e8677d309b7451c18b899eeb1503e7dd7dc42d6",
+              "rows": 42,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T04:42:01.235646",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_6.json",
+                "data_sha256": "2f04991520c10fa610fe14ced7bc11f880eb7081b16b49106b4c3608e173d898",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 42,
+                  "output_items": 42,
+                  "unique_output_indices": 42,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:22.932962+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_qwen3vl2b_instruct_audited_full_20260812/shard_6/results_qwen3-vl-2b-instruct_20260812_044201.json",
+                "source_result_sha256": "190b2c9aa8048a4e1f87e874cd4f446033b5db183241d5c563675c7323dffd1a",
+                "changed_row_count": 2,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl2b/shard_0_results_qwen3-vl-2b-instruct_20260812_164718_rescored.json",
+              "sha256": "20695c2fdbd16bebe2221bc9b21f5289c40ba10130c4d79cb3162646e1d6b126",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T16:47:18.530974",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_0.json",
+                "data_sha256": "3ed2394111b2531590d1b918ed182b24427cc446b09e973f790c80e53f7d9f40",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.570172+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl2b_full_20260812/shard_0/results_qwen3-vl-2b-instruct_20260812_164718.json",
+                "source_result_sha256": "e968e2a6d8c9ce561b4015284927e79c9bc445005a61b247762e616797bd56f7",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl2b/shard_1_results_qwen3-vl-2b-instruct_20260812_164753_rescored.json",
+              "sha256": "ca020011d9ba63ff8545ffbd5b4aa8ffa0d9f50aa41b150d14c58d608bc9e8ed",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T16:47:53.888408",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_1.json",
+                "data_sha256": "a6a07b9c2ccdf6008f5d99874e54e2ca339ec5cd9ae16f6133abe3f7a3fc8936",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.573544+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl2b_full_20260812/shard_1/results_qwen3-vl-2b-instruct_20260812_164753.json",
+                "source_result_sha256": "724c2853cedd6b38b2bd240d0bb587cd610a0357291e984124db2d9cc317a52d",
+                "changed_row_count": 1,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl2b/shard_2_results_qwen3-vl-2b-instruct_20260812_164720_rescored.json",
+              "sha256": "c46257e4e102cc88e74b05fadd22fcc744d95731d42c7e6be6fee5637df4c758",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T16:47:20.706330",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_2.json",
+                "data_sha256": "25ebdf1abb631b1f0b878c03422d39873048dc7c48b3c3fa042afbe451632755",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.575402+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl2b_full_20260812/shard_2/results_qwen3-vl-2b-instruct_20260812_164720.json",
+                "source_result_sha256": "29226e17b70c8f11375ef08fccc0bbf6ee76a3260cf2df83464045041913bb1b",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl2b/shard_3_results_qwen3-vl-2b-instruct_20260812_164652_rescored.json",
+              "sha256": "cf5136558d2154d5968d768db21f382f5e61de1485acd7daa88b215f6207c9c8",
+              "rows": 29,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T16:46:52.583741",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_3.json",
+                "data_sha256": "4e07fe47a73f4061c9a4ec40f73269df6e1193d7d5b741d70f55915d4f6d7d74",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.577086+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl2b_full_20260812/shard_3/results_qwen3-vl-2b-instruct_20260812_164652.json",
+                "source_result_sha256": "e6d4d20593b31cfb42a1874d1d1defbf61aea23dd1a2680775a95a9fa6286ff9",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl2b/shard_4_results_qwen3-vl-2b-instruct_20260812_164724_rescored.json",
+              "sha256": "2012395c118eea790a571c730d368a9a0fe23d0ba778387ca3a3275352f92ae0",
+              "rows": 28,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T16:47:24.721670",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_4.json",
+                "data_sha256": "34c2e5fb1d1dc34c5d1cd92818bb1d4ab8c99b4081c9a72ad4186bf88159543d",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.580111+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl2b_full_20260812/shard_4/results_qwen3-vl-2b-instruct_20260812_164724.json",
+                "source_result_sha256": "42ba0a0426cdf75d512ada23715618c010971958b1af1886ce905c290071bce3",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl2b/shard_5_results_qwen3-vl-2b-instruct_20260812_164746_rescored.json",
+              "sha256": "03ae226642be1b39a2a4c5241c702f0eb0d616f1ad34f0fe292cbc1ec2a61b76",
+              "rows": 28,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T16:47:46.142352",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_5.json",
+                "data_sha256": "46f11ada9159e594cc10334be93adb3e8599a1b609ce175d0a67221bb4d18640",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.581870+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl2b_full_20260812/shard_5/results_qwen3-vl-2b-instruct_20260812_164746.json",
+                "source_result_sha256": "ee15a4a213fb74ecfbded23070e2b9e1b501b9b8c351de456597f4ba283139a0",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/qwen3vl2b/shard_6_results_qwen3-vl-2b-instruct_20260812_164651_rescored.json",
+              "sha256": "eedba74b0a569de2e978f0d5d8b8fa3e35689541360563c3df59599179a68115",
+              "rows": 28,
+              "metadata": {
+                "model": "qwen3-vl-2b-instruct",
+                "timestamp": "2026-08-12T16:46:51.116443",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "Qwen/Qwen3-VL-2B-Instruct",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_6.json",
+                "data_sha256": "f85f8a9a90bf74051bcec1105fb5dbb09bad758cb2ec464ead8e39245a020402",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.583405+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_qwen3vl2b_full_20260812/shard_6/results_qwen3-vl-2b-instruct_20260812_164651.json",
+                "source_result_sha256": "3c5eaef22a1a05458722bf0b418b8656f9b670d270ec87a7feb055cd285b9962",
+                "changed_row_count": 1,
+                "force_hit_max_incorrect": false
+              }
+            }
+          ],
+          "unique_prediction_rows": 498,
+          "consistent_overlap_rows": 0
+        }
+      },
+      {
+        "label": "internvl3_2b",
+        "provenance": {
+          "sources": [
+            {
+              "path": "historical_internal/results/broad154_internvl3_2b_audited_rescored_v3_20260812/shard_0_results_internvl3-2b_20260812_044203_rescored.json",
+              "sha256": "bc3263217e09b058d3d9752e13de72f7b06a7ce561e09f896436862d42e1033d",
+              "rows": 43,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T04:42:03.630187",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_0.json",
+                "data_sha256": "9be57f68b6b664c5fba310c05f50e62ece927c66c77b32f0a649fa36677cd469",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 43,
+                  "output_items": 43,
+                  "unique_output_indices": 43,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:23.156506+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_internvl3_2b_audited_full_20260812/shard_0/results_internvl3-2b_20260812_044203.json",
+                "source_result_sha256": "9eb06a09dcb8764bdc2fccc2eb0575af13f73e07952f4df3fcd5ddb5f6ec3102",
+                "changed_row_count": 3,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_internvl3_2b_audited_rescored_v3_20260812/shard_1_results_internvl3-2b_20260812_044118_rescored.json",
+              "sha256": "ae22b72c78d631b6d772cca7a2496484ee37468406a263c597c728aa7988d2f7",
+              "rows": 43,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T04:41:18.099203",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_1.json",
+                "data_sha256": "586069040f612e11b138aab41416d027a73b3c6546b52c7015d2f9168485fd98",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 43,
+                  "output_items": 43,
+                  "unique_output_indices": 43,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:23.160887+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_internvl3_2b_audited_full_20260812/shard_1/results_internvl3-2b_20260812_044118.json",
+                "source_result_sha256": "73d1b5c73b264ebebb5139bba0ede723fb0afa162010f45e2e0a7c5223549d90",
+                "changed_row_count": 2,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_internvl3_2b_audited_rescored_v3_20260812/shard_2_results_internvl3-2b_20260812_044243_rescored.json",
+              "sha256": "5c624c50c6e4133c7ef93ab909fbabd6a74ddda35256533db024708c083daffc",
+              "rows": 43,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T04:42:43.468534",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_2.json",
+                "data_sha256": "79b3ad6b84bb77491d6a037be98d3a573eda9fbb154be5e414db22fd3162cdd7",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 43,
+                  "output_items": 43,
+                  "unique_output_indices": 43,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:23.162842+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_internvl3_2b_audited_full_20260812/shard_2/results_internvl3-2b_20260812_044243.json",
+                "source_result_sha256": "b192197b9c44ca562d023915709d678fbbd56d5c162e349d20184f1351c5a7aa",
+                "changed_row_count": 1,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_internvl3_2b_audited_rescored_v3_20260812/shard_3_results_internvl3-2b_20260812_044054_rescored.json",
+              "sha256": "933bc5984aeca8849b3995e670bf92930a59fc6190457cd441c50a88e700d1a9",
+              "rows": 43,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T04:40:54.360721",
+                "total_items": 43,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_3.json",
+                "data_sha256": "4fa5f60ab1294c3468ddef9f96f5331156f8028e1ebb523cca22548a24650f5e",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 43,
+                  "output_items": 43,
+                  "unique_output_indices": 43,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:23.164667+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_internvl3_2b_audited_full_20260812/shard_3/results_internvl3-2b_20260812_044054.json",
+                "source_result_sha256": "a5716ed658f84bc4b83b5a7b973b3db0fbe2da34de06879705f294996ddbead1",
+                "changed_row_count": 4,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_internvl3_2b_audited_rescored_v3_20260812/shard_4_results_internvl3-2b_20260812_044019_rescored.json",
+              "sha256": "d8e999fcc5c1335e688f261703829720c576266af6ffd1ba293468fadbc32c1f",
+              "rows": 42,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T04:40:19.995065",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_4.json",
+                "data_sha256": "ac97ab27aaac7f8920718f7d302ecaec627f2a540448ce8bda8588399259cdb4",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 42,
+                  "output_items": 42,
+                  "unique_output_indices": 42,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:23.166515+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_internvl3_2b_audited_full_20260812/shard_4/results_internvl3-2b_20260812_044019.json",
+                "source_result_sha256": "09db55734044cccda7e4a01d01318ffdf5bbb9cf2e8e6654a43acd5cdde95631",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_internvl3_2b_audited_rescored_v3_20260812/shard_5_results_internvl3-2b_20260812_043903_rescored.json",
+              "sha256": "56ba49a6185ee20a4782154b250b17643e6ade659660d2b0d6dc739aad8bd201",
+              "rows": 42,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T04:39:03.027380",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_5.json",
+                "data_sha256": "cdf867a9ca6726a438b5ad19613d665738b7d929f00c50ae3d4d5b54bd3127ca",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 42,
+                  "output_items": 42,
+                  "unique_output_indices": 42,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:23.168304+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_internvl3_2b_audited_full_20260812/shard_5/results_internvl3-2b_20260812_043903.json",
+                "source_result_sha256": "0b377d77b88383a7e7092897e4d83f826cfc899e8e23c936aeb1edb341a79452",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/broad154_internvl3_2b_audited_rescored_v3_20260812/shard_6_results_internvl3-2b_20260812_043858_rescored.json",
+              "sha256": "d3b4b0994fd10e9249468f124cba1d18cd6f38e4bb628fd296d01dcefd037f7e",
+              "rows": 42,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T04:38:58.623585",
+                "total_items": 42,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_6.json",
+                "data_sha256": "2f04991520c10fa610fe14ced7bc11f880eb7081b16b49106b4c3608e173d898",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 42,
+                  "output_items": 42,
+                  "unique_output_indices": 42,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-11T20:51:23.170196+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/broad154_internvl3_2b_audited_full_20260812/shard_6/results_internvl3-2b_20260812_043858.json",
+                "source_result_sha256": "9beb5824f6a953ee484b09e73349fb921188b3b4d67a92e2ba4e47dfdccfa29c",
+                "changed_row_count": 3,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/internvl3_2b/shard_0_results_internvl3-2b_20260812_164844_rescored.json",
+              "sha256": "94b9156f1709701fed36da0146c54fc84c5569b1049727da3e7cddbd0cb35f79",
+              "rows": 29,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T16:48:44.296113",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_0.json",
+                "data_sha256": "3ed2394111b2531590d1b918ed182b24427cc446b09e973f790c80e53f7d9f40",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.677545+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_internvl3_2b_full_20260812/shard_0/results_internvl3-2b_20260812_164844.json",
+                "source_result_sha256": "59243f4672b3d1f70375dcbb433d5ba9e7a0696f8a4a1bf5f563ca0b3417d2e2",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/internvl3_2b/shard_1_results_internvl3-2b_20260812_164851_rescored.json",
+              "sha256": "711f88b9051a4893715ee50c738f93446b1621159ec23346690d54b9c9f71830",
+              "rows": 29,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T16:48:51.917711",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_1.json",
+                "data_sha256": "a6a07b9c2ccdf6008f5d99874e54e2ca339ec5cd9ae16f6133abe3f7a3fc8936",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.679701+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_internvl3_2b_full_20260812/shard_1/results_internvl3-2b_20260812_164851.json",
+                "source_result_sha256": "f66c9d55bf46404b46efec33bf3ccc85d3c14a2b9dc248d3dbc8f5248862d812",
+                "changed_row_count": 1,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/internvl3_2b/shard_2_results_internvl3-2b_20260812_164845_rescored.json",
+              "sha256": "013d703cabd692046bd8e4cd78599b60df7f88e88c26d05ea65c4771b3a4d764",
+              "rows": 29,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T16:48:45.271120",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_2.json",
+                "data_sha256": "25ebdf1abb631b1f0b878c03422d39873048dc7c48b3c3fa042afbe451632755",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.681669+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_internvl3_2b_full_20260812/shard_2/results_internvl3-2b_20260812_164845.json",
+                "source_result_sha256": "556b1aa32a5eab5549ca7d69db083c5be3afacce190d53d382ed677ba8c0f563",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/internvl3_2b/shard_3_results_internvl3-2b_20260812_164836_rescored.json",
+              "sha256": "6c1a8fb8de6d7cc77f3238597e77894f37e11e26be669fcef4614eeae2436b2b",
+              "rows": 29,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T16:48:36.854120",
+                "total_items": 29,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_3.json",
+                "data_sha256": "4e07fe47a73f4061c9a4ec40f73269df6e1193d7d5b741d70f55915d4f6d7d74",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 29,
+                  "output_items": 29,
+                  "unique_output_indices": 29,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.683165+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_internvl3_2b_full_20260812/shard_3/results_internvl3-2b_20260812_164836.json",
+                "source_result_sha256": "1cfa1e4f17434efda250c825b3b600aabe85da8cd837dfc954f60465342f6bc7",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/internvl3_2b/shard_4_results_internvl3-2b_20260812_164833_rescored.json",
+              "sha256": "0429ed158a963e35c7a046655985a58fba756e3e53da904d794877717266aa99",
+              "rows": 28,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T16:48:33.795657",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_4.json",
+                "data_sha256": "34c2e5fb1d1dc34c5d1cd92818bb1d4ab8c99b4081c9a72ad4186bf88159543d",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.684717+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_internvl3_2b_full_20260812/shard_4/results_internvl3-2b_20260812_164833.json",
+                "source_result_sha256": "c29550bd2fa9e36d4efdabf33e5b4d24369fc83b7ecaa621f8003acafc3b0a08",
+                "changed_row_count": 3,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/internvl3_2b/shard_5_results_internvl3-2b_20260812_164844_rescored.json",
+              "sha256": "368447b2fd4ac8de7ede281d639ad27778a86451ba4fc976d098444becc71320",
+              "rows": 28,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T16:48:44.994021",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_5.json",
+                "data_sha256": "46f11ada9159e594cc10334be93adb3e8599a1b609ce175d0a67221bb4d18640",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.686574+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_internvl3_2b_full_20260812/shard_5/results_internvl3-2b_20260812_164844.json",
+                "source_result_sha256": "e93420d3b6af083da71224810049586d50c6071e33218aa195f2842cc78ebac4",
+                "changed_row_count": 0,
+                "force_hit_max_incorrect": false
+              }
+            },
+            {
+              "path": "historical_internal/results/rescored_additional100_20260812/internvl3_2b/shard_6_results_internvl3-2b_20260812_164816_rescored.json",
+              "sha256": "17796f33996dcdaefbe58022b4b7d3e842ed398fae85026c97030f7969979542",
+              "rows": 28,
+              "metadata": {
+                "model": "internvl3-2b",
+                "timestamp": "2026-08-12T16:48:16.605586",
+                "total_items": 28,
+                "num_frames": 16,
+                "model_path": "OpenGVLab/InternVL3-2B",
+                "max_tokens": 512,
+                "evaluator_sha256": "95902073d45b6b885af7fea41fa0d78c6c3ea318bf2ac4c6f4fa572089810a34",
+                "data_path": "historical_internal/items_shard_6.json",
+                "data_sha256": "f85f8a9a90bf74051bcec1105fb5dbb09bad758cb2ec464ead8e39245a020402",
+                "video_dir": "data/videos",
+                "run_integrity": {
+                  "input_items": 28,
+                  "output_items": 28,
+                  "unique_output_indices": 28,
+                  "inference_errors": 0,
+                  "complete": true
+                },
+                "rescored_at": "2026-08-12T08:51:18.688697+00:00",
+                "rescore_protocol": "anchored-option-label-v2",
+                "rescore_evaluator_path": "archived_workspace/eval/evaluate.py",
+                "rescore_evaluator_sha256": "f6193562c4b4cfb1c430a184c6e207f710c6d0efd59056bae0ed1fd67c2b3dc3",
+                "source_result_path": "archived_workspace/experiments/matched_pair/results/raw_additional100_20260812/additional100_internvl3_2b_full_20260812/shard_6/results_internvl3-2b_20260812_164816.json",
+                "source_result_sha256": "b7fa29397a9d2a9709f93c3e593f56b09b5b01241a97601bdee1344b6a7a3bc0",
+                "changed_row_count": 1,
+                "force_hit_max_incorrect": false
+              }
+            }
+          ],
+          "unique_prediction_rows": 498,
+          "consistent_overlap_rows": 0
+        }
+      }
+    ]
+  },
+  "candidate_manifest_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+  "candidate_rows_sha256": "87e09ab6b060e09b69a79d07ab8f853d1c8deeab52a46683386663c7233effc4",
+  "pair_content_digest_sha256": "a861c089480c84ebd536a0a154ca6252a574223c2965fac506cbf59eee3c4b80",
+  "outcome_selection_audit_sha256": "b2d254150636cf6f69aa807c1dd612b2e7cfe8cb43af917040af72f0d613a6af",
+  "reporting_guardrail": "This candidate set was selected using the same model outcomes summarized within it. Use it as a balanced candidate or qualitative set only, not as independent confirmatory evidence. Preserve the complete 100- and 254-pair analyses as the inferential results."
+}

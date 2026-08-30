@@ -1,0 +1,17 @@
+{
+  "schema": "escher-audit-coverage-judgment-packet-v1",
+  "included_proposals": 666,
+  "excluded": {
+    "rejected": 7,
+    "still_uncertain": 47
+  },
+  "unique_videos": 120,
+  "packet_excludes": [
+    "author identity",
+    "capability label",
+    "benchmark answer",
+    "model result"
+  ],
+  "packet_sha256": "22b1952399037bddfc1e22cc28da2cc26e45bc19a47f4a672fd553deda91789f",
+  "mapping_sha256": "d2817716be981229f552acda73fab58d52b252e95d27e6e17b25c9bfd67ccf31"
+}

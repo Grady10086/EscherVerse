@@ -1,0 +1,55 @@
+{
+  "artifact": "semantic coverage disagreement adjudication",
+  "adjudicator_identity": {
+    "type": "reviewer-assisted independent third adjudicator",
+    "system": "OpenAI Codex (GPT-5 family)",
+    "human_adjudicator": false,
+    "scope": "Text-only comparison of each Chinese reference question against all same-video generated questions in the blinded disagreement packet."
+  },
+  "method": {
+    "rows_adjudicated": 174,
+    "allowed_statuses": [
+      "direct",
+      "partial",
+      "absent",
+      "uncertain"
+    ],
+    "decision_rule": "Independent semantic judgment under COVERAGE_JUDGING_GUIDE_CN.md; no majority heuristic.",
+    "excluded_information": [
+      "capability/category labels",
+      "benchmark answers",
+      "model results",
+      "desired paper direction"
+    ]
+  },
+  "source": {
+    "path": "experiments/coverage_audit/manifests/coverage_disagreement_packet.csv",
+    "sha256": "ce4ee32153c31178aae0d4d99e563cda6393c6337e13b1cda266d5cb453df2c2"
+  },
+  "output": {
+    "path": "experiments/coverage_audit/judgments/adjudication_174.csv",
+    "sha256": "698cbc8f75334bf628098ebcb311d3588cd4b38410021a40c82f4bdf9bfba178",
+    "columns": [
+      "blind_proposal_id",
+      "final_status",
+      "closest_generated_id",
+      "confidence",
+      "adjudication_reason_cn"
+    ]
+  },
+  "status_counts": {
+    "absent": 56,
+    "direct": 42,
+    "partial": 75,
+    "uncertain": 1
+  },
+  "validation": {
+    "passed": true,
+    "row_count": 174,
+    "unique_blind_proposal_ids": 174,
+    "keys_exactly_equal_source": true,
+    "all_statuses_valid": true,
+    "all_closest_ids_present_in_row_candidates": true,
+    "exact_output_columns": true
+  }
+}

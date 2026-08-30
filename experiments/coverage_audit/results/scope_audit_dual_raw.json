@@ -1,0 +1,295 @@
+{
+  "schema": "escher-audit-six-dimension-scope-audit-v1",
+  "items": 666,
+  "videos": 120,
+  "rater_results": {
+    "rater_1": {
+      "status_counts": {
+        "directly_in_scope": 449,
+        "outside_scope": 57,
+        "supporting_operation": 160
+      },
+      "direct": {
+        "rate": 0.6741741741741741,
+        "numerator": 449,
+        "denominator": 666,
+        "video_cluster_bootstrap_95ci": [
+          0.6304675716440422,
+          0.7164184732446365
+        ]
+      },
+      "absorbed": {
+        "definition": "directly_in_scope + supporting_operation",
+        "rate": 0.9144144144144144,
+        "numerator": 609,
+        "denominator": 666,
+        "video_cluster_bootstrap_95ci": [
+          0.8850746268656716,
+          0.9410876132930514
+        ]
+      },
+      "primary_dimension_counts": {
+        "C1_occlusion_permanence": 32,
+        "C2_dynamic_spatial": 250,
+        "C3_action_intent": 105,
+        "C4_predictive_counterfactual": 2,
+        "C5_deformation_state": 86,
+        "C6_reference_frame": 134,
+        "NONE": 57
+      },
+      "multilabel_dimension_incidence": {
+        "C1_occlusion_permanence": 34,
+        "C2_dynamic_spatial": 383,
+        "C3_action_intent": 139,
+        "C4_predictive_counterfactual": 2,
+        "C5_deformation_state": 99,
+        "C6_reference_frame": 151
+      }
+    },
+    "rater_2": {
+      "status_counts": {
+        "directly_in_scope": 354,
+        "outside_scope": 148,
+        "supporting_operation": 164
+      },
+      "direct": {
+        "rate": 0.5315315315315315,
+        "numerator": 354,
+        "denominator": 666,
+        "video_cluster_bootstrap_95ci": [
+          0.48776664602915515,
+          0.5740222731225403
+        ]
+      },
+      "absorbed": {
+        "definition": "directly_in_scope + supporting_operation",
+        "rate": 0.7777777777777778,
+        "numerator": 518,
+        "denominator": 666,
+        "video_cluster_bootstrap_95ci": [
+          0.7299695250393816,
+          0.8231709582140397
+        ]
+      },
+      "primary_dimension_counts": {
+        "C1_occlusion_permanence": 36,
+        "C2_dynamic_spatial": 229,
+        "C3_action_intent": 80,
+        "C4_predictive_counterfactual": 2,
+        "C5_deformation_state": 75,
+        "C6_reference_frame": 96,
+        "NONE": 148
+      },
+      "multilabel_dimension_incidence": {
+        "C1_occlusion_permanence": 36,
+        "C2_dynamic_spatial": 280,
+        "C3_action_intent": 86,
+        "C4_predictive_counterfactual": 2,
+        "C5_deformation_state": 81,
+        "C6_reference_frame": 156
+      }
+    }
+  },
+  "agreement": {
+    "exact_scope_status": 0.6906906906906907,
+    "scope_status_cohen_kappa": 0.4510710827658501,
+    "binary_absorbed_agreement": 0.8573573573573574,
+    "binary_absorbed_cohen_kappa": 0.4712430426716142,
+    "exact_primary_dimension": 0.6666666666666666,
+    "primary_dimension_cohen_kappa": 0.5763553008595989,
+    "scope_status_disagreements": 206,
+    "binary_absorbed_disagreements": 95
+  },
+  "dual_rater_sensitivity": {
+    "pairwise_nonambiguous_denominator": 666,
+    "consensus_direct_rate": 0.5135135135135135,
+    "at_least_one_rater_direct_rate": 0.6921921921921922,
+    "consensus_absorbed_rate": 0.7747747747747747,
+    "at_least_one_rater_absorbed_rate": 0.9174174174174174
+  },
+  "results_by_independent_author": {
+    "author_a": {
+      "rater_1": {
+        "status_counts": {
+          "directly_in_scope": 217,
+          "outside_scope": 28,
+          "supporting_operation": 77
+        },
+        "direct": {
+          "rate": 0.6739130434782609,
+          "numerator": 217,
+          "denominator": 322,
+          "video_cluster_bootstrap_95ci": [
+            0.6194933049300061,
+            0.7275449101796407
+          ]
+        },
+        "absorbed": {
+          "definition": "directly_in_scope + supporting_operation",
+          "rate": 0.9130434782608695,
+          "numerator": 294,
+          "denominator": 322,
+          "video_cluster_bootstrap_95ci": [
+            0.8801230283911672,
+            0.9433962264150944
+          ]
+        },
+        "primary_dimension_counts": {
+          "C1_occlusion_permanence": 15,
+          "C2_dynamic_spatial": 123,
+          "C3_action_intent": 38,
+          "C5_deformation_state": 50,
+          "C6_reference_frame": 68,
+          "NONE": 28
+        },
+        "multilabel_dimension_incidence": {
+          "C1_occlusion_permanence": 15,
+          "C2_dynamic_spatial": 195,
+          "C3_action_intent": 60,
+          "C5_deformation_state": 57,
+          "C6_reference_frame": 77
+        }
+      },
+      "rater_2": {
+        "status_counts": {
+          "directly_in_scope": 163,
+          "outside_scope": 74,
+          "supporting_operation": 85
+        },
+        "direct": {
+          "rate": 0.5062111801242236,
+          "numerator": 163,
+          "denominator": 322,
+          "video_cluster_bootstrap_95ci": [
+            0.45482866043613707,
+            0.5570088987873317
+          ]
+        },
+        "absorbed": {
+          "definition": "directly_in_scope + supporting_operation",
+          "rate": 0.7701863354037267,
+          "numerator": 248,
+          "denominator": 322,
+          "video_cluster_bootstrap_95ci": [
+            0.7160031562792584,
+            0.8226299694189603
+          ]
+        },
+        "primary_dimension_counts": {
+          "C1_occlusion_permanence": 15,
+          "C2_dynamic_spatial": 114,
+          "C3_action_intent": 29,
+          "C5_deformation_state": 41,
+          "C6_reference_frame": 49,
+          "NONE": 74
+        },
+        "multilabel_dimension_incidence": {
+          "C1_occlusion_permanence": 15,
+          "C2_dynamic_spatial": 143,
+          "C3_action_intent": 32,
+          "C5_deformation_state": 46,
+          "C6_reference_frame": 76
+        }
+      }
+    },
+    "author_b": {
+      "rater_1": {
+        "status_counts": {
+          "directly_in_scope": 232,
+          "outside_scope": 29,
+          "supporting_operation": 83
+        },
+        "direct": {
+          "rate": 0.6744186046511628,
+          "numerator": 232,
+          "denominator": 344,
+          "video_cluster_bootstrap_95ci": [
+            0.6253602305475504,
+            0.7222222222222222
+          ]
+        },
+        "absorbed": {
+          "definition": "directly_in_scope + supporting_operation",
+          "rate": 0.9156976744186046,
+          "numerator": 315,
+          "denominator": 344,
+          "video_cluster_bootstrap_95ci": [
+            0.8833819241982507,
+            0.9452449567723343
+          ]
+        },
+        "primary_dimension_counts": {
+          "C1_occlusion_permanence": 17,
+          "C2_dynamic_spatial": 127,
+          "C3_action_intent": 67,
+          "C4_predictive_counterfactual": 2,
+          "C5_deformation_state": 36,
+          "C6_reference_frame": 66,
+          "NONE": 29
+        },
+        "multilabel_dimension_incidence": {
+          "C1_occlusion_permanence": 19,
+          "C2_dynamic_spatial": 188,
+          "C3_action_intent": 79,
+          "C4_predictive_counterfactual": 2,
+          "C5_deformation_state": 42,
+          "C6_reference_frame": 74
+        }
+      },
+      "rater_2": {
+        "status_counts": {
+          "directly_in_scope": 191,
+          "outside_scope": 74,
+          "supporting_operation": 79
+        },
+        "direct": {
+          "rate": 0.5552325581395349,
+          "numerator": 191,
+          "denominator": 344,
+          "video_cluster_bootstrap_95ci": [
+            0.5058139534883721,
+            0.603448275862069
+          ]
+        },
+        "absorbed": {
+          "definition": "directly_in_scope + supporting_operation",
+          "rate": 0.7848837209302325,
+          "numerator": 270,
+          "denominator": 344,
+          "video_cluster_bootstrap_95ci": [
+            0.735632183908046,
+            0.8318840579710145
+          ]
+        },
+        "primary_dimension_counts": {
+          "C1_occlusion_permanence": 21,
+          "C2_dynamic_spatial": 115,
+          "C3_action_intent": 51,
+          "C4_predictive_counterfactual": 2,
+          "C5_deformation_state": 34,
+          "C6_reference_frame": 47,
+          "NONE": 74
+        },
+        "multilabel_dimension_incidence": {
+          "C1_occlusion_permanence": 21,
+          "C2_dynamic_spatial": 137,
+          "C3_action_intent": 54,
+          "C4_predictive_counterfactual": 2,
+          "C5_deformation_state": 35,
+          "C6_reference_frame": 80
+        }
+      }
+    }
+  },
+  "bootstrap": {
+    "iterations": 10000,
+    "cluster": "source video",
+    "seed": 20260814
+  },
+  "limitations": [
+    "Both independent question authors and both scope raters are reviewer-assisted, not human-only raters.",
+    "The audit evaluates whether the six dimensions can organize questions, not whether the final benchmark realizes every concrete question.",
+    "Supporting operations are reported separately and are not direct six-dimension coverage.",
+    "The sample contains 120 videos and cannot establish exhaustive long-tail coverage."
+  ]
+}

@@ -1,0 +1,175 @@
+blind_proposal_id,final_status,closest_generated_id,confidence,adjudication_reason_cn
+judgment-0001,partial,audit-0001-g01,medium,生成题提到先滑蓝色栏杆且之后摔倒的位置，但未判断是否完整滑过并落回雪面。
+judgment-0002,absent,audit-0001-g01,high,"生成题 audit-0001-g01 询问：“[True/False] At the end of the video, after the fall, the snowboarder is positioned uphill and to the left of the blue rail they slid on at the beginning.”；参考题询问：“滑雪板相对栏杆的高度和方向如何变化？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0003,partial,audit-0001-g01,medium,生成题交代栏杆滑行动作在开头且结尾已摔倒，能关联先后关系，但任务本身是判断摔倒后的空间位置。
+judgment-0004,partial,audit-0001-g01,medium,生成题说明接触蓝色栏杆后发生摔倒，却未完整询问接近栏杆后的动作序列。
+judgment-0005,direct,audit-0001-g01,high,生成题明确把栏杆滑行置于开头并说明随后摔倒，直接覆盖越杆后未保持站立这一核心事实。
+judgment-0007,absent,audit-0002-g02,high,"生成题 audit-0002-g02 询问：“[Single-Choice] From the shooter's perspective, what is the spatial relationship between the targeted flying bird and the main flock of floating ducks at the exact moment the shot is fired? [Options] A) The flying bird is between the shooter and the flock. B) The flock is between the shooter and the flying bird. C) The flying bird is directly above the flock. D) The flying bird is to the far right of the flock.”；参考题询问：“男子的枪口主要朝向水面还是天空？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0008,absent,audit-0002-g01,high,生成题 audit-0002-g01 询问：“[True/False] The single duck floating near the shore at the beginning of the video is located to the right of the main flock of ducks seen in the water later in the video.”；参考题询问：“湖面上有几只水鸟同时可见？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。
+judgment-0009,absent,audit-0002-g01,high,生成题 audit-0002-g01 询问：“[True/False] The single duck floating near the shore at the beginning of the video is located to the right of the main flock of ducks seen in the water later in the video.”；参考题询问：“水鸟群相对岸边如何移动？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。
+judgment-0013,partial,audit-0003-g01,medium,生成题把黄色房屋描述为画面中央，触及中心房屋，但未覆盖镜头移动后进入中央的动态过程。
+judgment-0018,absent,audit-0004-g02,high,"生成题 audit-0004-g02 询问：“[Single-Choice] After bringing the fish into the kayak and steadying it, what is the person's most immediate action-oriented goal based on the spatial arrangement of their hands, the fish, and the fishing line? [Options] A) To take a photo of the fish. B) To release the fish back into the water. C) To remove the hook from the fish's mouth. D) To put the fish into a storage compartment.”；参考题询问：“人先展示鱼还是先处理鱼钩？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0019,absent,audit-0004-g01,high,"生成题 audit-0004-g01 询问：“[Fill-in-the-Blank] As the person lifts the fish from the water into the kayak, the distance between the yellow bobber and the fish's mouth steadily ____.”；参考题询问：“钓鱼者先拿着浮漂还是先展示鱼？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0021,absent,audit-0004-g01,high,"生成题 audit-0004-g01 询问：“[Fill-in-the-Blank] As the person lifts the fish from the water into the kayak, the distance between the yellow bobber and the fish's mouth steadily ____.”；参考题询问：“鱼被举起后其身体朝向如何变化？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0029,partial,audit-0006-g03,medium,"生成题 audit-0006-g03 询问：“[Multiple-Select] The video pans from left to right across a line of seated men. If the camera had instead panned from right to left at the same speed, which two individuals would have been the first to appear fully in the frame? (Select two) [Options] A) The man in the black cowboy hat. B) The man in the brown kufi cap. C) The man in the patterned cap. D) The man in the blue beanie.”；参考题询问：“戴蓝帽的人在戴宽檐帽的人之前还是之后出现？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0031,uncertain,audit-0006-g03,low,参考中的“戴帽男子”无法从文字稳定对应牛仔帽、库菲帽、花纹帽或蓝帽中的哪一人，因而不能可靠比较左右关系。
+judgment-0039,partial,audit-0008-g01,medium,生成题判断浪峰从左向右传播时峰高是否一致，覆盖形状变化的一个维度但不是整体形态变化。
+judgment-0047,partial,audit-0009-g01,medium,"生成题 audit-0009-g01 询问：“[Single-Choice] Assuming the watercraft continues on its current path without turning, what will its position be relative to the group of trees on the land in the next few seconds? [Options] A) It will be directly in front of the trees, having landed on the shore. B) It will have passed the trees, with the trees now on its right side. C) It will have turned away, with the trees getting smaller in the distance. D) It will be stationary in its current position.”；参考题询问：“第一视角所在载具在水面上是否持续前进？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0049,partial,audit-0009-g01,medium,"生成题 audit-0009-g01 询问：“[Single-Choice] Assuming the watercraft continues on its current path without turning, what will its position be relative to the group of trees on the land in the next few seconds? [Options] A) It will be directly in front of the trees, having landed on the shore. B) It will have passed the trees, with the trees now on its right side. C) It will have turned away, with the trees getting smaller in the distance. D) It will be stationary in its current position.”；参考题询问：“远处树木相对观察者向哪个方向移动？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0056,partial,audit-0011-g01,medium,生成题明确描述无人机正远离相机飞行，但没有比较远离与随后或先前靠近的先后次序。
+judgment-0057,absent,audit-0011-g01,high,"生成题 audit-0011-g01 询问：“[Single-Choice] As the drone flies away from the camera, what is its position relative to the utility pole at the moment it is horizontally aligned with the green dumpster? [Options] A) It has already passed to the left of the utility pole. B) It is directly in front of the utility pole. C) It has not yet reached the utility pole. D) It is flying at the same height as the top of the utility pole.”；参考题询问：“无人机相对地面的高度如何变化？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0059,partial,audit-0011-g01,medium,生成题确认无人机处于远离相机的阶段，但未比较其远离和接近阶段的时间顺序。
+judgment-0061,absent,audit-0011-g01,high,"生成题 audit-0011-g01 询问：“[Single-Choice] As the drone flies away from the camera, what is its position relative to the utility pole at the moment it is horizontally aligned with the green dumpster? [Options] A) It has already passed to the left of the utility pole. B) It is directly in front of the utility pole. C) It has not yet reached the utility pole. D) It is flying at the same height as the top of the utility pole.”；参考题询问：“无人机短暂变小时是否仍保持在画面中央附近？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0063,absent,audit-0012-g03,high,生成题涉及击球后球的位置及两人最终距离，却没有描述另一人走近洞口或比较其与击球的先后。
+judgment-0072,partial,audit-0014-g01,medium,生成题明确马在开头向左作大幅转弯并列出朝相机的可能路径，但没有直接判断实际是否由侧向转为靠近相机。
+judgment-0073,partial,audit-0014-g01,medium,生成题基于马的转弯预测路径，间接涉及与相机的接近关系，但没有追踪骑手到相机的距离变化。
+judgment-0074,direct,audit-0014-g01,high,生成题明确马在前三秒开始向左大幅转弯，直接覆盖马是否改变行进方向。
+judgment-0075,absent,audit-0014-g01,high,"生成题 audit-0014-g01 询问：“[Single-Choice] In the first three seconds, the horse begins a wide turn to its left. If it had maintained that initial turning radius, what path would it have followed? [Options] A) It would have run into the fence on the left side of the arena. B) It would have completed a tight circle in the center of the arena. C) It would have continued along the fence at the far end of the arena. D) It would have reversed direction and run towards the camera.”；参考题询问：“骑手靠近镜头时马位于围栏哪一侧？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0084,absent,audit-0016-g01,high,生成题 audit-0016-g01 询问：“[Multiple-Select] Which of the following statements accurately describe a physical interaction or state change shown in the video? (Select all that apply) [Options] A) The knife is used to create a new hole in the meat. B) The person's gloved hand causes visible compression on the surface of the meat. C) The knife passes through a pre-existing channel within the meat and bone. D) The meat is sliced into two separate pieces by the end of the video.”；参考题询问：“工具接触肉块发生在男子展示肉块之前还是之后？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。
+judgment-0087,direct,audit-0016-g01,high,生成题具体区分造新孔、穿过既有通道和切开肉块等工具作用，直接覆盖处理肉块的动作目标。
+judgment-0090,absent,audit-0017-g02,high,生成题没有男子手势或其指向发动机舱的区域。
+judgment-0093,absent,audit-0017-g02,high,生成题未提讲解者的反复指向动作或车辆区域。
+judgment-0104,partial,audit-0019-g02,medium,生成题出现男子向水面伸臂的动作且另一题出现海浪遮挡，但没有比较浪涌时人群后退和伸手的先后。
+judgment-0121,partial,audit-0022-g01,medium,生成题明确男子反复转动渔轮及其导致的竿弯状态，却没有追问收线动作的直接目标。
+judgment-0129,partial,audit-0024-g01,medium,生成题明确绳索绕在左前臂并判断绕动方向，触及身体侧别，但没有抛绳后绳圈落点。
+judgment-0132,partial,audit-0024-g01,medium,生成题追踪绳索的环绕操作，属于绳索形态变化，但没有判断是否随过程逐渐展开。
+judgment-0134,absent,audit-0025-g01,high,"生成题 audit-0025-g01 询问：“[Single-Choice] As the car moves up the curved ramp, which background element is the last to be completely hidden behind the solid white wall on the left? [Options] A) The white sedan parked on the far left of the distant lot. B) The dark SUV parked in the middle of the distant lot. C) The trees on the far right of the distant lot. D) The building behind the distant lot.”；参考题询问：“车辆下坡进入停车区后是否改变行驶方向？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0138,partial,audit-0025-g01,medium,"生成题 audit-0025-g01 询问：“[Single-Choice] As the car moves up the curved ramp, which background element is the last to be completely hidden behind the solid white wall on the left? [Options] A) The white sedan parked on the far left of the distant lot. B) The dark SUV parked in the middle of the distant lot. C) The trees on the far right of the distant lot. D) The building behind the distant lot.”；参考题询问：“白色围墙在转弯前位于车辆哪一侧？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0139,direct,audit-0026-g01,high,生成题直接判断女子运动是靠近还是远离相机，覆盖游泳者靠近相机时距离减小的核心关系。
+judgment-0140,absent,audit-0026-g01,high,生成题 audit-0026-g01 询问：“[Single-Choice] Which statement accurately describes the woman's movement relative to both the camera and the blue structure in the background? [Options] A) She moves away from the blue structure and away from the camera. B) She moves towards the blue structure and towards the camera. C) She moves towards the camera but her distance from the blue structure remains constant. D) She moves towards the camera while moving away from the blue structure.”；参考题询问：“游泳者主要面向相机还是背向相机？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。
+judgment-0141,partial,audit-0026-g02,medium,"生成题 audit-0026-g02 询问：“[Single-Choice] Based on the woman's continuous forward swimming trajectory and her final action, what is her immediate spatial goal? [Options] A) To swim to the edge of the pool on the right. B) To reach the hands of the person holding the camera. C) To turn around and swim back to where she started. D) To dive under the person holding the camera.”；参考题询问：“伸手动作发生在游到近处之前还是之后？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0142,absent,audit-0026-g01,high,生成题 audit-0026-g01 询问：“[Single-Choice] Which statement accurately describes the woman's movement relative to both the camera and the blue structure in the background? [Options] A) She moves away from the blue structure and away from the camera. B) She moves towards the blue structure and towards the camera. C) She moves towards the camera but her distance from the blue structure remains constant. D) She moves towards the camera while moving away from the blue structure.”；参考题询问：“游泳者从远处接近相机时是否一直面向相机？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。
+judgment-0143,direct,audit-0026-g01,high,生成题明确要求比较女子运动时与相机的距离，直接覆盖二者距离随接近而减小。
+judgment-0156,partial,audit-0028-g01,medium,生成题判断手部相对身体的运动方向，却没有确定手势总体朝相机还是朝海面。
+judgment-0161,partial,audit-0029-g01,medium,生成题具体提到道路左侧树木、围栏边马、玉米地和远处建筑，覆盖道路两侧环境但没有概括主要分布物。
+judgment-0164,direct,audit-0030-g01,high,生成题直接比较狗由靠近右侧栏杆移动到靠近左侧围栏的过程，覆盖其与右栏杆距离增大的变化。
+judgment-0167,direct,audit-0030-g01,high,生成题明确狗从靠近右栏杆的一侧横移到左侧围栏，直接给出与右栏杆距离如何变化。
+judgment-0170,partial,audit-0031-g01,medium,生成题以海岸和海滩为地标判断转向后的行进方向，触及岸线距离关系但没有追踪实际距离变化。
+judgment-0174,absent,audit-0031-g01,high,生成题没有身体姿势调整或其即时目标。
+judgment-0176,direct,audit-0032-g02,high,"生成题 audit-0032-g02 询问：“[Single-Choice] If the green defender had not intercepted the high ball at 0:03, which blue player's path put them in the best position to receive it directly? [Options] A) The player wearing number 6, who was running towards the goal. B) The player who eventually took the final shot from the edge of the box. C) The player who made the initial long kick from midfield. D) The player standing furthest to the left from the camera's perspective.”；参考题询问：“蓝队传中后球先到绿队球员还是守门员附近？”。二者都要求判断同一个核心可视事实，且需要的空间、时间或状态推理操作基本一致。"
+judgment-0187,partial,audit-0034-g02,medium,生成题以驾驶者视角判断收音机在方向盘右侧，覆盖方向盘的舱内参照关系，但没有直接问它位于画面哪侧。
+judgment-0191,partial,audit-0035-g03,medium,生成题追踪黄队从右路传中时队友位置及之后首射和进球者角色，但未明确传中到门前后哪队先触球。
+judgment-0192,absent,audit-0035-g01,high,"生成题 audit-0035-g01 询问：“[True/False] At the exact moment the second shot is taken by the player in yellow (around 0:11), the goalkeeper is positioned on the ground between the shooter and the goal line.”；参考题询问：“球在门前混战中是否改变方向？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0205,partial,audit-0038-g01,medium,"生成题 audit-0038-g01 询问：“[Fill-in-the-Blank] As the camera pans from right to left, the amount of the large mountain peak visible to the right of the overlapping, closer mountain range gradually ____.”；参考题询问：“镜头转动时远山在画面中的相对位置如何变化？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0220,direct,audit-0040-g02,high,生成题表明讲解者抬起盖板是为了展示可开启的地板下空舱，实质覆盖手势要展示的船内区域。
+judgment-0226,partial,audit-0041-g01,medium,生成题明确直行会撞上岩石，因而触及规避岩石这一目标，但未出现下板动作或其实际动机。
+judgment-0227,absent,audit-0042-g01,high,"生成题 audit-0042-g01 询问：“[Single-Choice] Based on the visible arc of motion, what object is located behind the ride's path when it reaches its highest point on the left side of the screen? [Options] A) A tall, glass-paneled building. B) The sun. C) A parking lot full of cars. D) A small, single-story shop.”；参考题询问：“镜头先展示港口小船还是大型起重桥？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0233,direct,audit-0043-g03,high,生成题把鱼竿形状变化后的相机运动解释为把物体从水中带到岸边，另一题明确最终鱼上沙滩，覆盖弯竿后鱼到岸。
+judgment-0235,absent,audit-0043-g01,high,"生成题 audit-0043-g01 询问：“[Fill-in-the-Blank] To track the fish as it is reeled in, the camera's perspective, which represents the person's viewpoint, tilts primarily ______.”；参考题询问：“鱼竿弯曲方向相对海面如何变化？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0236,direct,audit-0043-g03,high,生成题明确鱼竿形状改变后随即移动镜头以把水中物体带到岸边，并由另一题确认最终鱼上沙，覆盖所问时序。
+judgment-0240,absent,audit-0044-g01,high,生成题比较控制塔与航站楼，而非航站楼相对机翼从前到后的变化。
+judgment-0241,absent,audit-0044-g01,high,"生成题 audit-0044-g01 询问：“[Single-Choice] As the viewing airplane moves, how does the perceived position of the green-and-white control tower change relative to the first large terminal building? [Options] A) It moves from being to the left of the terminal to being to the right of it. B) It moves from being to the right of the terminal to being to the left of it. C) It remains in a fixed position to the right of the terminal. D) It is initially behind the terminal and then moves in front of it.”；参考题询问：“飞机起飞后地面停机坪在画面中如何移动？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0243,absent,audit-0044-g01,high,"生成题 audit-0044-g01 询问：“[Single-Choice] As the viewing airplane moves, how does the perceived position of the green-and-white control tower change relative to the first large terminal building? [Options] A) It moves from being to the left of the terminal to being to the right of it. B) It moves from being to the right of the terminal to being to the left of it. C) It remains in a fixed position to the right of the terminal. D) It is initially behind the terminal and then moves in front of it.”；参考题询问：“飞机经过航站楼上空时是否已经离地？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0244,direct,audit-0045-g02,high,生成题明确蓝衣男子先靠近旧车并打开车门，直接覆盖开门发生在走近车辆之后。
+judgment-0246,partial,audit-0045-g01,medium,生成题聚焦驾驶侧车门并定位两人靠近车侧，相关于查看车辆侧面，但没有与尾部作直接比较。
+judgment-0257,direct,audit-0047-g02,high,生成题把加工过程与提高木柱表面反光性直接关联，实质覆盖工具接触旋转木杆的表面处理目标。
+judgment-0258,absent,audit-0047-g01,high,生成题虽出现加工后的深浅两根圆柱，却只问它们最终相对位置，没有比较形状是否相同。
+judgment-0259,partial,audit-0048-g01,medium,生成题持续比较输电塔和高层白楼的空间关系，但只问左右及可见性，不判断谁在前景或远景。
+judgment-0262,partial,audit-0048-g01,medium,"生成题 audit-0048-g01 询问：“[Single-Choice] At the beginning of the video (0:02), a prominent tall white building is visible to the left of the large electrical pylon. By the time the main rightward pan concludes (0:20), what is the new spatial relationship between them? [Options] A) The pylon is now to the left of the white building. B) The pylon is directly occluding the white building. C) The white building is no longer visible in the frame. D) The pylon remains to the right of the white building.”；参考题询问：“镜头平移时输电塔何时进入画面中央？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0266,partial,audit-0049-g01,medium,生成题定位三个红色拨杆在轮毂正面并描述其转动方向，但没有说明折叠机构位于后轮哪一侧。
+judgment-0271,absent,audit-0050-g03,high,生成题比较车把和后货架的视位置，没有后货架与后轮的垂直关系。
+judgment-0272,partial,audit-0050-g01,medium,生成题直接描述相机从车右侧沿弧线绕到左侧，覆盖视角导致的左右朝向变化，但没有直接表述车身朝向如何改变。
+judgment-0276,absent,audit-0051-g01,high,"生成题 audit-0051-g01 询问：“[Multiple-Select] As the boy stands up and begins to move, which of these statements correctly describe the changing spatial properties of the collection of shoes in his arms? (Select all that apply) [Options] A) The shoes lock together to form a stable, rigid structure. B) The entire pile of shoes visibly wobbles and sways as he moves. C) Individual shoes can be seen shifting their positions and angles relative to each other within the pile. D) The overall size of the pile shrinks as the shoes are compressed together.”；参考题询问：“他先整理鞋带还是先站起来？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0278,absent,audit-0051-g01,high,"生成题 audit-0051-g01 询问：“[Multiple-Select] As the boy stands up and begins to move, which of these statements correctly describe the changing spatial properties of the collection of shoes in his arms? (Select all that apply) [Options] A) The shoes lock together to form a stable, rigid structure. B) The entire pile of shoes visibly wobbles and sways as he moves. C) Individual shoes can be seen shifting their positions and angles relative to each other within the pile. D) The overall size of the pile shrinks as the shoes are compressed together.”；参考题询问：“男子抱起设备发生在蹲下之后吗？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0280,partial,audit-0051-g02,medium,生成题给出抱鞋者起身后转向厨房冰箱的方向，但参考要求抱着设备且没有明确把转身等同于行走。
+judgment-0285,absent,audit-0053-g01,high,"生成题 audit-0053-g01 询问：“[Single-Choice] When the man appears and looks toward the camera, from his point of view, the distant hills are located in which direction? [Options] A) To his right. B) To his left. C) Directly behind him. D) In front of him, across the water.”；参考题询问：“镜头先展示空海滩还是先展示男子面部？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0288,absent,audit-0053-g01,high,"生成题 audit-0053-g01 询问：“[Single-Choice] When the man appears and looks toward the camera, from his point of view, the distant hills are located in which direction? [Options] A) To his right. B) To his left. C) Directly behind him. D) In front of him, across the water.”；参考题询问：“镜头先展示海岸还是先展示男子面部？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0289,absent,audit-0053-g01,high,"生成题 audit-0053-g01 询问：“[Single-Choice] When the man appears and looks toward the camera, from his point of view, the distant hills are located in which direction? [Options] A) To his right. B) To his left. C) Directly behind him. D) In front of him, across the water.”；参考题询问：“男子转头时由面向相机变为面向哪里？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0294,direct,audit-0054-g01,high,生成题明确先从室内顶架取下两只鸟，随后将它们带出建筑，直接覆盖先取下后走向室外。
+judgment-0297,partial,audit-0055-g02,medium,生成题借背景车辆依次被白车遮挡来追踪相对运动，但没有描述白车绕场地时行驶方向持续如何改变。
+judgment-0308,partial,audit-0057-g02,medium,生成题直接询问哪辆车始终停在红色越野车左侧，覆盖一侧邻车关系，但没有同时给出红车相对两侧车辆的完整位置。
+judgment-0315,partial,audit-0058-g01,medium,生成题通过背景面包车的反向视运动反映相机跟随无人机的平移方向，可关联无人机飞离侧，但没有直接给出场地哪侧。
+judgment-0320,partial,audit-0059-g01,medium,生成题定位末段转回破浪区的动作，但没有描述冲浪者消失在浪后或比较二者先后。
+judgment-0325,absent,audit-0060-g02,high,生成题没有人群为靠近车辆让出行驶空间的动作。
+judgment-0328,absent,audit-0060-g02,high,生成题没有人群在车辆靠近前向两侧让开的事件。
+judgment-0330,partial,audit-0061-g01,medium,生成题基于十三秒处大象沿铺装路的朝向推断左转后的路径，覆盖行进方向但没有直接判断骑象者面向哪里。
+judgment-0336,direct,audit-0062-g02,high,生成题明确相机先横扫景观再迅速转向人物作惊喜揭示，直接覆盖先展示海边果岭后出现自拍者的顺序。
+judgment-0339,direct,audit-0062-g02,high,生成题明确先平移展示海岸景观再快速转向最后出现的人物，直接覆盖展示顺序。
+judgment-0345,direct,audit-0063-g01,high,生成题直接判断车辆过弯时车身朝向相对行进方向是外甩、内倾还是对齐，覆盖驶入弯道后的朝向改变。
+judgment-0350,absent,audit-0064-g01,high,生成题没有钳子松开或手拿零件的动作先后。
+judgment-0351,absent,audit-0064-g01,high,生成题反而说明手中物原本是用于安装的独立件，没有钳子夹住墙内零件并取出的事实。
+judgment-0353,absent,audit-0064-g01,high,生成题没有操作者拉动钳子的动作或其直接目标。
+judgment-0354,partial,audit-0065-g01,medium,生成题依据三名年轻人的朝向和后续运动判断其向前跟随或转回相机的目标，覆盖一组行人方向但不代表整体人流。
+judgment-0357,absent,audit-0065-g01,high,生成题判断三人组的即时移动目标，而非观察者自身沿商场通道前进还是后退。
+judgment-0367,direct,audit-0067-g01,high,生成题明确实际转弯方向为右侧，实质覆盖从骑手视角目标道路位于右侧。
+judgment-0374,absent,audit-0068-g03,high,生成题只判断初始广角中店亭位于圣诞树右侧，没有圣诞树与蛋糕柜台的镜头展示顺序。
+judgment-0380,absent,audit-0069-g01,high,生成题定位跨谷道路的高度，却没有镜头平移时山谷先从画面哪侧出现。
+judgment-0382,direct,audit-0069-g02,high,生成题直接询问前景裸树枝短暂遮住山谷深处哪一特征，覆盖树木经过前景时短暂遮挡山谷。
+judgment-0383,direct,audit-0070-g01,high,生成题把火箭的主要状态转换列为由水平到竖直，另一题明确处于抬升过程，实质覆盖逐渐抬到倾斜位置。
+judgment-0384,direct,audit-0070-g01,high,生成题 audit-0070-g01 询问：“[Single-Choice] What is the primary state transition of the rocket shown in the video? [Options] A) From a stationary state to a state of upward acceleration. B) From a horizontal orientation to a vertical orientation. C) From a disassembled state to an assembled state. D) From being attached to a train to being attached to a launch tower.”；参考题询问：“火箭尖端相对地面的高度如何变化？”。二者都要求判断同一个核心可视事实，且需要的空间、时间或状态推理操作基本一致。
+judgment-0385,partial,audit-0070-g02,medium,生成题同时描述抬升中的火箭和从下方移动到遮挡助推器的绿色支撑臂，但没有明确主体抬起与支撑结构首次可见的先后。
+judgment-0386,direct,audit-0070-g01,high,生成题直接区分火箭是实际由静止向上加速还是仅改变方向等状态，覆盖片段中是否发生真实位移。
+judgment-0387,absent,audit-0070-g02,high,生成题定位支撑臂相对助推器，没有火箭尖端相对发射架的方向。
+judgment-0391,partial,audit-0071-g02,medium,生成题明确一块屏在方向盘后且另一块是中控屏，覆盖二者结构关系但没有直接给出驾驶者视角的左右侧。
+judgment-0397,partial,audit-0072-g01,medium,生成题在翻滚和坐姿滑行等动作序列之间作选择，明显涉及所问先后，但没有明确使用“蹲下”并单独比较二者。
+judgment-0398,partial,audit-0072-g02,medium,生成题追随人物下坡时判断背景山峰在画面的反向移动，关联人物运动方向但没有以翻滚结束和相机为直接参照。
+judgment-0406,direct,audit-0074-g01,high,生成题明确汽车在片尾完成向左转弯，直接覆盖入弯后车头朝向左侧。
+judgment-0417,partial,audit-0076-g01,medium,生成题区分第一场景拉绳和第二场景把绳绕上船用绞盘，但没有明确展示绳端与演示固定点的先后。
+judgment-0418,direct,audit-0076-g01,high,生成题直接描述绳索绕在银色绞盘上并利用摩擦和旋转机构保持张力，覆盖穿过固定装置后的缠绕形态。
+judgment-0420,partial,audit-0076-g01,medium,生成题把第二场景的船上绞盘讲解与准备打结列在同一操作中，但没有比较演示绳结与船上讲解的顺序。
+judgment-0421,absent,audit-0076-g01,high,生成题描述绳绕绞盘而非绳索在手中形成的具体结构。
+judgment-0423,partial,audit-0077-g01,medium,生成题明确不用时踏板向上折叠贴合后门，反向涵盖使用时展开，但没有说明是男子踩踏触发展开。
+judgment-0424,absent,audit-0077-g01,high,生成题没有踏板展开与男子触碰后门的时间顺序。
+judgment-0425,partial,audit-0077-g01,medium,生成题只给出收起时踏板贴合后门的高位状态，未明确展开后相对保险杠在上还是下。
+judgment-0432,absent,audit-0078-g01,high,生成题没有冲浪者在浪壁上的高度变化。
+judgment-0433,partial,audit-0078-g01,medium,生成题直接判断二十五秒处明显转向朝画面哪侧，但没有确认这是浪管闭合前的最后一次转向。
+judgment-0436,partial,audit-0079-g01,medium,生成题明确存在一个较大编织环和附着绳结，但没有统计操作后形成的环数。
+judgment-0437,partial,audit-0079-g01,medium,生成题把拉紧绳端明确放在最终阶段，暗示穿绳在前，但没有直接描述右手穿绳事件。
+judgment-0438,direct,audit-0079-g01,high,生成题明确绳结连接较大编织环并通过拉端收紧靠近该环，实质覆盖制作结以固定上方绳环的目标。
+judgment-0446,partial,audit-0081-g01,medium,生成题把对象始终描述为中央被压宽的同一金属条，相关于连续性，但未直接判断弯曲后是否断开。
+judgment-0449,direct,audit-0081-g01,high,生成题明确机器加工的结果是压缩金属条中央并使其变宽，直接覆盖使用工具的加工目标。
+judgment-0469,partial,audit-0086-g02,medium,生成题明确二至五秒有一次转弯并判断山脉持续在左侧，覆盖一次明显转向但没有统计全部换刃次数。
+judgment-0470,partial,audit-0086-g02,medium,生成题追踪转弯期间滑雪者与山脉的相对侧，关联朝向变化但没有描述单板相对坡面的交替方向。
+judgment-0474,partial,audit-0086-g02,medium,生成题在指定转弯期间判断远山始终位于滑雪者左侧，涉及转弯朝向参照但没有直接描述身体朝向如何改变。
+judgment-0479,partial,audit-0087-g02,medium,"生成题 audit-0087-g02 询问：“[Single-Choice] If the camera, at its position at 0:05, had moved directly sideways to the left into the foliage instead of continuing forward, which statue's hat would have been the first to be fully obscured by the green bushes? [Options] A) The statue with the red and blue striped hat in the extreme foreground. B) The statue with the green and yellow striped hat. C) The statue with the orange hat. D) The statue with the pink and white striped hat.”；参考题询问：“石像分布在步道哪一侧？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0484,partial,audit-0088-g01,medium,"生成题 audit-0088-g01 询问：“[Single-Choice] As the camera pans left, how does the perceived horizontal position of the distant wind turbine change relative to the large, multi-gabled house on the peninsula? [Options] A) It moves from being to the left of the house to being to the right of the house. B) It remains to the left of the house throughout the pan. C) It moves from being to the right of the house to being to the left of the house. D) It becomes completely blocked from view by the house.”；参考题询问：“镜头移动时海滨住宅何时进入中央？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0488,direct,audit-0089-g01,high,生成题描述绳从线圈变成复杂缠绕再由松弛变为张紧，实质给出先绕绳后拉紧的顺序。
+judgment-0489,direct,audit-0089-g01,high,生成题明确讨论两木杆交叉点的稳定性及缠绕后的连接，直接覆盖捆扎点在交叉处而非末端。
+judgment-0491,direct,audit-0089-g01,high,生成题直接描述绳由松弛变张紧且由线圈变为复杂缠绕结构，覆盖拉紧后的结构变化。
+judgment-0494,partial,audit-0090-g01,medium,生成题同时定位中央儿童群和后来出现的成年人，但没有追踪二者距离如何变化。
+judgment-0495,partial,audit-0090-g01,medium,生成题明确成年人稍后出现，却没有孩子们散开的时刻，无法完整比较先后。
+judgment-0499,direct,audit-0091-g02,high,生成题把无人机在跟随中是否明显降低高度列为需判断的实际空间行为，直接覆盖相对地面高度变化。
+judgment-0502,partial,audit-0091-g02,medium,生成题判断跟随时是否显著掉高，涉及高度安全余量，但没有草地参照或全程高于草地的条件。
+judgment-0503,partial,audit-0091-g02,medium,生成题说明测试的是无人机跟随操作者的能力，涉及双方持续跟踪意图，但没有判断操作者转身是否为了跟踪无人机且主客体相反。
+judgment-0521,absent,audit-0095-g01,high,生成题 audit-0095-g01 询问：“[True/False] The path of the woman in the black dress crosses behind the path of the woman pushing the stroller.”；参考题询问：“前进过程中迎面行人与相机距离如何变化？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。
+judgment-0524,absent,audit-0095-g01,high,生成题 audit-0095-g01 询问：“[True/False] The path of the woman in the black dress crosses behind the path of the woman pushing the stroller.”；参考题询问：“迎面行人经过后是否离开视野？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。
+judgment-0528,absent,audit-0096-g02,high,生成题分别讨论两辆红车各自一个弯道动作，没有判断同一主要红车是否完成多次明显转向。
+judgment-0530,partial,audit-0096-g03,medium,"生成题 audit-0096-g03 询问：“[Single-Choice] Judging by the second car's orientation and speed as it leaves the frame to the right, what is the most probable immediate outcome of its maneuver? [Options] A) The car will come to an abrupt halt. B) The car will straighten its path and continue driving forward. C) The car will spin out and face the opposite direction. D) The car will continue sliding sideways at the same angle.”；参考题询问：“车辆最终朝向画面哪一侧？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0532,partial,audit-0097-g01,medium,生成题在男子接近转角前把墙上最后一张照片作为可能被遮住物，涉及人与照片的接近过程但没有连续距离变化。
+judgment-0537,absent,audit-0098-g01,high,生成题 audit-0098-g01 询问：“[Single-Choice] How does the surfer's position relative to the main breaking part of the wave (the white water) change between the first turn (0:03) and the second turn (0:08)? [Options] A) They move farther away from the white water and then closer again. B) They stay at a constant distance from the white water. C) They move closer to the white water and then farther away. D) They are always inside the white water.”；参考题询问：“冲浪者跌入浪花后是否再次露出水面？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。
+judgment-0540,absent,audit-0098-g01,high,生成题 audit-0098-g01 询问：“[Single-Choice] How does the surfer's position relative to the main breaking part of the wave (the white water) change between the first turn (0:03) and the second turn (0:08)? [Options] A) They move farther away from the white water and then closer again. B) They stay at a constant distance from the white water. C) They move closer to the white water and then farther away. D) They are always inside the white water.”；参考题询问：“冲浪者何时被浪花完全遮挡？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。
+judgment-0548,partial,audit-0099-g02,medium,生成题说明车辆已开始减速并推演若不减速将沿路直行，相关于停车趋势但未判断最终是否停在路上。
+judgment-0549,partial,audit-0100-g04,medium,"生成题 audit-0100-g04 询问：“[True/False] As the vehicle moves forward and to the left, the car's left A-pillar moves across the field of view, eventually revealing a wooden fence that was initially occluded.”；参考题询问：“白车经过住宅时从车内视角向哪侧移动？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0552,partial,audit-0100-g04,medium,"生成题 audit-0100-g04 询问：“[True/False] As the vehicle moves forward and to the left, the car's left A-pillar moves across the field of view, eventually revealing a wooden fence that was initially occluded.”；参考题询问：“窗外白车相对观察者向哪侧移动？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0553,absent,audit-0100-g04,high,生成题的前景遮挡物是左侧A柱且被揭示的是木栅栏，不是仪表台对白车的遮挡。
+judgment-0558,direct,audit-0101-g01,high,生成题直接描述鱼先从远处在水中被拉近再被举起，完整覆盖从水下出现到举起的核心顺序。
+judgment-0562,partial,audit-0102-g04,medium,生成题比较背景列车相对摩托车比赛方向是同向、反向或横向，触及骑手行驶轴向但没有直接给出画面或赛道哪侧。
+judgment-0563,direct,audit-0102-g01,high,生成题直接判断右车道摩托车是否从早期加速后持续保持领先，完整覆盖比赛中前后关系是否改变。
+judgment-0574,direct,audit-0105-g02,high,生成题明确男子对左手物体进行反复刮削并造成表面变化，直接覆盖持续处理手中物品。
+judgment-0580,partial,audit-0106-g03,medium,生成题定位女子左侧引导鱼钩的手并描述鱼钩进入鱼嘴，但没有比较先握住小鱼与另一手靠近鱼钩的次序。
+judgment-0582,direct,audit-0106-g01,high,生成题直接判断把鱼钩穿过鱼嘴的目标是否为把鱼固定在线上作活饵，实质决定处理后钩与鱼并未分离。
+judgment-0585,direct,audit-0106-g01,high,生成题直接询问两手引导鱼钩穿过鱼嘴的即时目标，完整覆盖操作鱼钩的目的。
+judgment-0588,partial,audit-0107-g01,medium,生成题明确直升机完成着陆并进入停转状态，但没有说明落在草地或机身是否平稳。
+judgment-0591,absent,audit-0107-g01,high,生成题只关注着陆后主旋翼状态，没有着陆时机身朝向稳定性。
+judgment-0597,partial,audit-0108-g01,medium,生成题明确一名女子从画面右侧向左走并最终被人遮挡，触及人群中的移动方向但没有判断整个人群是否同向。
+judgment-0598,direct,audit-0109-g01,high,生成题直接说明手势先指包装盒中央标签再移到盒顶边缘，完整覆盖主要指向区域。
+judgment-0599,absent,audit-0109-g01,high,生成题没有盒面圆形图案相对产品名称的位置。
+judgment-0606,absent,audit-0110-g02,high,"生成题 audit-0110-g02 询问：“[True/False] Based on their movements, the two dogs are initially moving away from each other.”；参考题询问：“狗群是否在奔跑中改变整体方向？”。生成题的核心事实与参考题不同；同一视频、同一对象或相邻事件本身不足以构成覆盖。"
+judgment-0607,partial,audit-0110-g02,medium,生成题直接判断两只狗起初是否相互远离，可区分是否同向奔跑，但没有明确黑狗和白狗身份或全程方向。
+judgment-0611,absent,audit-0111-g05,high,生成题定位居民房屋、灌木和街道，没有草地作为参照或居民区相对草地的方向。
+judgment-0614,direct,audit-0111-g02,high,生成题明确多栋房屋位于浓密树线后方并考察白房是否被树完全挡住，直接覆盖前景灌木遮挡部分房屋。
+judgment-0632,partial,audit-0115-g02,medium,生成题通过未上漆外壳与完整红车比较开孔和缺失部件，覆盖两类细节但没有镜头先展示外壳还是开孔。
+judgment-0633,direct,audit-0115-g02,high,生成题具体比较前格栅开口和前轮拱等开孔是否存在，直接覆盖开孔位于车身前部区域。
+judgment-0634,direct,audit-0115-g02,high,生成题明确前景车身未上漆且相较组装红车缺少多项部件，直接覆盖未完成或拆卸状态。
+judgment-0640,partial,audit-0116-g01,medium,生成题把装卸码头、半挂车等列为车辆潜在碰撞对象，触及装卸区运动，但没有与从远处横向驶过比较顺序。
+judgment-0641,partial,audit-0116-g01,medium,生成题明确汽车在七秒处持续旋转且司机随后修正路径，覆盖转弯过程但没有直接判断是否完成转弯。
+judgment-0642,partial,audit-0116-g01,medium,生成题预测若保持轨迹可能撞上主楼装卸门，说明与仓库接近，但未追踪实际距离变化。
+judgment-0644,direct,audit-0117-g02,high,生成题明确白色SUV静止等待驶出停车场时一辆深色SUV横穿路口，直接覆盖汇入主路前等待横向车流。
+judgment-0645,partial,audit-0117-g01,medium,生成题根据道路箭头判断直行会进入何处，另题描述停车场出口，却没有直接给出实际汇入方向位于驾驶者哪侧。
+judgment-0646,direct,audit-0117-g02,high,生成题明确本车静止等待时横向深色SUV先穿过路口，实质覆盖横向车先通过、本车后起步的顺序。
+judgment-0650,direct,audit-0118-g01,high,生成题直接判断主入口纱门与实心白门的前后端关系，覆盖入口门位于车身哪一端。
+judgment-0654,absent,audit-0118-g03,high,生成题仅把遮阳篷顶部列为可能的下一焦点，没有判断其是否在全片段展开。
+judgment-0655,absent,audit-0118-g02,high,生成题定位后方实心白门并描述初始遮挡，但没有它相对侧窗的侧向位置。
+judgment-0656,partial,audit-0119-g01,medium,"生成题 audit-0119-g01 询问：“[Single-Choice] As the motorcycle accelerates through the intersection, what is the final position of the red car relative to the motorcycle's camera? [Options] A) Directly in front of the motorcycle. B) To the right and behind the motorcycle. C) To the left and behind the motorcycle. D) It is no longer visible.”；参考题询问：“摩托车与前方红车的距离如何变化？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"
+judgment-0658,absent,audit-0119-g01,high,生成题没有转向车道相对骑手位于哪侧。
+judgment-0660,partial,audit-0119-g01,medium,"生成题 audit-0119-g01 询问：“[Single-Choice] As the motorcycle accelerates through the intersection, what is the final position of the red car relative to the motorcycle's camera? [Options] A) Directly in front of the motorcycle. B) To the right and behind the motorcycle. C) To the left and behind the motorcycle. D) It is no longer visible.”；参考题询问：“前方红车与骑手的距离如何变化？”。二者有明确语义重合，但生成题只覆盖参考事实的一部分，或改问了不同参照、时间点、条件或细节，不能直接回答参考题。"

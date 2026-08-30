@@ -1,0 +1,11 @@
+{
+  "expected": 102,
+  "present": 102,
+  "dimensions": {
+    "(2596, 1476)": 101,
+    "(2596, 1956)": 1
+  },
+  "decode_or_missing": [],
+  "dark_centers": [],
+  "set_digest": "0dd08c02f7b1a0b88850652d28780a55698ce07972a302f71db8b2b80925e572"
+}

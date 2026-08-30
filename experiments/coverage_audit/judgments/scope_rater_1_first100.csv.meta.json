@@ -1,0 +1,47 @@
+{
+  "artifact": "scope_rater_1_first100.csv",
+  "role": "reviewer-assisted blinded six-dimension scope rater",
+  "human_rater": false,
+  "source_packet": "experiments/coverage_audit/manifests/six_dimension_scope_packet_666.csv",
+  "source_range": "scope-0001 through scope-0100",
+  "codebook": "experiments/coverage_audit/SIX_DIMENSION_SCOPE_CODEBOOK_CN.md",
+  "rows": 100,
+  "status_counts": {
+    "directly_in_scope": 65,
+    "supporting_operation": 26,
+    "outside_scope": 9,
+    "ambiguous": 0
+  },
+  "primary_dimension_counts": {
+    "C1_occlusion_permanence": 5,
+    "C2_dynamic_spatial": 45,
+    "C3_action_intent": 14,
+    "C4_predictive_counterfactual": 2,
+    "C5_deformation_state": 9,
+    "C6_reference_frame": 16,
+    "NONE": 9
+  },
+  "multilabel_dimension_incidence": {
+    "C1_occlusion_permanence": 5,
+    "C2_dynamic_spatial": 58,
+    "C3_action_intent": 17,
+    "C4_predictive_counterfactual": 2,
+    "C5_deformation_state": 11,
+    "C6_reference_frame": 17
+  },
+  "confidence_counts": {
+    "high": 84,
+    "medium": 16,
+    "low": 0
+  },
+  "csv_sha256": "bc7b55d23f4889fe5c98ad1c3905d5a662824c201fa79085a7dc1350d1a44f1e",
+  "information_excluded": [
+    "author identity",
+    "video identity",
+    "original author capability label",
+    "benchmark questions and categories",
+    "coverage-overlap judgments",
+    "desired result distribution"
+  ],
+  "decision_note_cn": "静态位置、一般动作识别和时间顺序只有在具体语境中明确构成某一六维能力的组成操作时才标为 supporting_operation；不得仅因其可能是任意复杂任务的前提而强行覆盖。"
+}

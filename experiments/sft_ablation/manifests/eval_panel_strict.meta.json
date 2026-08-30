@@ -1,0 +1,45 @@
+{
+  "schema": "escher-sft-eval-panel-v1",
+  "seed": 20260814,
+  "selection_uses_model_outcomes": false,
+  "source_benchmark": "archived_workspace/data/Escher-Bench.json",
+  "source_benchmark_sha256": "a4cbe71c14bbb73cf4829b8c6a59c39cb9f4e6de46bbe32d426fe17f265b111b",
+  "operational_definitions": {
+    "intent": "Category 3 and Human-Centric",
+    "dynamic_non_intent": "Category 2 and Object-Centric"
+  },
+  "matching_dimensions": [
+    "question_type",
+    "canonical_answer"
+  ],
+  "matched_question_type_answer_quotas_per_capability": {
+    "Fill-in-the-Blank|LEFT": 5,
+    "Fill-in-the-Blank|REAR": 1,
+    "Fill-in-the-Blank|RIGHT": 4,
+    "Fill-in-the-Blank|TOWARDS": 1,
+    "Multiple-Select|A,B": 5,
+    "Multiple-Select|A,B,C": 3,
+    "Multiple-Select|A,B,D": 2,
+    "Multiple-Select|A,C": 7,
+    "Multiple-Select|A,C,D": 2,
+    "Multiple-Select|A,D": 4,
+    "Multiple-Select|B,C": 4,
+    "Multiple-Select|B,C,D": 1,
+    "Multiple-Select|B,D": 4,
+    "Multiple-Select|C,D": 1,
+    "Single-Choice|A": 69,
+    "Single-Choice|B": 122,
+    "Single-Choice|C": 89,
+    "Single-Choice|D": 36,
+    "True/False|FALSE": 74,
+    "True/False|TRUE": 52
+  },
+  "items_per_capability": 486,
+  "total_items": 972,
+  "unique_videos": {
+    "intent": 421,
+    "dynamic_non_intent": 361,
+    "overall": 782
+  },
+  "panel_sha256": "92b486dd3bf77cdfa2b080e2629e23c99412d55c077a8301c22acab389709cee"
+}

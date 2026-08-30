@@ -1,0 +1,2602 @@
+{
+  "schema_version": "error-failure-mode-analysis-v1",
+  "status": "adjudicated",
+  "input": {
+    "audit_manifest": "experiments/failure_mode/annotation_pool_300/audit_manifest.json",
+    "rater_1": "experiments/failure_mode/annotation_pool_300/rater_1.csv",
+    "rater_2": "experiments/failure_mode/annotation_pool_300/rater_2.csv",
+    "adjudicated": "experiments/failure_mode/final_annotations/adjudication_final.csv"
+  },
+  "validation": {
+    "expected_rows": 300,
+    "audit_rows": 300,
+    "rater_rows": {
+      "rater_1": 300,
+      "rater_2": 300
+    },
+    "unit_ids_exactly_aligned": true,
+    "immutable_context_matches_audit": true,
+    "allowed_primary_labels": [
+      "benchmark_ambiguity",
+      "protocol_or_parsing",
+      "perception_recognition",
+      "spatiotemporal_grounding",
+      "perspective_reference_frame",
+      "action_goal_binding",
+      "physical_prediction_counterfactual",
+      "other_unresolved"
+    ]
+  },
+  "reliability": {
+    "n": 300,
+    "primary_label": {
+      "raw_agreement": 0.7933333333333333,
+      "cohen_kappa": {
+        "observed_agreement": 0.7933333333333333,
+        "expected_agreement": 0.1892,
+        "kappa": 0.7451077125472784
+      },
+      "rater_1_prevalence": {
+        "benchmark_ambiguity": {
+          "count": 17,
+          "proportion": 0.056666666666666664
+        },
+        "protocol_or_parsing": {
+          "count": 11,
+          "proportion": 0.03666666666666667
+        },
+        "perception_recognition": {
+          "count": 43,
+          "proportion": 0.14333333333333334
+        },
+        "spatiotemporal_grounding": {
+          "count": 90,
+          "proportion": 0.3
+        },
+        "perspective_reference_frame": {
+          "count": 67,
+          "proportion": 0.22333333333333333
+        },
+        "action_goal_binding": {
+          "count": 26,
+          "proportion": 0.08666666666666667
+        },
+        "physical_prediction_counterfactual": {
+          "count": 46,
+          "proportion": 0.15333333333333332
+        },
+        "other_unresolved": {
+          "count": 0,
+          "proportion": 0.0
+        }
+      },
+      "rater_2_prevalence": {
+        "benchmark_ambiguity": {
+          "count": 24,
+          "proportion": 0.08
+        },
+        "protocol_or_parsing": {
+          "count": 12,
+          "proportion": 0.04
+        },
+        "perception_recognition": {
+          "count": 44,
+          "proportion": 0.14666666666666667
+        },
+        "spatiotemporal_grounding": {
+          "count": 74,
+          "proportion": 0.24666666666666667
+        },
+        "perspective_reference_frame": {
+          "count": 80,
+          "proportion": 0.26666666666666666
+        },
+        "action_goal_binding": {
+          "count": 23,
+          "proportion": 0.07666666666666666
+        },
+        "physical_prediction_counterfactual": {
+          "count": 43,
+          "proportion": 0.14333333333333334
+        },
+        "other_unresolved": {
+          "count": 0,
+          "proportion": 0.0
+        }
+      },
+      "confusion_matrix_rater_1_rows_rater_2_columns": {
+        "benchmark_ambiguity": {
+          "benchmark_ambiguity": 9,
+          "protocol_or_parsing": 1,
+          "perception_recognition": 3,
+          "spatiotemporal_grounding": 1,
+          "perspective_reference_frame": 3,
+          "action_goal_binding": 0,
+          "physical_prediction_counterfactual": 0,
+          "other_unresolved": 0
+        },
+        "protocol_or_parsing": {
+          "benchmark_ambiguity": 0,
+          "protocol_or_parsing": 11,
+          "perception_recognition": 0,
+          "spatiotemporal_grounding": 0,
+          "perspective_reference_frame": 0,
+          "action_goal_binding": 0,
+          "physical_prediction_counterfactual": 0,
+          "other_unresolved": 0
+        },
+        "perception_recognition": {
+          "benchmark_ambiguity": 3,
+          "protocol_or_parsing": 0,
+          "perception_recognition": 31,
+          "spatiotemporal_grounding": 3,
+          "perspective_reference_frame": 5,
+          "action_goal_binding": 1,
+          "physical_prediction_counterfactual": 0,
+          "other_unresolved": 0
+        },
+        "spatiotemporal_grounding": {
+          "benchmark_ambiguity": 0,
+          "protocol_or_parsing": 0,
+          "perception_recognition": 9,
+          "spatiotemporal_grounding": 67,
+          "perspective_reference_frame": 12,
+          "action_goal_binding": 2,
+          "physical_prediction_counterfactual": 0,
+          "other_unresolved": 0
+        },
+        "perspective_reference_frame": {
+          "benchmark_ambiguity": 3,
+          "protocol_or_parsing": 0,
+          "perception_recognition": 0,
+          "spatiotemporal_grounding": 3,
+          "perspective_reference_frame": 59,
+          "action_goal_binding": 0,
+          "physical_prediction_counterfactual": 2,
+          "other_unresolved": 0
+        },
+        "action_goal_binding": {
+          "benchmark_ambiguity": 5,
+          "protocol_or_parsing": 0,
+          "perception_recognition": 0,
+          "spatiotemporal_grounding": 0,
+          "perspective_reference_frame": 1,
+          "action_goal_binding": 20,
+          "physical_prediction_counterfactual": 0,
+          "other_unresolved": 0
+        },
+        "physical_prediction_counterfactual": {
+          "benchmark_ambiguity": 4,
+          "protocol_or_parsing": 0,
+          "perception_recognition": 1,
+          "spatiotemporal_grounding": 0,
+          "perspective_reference_frame": 0,
+          "action_goal_binding": 0,
+          "physical_prediction_counterfactual": 41,
+          "other_unresolved": 0
+        },
+        "other_unresolved": {
+          "benchmark_ambiguity": 0,
+          "protocol_or_parsing": 0,
+          "perception_recognition": 0,
+          "spatiotemporal_grounding": 0,
+          "perspective_reference_frame": 0,
+          "action_goal_binding": 0,
+          "physical_prediction_counterfactual": 0,
+          "other_unresolved": 0
+        }
+      },
+      "per_label_positive_agreement": {
+        "benchmark_ambiguity": {
+          "both_raters": 9,
+          "either_rater": 32,
+          "positive_agreement_jaccard": 0.28125
+        },
+        "protocol_or_parsing": {
+          "both_raters": 11,
+          "either_rater": 12,
+          "positive_agreement_jaccard": 0.9166666666666666
+        },
+        "perception_recognition": {
+          "both_raters": 31,
+          "either_rater": 56,
+          "positive_agreement_jaccard": 0.5535714285714286
+        },
+        "spatiotemporal_grounding": {
+          "both_raters": 67,
+          "either_rater": 97,
+          "positive_agreement_jaccard": 0.6907216494845361
+        },
+        "perspective_reference_frame": {
+          "both_raters": 59,
+          "either_rater": 88,
+          "positive_agreement_jaccard": 0.6704545454545454
+        },
+        "action_goal_binding": {
+          "both_raters": 20,
+          "either_rater": 29,
+          "positive_agreement_jaccard": 0.6896551724137931
+        },
+        "physical_prediction_counterfactual": {
+          "both_raters": 41,
+          "either_rater": 48,
+          "positive_agreement_jaccard": 0.8541666666666666
+        },
+        "other_unresolved": {
+          "both_raters": 0,
+          "either_rater": 0,
+          "positive_agreement_jaccard": null
+        }
+      }
+    },
+    "question_or_key_problem": {
+      "raw_agreement": 0.8933333333333333,
+      "rater_1_yes": 30,
+      "rater_2_yes": 28
+    },
+    "secondary_label_exact_agreement": 0.6366666666666667
+  },
+  "adjudication_queue": "generated during recomputation; completed labels are in final_annotations/adjudication_final.csv",
+  "adjudication_queue_rows": 114,
+  "cluster_diagnostic": {
+    "analysis_units": 300,
+    "unique_benchmark_items": 169,
+    "benchmark_items_with_multiple_models": 98,
+    "max_models_per_benchmark_item": 3,
+    "inference_unit_limitation": "Model-item errors sharing a benchmark item are correlated; reported Wilson intervals are descriptive and are not treated as independent-unit inference."
+  },
+  "final_statistics": {
+    "overall_primary": {
+      "n": 300,
+      "weight_total": 358.0,
+      "kish_effective_n": 299.32526061530774,
+      "frequencies": [
+        {
+          "label": "benchmark_ambiguity",
+          "unweighted_count": 29,
+          "unweighted_proportion": 0.09666666666666666,
+          "unweighted_wilson_95_ci": [
+            0.06815029481828931,
+            0.13538170196951116
+          ],
+          "weighted_total": 34.50486141825151,
+          "weighted_proportion": 0.09638229446438969,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.06788530562000222,
+            0.13510785191949098
+          ]
+        },
+        {
+          "label": "protocol_or_parsing",
+          "unweighted_count": 12,
+          "unweighted_proportion": 0.04,
+          "unweighted_wilson_95_ci": [
+            0.023027321487942308,
+            0.06860421203864003
+          ],
+          "weighted_total": 14.7749871001032,
+          "weighted_proportion": 0.041270913687439105,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.023950165088157626,
+            0.07021687562281922
+          ]
+        },
+        {
+          "label": "perception_recognition",
+          "unweighted_count": 36,
+          "unweighted_proportion": 0.12,
+          "unweighted_wilson_95_ci": [
+            0.0879508443036389,
+            0.16165781382701605
+          ],
+          "weighted_total": 43.28781328320802,
+          "weighted_proportion": 0.12091567956203357,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.08870627046278788,
+            0.16273192683429755
+          ]
+        },
+        {
+          "label": "spatiotemporal_grounding",
+          "unweighted_count": 86,
+          "unweighted_proportion": 0.2866666666666667,
+          "unweighted_wilson_95_ci": [
+            0.23844603884969776,
+            0.3402816288727752
+          ],
+          "weighted_total": 103.1641290726817,
+          "weighted_proportion": 0.28816795830358016,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.23979925272485475,
+            0.34190495804463444
+          ]
+        },
+        {
+          "label": "perspective_reference_frame",
+          "unweighted_count": 72,
+          "unweighted_proportion": 0.24,
+          "unweighted_wilson_95_ci": [
+            0.19515315695222746,
+            0.29142118808453643
+          ],
+          "weighted_total": 84.99844156961029,
+          "weighted_proportion": 0.2374258144402522,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.19274005930881305,
+            0.2887657822971617
+          ]
+        },
+        {
+          "label": "action_goal_binding",
+          "unweighted_count": 22,
+          "unweighted_proportion": 0.07333333333333333,
+          "unweighted_wilson_95_ci": [
+            0.04892399383922859,
+            0.10853134160571733
+          ],
+          "weighted_total": 26.53989139515455,
+          "weighted_proportion": 0.07413377484680042,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.04954934446332509,
+            0.10951060071546564
+          ]
+        },
+        {
+          "label": "physical_prediction_counterfactual",
+          "unweighted_count": 43,
+          "unweighted_proportion": 0.14333333333333334,
+          "unweighted_wilson_95_ci": [
+            0.1081847423238497,
+            0.18750057714965976
+          ],
+          "weighted_total": 50.72987616099071,
+          "weighted_proportion": 0.1417035646955048,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.10672499344264613,
+            0.1857621629670565
+          ]
+        },
+        {
+          "label": "other_unresolved",
+          "unweighted_count": 0,
+          "unweighted_proportion": 0.0,
+          "unweighted_wilson_95_ci": [
+            0.0,
+            0.012642971224546036
+          ],
+          "weighted_total": 0,
+          "weighted_proportion": 0.0,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.0,
+            0.012671109902302625
+          ]
+        }
+      ]
+    },
+    "stratified_primary": {
+      "model": {
+        "InternVL3-2B": {
+          "n": 100,
+          "weight_total": 122.0,
+          "kish_effective_n": 99.96407220318697,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 12,
+              "unweighted_proportion": 0.12,
+              "unweighted_wilson_95_ci": [
+                0.06999406437019488,
+                0.19812099426711421
+              ],
+              "weighted_total": 14.628801169590643,
+              "weighted_proportion": 0.11990820630812002,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.06991831917725433,
+                0.19802967677851352
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 9,
+              "unweighted_proportion": 0.09,
+              "unweighted_wilson_95_ci": [
+                0.04807254000256515,
+                0.1622621285271631
+              ],
+              "weighted_total": 11.023026315789474,
+              "weighted_proportion": 0.09035267471958586,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.048316709892614405,
+                0.16270770473606394
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 8,
+              "unweighted_proportion": 0.08,
+              "unweighted_wilson_95_ci": [
+                0.041093461484380624,
+                0.14998107700948735
+              ],
+              "weighted_total": 9.5625,
+              "weighted_proportion": 0.0783811475409836,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.03997736872592211,
+                0.14799003544367198
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 28,
+              "unweighted_proportion": 0.28,
+              "unweighted_wilson_95_ci": [
+                0.20139685211186212,
+                0.3748802870992116
+              ],
+              "weighted_total": 34.36805555555556,
+              "weighted_proportion": 0.2817053734061931,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.20287341148809723,
+                0.37669388903713485
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 24,
+              "unweighted_proportion": 0.24,
+              "unweighted_wilson_95_ci": [
+                0.16691325556948772,
+                0.33232336349814473
+              ],
+              "weighted_total": 29.220248538011695,
+              "weighted_proportion": 0.23951023391812865,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.166485367674092,
+                0.33181462601682415
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 6,
+              "unweighted_proportion": 0.06,
+              "unweighted_wilson_95_ci": [
+                0.027786123963188192,
+                0.1247681544589592
+              ],
+              "weighted_total": 7.4605263157894735,
+              "weighted_proportion": 0.0611518550474547,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.028521157005249827,
+                0.12626284697660817
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 13,
+              "unweighted_proportion": 0.13,
+              "unweighted_wilson_95_ci": [
+                0.07757167427240512,
+                0.20980351440076428
+              ],
+              "weighted_total": 15.736842105263158,
+              "weighted_proportion": 0.12899050905953408,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.07679421835662709,
+                0.20864617822670828
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                3.469446951953614e-18,
+                0.03699349820698568
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.03700630190707636
+              ]
+            }
+          ]
+        },
+        "Qwen2.5-VL-7B-Instruct": {
+          "n": 100,
+          "weight_total": 124.0,
+          "kish_effective_n": 99.98333985005866,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 7,
+              "unweighted_proportion": 0.07,
+              "unweighted_wilson_95_ci": [
+                0.03431926106727268,
+                0.137495147390735
+              ],
+              "weighted_total": 8.665032679738562,
+              "weighted_proportion": 0.06987929580434324,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.03423690527340459,
+                0.13735013183673261
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 3,
+              "unweighted_proportion": 0.03,
+              "unweighted_wilson_95_ci": [
+                0.010254524024038925,
+                0.0845193642905276
+              ],
+              "weighted_total": 3.7519607843137255,
+              "weighted_proportion": 0.03025774826059456,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.010385876155982757,
+                0.08489001555979646
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 16,
+              "unweighted_proportion": 0.16,
+              "unweighted_wilson_95_ci": [
+                0.10095288488804782,
+                0.24420269389270244
+              ],
+              "weighted_total": 19.933333333333334,
+              "weighted_proportion": 0.16075268817204302,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.10154677599757714,
+                0.24506251762066564
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 29,
+              "unweighted_proportion": 0.29,
+              "unweighted_wilson_95_ci": [
+                0.2101483574912227,
+                0.3853889117557111
+              ],
+              "weighted_total": 36.077777777777776,
+              "weighted_proportion": 0.29094982078853043,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.2109763137322002,
+                0.3863928046014924
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 21,
+              "unweighted_proportion": 0.21,
+              "unweighted_wilson_95_ci": [
+                0.141656540619153,
+                0.29979968834089865
+              ],
+              "weighted_total": 26.040849673202615,
+              "weighted_proportion": 0.21000685220324689,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.1416575048252465,
+                0.2998153644398738
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 10,
+              "unweighted_proportion": 0.1,
+              "unweighted_wilson_95_ci": [
+                0.0552291370606751,
+                0.17436566150491345
+              ],
+              "weighted_total": 12.222222222222221,
+              "weighted_proportion": 0.0985663082437276,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.05419039605783179,
+                0.17264785946507558
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 14,
+              "unweighted_proportion": 0.14,
+              "unweighted_wilson_95_ci": [
+                0.08526343659939134,
+                0.22137188210963837
+              ],
+              "weighted_total": 17.308823529411764,
+              "weighted_proportion": 0.13958728652751423,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.08494033284115322,
+                0.22090437326464513
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                3.469446951953614e-18,
+                0.03699349820698568
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                3.469446951953614e-18,
+                0.03699943433433553
+              ]
+            }
+          ]
+        },
+        "Qwen3-VL-8B-Instruct": {
+          "n": 100,
+          "weight_total": 112.0,
+          "kish_effective_n": 99.95438695994282,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 10,
+              "unweighted_proportion": 0.1,
+              "unweighted_wilson_95_ci": [
+                0.0552291370606751,
+                0.17436566150491345
+              ],
+              "weighted_total": 11.211027568922306,
+              "weighted_proportion": 0.1000984604368063,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.055293010453251135,
+                0.1745044264142447
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                3.469446951953614e-18,
+                0.03699349820698568
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.03700975498395859
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 12,
+              "unweighted_proportion": 0.12,
+              "unweighted_wilson_95_ci": [
+                0.06999406437019488,
+                0.19812099426711421
+              ],
+              "weighted_total": 13.791979949874687,
+              "weighted_proportion": 0.12314267812388113,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.07235376476879914,
+                0.20182638577205508
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 29,
+              "unweighted_proportion": 0.29,
+              "unweighted_wilson_95_ci": [
+                0.2101483574912227,
+                0.3853889117557111
+              ],
+              "weighted_total": 32.71829573934837,
+              "weighted_proportion": 0.29212764052989615,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.2120006734311422,
+                0.3876412178125019
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 27,
+              "unweighted_proportion": 0.27,
+              "unweighted_wilson_95_ci": [
+                0.1926958414957634,
+                0.36432116767944994
+              ],
+              "weighted_total": 29.73734335839599,
+              "weighted_proportion": 0.26551199427139277,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.18879253406574628,
+                0.359588141754425
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 6,
+              "unweighted_proportion": 0.06,
+              "unweighted_wilson_95_ci": [
+                0.027786123963188192,
+                0.1247681544589592
+              ],
+              "weighted_total": 6.857142857142857,
+              "weighted_proportion": 0.061224489795918366,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0285668498313461,
+                0.12636007801171958
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 16,
+              "unweighted_proportion": 0.16,
+              "unweighted_wilson_95_ci": [
+                0.10095288488804782,
+                0.24420269389270244
+              ],
+              "weighted_total": 17.684210526315788,
+              "weighted_proportion": 0.15789473684210525,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.09927293123081037,
+                0.24183900638979283
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                3.469446951953614e-18,
+                0.03699349820698568
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.03700975498395859
+              ]
+            }
+          ]
+        }
+      },
+      "category": {
+        "1: Object Permanence and Occlusion Tracking": {
+          "n": 48,
+          "weight_total": 58.0,
+          "kish_effective_n": 47.90506329113924,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 2,
+              "unweighted_proportion": 0.041666666666666664,
+              "unweighted_wilson_95_ci": [
+                0.011501893489386572,
+                0.13975655870455445
+              ],
+              "weighted_total": 2.355555555555555,
+              "weighted_proportion": 0.04061302681992336,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.011033101697118214,
+                0.13839912573816615
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 1,
+              "unweighted_proportion": 0.020833333333333332,
+              "unweighted_wilson_95_ci": [
+                0.003687110977510649,
+                0.10899217995251861
+              ],
+              "weighted_total": 1.2666666666666666,
+              "weighted_proportion": 0.021839080459770115,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.003989238208574011,
+                0.11068250477660938
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 1,
+              "unweighted_proportion": 0.020833333333333332,
+              "unweighted_wilson_95_ci": [
+                0.003687110977510649,
+                0.10899217995251861
+              ],
+              "weighted_total": 1.2666666666666666,
+              "weighted_proportion": 0.021839080459770115,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.003989238208574011,
+                0.11068250477660938
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 42,
+              "unweighted_proportion": 0.875,
+              "unweighted_wilson_95_ci": [
+                0.7529954171361317,
+                0.9414294856142802
+              ],
+              "weighted_total": 50.75555555555555,
+              "weighted_proportion": 0.875095785440613,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.7529653808095333,
+                0.9415349105506472
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 2,
+              "unweighted_proportion": 0.041666666666666664,
+              "unweighted_wilson_95_ci": [
+                0.011501893489386572,
+                0.13975655870455445
+              ],
+              "weighted_total": 2.355555555555555,
+              "weighted_proportion": 0.04061302681992336,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.011033101697118214,
+                0.13839912573816615
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                6.938893903907228e-18,
+                0.07410012966611748
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                6.938893903907228e-18,
+                0.07423607740037205
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                6.938893903907228e-18,
+                0.07410012966611748
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                6.938893903907228e-18,
+                0.07423607740037205
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                6.938893903907228e-18,
+                0.07410012966611748
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                6.938893903907228e-18,
+                0.07423607740037205
+              ]
+            }
+          ]
+        },
+        "2: Dynamic Spatial Relationships": {
+          "n": 57,
+          "weight_total": 68.0,
+          "kish_effective_n": 56.84121991984617,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 4,
+              "unweighted_proportion": 0.07017543859649122,
+              "unweighted_wilson_95_ci": [
+                0.027626420229066015,
+                0.1670017009603369
+              ],
+              "weighted_total": 4.827485380116959,
+              "weighted_proportion": 0.07099243206054351,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.028060313886346028,
+                0.1682403761082804
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 4,
+              "unweighted_proportion": 0.07017543859649122,
+              "unweighted_wilson_95_ci": [
+                0.027626420229066015,
+                0.1670017009603369
+              ],
+              "weighted_total": 5.0,
+              "weighted_proportion": 0.07352941176470588,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.029524570282553134,
+                0.17152887698282776
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 6,
+              "unweighted_proportion": 0.10526315789473684,
+              "unweighted_wilson_95_ci": [
+                0.049144658523744625,
+                0.2112281058338703
+              ],
+              "weighted_total": 6.982456140350877,
+              "weighted_proportion": 0.10268317853457172,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.047427203876734894,
+                0.20824267439833266
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 25,
+              "unweighted_proportion": 0.43859649122807015,
+              "unweighted_wilson_95_ci": [
+                0.31772696899794395,
+                0.5672199054576849
+              ],
+              "weighted_total": 29.842105263157894,
+              "weighted_proportion": 0.43885448916408665,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.31780801973377704,
+                0.567642474520243
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 18,
+              "unweighted_proportion": 0.3157894736842105,
+              "unweighted_wilson_95_ci": [
+                0.21004287638825245,
+                0.4447977469786344
+              ],
+              "weighted_total": 21.34795321637427,
+              "weighted_proportion": 0.3139404884760922,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.2083592279793099,
+                0.44307838709603836
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.06313883485297894
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.06330404162148105
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.06313883485297894
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.06330404162148105
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.06313883485297894
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.06330404162148105
+              ]
+            }
+          ]
+        },
+        "3: Action and Intent-Driven Spatial Reasoning": {
+          "n": 44,
+          "weight_total": 53.0,
+          "kish_effective_n": 43.94239245142467,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 4,
+              "unweighted_proportion": 0.09090909090909091,
+              "unweighted_wilson_95_ci": [
+                0.03592219322731624,
+                0.21159239166598612
+              ],
+              "weighted_total": 4.865079365079365,
+              "weighted_proportion": 0.09179395028451631,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0364115615023471,
+                0.212809672864341
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 1,
+              "unweighted_proportion": 0.022727272727272728,
+              "unweighted_wilson_95_ci": [
+                0.004023252060053224,
+                0.11807709698213287
+              ],
+              "weighted_total": 1.25,
+              "weighted_proportion": 0.02358490566037736,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.00428097169489873,
+                0.11948915197994292
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 2,
+              "unweighted_proportion": 0.045454545454545456,
+              "unweighted_wilson_95_ci": [
+                0.012555109949594967,
+                0.15134998437629657
+              ],
+              "weighted_total": 2.392857142857143,
+              "weighted_proportion": 0.045148247978436654,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.012412454285415,
+                0.15101729604063607
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 11,
+              "unweighted_proportion": 0.25,
+              "unweighted_wilson_95_ci": [
+                0.14574213828964888,
+                0.3944056635895915
+              ],
+              "weighted_total": 13.075396825396824,
+              "weighted_proportion": 0.24670560047918536,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.1431535315167025,
+                0.39098356236857
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 5,
+              "unweighted_proportion": 0.11363636363636363,
+              "unweighted_wilson_95_ci": [
+                0.04952780601092492,
+                0.23979152416608285
+              ],
+              "weighted_total": 6.087301587301587,
+              "weighted_proportion": 0.11485474693021862,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.050257905949269197,
+                0.24137709580829564
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 21,
+              "unweighted_proportion": 0.4772727272727273,
+              "unweighted_wilson_95_ci": [
+                0.337549910322511,
+                0.6206453443937836
+              ],
+              "weighted_total": 25.32936507936508,
+              "weighted_proportion": 0.4779125486672656,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.3380476992731367,
+                0.6213287248167703
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.08029560375848066
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.08039240702508134
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.08029560375848066
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.08039240702508134
+              ]
+            }
+          ]
+        },
+        "4: Predictive and Counterfactual Spatial Reasoning": {
+          "n": 55,
+          "weight_total": 65.0,
+          "kish_effective_n": 54.87454260324098,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 7,
+              "unweighted_proportion": 0.12727272727272726,
+              "unweighted_wilson_95_ci": [
+                0.06304210427364636,
+                0.24017027655909073
+              ],
+              "weighted_total": 8.312693498452012,
+              "weighted_proportion": 0.1278875922838771,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.06340924885760878,
+                0.24105639337908757
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 2,
+              "unweighted_proportion": 0.03636363636363636,
+              "unweighted_wilson_95_ci": [
+                0.01002954128933356,
+                0.12323463974651017
+              ],
+              "weighted_total": 2.4458204334365323,
+              "weighted_proportion": 0.037628006668254346,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.010570086167469225,
+                0.1251867422501602
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.06528490111708637
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.06542439416060417
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.06528490111708637
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.06542439416060417
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 3,
+              "unweighted_proportion": 0.05454545454545454,
+              "unweighted_wilson_95_ci": [
+                0.01872321555468448,
+                0.14853060544053792
+              ],
+              "weighted_total": 3.5510835913312695,
+              "weighted_proportion": 0.0546320552512503,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.018746769708405275,
+                0.1487931967215761
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 1,
+              "unweighted_proportion": 0.01818181818181818,
+              "unweighted_wilson_95_ci": [
+                0.003216780454841077,
+                0.09605776062162397
+              ],
+              "weighted_total": 1.2105263157894737,
+              "weighted_proportion": 0.018623481781376516,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.003345505587980989,
+                0.09688899210996099
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 42,
+              "unweighted_proportion": 0.7636363636363637,
+              "unweighted_wilson_95_ci": [
+                0.6365163381083228,
+                0.8563334413026682
+              ],
+              "weighted_total": 49.47987616099071,
+              "weighted_proportion": 0.7612288640152417,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.6337587901819638,
+                0.8545174575175999
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.06528490111708637
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.06542439416060417
+              ]
+            }
+          ]
+        },
+        "5: Object Deformation and State Transition": {
+          "n": 44,
+          "weight_total": 53.0,
+          "kish_effective_n": 43.96217802412781,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 6,
+              "unweighted_proportion": 0.13636363636363635,
+              "unweighted_wilson_95_ci": [
+                0.06402954497555872,
+                0.2670945304851544
+              ],
+              "weighted_total": 7.208333333333334,
+              "weighted_proportion": 0.1360062893081761,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.06377516609283454,
+                0.266737850686969
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 3,
+              "unweighted_proportion": 0.06818181818181818,
+              "unweighted_wilson_95_ci": [
+                0.023459395907381622,
+                0.18225044370221527
+              ],
+              "weighted_total": 3.5625,
+              "weighted_proportion": 0.06721698113207547,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.02295113779853432,
+                0.18103896098609162
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 26,
+              "unweighted_proportion": 0.5909090909090909,
+              "unweighted_wilson_95_ci": [
+                0.444097537410319,
+                0.7231214437245027
+              ],
+              "weighted_total": 31.395833333333336,
+              "weighted_proportion": 0.592374213836478,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.4454549308955658,
+                0.724447273269387
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 7,
+              "unweighted_proportion": 0.1590909090909091,
+              "unweighted_wilson_95_ci": [
+                0.0792667701220125,
+                0.29366205062240613
+              ],
+              "weighted_total": 8.395833333333334,
+              "weighted_proportion": 0.1584119496855346,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.07877864453869415,
+                0.29294469410239576
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 1,
+              "unweighted_proportion": 0.022727272727272728,
+              "unweighted_wilson_95_ci": [
+                0.004023252060053224,
+                0.11807709698213287
+              ],
+              "weighted_total": 1.1875,
+              "weighted_proportion": 0.02240566037735849,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0039242767485333785,
+                0.11764517831351975
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.08029560375848066
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                6.938893903907228e-18,
+                0.08035913320076671
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 1,
+              "unweighted_proportion": 0.022727272727272728,
+              "unweighted_wilson_95_ci": [
+                0.004023252060053224,
+                0.11807709698213287
+              ],
+              "weighted_total": 1.25,
+              "weighted_proportion": 0.02358490566037736,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.00428231081829171,
+                0.11945610855225018
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.08029560375848066
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                6.938893903907228e-18,
+                0.08035913320076671
+              ]
+            }
+          ]
+        },
+        "6: Egocentric vs. Allocentric Reference Frames": {
+          "n": 52,
+          "weight_total": 61.0,
+          "kish_effective_n": 51.831387635977705,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 6,
+              "unweighted_proportion": 0.11538461538461539,
+              "unweighted_wilson_95_ci": [
+                0.05396969203087296,
+                0.22971664344902112
+              ],
+              "weighted_total": 6.935714285714286,
+              "weighted_proportion": 0.11370023419203748,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.05281175536828468,
+                0.22789853053877185
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 1,
+              "unweighted_proportion": 0.019230769230769232,
+              "unweighted_wilson_95_ci": [
+                0.0034028080709451597,
+                0.10120511127892247
+              ],
+              "weighted_total": 1.25,
+              "weighted_proportion": 0.020491803278688523,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0037817801361860193,
+                0.10337451595032394
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 1,
+              "unweighted_proportion": 0.019230769230769232,
+              "unweighted_wilson_95_ci": [
+                0.0034028080709451597,
+                0.10120511127892247
+              ],
+              "weighted_total": 1.25,
+              "weighted_proportion": 0.020491803278688523,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0037817801361860193,
+                0.10337451595032394
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 1,
+              "unweighted_proportion": 0.019230769230769232,
+              "unweighted_wilson_95_ci": [
+                0.0034028080709451597,
+                0.10120511127892247
+              ],
+              "weighted_total": 1.0952380952380953,
+              "weighted_proportion": 0.017954722872755662,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.003018995796893728,
+                0.09941325952816919
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 43,
+              "unweighted_proportion": 0.8269230769230769,
+              "unweighted_wilson_95_ci": [
+                0.702691358755192,
+                0.9061752560868979
+              ],
+              "weighted_total": 50.46904761904762,
+              "weighted_proportion": 0.8273614363778299,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.7029603085903969,
+                0.9065863047366233
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.06879223612386234
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.06900058224405312
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.06879223612386234
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.06900058224405312
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.06879223612386234
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.06900058224405312
+              ]
+            }
+          ]
+        }
+      },
+      "control_pass": {
+        "fail": {
+          "n": 73,
+          "weight_total": 87.97223880780382,
+          "kish_effective_n": 72.87917896924657,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 9,
+              "unweighted_proportion": 0.1232876712328767,
+              "unweighted_wilson_95_ci": [
+                0.06623751038902924,
+                0.21800304355022015
+              ],
+              "weighted_total": 10.93829119367045,
+              "weighted_proportion": 0.1243379882324893,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.06695443311117466,
+                0.21934089038413368
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 4,
+              "unweighted_proportion": 0.0547945205479452,
+              "unweighted_wilson_95_ci": [
+                0.02151249741569728,
+                0.1325899754215975
+              ],
+              "weighted_total": 4.962487100103199,
+              "weighted_proportion": 0.05640969432351184,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.022420312289972405,
+                0.13482086276557814
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 11,
+              "unweighted_proportion": 0.1506849315068493,
+              "unweighted_wilson_95_ci": [
+                0.086276766635949,
+                0.25001901974408225
+              ],
+              "weighted_total": 13.430555555555555,
+              "weighted_proportion": 0.15266811141293998,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.08772076008952556,
+                0.2523977895145621
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 18,
+              "unweighted_proportion": 0.2465753424657534,
+              "unweighted_wilson_95_ci": [
+                0.16204464648051795,
+                0.35644445344224973
+              ],
+              "weighted_total": 21.913690476190474,
+              "weighted_proportion": 0.24909779236227145,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.16407243105146252,
+                0.3592488702058476
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 18,
+              "unweighted_proportion": 0.2465753424657534,
+              "unweighted_wilson_95_ci": [
+                0.16204464648051795,
+                0.35644445344224973
+              ],
+              "weighted_total": 21.033949456975773,
+              "weighted_proportion": 0.23909758057799818,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.1558282836880893,
+                0.34849402993431944
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 8,
+              "unweighted_proportion": 0.1095890410958904,
+              "unweighted_wilson_95_ci": [
+                0.05658671784680623,
+                0.20162621987205226
+              ],
+              "weighted_total": 9.646825396825395,
+              "weighted_proportion": 0.1096576093499356,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.05660383069016235,
+                0.20180084979857138
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 5,
+              "unweighted_proportion": 0.0684931506849315,
+              "unweighted_wilson_95_ci": [
+                0.029609038651838046,
+                0.15052105040584768
+              ],
+              "weighted_total": 6.046439628482972,
+              "weighted_proportion": 0.06873122374085364,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.029734837722206656,
+                0.15091550006840732
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.0499920079557311
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                3.469446951953614e-18,
+                0.050070736262802576
+              ]
+            }
+          ]
+        },
+        "pass": {
+          "n": 227,
+          "weight_total": 270.0277611921962,
+          "kish_effective_n": 226.45438958193185,
+          "frequencies": [
+            {
+              "label": "benchmark_ambiguity",
+              "unweighted_count": 20,
+              "unweighted_proportion": 0.0881057268722467,
+              "unweighted_wilson_95_ci": [
+                0.05775820749982637,
+                0.13216200460014976
+              ],
+              "weighted_total": 23.56657022458106,
+              "weighted_proportion": 0.08727461991512499,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.057062869314162205,
+                0.13125533389817623
+              ]
+            },
+            {
+              "label": "protocol_or_parsing",
+              "unweighted_count": 8,
+              "unweighted_proportion": 0.03524229074889868,
+              "unweighted_wilson_95_ci": [
+                0.017964010481148516,
+                0.06798874220919884
+              ],
+              "weighted_total": 9.8125,
+              "weighted_proportion": 0.03633885625935998,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.018696973136924422,
+                0.06944897472159768
+              ]
+            },
+            {
+              "label": "perception_recognition",
+              "unweighted_count": 25,
+              "unweighted_proportion": 0.11013215859030837,
+              "unweighted_wilson_95_ci": [
+                0.07571801170667976,
+                0.1575219751473083
+              ],
+              "weighted_total": 29.857257727652463,
+              "weighted_proportion": 0.11057106719631367,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.07604688492762651,
+                0.15808701826438282
+              ]
+            },
+            {
+              "label": "spatiotemporal_grounding",
+              "unweighted_count": 68,
+              "unweighted_proportion": 0.29955947136563876,
+              "unweighted_wilson_95_ci": [
+                0.2437103640135277,
+                0.36207968572496335
+              ],
+              "weighted_total": 81.25043859649122,
+              "weighted_proportion": 0.3008966123992712,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.24488891650061018,
+                0.36354661183778336
+              ]
+            },
+            {
+              "label": "perspective_reference_frame",
+              "unweighted_count": 54,
+              "unweighted_proportion": 0.23788546255506607,
+              "unweighted_wilson_95_ci": [
+                0.187147497175515,
+                0.2973471832517425
+              ],
+              "weighted_total": 63.964492112634524,
+              "weighted_proportion": 0.23688117040346407,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.18618312431159428,
+                0.2963571441553862
+              ]
+            },
+            {
+              "label": "action_goal_binding",
+              "unweighted_count": 14,
+              "unweighted_proportion": 0.06167400881057269,
+              "unweighted_wilson_95_ci": [
+                0.03708984010693097,
+                0.10084664228823073
+              ],
+              "weighted_total": 16.893065998329156,
+              "weighted_proportion": 0.06256047868465373,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.037740228843083326,
+                0.10197418228870099
+              ]
+            },
+            {
+              "label": "physical_prediction_counterfactual",
+              "unweighted_count": 38,
+              "unweighted_proportion": 0.16740088105726872,
+              "unweighted_wilson_95_ci": [
+                0.12445852667333512,
+                0.22141287454108405
+              ],
+              "weighted_total": 44.68343653250774,
+              "weighted_proportion": 0.1654771951418123,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.12273923596157618,
+                0.21937519553303161
+              ]
+            },
+            {
+              "label": "other_unresolved",
+              "unweighted_count": 0,
+              "unweighted_proportion": 0.0,
+              "unweighted_wilson_95_ci": [
+                0.0,
+                0.016641113083928197
+              ],
+              "weighted_total": 0,
+              "weighted_proportion": 0.0,
+              "weighted_wilson_95_ci_kish_effective_n": [
+                0.0,
+                0.016680538738927272
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "secondary_multilabel_sensitivity": {
+      "n": 300,
+      "weight_total": 358.0,
+      "kish_effective_n": 299.32526061530774,
+      "frequencies": [
+        {
+          "label": "benchmark_ambiguity",
+          "unweighted_count": 34,
+          "unweighted_proportion": 0.11333333333333333,
+          "unweighted_wilson_95_ci": [
+            0.082244501875291,
+            0.15419939587169124
+          ],
+          "weighted_total": 40.60882967221976,
+          "weighted_proportion": 0.1134324851179323,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.08229921104517117,
+            0.15436223812215483
+          ]
+        },
+        {
+          "label": "protocol_or_parsing",
+          "unweighted_count": 19,
+          "unweighted_proportion": 0.06333333333333334,
+          "unweighted_wilson_95_ci": [
+            0.040916882383915276,
+            0.09679131248552161
+          ],
+          "weighted_total": 23.266653766769867,
+          "weighted_proportion": 0.0649906529798041,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.042211957118097915,
+            0.09879345133075385
+          ]
+        },
+        {
+          "label": "perception_recognition",
+          "unweighted_count": 135,
+          "unweighted_proportion": 0.45,
+          "unweighted_wilson_95_ci": [
+            0.394689901646408,
+            0.5065743954760465
+          ],
+          "weighted_total": 161.34884883778074,
+          "weighted_proportion": 0.45069510848542105,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.3953076729764483,
+            0.5073320393925984
+          ]
+        },
+        {
+          "label": "spatiotemporal_grounding",
+          "unweighted_count": 205,
+          "unweighted_proportion": 0.6833333333333333,
+          "unweighted_wilson_95_ci": [
+            0.628659261236736,
+            0.7333716493142638
+          ],
+          "weighted_total": 244.54451877242124,
+          "weighted_proportion": 0.6830852479676571,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.6283399682549538,
+            0.7331907410833836
+          ]
+        },
+        {
+          "label": "perspective_reference_frame",
+          "unweighted_count": 119,
+          "unweighted_proportion": 0.39666666666666667,
+          "unweighted_wilson_95_ci": [
+            0.34295083194304077,
+            0.452995382110032
+          ],
+          "weighted_total": 141.19624920143497,
+          "weighted_proportion": 0.3944029307302653,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.34071119321871507,
+            0.45077073238197113
+          ]
+        },
+        {
+          "label": "action_goal_binding",
+          "unweighted_count": 36,
+          "unweighted_proportion": 0.12,
+          "unweighted_wilson_95_ci": [
+            0.0879508443036389,
+            0.16165781382701605
+          ],
+          "weighted_total": 43.551796157059314,
+          "weighted_proportion": 0.12165306189122714,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.08934003847955867,
+            0.16355423657084744
+          ]
+        },
+        {
+          "label": "physical_prediction_counterfactual",
+          "unweighted_count": 57,
+          "unweighted_proportion": 0.19,
+          "unweighted_wilson_95_ci": [
+            0.14963485033440665,
+            0.23820379182481183
+          ],
+          "weighted_total": 67.35225563909775,
+          "weighted_proportion": 0.18813479228798255,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.14791631941505962,
+            0.2362566218041523
+          ]
+        },
+        {
+          "label": "other_unresolved",
+          "unweighted_count": 0,
+          "unweighted_proportion": 0.0,
+          "unweighted_wilson_95_ci": [
+            0.0,
+            0.012642971224546036
+          ],
+          "weighted_total": 0,
+          "weighted_proportion": 0.0,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.0,
+            0.012671109902302625
+          ]
+        }
+      ]
+    },
+    "sensitivity_excluding_benchmark_ambiguity": {
+      "n": 271,
+      "weight_total": 323.4951385817485,
+      "kish_effective_n": 270.3882131079815,
+      "frequencies": [
+        {
+          "label": "benchmark_ambiguity",
+          "unweighted_count": 0,
+          "unweighted_proportion": 0.0,
+          "unweighted_wilson_95_ci": [
+            0.0,
+            0.013976999093140033
+          ],
+          "weighted_total": 0,
+          "weighted_proportion": 0.0,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            8.673617379884035e-19,
+            0.014008180783927897
+          ]
+        },
+        {
+          "label": "protocol_or_parsing",
+          "unweighted_count": 12,
+          "unweighted_proportion": 0.04428044280442804,
+          "unweighted_wilson_95_ci": [
+            0.02550895467932533,
+            0.07579111460482812
+          ],
+          "weighted_total": 14.7749871001032,
+          "weighted_proportion": 0.045672980326316406,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.02652104021913577,
+            0.0775535104867213
+          ]
+        },
+        {
+          "label": "perception_recognition",
+          "unweighted_count": 36,
+          "unweighted_proportion": 0.13284132841328414,
+          "unweighted_wilson_95_ci": [
+            0.09752055621953713,
+            0.17842565344664318
+          ],
+          "weighted_total": 43.28781328320802,
+          "weighted_proportion": 0.13381287110832119,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.09832279953533125,
+            0.17956217368583544
+          ]
+        },
+        {
+          "label": "spatiotemporal_grounding",
+          "unweighted_count": 86,
+          "unweighted_proportion": 0.3173431734317343,
+          "unweighted_wilson_95_ci": [
+            0.2648103645125996,
+            0.37498197094947
+          ],
+          "weighted_total": 103.1641290726817,
+          "weighted_proportion": 0.31890472767216477,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.26622310976121183,
+            0.3766599762108837
+          ]
+        },
+        {
+          "label": "perspective_reference_frame",
+          "unweighted_count": 72,
+          "unweighted_proportion": 0.2656826568265683,
+          "unweighted_wilson_95_ci": [
+            0.21663587948477622,
+            0.3212795407544444
+          ],
+          "weighted_total": 84.99844156961029,
+          "weighted_proportion": 0.2627502902895428,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.21387596847983373,
+            0.31827148574836894
+          ]
+        },
+        {
+          "label": "action_goal_binding",
+          "unweighted_count": 22,
+          "unweighted_proportion": 0.08118081180811808,
+          "unweighted_wilson_95_ci": [
+            0.05421973343809728,
+            0.11984956100523403
+          ],
+          "weighted_total": 26.53989139515455,
+          "weighted_proportion": 0.08204108263113145,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.054892288962871405,
+            0.12089956444890729
+          ]
+        },
+        {
+          "label": "physical_prediction_counterfactual",
+          "unweighted_count": 43,
+          "unweighted_proportion": 0.15867158671586715,
+          "unweighted_wilson_95_ci": [
+            0.11998409711105018,
+            0.2069005701665546
+          ],
+          "weighted_total": 50.72987616099071,
+          "weighted_proportion": 0.1568180479725233,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.11831999386128803,
+            0.20493081173532293
+          ]
+        },
+        {
+          "label": "other_unresolved",
+          "unweighted_count": 0,
+          "unweighted_proportion": 0.0,
+          "unweighted_wilson_95_ci": [
+            0.0,
+            0.013976999093140033
+          ],
+          "weighted_total": 0,
+          "weighted_proportion": 0.0,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            8.673617379884035e-19,
+            0.014008180783927897
+          ]
+        }
+      ]
+    },
+    "sensitivity_excluding_benchmark_ambiguity_and_protocol_or_parsing": {
+      "n": 259,
+      "weight_total": 308.7201514816453,
+      "kish_effective_n": 258.40558223024397,
+      "frequencies": [
+        {
+          "label": "benchmark_ambiguity",
+          "unweighted_count": 0,
+          "unweighted_proportion": 0.0,
+          "unweighted_wilson_95_ci": [
+            0.0,
+            0.014615117561475346
+          ],
+          "weighted_total": 0,
+          "weighted_proportion": 0.0,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            8.673617379884035e-19,
+            0.014648244667698547
+          ]
+        },
+        {
+          "label": "protocol_or_parsing",
+          "unweighted_count": 0,
+          "unweighted_proportion": 0.0,
+          "unweighted_wilson_95_ci": [
+            0.0,
+            0.014615117561475346
+          ],
+          "weighted_total": 0,
+          "weighted_proportion": 0.0,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            8.673617379884035e-19,
+            0.014648244667698547
+          ]
+        },
+        {
+          "label": "perception_recognition",
+          "unweighted_count": 36,
+          "unweighted_proportion": 0.138996138996139,
+          "unweighted_wilson_95_ci": [
+            0.10211873236868342,
+            0.1864257733610305
+          ],
+          "weighted_total": 43.28781328320802,
+          "weighted_proportion": 0.14021699936157767,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.1031349574387864,
+            0.18783942012562962
+          ]
+        },
+        {
+          "label": "spatiotemporal_grounding",
+          "unweighted_count": 86,
+          "unweighted_proportion": 0.33204633204633205,
+          "unweighted_wilson_95_ci": [
+            0.2775138454718968,
+            0.39148814382481506
+          ],
+          "weighted_total": 103.1641290726817,
+          "weighted_proportion": 0.3341671367339143,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.2794550040519652,
+            0.39373759012599674
+          ]
+        },
+        {
+          "label": "perspective_reference_frame",
+          "unweighted_count": 72,
+          "unweighted_proportion": 0.277992277992278,
+          "unweighted_wilson_95_ci": [
+            0.22697862313353143,
+            0.3354952707644209
+          ],
+          "weighted_total": 84.99844156961029,
+          "weighted_proportion": 0.2753252133418437,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.22445481250105948,
+            0.3327777966738913
+          ]
+        },
+        {
+          "label": "action_goal_binding",
+          "unweighted_count": 22,
+          "unweighted_proportion": 0.08494208494208494,
+          "unweighted_wilson_95_ci": [
+            0.05676224200890018,
+            0.12525416832205427
+          ],
+          "weighted_total": 26.53989139515455,
+          "weighted_proportion": 0.08596747335015628,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.05756787035074623,
+            0.126496775851071
+          ]
+        },
+        {
+          "label": "physical_prediction_counterfactual",
+          "unweighted_count": 43,
+          "unweighted_proportion": 0.16602316602316602,
+          "unweighted_wilson_95_ci": [
+            0.12565577688358526,
+            0.21615277654550835
+          ],
+          "weighted_total": 50.72987616099071,
+          "weighted_proportion": 0.164323177212508,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.12412162891219022,
+            0.21435887797175954
+          ]
+        },
+        {
+          "label": "other_unresolved",
+          "unweighted_count": 0,
+          "unweighted_proportion": 0.0,
+          "unweighted_wilson_95_ci": [
+            0.0,
+            0.014615117561475346
+          ],
+          "weighted_total": 0,
+          "weighted_proportion": 0.0,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            8.673617379884035e-19,
+            0.014648244667698547
+          ]
+        }
+      ]
+    },
+    "sensitivity_both_raters_nonlow_confidence": {
+      "n": 255,
+      "weight_total": 304.60894638557176,
+      "kish_effective_n": 254.4309421550177,
+      "frequencies": [
+        {
+          "label": "benchmark_ambiguity",
+          "unweighted_count": 20,
+          "unweighted_proportion": 0.0784313725490196,
+          "unweighted_wilson_95_ci": [
+            0.05134348342534952,
+            0.11803223799284951
+          ],
+          "weighted_total": 23.902903091060985,
+          "weighted_proportion": 0.0784707848363878,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.0513507942563133,
+            0.11813014947000514
+          ]
+        },
+        {
+          "label": "protocol_or_parsing",
+          "unweighted_count": 12,
+          "unweighted_proportion": 0.047058823529411764,
+          "unweighted_wilson_95_ci": [
+            0.027121591320373617,
+            0.08044023029638907
+          ],
+          "weighted_total": 14.7749871001032,
+          "weighted_proportion": 0.04850477070821528,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.028173036308866507,
+            0.0822672884550062
+          ]
+        },
+        {
+          "label": "perception_recognition",
+          "unweighted_count": 36,
+          "unweighted_proportion": 0.1411764705882353,
+          "unweighted_wilson_95_ci": [
+            0.10374942295634124,
+            0.1892540980647305
+          ],
+          "weighted_total": 43.28781328320802,
+          "weighted_proportion": 0.14210946131705082,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.10451815723277288,
+            0.1903470579317945
+          ]
+        },
+        {
+          "label": "spatiotemporal_grounding",
+          "unweighted_count": 57,
+          "unweighted_proportion": 0.2235294117647059,
+          "unweighted_wilson_95_ci": [
+            0.17671400028379536,
+            0.2785510077160468
+          ],
+          "weighted_total": 68.51947577276525,
+          "weighted_proportion": 0.22494242728522426,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.17794672836041325,
+            0.2801203581086984
+          ]
+        },
+        {
+          "label": "perspective_reference_frame",
+          "unweighted_count": 71,
+          "unweighted_proportion": 0.2784313725490196,
+          "unweighted_wilson_95_ci": [
+            0.2270161644660924,
+            0.3364231681862634
+          ],
+          "weighted_total": 83.9032034743722,
+          "weighted_proportion": 0.2754456310950505,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.22420011198431222,
+            0.3333710459894381
+          ]
+        },
+        {
+          "label": "action_goal_binding",
+          "unweighted_count": 20,
+          "unweighted_proportion": 0.0784313725490196,
+          "unweighted_wilson_95_ci": [
+            0.05134348342534952,
+            0.11803223799284951
+          ],
+          "weighted_total": 24.14703425229741,
+          "weighted_proportion": 0.07927224245650445,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.051992545355348946,
+            0.11906747237665682
+          ]
+        },
+        {
+          "label": "physical_prediction_counterfactual",
+          "unweighted_count": 39,
+          "unweighted_proportion": 0.15294117647058825,
+          "unweighted_wilson_95_ci": [
+            0.11394234702875902,
+            0.20224138641785136
+          ],
+          "weighted_total": 46.0735294117647,
+          "weighted_proportion": 0.15125468230156697,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            0.1124379517733862,
+            0.20044565933682543
+          ]
+        },
+        {
+          "label": "other_unresolved",
+          "unweighted_count": 0,
+          "unweighted_proportion": 0.0,
+          "unweighted_wilson_95_ci": [
+            8.673617379884035e-19,
+            0.014840971914608158
+          ],
+          "weighted_total": 0,
+          "weighted_proportion": 0.0,
+          "weighted_wilson_95_ci_kish_effective_n": [
+            8.673617379884035e-19,
+            0.014873671387967542
+          ]
+        }
+      ]
+    },
+    "confidence": {
+      "rater_1": {
+        "high": 153,
+        "medium": 111,
+        "low": 36
+      },
+      "rater_2": {
+        "high": 195,
+        "medium": 94,
+        "low": 11
+      },
+      "both_raters_nonlow_count": 255,
+      "both_raters_nonlow_proportion": 0.85
+    },
+    "question_or_key_problem": {
+      "count": 38,
+      "proportion": 0.12666666666666668,
+      "wilson_95_ci": [
+        0.09369224846506602,
+        0.16908117004926165
+      ]
+    },
+    "representative_high_or_medium_confidence_evidence": {
+      "benchmark_ambiguity": [
+        {
+          "unit_id": "error-0061",
+          "benchmark_index": 6605,
+          "category_id": 5,
+          "control_pass": true,
+          "question": "[Fill-in-the-Blank] The procedure shown transforms a single large horizontal loop into two smaller vertical loops by pulling them through the ________ of the knot.",
+          "gold_answer": "center",
+          "model_answer": "[answer] eye",
+          "rater_evidence": {
+            "rater_1": "操作确实把大环从绳结中央开口拉出；模型回答 eye 在结绳语境中可合理指环眼/中心开口，与 gold center 语义相容，填空接受范围过窄。",
+            "rater_2": "20-frame full-duration sheet: the two smaller loops are pulled through the central opening of the knot; 'eye' is a standard spatial synonym for that opening and is semantically compatible with the keyed word 'center'."
+          }
+        },
+        {
+          "unit_id": "error-0067",
+          "benchmark_index": 6454,
+          "category_id": 5,
+          "control_pass": true,
+          "question": "[Fill-in-the-Blank] After the helicopter lands, the visual state of the main rotor blades transitions from a continuous transparent blur to ______, as they slow to a stop.",
+          "gold_answer": "distinct individual blades",
+          "model_answer": "clear",
+          "rater_evidence": {
+            "rater_1": "旋翼由高速透明模糊变为低速可辨状态；模型回答 clear 可自然解释为 blades become visually clear，与 gold distinct individual blades 基本同义，填空评分边界不充分。",
+            "rater_2": "20-frame full-duration sheet: after landing the blurred rotor resolves into clearly visible individual blades; the fill 'clear' plausibly describes this same visual transition even though it is less explicit than the keyed phrase."
+          }
+        },
+        {
+          "unit_id": "error-0071",
+          "benchmark_index": 4639,
+          "category_id": 2,
+          "control_pass": true,
+          "question": "[Single-Choice] As the camera pans to the left, what is the apparent motion of the small puff of smoke on the distant hillside relative to the dock's corner post in the foreground? [Options] A) The smoke appears to move from the right side of the post to the left side of it. B) The smoke remains stationary directly behind the post. C) The smoke appears to move from the left side of the post to the right side of it. D) The smoke is never visible at the same time as the corner post.",
+          "gold_answer": "B",
+          "model_answer": "The smoke appears to move from the right side of the post to the left side of it.",
+          "rater_evidence": {
+            "rater_1": "镜头左移时远处烟雾与近处码头角柱存在明显视差，20 帧中难以支持烟雾始终固定在柱后；模型所述由右向左具有视觉合理性，gold“stationary directly behind”不够稳固。",
+            "rater_2": "20-frame full-duration sheet: throughout the left pan the distant smoke remains aligned behind the dock corner post rather than crossing from one side to the other; the answer mistakes camera motion for relative object motion."
+          }
+        }
+      ],
+      "protocol_or_parsing": [
+        {
+          "unit_id": "error-0127",
+          "benchmark_index": 989,
+          "category_id": 1,
+          "control_pass": false,
+          "question": "[Fill-in-the-Blank] A third, less illuminated jellyfish starts below the main jellyfish on the left. As the main jellyfish moves down, it briefly occludes the third one. From the viewer's perspective, the third jellyfish re-emerges to the ________ of the main jellyfish's bell.",
+          "gold_answer": "below",
+          "model_answer": "bottom",
+          "rater_evidence": {
+            "rater_1": "模型回答 bottom 与 gold below 在“位于主水母伞体下方”这一语境中完全同义；该错误反映填空同义词接受或评分规范化不足。",
+            "rater_2": "20-frame full-duration sheet: the dim third jellyfish re-emerges underneath the main bell; the model fill 'bottom' expresses the same below relation as the keyed 'below', so this is not a substantive content error."
+          }
+        },
+        {
+          "unit_id": "error-0108",
+          "benchmark_index": 5940,
+          "category_id": 3,
+          "control_pass": true,
+          "question": "[Multiple-Select] Throughout the video, the driver's hands make minor adjustments to the steering wheel. What is the spatial intent of these small movements, as confirmed by the car's trajectory on the road? (Select all that apply) [Options] A) To prepare to change lanes to the left. B) To correct the car's path and keep it centered within the lane markings. C) To navigate a slight curve in the road. D) To initiate a sudden stop.",
+          "gold_answer": "B,C",
+          "model_answer": "BC",
+          "rater_evidence": {
+            "rater_1": "模型输出 BC 与 gold B,C 是完全相同的选项集合；被计入错误只能由多选格式标准化或解析评分造成。",
+            "rater_2": "20-frame full-duration sheet: the minor steering corrections keep the car centered and negotiate a slight road curve; the response 'BC' exactly matches both keyed options, indicating normalization/parsing rather than content error."
+          }
+        },
+        {
+          "unit_id": "error-0159",
+          "benchmark_index": 1158,
+          "category_id": 2,
+          "control_pass": true,
+          "question": "[Single-Choice] During the camera's upward pan, what is the apparent change in the position of the blue star-shaped light in the foreground relative to the red and white star-shaped light behind it? [Options] A) The blue light moves from being below the red light to being above it. B) The blue light appears to move further down and to the left relative to the red light. C) The two lights maintain a fixed spatial relationship to each other in the frame. D) The blue light moves from being to the left of the red light to its right.",
+          "gold_answer": "C",
+          "model_answer": "A) The blue light moves from being below the red light to being above it.\nC) The two lights maintain a fixed spatial relationship to each other in the frame.",
+          "rater_evidence": {
+            "rater_1": "题目明确为单选，模型同时输出互斥的 A 与 C；其中 C 正是 gold，错误主要由额外输出选项和单选协议未遵守造成，而非完全未识别固定相对关系。",
+            "rater_2": "20-frame full-duration sheet: the blue and red-white star lights keep a fixed relative arrangement through the upward pan, matching C; the model includes C but also emits incompatible option A for a single-choice item."
+          }
+        }
+      ],
+      "perception_recognition": [
+        {
+          "unit_id": "error-0176",
+          "benchmark_index": 6200,
+          "category_id": 1,
+          "control_pass": true,
+          "question": "[Fill-in-the-Blank] Between 0:04 and 0:06, the white paper lantern hanging on the left side of the street is temporarily hidden from view by the corner of the ______ building.",
+          "gold_answer": "brick",
+          "model_answer": "white",
+          "rater_evidence": {
+            "rater_1": "4–6 秒白纸灯笼经过街角时，被左前景红褐色砖墙建筑的转角短暂挡住；回答 white 误取了邻近白色立面属性。",
+            "rater_2": "20-frame full-duration sheet: between 0:04 and 0:06 the left paper lantern passes behind the projecting corner of the red-brick storefront; the response names its light-colored trim rather than the occluding building material."
+          }
+        },
+        {
+          "unit_id": "error-0010",
+          "benchmark_index": 7402,
+          "category_id": 5,
+          "control_pass": true,
+          "question": "[Single-Choice] How does the spatial arrangement of the red leash change from the beginning to the end of the video? [Options] A) It starts stretched out and becomes coiled near the husky. B) It remains coiled in the same spot throughout the video. C) It starts partially coiled and ends up stretched out towards the right side of the scene. D) It starts partially coiled and ends up stretched out towards the left side of the scene.",
+          "gold_answer": "D",
+          "model_answer": "C) It starts partially coiled and ends up stretched out towards the right side of the scene.",
+          "rater_evidence": {
+            "rater_1": "红色牵引绳从早期局部盘绕变为末段跨越沙地、从哈士奇位置向画面左侧延伸；回答把最终延伸方向判为右侧，属于可见方向与状态变化识别错误。",
+            "rater_2": "20-frame full-duration sheet: the red leash begins partly coiled near the dogs and ends extended across the sand toward the image-left side; the answer reverses the directly visible final direction."
+          }
+        },
+        {
+          "unit_id": "error-0097",
+          "benchmark_index": 667,
+          "category_id": 5,
+          "control_pass": true,
+          "question": "[True/False] The plane's landing gear is still visible and fully extended when the aircraft passes over the distant treeline.",
+          "gold_answer": "True",
+          "model_answer": "False",
+          "rater_evidence": {
+            "rater_1": "飞机越过远处树线时起落架仍清楚可见且完全伸出；回答 False 否认直接可见的部件状态。",
+            "rater_2": "20-frame full-duration sheet: the aircraft's landing gear remains visibly down as it crosses above the distant treeline; the negative answer contradicts the visible configuration."
+          }
+        }
+      ],
+      "spatiotemporal_grounding": [
+        {
+          "unit_id": "error-0069",
+          "benchmark_index": 1853,
+          "category_id": 1,
+          "control_pass": true,
+          "question": "[True/False] The wooden pier with the thatched roof moves from the left side of the frame to the right, and as it does, it continuously occludes a new portion of the beach behind it.",
+          "gold_answer": "True",
+          "model_answer": "False",
+          "rater_evidence": {
+            "rater_1": "移动镜头使茅草顶木码头从左向右穿过画面并持续替换其遮挡的海滩区域；回答否定该跨帧投影关系。",
+            "rater_2": "20-frame full-duration sheet: the thatched pier shifts left-to-right during the camera motion and successively occludes new beach regions; the negative answer fails the changing projected overlap."
+          }
+        },
+        {
+          "unit_id": "error-0092",
+          "benchmark_index": 4371,
+          "category_id": 1,
+          "control_pass": true,
+          "question": "[True/False] During the camera's pan to the right, the covered structure on the pier moves in front of the small, white chapel-like building from the camera's viewpoint, but the chapel remains at least partially visible throughout this transit.",
+          "gold_answer": "True",
+          "model_answer": "False",
+          "rater_evidence": {
+            "rater_1": "右摇镜头使近处码头覆顶结构移到远处白色小教堂前，但教堂始终部分可见；回答错误否定该动态遮挡关系。",
+            "rater_2": "20-frame full-duration sheet: the covered pier structure crosses in front of the chapel-like building during the right pan while a portion of the chapel remains visible; the negative response misses the partial occlusion sequence."
+          }
+        },
+        {
+          "unit_id": "error-0093",
+          "benchmark_index": 1347,
+          "category_id": 1,
+          "control_pass": true,
+          "question": "[Fill-in-the-Blank] A utility pole temporarily occludes the man. Immediately after he reappears, he is on the ______ side of the white parked car.",
+          "gold_answer": "left",
+          "model_answer": "right",
+          "rater_evidence": {
+            "rater_1": "镜头经过电线杆、男子重新出现时，他位于白色停放车辆的场景左侧；回答给出右侧，混淆遮挡前后位置及画面方向。",
+            "rater_2": "20-frame full-duration sheet: immediately after the utility-pole occlusion the man reappears on the image-left side of the white parked car; the answer reverses the post-occlusion side."
+          }
+        }
+      ],
+      "perspective_reference_frame": [
+        {
+          "unit_id": "error-0011",
+          "benchmark_index": 3033,
+          "category_id": 6,
+          "control_pass": true,
+          "question": "[Single-Choice] If the woman in the black dress were to turn 180 degrees, what would be directly in her line of sight? [Options] A) The man carrying a basket on his shoulder. B) A stone fountain. C) The large arched doorway. D) The woman with her back to the camera.",
+          "gold_answer": "C",
+          "model_answer": "A) The man carrying a basket on his shoulder.",
+          "rater_evidence": {
+            "rater_1": "黑裙女子面对前景女子，拱形门位于其身后；题目要求将她旋转 180 度后沿其视线判断对象，回答仍绑定到侧后方搬篮男子。",
+            "rater_2": "20-frame full-duration sheet: the woman in black initially faces the foreground woman, with the arched doorway behind her; after a 180-degree body-centered turn her sight line would face the doorway rather than the basket-carrying man."
+          }
+        },
+        {
+          "unit_id": "error-0020",
+          "benchmark_index": 2515,
+          "category_id": 6,
+          "control_pass": true,
+          "question": "[Single-Choice] From the perspective of the rower seated at the very front of the boat, in which direction is the chase boat that is following them located? [Options] A) Directly in front of her. B) Directly behind her. C) To her left. D) To her right.",
+          "gold_answer": "C",
+          "model_answer": "B) Directly behind her.",
+          "rater_evidence": {
+            "rater_1": "追逐艇位于赛艇后侧并偏向画面下方，题目要求改用最前排划手自身朝向判断；回答直接使用船体前后关系选择“behind”，未转换到划手参照系中的左侧。",
+            "rater_2": "20-frame full-duration sheet: the chase motorboat follows behind the rowing shell in world coordinates, but the front rower faces opposite the shell's travel direction; from her seated perspective the boat falls to her left rather than directly behind."
+          }
+        },
+        {
+          "unit_id": "error-0034",
+          "benchmark_index": 7607,
+          "category_id": 6,
+          "control_pass": true,
+          "question": "[Single-Choice] Relative to the car's frame of reference, which description best captures the initial motion of the armrest as it moves from its stowed to its deployed position? [Options] A) It pivots downwards and towards the front of the car. B) It slides horizontally forward from the seatback. C) It pivots downwards and towards the rear of the car. D) It rotates sideways from the seat cushion.",
+          "gold_answer": "A",
+          "model_answer": "C) It pivots downwards and towards the rear of the car.",
+          "rater_evidence": {
+            "rater_1": "后排中央扶手从靠背向下翻至座垫上方，按汽车自身前后方向同时朝车头侧运动；回答把同一转动解释为朝车尾，混淆车辆参照系。",
+            "rater_2": "20-frame full-duration sheet: the rear-seat armrest pivots down from the seatback toward the car's front; the answer reverses front and rear in the vehicle-centered frame."
+          }
+        }
+      ],
+      "action_goal_binding": [
+        {
+          "unit_id": "error-0122",
+          "benchmark_index": 5200,
+          "category_id": 3,
+          "control_pass": false,
+          "question": "[Single-Choice] At 0:17, the player in the blue vest passes the ball off-screen to the right. Based on the on-field positions and the drill's context, who is the most likely intended recipient? [Options] A) The player in the yellow vest moving towards the center. B) The stationary player in the black jacket and neon yellow shoes. C) A player in a red jersey further downfield. D) The player in a blue vest who is now behind the passer.",
+          "gold_answer": "B",
+          "model_answer": "D",
+          "rater_evidence": {
+            "rater_1": "蓝背心球员向画外右侧传球，固定站位的黑夹克荧光鞋球员最符合接应位置；回答选择身后另一蓝背心球员。接收者不在画内，题目仍带一定意图推断。",
+            "rater_2": "20-frame full-duration sheet: the off-screen-right pass aligns with the stationary black-jacketed, neon-shoed recipient; the blue-vested player behind the passer is not on the outgoing path."
+          }
+        },
+        {
+          "unit_id": "error-0143",
+          "benchmark_index": 5933,
+          "category_id": 3,
+          "control_pass": true,
+          "question": "[Multiple-Select] Assuming the man uses the blind as intended, which locations are within his primary field of view for observation? (Select all that apply) [Options] A) The near edge of the pond. B) The far edge of the pond. C) The area where the truck is parked. D) The base of the wind turbines on the hill.",
+          "gold_answer": "A, B",
+          "model_answer": "ABD",
+          "rater_evidence": {
+            "rater_1": "隐蔽棚开口覆盖池塘近岸与远岸，回答 ABD 正确保留 A,B 却额外加入并非主要观察方向的风机基部 D。",
+            "rater_2": "20-frame full-duration sheet: the blind's intended field covers near and far pond edges only; adding the wind-turbine base extends beyond the primary observation aperture."
+          }
+        },
+        {
+          "unit_id": "error-0161",
+          "benchmark_index": 7472,
+          "category_id": 3,
+          "control_pass": true,
+          "question": "[Single-Choice] Based on the woman's path of movement from the sidewalk and the sudden appearance of a light source from above and behind her around the 5-second mark, what spatial interaction most likely occurred? [Options] A) She walked under a street lamp that turned on. B) She opened the rear trunk of the vehicle. C) She turned around to face the sunset. D) Another car turned its headlights on her.",
+          "gold_answer": "B",
+          "model_answer": "A) She walked under a street lamp that turned on.",
+          "rater_evidence": {
+            "rater_1": "女子沿人行道走到停放车辆后方，约 5 秒上后方亮起并随后可见掀起的尾门；该空间路径和结果对应打开后备箱，而非经过自动点亮的路灯。",
+            "rater_2": "20-frame full-duration sheet: the woman approaches the vehicle and becomes lit orange from above/behind, but the trunk lid and opening action are not directly visible; both a vehicle light/trunk interaction and an overhead lamp remain plausible from the static sequence."
+          }
+        }
+      ],
+      "physical_prediction_counterfactual": [
+        {
+          "unit_id": "error-0291",
+          "benchmark_index": 6052,
+          "category_id": 5,
+          "control_pass": true,
+          "question": "[Multiple-Select] The video shows a long, thin, white cushion positioned as a backrest on the left side of the boat. What spatial changes would occur if this cushion were moved to the empty slot visible on the right side? (Select all that apply) [Options] A) The total available seating space would decrease. B) The right side would gain a backrest, creating a symmetrical seating arrangement with the left side. C) The table would be blocked from swinging to the left. D) A gap would be created between the corner cushion and the side cushion on the left.",
+          "gold_answer": "B, D",
+          "model_answer": "B) The right side would gain a backrest, creating a symmetrical seating arrangement with the left side.",
+          "rater_evidence": {
+            "rater_1": "将左侧长白靠垫移到右侧空位会使右侧获得靠背并形成对称 B，同时左侧角垫与侧垫间留下缺口 D；回答只选 B。",
+            "rater_2": "20-frame full-duration sheet: moving the long left backrest into the empty right slot would create a matching right backrest and leave a visible gap between the left corner and side cushions; selecting only B omits D."
+          }
+        },
+        {
+          "unit_id": "error-0002",
+          "benchmark_index": 1466,
+          "category_id": 4,
+          "control_pass": true,
+          "question": "[True/False] Assuming the flying object's path relative to the road remained the same, if the camera vehicle had been traveling in the left lane at the same speed, the object would have most likely passed harmlessly behind it.",
+          "gold_answer": "False",
+          "model_answer": "True",
+          "rater_evidence": {
+            "rater_1": "黑色飞行物从道路右上方横穿至车辆前方；回答错误外推了车辆改在左车道后与飞行物轨迹的相交时序。20-frame full-duration sheet 对最近接时刻的分辨率有限。",
+            "rater_2": "20-frame full-duration sheet: the vehicle remains in the right lane while the airborne object approaches and crosses the forward view; the answer does not preserve the observed relative trajectory under the left-lane counterfactual."
+          }
+        },
+        {
+          "unit_id": "error-0013",
+          "benchmark_index": 4886,
+          "category_id": 4,
+          "control_pass": true,
+          "question": "[Single-Choice] At 0:03, a fish is swimming from the upper right towards the lower left. Given its trajectory at that moment, if it had continued in a perfectly straight line, where would it have most likely exited the frame? [Options] A) The bottom edge of the frame. B) The left edge of the frame. C) The top edge of the frame. D) It would have remained in the center.",
+          "gold_answer": "A",
+          "model_answer": "B) The left edge of the frame.",
+          "rater_evidence": {
+            "rater_1": "鱼在约 0:03 后由右上向左下移动，问题要求延长瞬时轨迹到画面边界；回答选择左边缘而非底边，反映了对斜率和未来交点的错误外推。",
+            "rater_2": "20-frame full-duration sheet: once visible, the fish moves diagonally from upper right toward lower left with a stronger downward component; extending that local vector reaches the bottom edge before the left edge."
+          }
+        }
+      ],
+      "other_unresolved": []
+    }
+  }
+}

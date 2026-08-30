@@ -1,0 +1,222 @@
+{
+  "schema": "escher-sft-eligibility-audit-v1",
+  "sources": {
+    "sft": "data/Escher-sft.jsonl",
+    "sft_sha256": "766e2927689161edf56a769f074bd84342ada784091607f5a44152da76488306",
+    "benchmark": "data/Escher-Bench.json",
+    "benchmark_sha256": "a4cbe71c14bbb73cf4829b8c6a59c39cb9f4e6de46bbe32d426fe17f265b111b"
+  },
+  "raw_lines": 35963,
+  "parsed_rows": 35963,
+  "parse_errors": [],
+  "valid_schema_rows": 35963,
+  "invalid_schema_rows": 0,
+  "exact_duplicate_extra_rows": 0,
+  "all_valid": {
+    "rows": 35963,
+    "unique_videos": 11243,
+    "rows_per_video": {
+      "1": 630,
+      "2": 1924,
+      "3": 3992,
+      "4": 4397,
+      "5": 65,
+      "6": 88,
+      "7": 108,
+      "8": 39
+    },
+    "categories": {
+      "Category 1: Object Permanence and Occlusion Tracking": 3084,
+      "Category 2: Dynamic Spatial Relationships": 9810,
+      "Category 3: Action & Intent-Driven Spatial Reasoning": 7853,
+      "Category 4: Predictive & Counterfactual Spatial Reasoning": 6152,
+      "Category 5: Object Deformation and State Transition": 1159,
+      "Category 6: Egocentric vs. Allocentric Reference Frames": 7904,
+      "Category 6: Egocentric vs. Allocentric ReferenceFrames": 1
+    },
+    "scene_types": {
+      "Human-Centric": 28993,
+      "Object-Centric": 6970
+    },
+    "question_types": {
+      "single_choice": 22187,
+      "true_false": 8342,
+      "unknown": 5434
+    }
+  },
+  "benchmark_unique_videos": 4572,
+  "sft_rows_sharing_benchmark_video": 11565,
+  "sft_unique_videos_sharing_benchmark_video": 4486,
+  "no_benchmark_video_overlap": {
+    "rows": 24398,
+    "unique_videos": 6757,
+    "rows_per_video": {
+      "1": 98,
+      "2": 466,
+      "3": 1716,
+      "4": 4379,
+      "5": 2,
+      "6": 17,
+      "7": 40,
+      "8": 39
+    },
+    "categories": {
+      "Category 1: Object Permanence and Occlusion Tracking": 2165,
+      "Category 2: Dynamic Spatial Relationships": 6767,
+      "Category 3: Action & Intent-Driven Spatial Reasoning": 4967,
+      "Category 4: Predictive & Counterfactual Spatial Reasoning": 4108,
+      "Category 5: Object Deformation and State Transition": 826,
+      "Category 6: Egocentric vs. Allocentric Reference Frames": 5564,
+      "Category 6: Egocentric vs. Allocentric ReferenceFrames": 1
+    },
+    "scene_types": {
+      "Human-Centric": 19830,
+      "Object-Centric": 4568
+    },
+    "question_types": {
+      "single_choice": 14499,
+      "true_false": 6161,
+      "unknown": 3738
+    }
+  },
+  "groups_all_valid": {
+    "intent_human_category3": {
+      "rows": 7821,
+      "unique_videos": 7515,
+      "rows_per_video": {
+        "1": 7215,
+        "2": 294,
+        "3": 6
+      },
+      "categories": {
+        "Category 3: Action & Intent-Driven Spatial Reasoning": 7821
+      },
+      "scene_types": {
+        "Human-Centric": 7821
+      },
+      "question_types": {
+        "single_choice": 6838,
+        "true_false": 736,
+        "unknown": 247
+      }
+    },
+    "dynamic_object_category2": {
+      "rows": 2467,
+      "unique_videos": 1969,
+      "rows_per_video": {
+        "1": 1512,
+        "2": 420,
+        "3": 33,
+        "4": 4
+      },
+      "categories": {
+        "Category 2: Dynamic Spatial Relationships": 2467
+      },
+      "scene_types": {
+        "Object-Centric": 2467
+      },
+      "question_types": {
+        "single_choice": 1782,
+        "true_false": 296,
+        "unknown": 389
+      }
+    },
+    "dynamic_all_scenes_category2_sensitivity": {
+      "rows": 9810,
+      "unique_videos": 8941,
+      "rows_per_video": {
+        "1": 8128,
+        "2": 761,
+        "3": 48,
+        "4": 4
+      },
+      "categories": {
+        "Category 2: Dynamic Spatial Relationships": 9810
+      },
+      "scene_types": {
+        "Human-Centric": 7343,
+        "Object-Centric": 2467
+      },
+      "question_types": {
+        "single_choice": 5011,
+        "true_false": 2542,
+        "unknown": 2257
+      }
+    }
+  },
+  "groups_no_benchmark_video_overlap": {
+    "intent_human_category3": {
+      "rows": 4944,
+      "unique_videos": 4796,
+      "rows_per_video": {
+        "1": 4651,
+        "2": 142,
+        "3": 3
+      },
+      "categories": {
+        "Category 3: Action & Intent-Driven Spatial Reasoning": 4944
+      },
+      "scene_types": {
+        "Human-Centric": 4944
+      },
+      "question_types": {
+        "single_choice": 4263,
+        "true_false": 522,
+        "unknown": 159
+      }
+    },
+    "dynamic_object_category2": {
+      "rows": 1584,
+      "unique_videos": 1239,
+      "rows_per_video": {
+        "1": 926,
+        "2": 284,
+        "3": 26,
+        "4": 3
+      },
+      "categories": {
+        "Category 2: Dynamic Spatial Relationships": 1584
+      },
+      "scene_types": {
+        "Object-Centric": 1584
+      },
+      "question_types": {
+        "single_choice": 1129,
+        "true_false": 204,
+        "unknown": 251
+      }
+    },
+    "dynamic_all_scenes_category2_sensitivity": {
+      "rows": 6767,
+      "unique_videos": 6199,
+      "rows_per_video": {
+        "1": 5671,
+        "2": 491,
+        "3": 34,
+        "4": 3
+      },
+      "categories": {
+        "Category 2: Dynamic Spatial Relationships": 6767
+      },
+      "scene_types": {
+        "Human-Centric": 5183,
+        "Object-Centric": 1584
+      },
+      "question_types": {
+        "single_choice": 3336,
+        "true_false": 1878,
+        "unknown": 1553
+      }
+    }
+  },
+  "normalized_category_counts": {
+    "Category 1: Object Permanence and Occlusion Tracking": 3084,
+    "Category 2: Dynamic Spatial Relationships": 9810,
+    "Category 3: Action & Intent-Driven Spatial Reasoning": 7853,
+    "Category 4: Predictive & Counterfactual Spatial Reasoning": 6152,
+    "Category 5: Object Deformation and State Transition": 1159,
+    "Category 6: Egocentric vs. Allocentric Reference Frames": 7904,
+    "Category 6: Egocentric vs. Allocentric ReferenceFrames": 1
+  },
+  "unknown_category_counts": {}
+}

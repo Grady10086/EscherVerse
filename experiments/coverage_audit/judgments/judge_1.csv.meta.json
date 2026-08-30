@@ -1,0 +1,37 @@
+{
+  "judge_id": "judge_1",
+  "identity": {
+    "judge_type": "reviewer-assisted semantic judge",
+    "agent": "OpenAI Codex",
+    "disclosure": "Judgments were produced by an AI model acting as an independent blinded semantic coverage judge."
+  },
+  "packet": {
+    "path": "experiments/coverage_audit/manifests/coverage_judgment_packet_666.csv",
+    "rows": 666,
+    "sha256": "22b1952399037bddfc1e22cc28da2cc26e45bc19a47f4a672fd553deda91789f"
+  },
+  "output": {
+    "path": "experiments/coverage_audit/judgments/judge_1.csv",
+    "rows": 666,
+    "unique_blind_proposal_ids": 666,
+    "sha256": "1f3a715c43492ae5b4c16b457d9d04d0a1a22012a5957b786f574741dda1e965"
+  },
+  "counts": {
+    "direct": 99,
+    "partial": 215,
+    "absent": 351,
+    "uncertain": 1
+  },
+  "validation": {
+    "passed": true,
+    "exact_row_count_666": true,
+    "unique_blind_proposal_ids_666": true,
+    "exact_key_equality_with_packet": true,
+    "packet_order_preserved": true,
+    "schema_exact": true,
+    "coverage_status_values_valid": true,
+    "confidence_values_in_unit_interval": true,
+    "reasons_nonempty": true,
+    "closest_generated_ids_listed_in_packet_row": true
+  }
+}

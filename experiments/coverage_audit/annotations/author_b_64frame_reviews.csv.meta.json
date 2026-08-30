@@ -1,0 +1,24 @@
+{
+  "artifact": "author_b_64frame_reviews.csv",
+  "created_at": "2026-08-13T18:08:52+08:00",
+  "rows": 74,
+  "unique_audit_item_ids": 61,
+  "status_counts": {
+    "revised": 8,
+    "confirmed": 50,
+    "still_uncertain": 12,
+    "rejected": 4
+  },
+  "needs_continuous_video_counts": {
+    "0": 62,
+    "1": 12
+  },
+  "source_author_b_sha256": "0d361a8cd3584c9a17efb4f448b259b4dba8ccc1e6a91edf6353f5d7e1313541",
+  "sha256": "1c7f179e136412bcfe896a8bd506cc21ad121bf9ff44bb6a6a0e58f998a68eea",
+  "validation": {
+    "all_originally_flagged_reviewed_exactly_once": true,
+    "review_keys_match_original_flagged_keys": true,
+    "status_and_needs_continuous_video_consistent": true
+  },
+  "reviewer_note": "reviewer-assisted independent blinded author review based on 8x8 64-frame full-duration contact sheets. This is not a continuous-video human review."
+}
