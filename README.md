@@ -11,7 +11,8 @@
 <p align="center">
   <a href="https://huggingface.co/datasets/Gradygu3u/EscherVerse-Data"><img src="https://img.shields.io/badge/🤗%20Dataset-EscherVerse--Data-yellow" alt="Dataset"></a>
   <a href="https://arxiv.org/abs/2601.01547"><img src="https://img.shields.io/badge/📄%20Paper-arXiv%202601.01547-blue" alt="Paper"></a>
-  <a href="#license"><img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-green" alt="License"></a>
+  <a href="#license"><img src="https://img.shields.io/badge/Code-Apache%202.0-blue" alt="Code license: Apache 2.0"></a>
+  <a href="#license"><img src="https://img.shields.io/badge/Data-CC%20BY--NC%204.0-green" alt="Data license: CC BY-NC 4.0"></a>
 </p>
 
 ## Overview
@@ -123,6 +124,24 @@ Note that the benchmark and training files use different schemas, so direct file
 
 The underlying raw clips are derived from third-party online platforms. For this reason, source video files are **not** redistributed as an unrestricted public download. Access to retained clips is controlled and subject to availability and source-platform terms.
 
+## System requirements
+
+The repository targets Python 3.10--3.12. Python package dependencies and
+minimum versions are listed in `requirements.txt`; the additional LoRA training
+dependencies are listed in `reproducibility/training/requirements.txt`.
+`ffmpeg` and `ffprobe` are required only for clip reconstruction, and `yt-dlp`
+is optional for the best-effort public retrieval path. API-based evaluation
+also requires credentials for the selected provider.
+
+The CPU-side analysis and test suite were validated on macOS 15.1.1 (Apple
+Silicon, arm64) with Python 3.12.13. GPU-side paths were validated on Ubuntu
+24.04 (x86_64) with Python 3.12.3, an NVIDIA RTX 5880 Ada Generation GPU
+(48 GB), NVIDIA driver 550.144.03, and CUDA 12.4. Statistical analyses,
+frozen-output recomputation, and the unit tests do not require a GPU. Local VLM
+inference and LoRA training require a compatible GPU; the memory requirement
+depends on the selected model. The released LoRA configuration was run on the
+48 GB GPU above. API-based evaluation does not require a local GPU.
+
 ## Quick start
 
 ### Installation
@@ -132,6 +151,42 @@ git clone https://github.com/Grady10086/EscherVerse.git
 cd EscherVerse
 pip install -r requirements.txt
 ```
+
+A typical installation takes approximately 5--15 minutes on a broadband
+connection, excluding model-weight and dataset downloads. Install the training
+additions separately when reproducing the LoRA ablation:
+
+```bash
+pip install -r reproducibility/training/requirements.txt
+```
+
+### Minimal CPU demo
+
+The concept-structure analysis is a self-contained demo that uses the small
+input table included in the repository and requires neither videos nor a GPU:
+
+```bash
+python experiments/concept_structure/scripts/analyze_concept_structure.py \
+  --scores experiments/concept_structure/data/model_category_scores.csv \
+  --output-dir /tmp/escherverse-concept-demo \
+  --seed 20260730 \
+  --bootstrap 5000 \
+  --parallel-permutations 5000
+```
+
+Expected outputs are `analysis_results.md`, `analysis_results.json`, and
+`model_pair_group_scores.csv`. The reference result reports a median
+off-diagonal Spearman correlation of 0.854 and 96.6% variance explained by PC1.
+The demo completed in approximately 4 seconds on the tested macOS system.
+
+Run the public validation suite with:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The expected final status is `OK` after 18 tests. The suite completed in less
+than one second on the tested macOS system.
 
 ### Run evaluation
 
@@ -256,7 +311,7 @@ If you use EscherVerse, please cite the associated paper:
 ```bibtex
 @article{gu2026escherverse,
   title={Vision-language models lag human performance on physical dynamics and intent reasoning},
-  author={Gu, Tianjun and Gong, Jingyu and Zhang, Zhizhong and Xie, Yuan and Ma, Lizhuang and Tan, Xin},
+  author={Gu, Tianjun and Gong, Jingyu and Zhang, Zhizhong and Xie, Yuan and Ma, Lizhuang and Tan, Xin and Vasilakos, Athanasios V.},
   journal={arXiv preprint arXiv:2601.01547},
   year={2026}
 }
@@ -264,7 +319,11 @@ If you use EscherVerse, please cite the associated paper:
 
 ## License
 
-This project is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+Source code is licensed under the [Apache License 2.0](LICENSE). Released
+datasets, annotations, metadata, frozen experimental inputs and outputs, and
+non-code assets are licensed under
+[CC BY-NC 4.0](LICENSE-DATA). Third-party source videos are excluded from both
+licenses and remain subject to their original platform and rights-holder terms.
 
 ## Contact
 
