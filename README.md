@@ -234,8 +234,9 @@ subsequently deposited.
 `reproducibility/human_baseline/aggregate.py` recomputes per-annotator and
 summary accuracy from an anonymized CSV with `annotator_id` and `is_correct`
 columns. The public repository includes the manuscript-level aggregate record,
-not the item-level first-pass judgments. Deidentified item-level records are
-available to editors and referees subject to the study's privacy constraints.
+not the item-level first-pass judgments. This path verifies the reported
+aggregate and aggregation contract but does not independently reconstruct the
+result from item-level judgments.
 
 ## Repository structure
 

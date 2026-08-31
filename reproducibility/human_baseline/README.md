@@ -9,6 +9,6 @@ anonymized CSV with one row per judgment and two required columns:
 default.
 
 `reported_summary.json` is an aggregate-only validation record. Item-level
-first-pass judgments are not public because they derive from retained human
-annotation records; deidentified records are available to editors and referees
-under the stated privacy constraints.
+first-pass judgments are not included in the public release. This path verifies
+the manuscript-level aggregate and aggregation contract but does not
+independently reconstruct the result from item-level judgments.

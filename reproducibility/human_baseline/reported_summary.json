@@ -6,5 +6,5 @@
   "minimum_accuracy_percent": 84.81,
   "maximum_accuracy_percent": 95.14,
   "public_reproduction_level": "aggregate verification only",
-  "privacy_note": "Deidentified item-level first-pass records are available to editors and referees but are not included in the public repository."
+  "privacy_note": "Item-level first-pass judgments are not included in the public release."
 }
