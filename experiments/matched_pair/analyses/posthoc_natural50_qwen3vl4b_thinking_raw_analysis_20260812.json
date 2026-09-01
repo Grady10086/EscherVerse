@@ -3,7 +3,7 @@
   "benchmark_sha256": "a4cbe71c14bbb73cf4829b8c6a59c39cb9f4e6de46bbe32d426fe17f265b111b",
   "bootstrap_iterations": 100000,
   "candidate_pair_count": 50,
-  "candidate_pairs_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+  "candidate_pairs_sha256": "5f9db726c3854066b084e7fb8ea69b0028e9daffa7430162505bebe433344b1c",
   "interpretation": "the model was evaluated after the post-hoc 50-pair candidate set was frozen and did not participate in selection.",
   "model": "Qwen3-VL-4B-Thinking-raw",
   "nonstandard_gold_indices": [

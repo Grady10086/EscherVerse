@@ -12,7 +12,7 @@ LLaVA-OneVision-1.5-4B-Instruct,open-weight,43.75,aggregate score only,,exact ch
 LLaVA-OneVision-1.5-8B-Instruct,open-weight,44.30,aggregate score only,,exact checkpoint integration not included
 MiniCPM-V-4,open-weight,40.99,aggregate score only,,exact checkpoint integration not included
 InternVL3-8B,open-weight,43.56,fresh inference,OpenGVLab/InternVL3-8B,supported by eval/evaluate.py
-ERNIE-4.5-VL-28B-A3B-Thinking,open-weight,42.58,aggregate score only,,exact checkpoint integration not included
+ERNIE-4.5-VL-28B-A3B-Thinking,open-weight,42.06,aggregate score only,,exact checkpoint integration not included
 LLaVA-NeXT-Video-7B,open-weight,11.30,aggregate score only,,exact checkpoint integration not included
 Spatial-MLLM,open-weight,15.81,aggregate score only,,exact checkpoint integration not included
 ViCA2-7B,open-weight,16.45,aggregate score only,,exact checkpoint integration not included
@@ -23,6 +23,6 @@ Escher-4B-Thinking,SFT,48.54,aggregate score only,,original adapter and exact tr
 Escher-8B-Instruct,SFT,49.85,aggregate score only,,original adapter and exact training configuration not included in this release
 Escher-8B-Thinking,SFT,48.79,aggregate score only,,original adapter and exact training configuration not included in this release
 qwen3-vl-plus,closed API,44.75,aggregate score only,qwen3-vl-plus,API output archive not public
-GPT5,closed API,53.36,aggregate score only,,dated API snapshot not public
+GPT5,closed API,53.24,aggregate score only,,dated API snapshot not public
 Gemini-2.5-flash,closed API,52.19,fresh inference,gemini-2.5-flash,provider behavior may change
 Gemini-2.5-pro,closed API,57.26,fresh inference,gemini-2.5-pro,provider behavior may change

@@ -16,7 +16,7 @@ Rebuild the combined table from the frozen analysis files with:
 python experiments/matched_pair/build_posthoc_natural50_model_panel.py \
   --selection-summary experiments/matched_pair/frozen_panel/candidate_summary.json \
   --candidate-pairs experiments/matched_pair/frozen_panel/candidate_pairs.csv \
-  --expected-candidate-sha256 0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f \
+  --expected-candidate-sha256 5f9db726c3854066b084e7fb8ea69b0028e9daffa7430162505bebe433344b1c \
   --heldout Qwen3-VL-8B-Thinking=experiments/matched_pair/analyses/posthoc_natural50_qwen3vl8b_thinking_forced_analysis_20260812.json \
   --heldout Qwen3-VL-4B-Thinking=experiments/matched_pair/analyses/posthoc_natural50_qwen3vl4b_thinking_forced_analysis_20260812.json \
   --heldout Qwen2.5-VL-32B-Instruct-AWQ=experiments/matched_pair/analyses/posthoc_natural50_qwen25vl32b_awq_analysis_20260812.json \

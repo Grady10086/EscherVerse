@@ -134,9 +134,9 @@ is optional for the best-effort public retrieval path. API-based evaluation
 also requires credentials for the selected provider.
 
 The CPU-side analysis and test suite were validated on macOS 15.1.1 (Apple
-Silicon, arm64) with Python 3.12.13. GPU-side paths were validated on Ubuntu
-24.04 (x86_64) with Python 3.12.3, an NVIDIA RTX 5880 Ada Generation GPU
-(48 GB), NVIDIA driver 550.144.03, and CUDA 12.4. Statistical analyses,
+Silicon, arm64) with Python 3.12.13. The documented GPU reference environment
+uses Ubuntu 24.04 (x86_64), Python 3.12.3, NVIDIA A100-class GPUs, and CUDA
+12.4. Statistical analyses,
 frozen-output recomputation, and the unit tests do not require a GPU. Local VLM
 inference and LoRA training require a compatible GPU; the memory requirement
 depends on the selected model. The released LoRA configuration was run on the

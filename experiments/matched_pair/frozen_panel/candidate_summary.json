@@ -1867,7 +1867,7 @@
       }
     ]
   },
-  "candidate_manifest_sha256": "0756b51c9e734f02c5bbd801675f70a9816e9094ca96e16a351f4dfb9cb00e8f",
+  "candidate_manifest_sha256": "5f9db726c3854066b084e7fb8ea69b0028e9daffa7430162505bebe433344b1c",
   "candidate_rows_sha256": "87e09ab6b060e09b69a79d07ab8f853d1c8deeab52a46683386663c7233effc4",
   "pair_content_digest_sha256": "a861c089480c84ebd536a0a154ca6252a574223c2965fac506cbf59eee3c4b80",
   "outcome_selection_audit_sha256": "b2d254150636cf6f69aa807c1dd612b2e7cfe8cb43af917040af72f0d613a6af",
