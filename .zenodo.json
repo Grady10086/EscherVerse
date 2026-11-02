@@ -1,0 +1,43 @@
+{
+  "title": "EscherVerse: code and reproducibility resources for physical dynamics and intent reasoning",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Gu, Tianjun"
+    },
+    {
+      "name": "Gong, Jingyu"
+    },
+    {
+      "name": "Zhang, Zhizhong"
+    },
+    {
+      "name": "Xie, Yuan"
+    },
+    {
+      "name": "Ma, Lizhuang"
+    },
+    {
+      "name": "Tan, Xin"
+    },
+    {
+      "name": "Vasilakos, Athanasios V."
+    }
+  ],
+  "description": "<p>Code and reproducibility resources accompanying the manuscript <em>Vision-language models lag human performance on physical dynamics and intent reasoning</em> (NCOMMS-26-036064C).</p><p>The archive includes benchmark evaluation and common-scoring code, video reconstruction tooling, analysis scripts, and frozen analysis artifacts. It preserves the public code and resources supplied with the manuscript; it does not add new model evaluations.</p><p>Source code is licensed under Apache License 2.0. Released data, annotations, metadata, frozen experimental inputs and outputs, and non-code assets retain their CC BY-NC 4.0 terms; see LICENSE and LICENSE-DATA for the scope of each licence. Third-party source videos are excluded from both licences and are not redistributed in this archive.</p>",
+  "license": "Apache-2.0",
+  "keywords": [
+    "EscherVerse",
+    "vision-language models",
+    "spatial reasoning",
+    "benchmark",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://arxiv.org/abs/2601.01547",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
